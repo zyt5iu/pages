@@ -1,0 +1,158 @@
+/*中间开始*/
+/*导航部分*/
+.special-navigation{
+    width: 10rem;
+    border-bottom: 0.5px solid #d9d9d9;
+    position: relative;
+    white-space: nowrap;
+    margin-bottom: .236rem;
+    margin-top: 0.95rem;
+}
+.navigation-one{
+    width: 100%;
+    height: 2.85rem;
+    padding: .1333rem 0;
+    background: #763126;
+}
+.navigation-one li{
+    width: 25%;
+    float: left;
+    background: #763126;
+}
+.navigation-one li a{
+    height: 2.85333rem;
+    display: block;
+    margin-left: 5px;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;/*光标呈现为指示链接的指针（一只手）*/
+    position: relative;
+}
+.navigation-one h4{
+    height: .69333rem;
+    line-height: .69333rem;
+    font-size: .37333rem;
+    font-weight: 400;
+    color: #ff4200;
+}
+.navigation-one img{
+    display: block;
+    margin: 0 auto;
+    width: 1.6rem;
+    height: 1.6rem;
+    /*vertical-align: middle;!*把此元素放置在父元素的中部。*!*/
+}
+.navigation-one p{
+    width: 100%;
+    height: .56rem;
+    line-height: .56rem;
+    font-size: .32rem;
+    font-weight: 400;
+    color: #FFF;
+    background: url("../images/special/bg.png") center center no-repeat #ef3418;
+    background-size: cover;
+    position: absolute;
+}
+.navigation-two{
+    margin-top: .1333rem;
+    height: 2.99rem;
+    width: 10rem;
+
+}
+.navigation-two a{
+    height: 2.99rem;
+    width: 10rem;
+    display: block;
+    background: url("../images/special/aaa.jpg") no-repeat;
+    background-size: 10rem 200%;
+}
+/*中间内容部分--导航结束*/
+/*滑屏轮播开始*/
+.sliding{
+    margin-bottom: .24rem;
+    background-color: white;
+}
+/*title*/
+.sliding h3{
+    height: 1.04rem;
+    line-height: 1.04rem;
+    padding-top: .06666rem;
+    font-size: .42666rem;
+    color: #333;
+}
+.sliding h3 em{
+    display: inline-block;
+    background: url("../images/special/jrbk.png") .32rem 0 no-repeat;
+    font-weight: 400;
+    width: 2.13333333rem;
+    height: .37333333rem;
+    background-size: 1.81333333rem .37333333rem;
+    border-left: .0625rem solid #ff492d;
+}
+.sliding h3 small{
+    font-size: .3125rem;
+    color: #999;
+    margin-left: .14rem;
+    font-weight: 400;
+}
+/*content*/
+.sliding-content{
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+}
+.swiper-wrapper{
+    width: 400px;!important;
+    height: auto;
+}
+.swiper-wrapper .sliding-one{
+    width: 2.6666rem !important;
+    margin: 0 .04rem;
+    float: left;
+    overflow: hidden;
+}
+.swiper-wrapper .sliding-one a{
+    display: block;
+    width: 2.6666rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.swiper-wrapper .sliding-one a img{
+    width: 2.6666rem;
+    height: 2.6666rem;
+    position: relative;
+    border: none;
+}
+.swiper-wrapper .sliding-one a h4{
+    width: 2.52rem;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .349rem;
+    margin-top: .12rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #051b28;
+    text-align: left;
+    font-weight: 400;
+}
+.swiper-wrapper .swiper-slide{
+    width: 110px !important;
+}
+.swiper-wrapper .sliding-one a .two{
+    height: .45333rem;
+    line-height: .45333rem;
+    font-size: .44rem;
+    padding-left: .3rem;
+    position: relative;
+    color: #ff492d;
+}
+.swiper-wrapper i{
+     font-style: normal;
+     font-size: .34545rem;
+     position: absolute;
+     left: -.05rem;
+     bottom: 0;
+ }
+/*滑动轮播结束*/

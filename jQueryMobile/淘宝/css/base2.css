@@ -1,0 +1,65 @@
+body{
+    min-height: 100%;
+    background: #f4f4f4;
+}
+a{
+    color: white;
+}
+/*头部样式*/
+.header-special{
+    margin: 0 auto;
+    width: 10rem;
+    height: 1.066rem;
+    background: #582d27;
+}
+.header-frist{
+    width: 8.934rem;
+    height: 1.066rem;
+    z-index: 9;
+    float: left;
+    white-space: nowrap; /*文本不换行,直到遇到br*/
+}
+.header-frist ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.header-frist ul li{
+    height: 1.066rem;
+    line-height: 1.066rem;
+    padding: 0 .46rem;
+    text-align: center;
+    color: #fff;
+    font-size: .36rem;
+}
+.header-all{
+    background: #ff492d;
+    box-shadow: none;
+}
+.header-xiala{
+    width: 1.066rem;
+    height: 1.066rem;
+    line-height: 1.066rem;
+    touch-action: manipulation; /*允许手势水平/垂直平移或持续的缩放。任何auto属性支持的额外操作都不支持*/
+    user-select: none; /*文本不能被选择*/
+    text-align: center;
+    z-index: 3; /*头部是2*/
+    float: right;
+    display: block;
+}
+/*头部结束*/
+/*底部样式添加*/
+footer {
+    border-top: 1px solid #b5b5b5;
+}
+/*图标样式*/
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*底部样式添加结束*/

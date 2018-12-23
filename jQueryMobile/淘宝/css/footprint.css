@@ -1,0 +1,161 @@
+/*全局样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+a{
+    /*a标签去掉下滑线*/
+    text-decoration: none;
+}
+div ul li{
+    list-style-type: none;
+}
+[data-role=content]{
+    width: 10rem;
+    margin: 0 auto;
+    padding: 0;
+    background: #eee;
+}
+/*头部*/
+.header-logo{
+    font-size: 14px;
+    position: relative;
+    height: 3.133rem;
+    margin: 0 auto;
+    background: #d34201 url("../images/footprint/footprint-logo.jpg") no-repeat top center;
+    background-size: cover;
+    color: #fff;
+}
+.header-logo img{
+    position: absolute;
+    bottom: -1rem;
+    left: .467rem;
+    width: 1.867rem;
+    height: 1.867rem;
+    text-align: center;
+    border-radius: 100%;
+    padding: .067rem;
+    background: rgba(255,255,255,.7);
+}
+/*导航*/
+.navigation{
+    font-size: 14px;
+    height: 1.44rem;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    margin-bottom: .32rem;
+    border-bottom: .027rem solid #e7e7e7;
+    background: #fff;
+}
+.navigation ul{
+    display: -webkit-box;
+    width: 10rem;
+    margin: 0 auto;
+    padding-left: 2.3rem;
+    box-sizing: border-box;
+}
+.navigation ul li{
+    width: 2.6rem;
+}
+.navigation ul .one{
+    border-left: 1px solid #e7e7e7;
+}
+.navigation ul li a{
+    color: #051b28;
+    font-weight: 400;
+}
+/*行级列表导航*/
+.iconfont{
+    font-family:"iconfont";
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: .587rem;
+    color: #999;
+}
+.line-navigation-frist{
+    width: 10rem;
+    font-size: 14px;
+    /*margin-bottom: .32rem;*/
+    /*border-bottom: .027rem solid #e7e7e7;*/
+    background: #fff;
+}
+.line-navigation-frist ul{
+    text-align: center;
+    height: 1.76rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.line-navigation-frist ul li{
+    margin-top: 8px;
+}
+/*listview列表*/
+.line-navigation-secound{
+    position: relative;
+    width: 10rem;
+    height: 100%;
+}
+/*行高*/
+.ui-content .ui-listview-inset, .ui-panel-inner>.ui-listview-inset {
+    margin: 0 0;!important;
+}
+/*直角*/
+.ui-corner-all {
+    -webkit-border-radius: 0; !important;
+    border-radius:0; !important;
+}
+.ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb {
+    min-height: 0.5rem;
+    padding-left:0.25rem;
+    background-color: white;
+}
+.line-navigation-secound img{
+    width: 32px;
+    height: 32px;
+    margin: 5px 0 0 5px;
+}
+.line-navigation-secound span{
+    margin-left: 35px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.line-navigation-secound small{
+    float: right;
+    font-size: 12px;
+    font-weight: 400;
+    line-height:0.5rem;
+    color: #9a9a9a;
+    margin-right: -10px;
+}
+.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: white;
+}
+.ui-icon-carat-r:after {
+    background-image: url("../images/footprint/右箭头.png");
+    background-size: 22px 22px;!important;
+}
+/*底部*/
+#footer{
+    width: 10rem;
+    height: 1.1rem;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+#footer a{
+    font-weight: 400;
+    color: #051b28;
+    line-height: 0.6rem;
+    font-size: 14px;
+    background-color: white;
+}

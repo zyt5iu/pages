@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>添加</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/add.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="more">
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="contact.html" class="ui-btn" data-role="none" data-ajax="false" id="header-back">
+            <img src="./images/more/向左箭头.png">
+            <span style="font-size: 14px;margin-top: -10px;">联系人</span>
+        </a>
+        <h1>更多</h1>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 20px">
+        <!--导航-->
+        <div id="add-navigation">
+            <ul>
+                <li><a href="#" style="border-bottom: 3px solid cornflowerblue;padding-bottom: 5px;color:cornflowerblue">找人</a></li>
+                <li><a href="#">找群</a></li>
+                <li><a href="#">找公众号</a></li>
+            </ul>
+        </div>
+        <div id="add-fristlistview">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <img src="./images/add/搜索.png" alt="">
+                        <p>QQ号/手机号/群/公众号</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="add-secondlistview">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#">
+                        <img src="./images/add/add_page_1.png" alt="">
+                        <p style="font-size: 15px;font-weight: 700;">添加手机联系人</p>
+                        <p style="color: #b5b2b2;">金浩森、刘诗诗</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/add/add_page_2.png" alt="">
+                        <p style="font-size: 15px;font-weight: 700; line-height: 2.5em;">扫一扫添加好友</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/add/add_page_3.png" alt="">
+                        <p style="font-size: 15px;font-weight: 700;">面对面发起多人聊天</p>
+                        <p style="color: #b5b2b2;">与身边朋友进入同一个多人聊天</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/add/add_page_4.png" alt="">
+                        <p style="font-size: 15px;font-weight: 700;">按条件查找陌生人</p>
+                        <p style="color: #b5b2b2;">条件:18-22 永川人</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/add/add_page_5.png" alt="">
+                        <p style="font-size: 15px;font-weight: 700; line-height: 2.5em;">查看附近的人</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="add-threelistview">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#">
+                    <span style="font-size: 15px;font-weight: 600;line-height: 2.5em">可能认识的人</span>
+                    <span style="font-size: 10px;font-weight: 400;float: right;color:#a2a2a2; line-height: 3.0em;margin-right: 30px;">查看更多</span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

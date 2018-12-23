@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="`width=device-width,initial-scale=1">
+    <title>QQ登录界面</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css"/>
+    <!--<script src="./js/jquery-1.11.3.js"></script>-->
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        function but_click(){
+            var temp1=$("#username").val();
+            if(temp1==""){
+                alert("请输入QQ账号！");
+            }
+            else{
+                var username=temp1.substring(3,temp1.length);
+                var temp2=$("#password").val();
+                if(temp2==""){
+                    alert("请输入密码！");
+                }
+                else{
+                    var password=temp2.substring(3,temp2.length);
+                    alert("提交成功"+"你的QQ账号为"+username+"你的密码为："+password);
+                    window.location.href = "index.html";
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        .logo{
+            width: 120px;
+            height: 120px;
+            background: url("images/QQ.png") no-repeat;
+            background-size: contain;
+            margin: 42px auto 0;
+        }
+    </style>
+</head>
+<body>
+<!--框架-->
+<div data-role="page">
+    <div data-role="content">
+        <div class="logo"></div>
+        <form action="#" method="post">
+            <input type="text"  id="username" value="" placeholder="手机号/邮箱/会员名"/>
+            <input type="password"  id="password" value="" placeholder="请输入密码" />
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" data-ajax="false" data-role="button" data-theme="f" id="login" onclick="but_click();">登录 </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button" data-theme="e" id="forget">忘记密码</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+/*------头部--------*/
+#more{
+    background-color: transparent;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+}
+/*搜索框*/
+#search{
+    margin: 25px;
+}
+/*内容*/
+#first_list{
+    margin-left: -50px;
+    margin-top: -10px;
+}
+#first_list ul{
+    margin: 0;
+}
+#first_list ul li{
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    width: 33.3%;
+    text-shadow: none;
+}
+#first_list img{
+    width: 35px;
+    height: 35px;
+    margin-bottom: -8px;
+    /*margin: 0;*/
+}
+#first_list ul li a{
+    margin-top: 3.5px;
+    font-size: 15px;
+    margin-bottom: 0em;
+    text-shadow: none;
+    color: #2b2b2b;
+    text-decoration: none;
+}
+#second_list #frist{
+    border-top: none;
+}
+#second_list .ui-content{
+    background-color: white;
+    box-shadow: none;
+    text-shadow: none;
+    min-height: 1.5em;
+    border-bottom: none;
+}
+#second_list .frist{
+    background-color: white;
+    box-shadow: none;
+    text-shadow: none;
+    min-height: 1.5em;
+}
+.ui-icon-carat-r:after {
+    background-image: url('../images/dynamic/箭头.png');
+}
+#second_list .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: white;
+}
+#second_list img{
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    margin-left: 25px;
+}
+#second_list p{
+    font-size: 15px;
+    padding-top:5px;
+    margin-left: -15px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight:600;
+}
+#second_list .one{
+    margin-bottom: 40px;
+}
+

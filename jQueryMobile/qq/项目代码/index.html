@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>消息</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/panel.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/xl.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $("#mypanel").trigger("updatalayout")
+    </script>
+</head>
+<body>
+<div data-role="page">
+    <!--//我的面板-->
+    <div data-role="panel" id="mypanel">
+        <div id="mypanelheader">
+            <ul>
+                <li>
+                    <img src="./images/base/QQheader.png" alt="#">
+                    <font style="font-size: 30px;">留白</font>
+                </li>
+                <li><img src="./images/panel/7.jpg" alt="#"/></li>
+                <li><h5>世界亦纷扰，你在，就很好</h5></li>
+            </ul>
+        </div>
+        <div data-iconpos="left" id="panellistview" data-role="controlgroup" data-type="horizontal">
+            <ul>
+                <li><a href="#" data-role="button" data-icon="star">我的超级会员</a></li>
+                <li><a href="#" data-role="button" data-icon="shop">QQ钱包</a></li>
+                <li><a href="#" data-role="button" data-icon="gear" >个性装扮</a></li>
+                <li><a href="#" data-role="button" data-icon="video" >我的照片</a></li>
+                <li><a href="#" data-role="button" data-icon="recycle" >我的收藏</a></li>
+                <li><a href="#" data-role="button" data-icon="mail" >我的文件</a></li>
+                <li><a href="#" data-role="button" data-icon="info" >免流量特权</a></li>
+            </ul>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal" id="footer1" data-inlie="true">
+            <a href="edit.html" data-role="button" data-inline="true" data-icon="gear" data-ajax="false">设置</a>
+            <a href="#" data-role="button" data-inline="true" data-icon="gear">夜间</a>
+            <a href="#" data-role="button" data-inline="true">重庆-永川</a>
+        </div>
+    </div>
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="#mypanel" data-role="none" class="gerenxinxi" data-ajax="false"><img src="./images/base/QQheader.png" alt=""></a>
+        <h1>消息</h1>
+        <a href="#" data-role="none" data-ajax="false" id="xl_menu"><img src="./images/index/加号.png"></a>
+        <!--弹框-->
+        <div id="xl">
+            <ul data-role="listview" data-inset="true" data-ajax="false">
+                <li style="margin-top: 20px;">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_1.png"/>
+                        <h4>创建群聊</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_2.png"/>
+                        <h4>加好友/群</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_3.png"/>
+                        <h4>扫一扫</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_4.png"/>
+                        <h4>面对面快传</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_5.png"/>
+                        <h4>付款</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/xl/xl_6.png"/>
+                        <h4>拍摄</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 20px">
+        <!--<div id="search">-->
+        <!--<span>搜索</span>-->
+        <!--</div>-->
+        <div id="search">
+            <input type="search" name="search" placeholder="搜索">
+        </div>
+        <div id="xiaoxi">
+            <ul data-role="listview" data-inset="false">
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx1.jpg">
+                        <p>移动方向<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">9:05</span></p>
+                        <p>啦啦啦：从前的日色变得慢<span class="ui-li-count" id="qipao">5</span></p>
+                        <!--<span class="ui-li-aside"> 9:43</span>-->
+                        <!--<span class="ui-li-count">1</span>-->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx2.jpg">
+                        <p>黑土<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">9:10</span></p>
+                        <p>车马邮件都慢<span class="ui-li-count" id="qipao2">1</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx3.jpg">
+                        <p>大白菜<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">9:05</span></p>
+                        <p>一生只够爱一个人<span class="ui-li-count" id="qipao3">1</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx4.jpg">
+                        <p>2015软件工程学院<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">15:30</span></p>
+                        <p>吴老师：晚上周教六点开始，全体成员必须参加<span class="ui-li-count" id="qipao4">1</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx5.jpg">
+                        <p>2015软件工程学院<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">15:30</span></p>
+                        <p>吴老师：晚上周教六点开始，全体成员必须参加<span class="ui-li-count" id="qipao5">1</span></p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx6.jpg">
+                        <p>2015软件工程学院<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">15:30</span></p>
+                        <p>吴老师：晚上周教六点开始，全体成员必须参加</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx7.jpg">
+                        <p>2015软件工程学院<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">15:30</span></p>
+                        <p>吴老师：晚上周教六点开始，全体成员必须参加</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--//尾部-->
+    <div data-role="footer" data-fullscreen="true" data-position="fixed" id="footer2">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html"  class="ui-state-disabled" data-ajax="false"><img src="./images/base/消息.png" alt="#"></a></li>
+                <li><a href="contact.html"  data-ajax="false"><img src="./images/base/联系人.png" alt="#"></a></li>
+                <li><a href="dynamic.html"  data-ajax="false"><img src="./images/base/动态.png" alt="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

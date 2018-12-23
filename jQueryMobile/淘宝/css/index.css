@@ -1,0 +1,637 @@
+/*淘宝首页样式*/
+/*中间部分*/
+.scroll-wrap{
+    width: 100%;
+    height: 100%;
+    margin-top: 37px;
+}
+/*广告部分*/
+.adv{
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-top: none;
+    border-bottom: 1px solid rgb(186, 186, 186);
+}
+.adv_close{
+    width: 35px;
+    height: 70px;
+    display: inline-block;
+    float: left;
+}
+.close{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background-image: url("../images/index/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 11px;
+}
+.adv_content{
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+.adv_tubiao{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background-image: url("../images/index/taobao.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 8px;
+}
+.adv_app{
+    height:60px;
+    padding-right: 16px;
+    flex: 1;
+    overflow: hidden;
+    background: none;
+}
+.adv_app_open{
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 8px;
+    margin-bottom: 3px;
+    height: 1.5em;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+.adv_app_desc{
+    color: rgb(102, 102, 102);
+    font-size: 10px;
+    height: 1.5em;
+    line-height: 1.5em;
+    margin: 0;
+    overflow: hidden;
+}
+.adv_open{
+    width: 90px;
+    height: 100%;
+    background-image: linear-gradient(225deg, rgb(254, 86, 10) 3%, rgb(255, 153, 1) 100%);
+    color: rgb(255, 255, 255);
+    font-size:14px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*广告部分结束*/
+/*content开始*/
+#content{
+    position: relative;
+    width: 10rem;
+    margin: 0 auto;
+}
+/*轮播图开始*/
+.View{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 3.125rem;
+    position: relative;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    /*display: block;*/
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.img1,.img2,.img3,.img4,.img5,.img6,.img7,.img8{
+    display: block;
+    width: 10rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    float: left;
+}
+.swiper-pagination{
+    margin-left: 100px;
+}
+/*10个导航*/
+.contentapp{
+    width: 10rem;
+    height: 4.594rem;
+    position: relative;
+}
+.contentapp ul{
+    width: 10rem;
+    height: 4.594rem;
+    line-height: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.contentapp ul li{
+    width: 1.625rem;
+    height: 2.125rem;
+    margin-left: 0.047rem;
+    /*margin: 0 2px 0 2px; !*上 右 下 左*!*/
+    background-color: rgb(255,255,255);
+}
+.contentapp ul li img{
+    margin-top: 0.313rem;
+    width: 1.625rem;
+    height: 1.141rem;
+}
+.contentapp ul li p{
+    box-sizing: border-box;
+    line-height: 0.688rem;
+    text-align: center;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    background-color: transparent;
+    width: 1.625rem;
+    height: 0.688rem;
+}
+/*10个导航结束*/
+/*淘宝头条*/
+.headline{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 0.953rem;
+    padding: 0.09375rem 0;
+    margin-top: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+}
+.headline ul li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+}
+.headline-logo{
+    border-right: 1px solid rgb(232, 232, 232);
+    width: 2.1875rem;
+    height: 0.953rem;
+    box-sizing: border-box;
+    background: url("../images/index/headline.png") center center / 1.61719rem 0.46875rem no-repeat;
+}
+.headline-news{
+    display: block;
+    margin: 0.125rem 0.15625rem 0.125rem 0.28125rem;
+    padding: 0 0.0625rem;
+    height: 0.46875rem;
+    line-height: 0.46875rem;
+    border: 1px solid rgb(216, 20, 33);
+    border-radius: 0.125rem;
+    color: rgb(216, 20, 33);
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    max-width: 2rem;
+}
+.headline-desc{
+    display: block;
+    overflow: hidden;
+    margin: 0.125rem 0;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: rgb(53, 53, 53);
+    font-size: 15px;
+    width: 6rem;
+    flex: 1 1 0%;
+}
+/*淘宝头条结束*/
+/*间隔*/
+.interval{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 0.156rem;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+}
+/*间隔结束*/
+/*海抢购*/
+.trushbuy5{
+    width: 10rem;
+    height: 5.063rem;
+    box-sizing: border-box;
+    line-height: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+.trushbuy5-left{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.828rem;
+    height: 5.063rem;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.trushbuy5-left-bg{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.828rem;
+    height: 5.047rem;
+    /*z-index: 1;*/
+    background-size: contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/hqg.jpg");
+}
+.trushbuy5-data{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-top: 1.406rem;
+    margin-left: 0.172rem;
+    width: 2.781rem;
+    height: 0.594rem;
+    position: absolute;
+    padding: 0;
+    z-index: 1;
+    text-align: center;
+}
+.trushbuy5-data span{
+    display: inline-block;
+    width: 0.533rem;
+    height: 0.533rem;
+    line-height: 0.533rem;
+    vertical-align: middle;
+    margin: 0 0.03125rem;
+    color: #fff;
+    background: #333;
+    text-align: center;
+    font-size: 0.3125rem;
+    border-radius: 0.02667rem;
+}
+.trushbuy5-data .dot{
+    width: 0.125rem;
+    color: #333;
+    background: transparent;
+    margin: -5px;
+}
+.trushbuy5-right{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 6.188rem;
+    height: 5.047rem;
+}
+.trushbuy5-right-up{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 6.188rem;
+    height: 2.313rem;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.a{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 2.953rem;
+    height: 2.313rem;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/a.jpg");
+}
+.b{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.234rem;
+    height: 2.313rem;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/b.png");
+}
+.trushbuy5-right-down{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 6.188rem;
+    height: 2.719rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.c{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.047rem;
+    height: 2.719rem;
+    /*z-index: 1;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/c.jpg");
+}
+.d{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.094rem;
+    height: 2.719rem;
+    /*z-index: 1;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/d.png");
+}
+/*间隔图片*/
+.tbanner2{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 2rem;
+    z-index: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/e.jpg");
+}
+/*每日好店*/
+.goodshops{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 5.344rem;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(213, 213, 213);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(213, 213, 213);
+}
+/*title*/
+.goodshops-title{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 0.969rem;
+}
+.goodshops-title ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.goodshops-one{
+    box-sizing: border-box;
+    line-height: 0;
+    background-color: rgb(255, 155, 67);
+    width: 0.156rem;
+    height: 0.969rem;
+}
+.goodshops-two{
+    box-sizing: border-box;
+    line-height: 0.969rem;
+    font-size: 15.5px;
+    color: rgb(34, 34, 34);
+    margin-left: 0.188rem;
+    width: 4.656rem;
+    height: 0.969rem;
+}
+.goodshops-more{
+    box-sizing: border-box;
+    line-height: 0.969rem;
+    text-align: right;
+    font-size: 13.5px;
+    color: rgb(102, 102, 102);
+    /*background-color: transparent;*/
+    width: 4.266rem;
+    height: 0.969rem;
+}
+.goodshops-moreright{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-top: 0.281rem;
+    margin-left: 0.094rem;
+    width: 0.406rem;
+    height: 0.406rem;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/more.png");
+}
+/*content*/
+.goodshops-content{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-top: 0.156rem;
+    width: 10rem;
+    height: 4.219rem;
+}
+.goodshops-content-up{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-left: 0.188rem;
+    width: 4.813rem;
+    height: 3.781rem;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.up-one{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 4.813rem;
+    height: 3.188rem;
+    position: absolute;
+}
+.up-one ul{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.up-one-frist{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 3.125rem;
+    height: 3.188rem;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("../images/index/f.jpg");
+}
+#up-one-frist2{
+    background-image: url("../images/index/g.jpg");!important;
+}
+.up-one-scound{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-left: 0.063rem;
+    width: 1.563rem;
+    height: 3.188rem;
+}
+.up-one-scound div{
+    box-sizing: border-box;
+    line-height: 0;
+    margin-top: 0.06rem;
+    width: 1.563rem;
+    height: 1.5rem;
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.up-one-scound .aa{
+    background-image: url("../images/index/aa.jpg");
+}
+.up-one-scound .bb{
+    background-image: url("../images/index/bb.jpg");
+}
+.up-one-scound .cc{
+    background-image: url("../images/index/cc.jpg");
+}
+.up-one-scound .dd{
+    background-image: url("../images/index/dd.jpg");
+}
+.up-one-three{
+    box-sizing: border-box;
+    line-height: 0.5rem;
+    font-size: 13px;
+    color: rgb(34, 34, 34);
+    margin-top: 3.281rem;
+    margin-left: 0.031rem;
+    width: 4.719rem;
+    height: 0.5rem;
+    position: absolute;
+}
+/*提示器*/
+.goodshops-content-indicator{
+    width: 10rem;
+    height: 0.28125rem;
+    bottom: 0.1rem;
+    padding-bottom: .25rem;
+    /*将提示器放在最后面*/
+    display: -webkit-box;
+    -webkit-box-align: end;
+    -webkit-box-pack: end;
+}
+.goodshops-content-indicator span{
+    display: block;
+    overflow: hidden;
+    width: .25rem;
+    height: .25rem;
+    margin-right:5px;
+    font-size: 0;
+    background-image: url("../images/index/cur.png");
+}
+/*猜你喜欢*/
+.likemore{
+    background-color: rgb(238, 238, 238);
+    width: 10rem;
+    height: 100%;
+    /*margin-bottom: 80px;*/
+}
+.like{
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    height: 1.469rem;
+    background-color: rgb(238, 238, 238);
+}
+.like img{
+    width: 0.531rem;
+    height: 0.516rem;
+    margin: 0 5px 0 5px;
+}
+.like li{
+    line-height: 0.5rem;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+.like-content{
+    overflow: auto;
+    /*zoom: 1;*/
+    box-sizing: border-box;
+    line-height: 0;
+    width: 10rem;
+    background-color: rgb(238, 238, 238);
+}
+.like-one{
+    width: 4.95rem;
+    height: 6.775rem;
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    line-height: 0;
+    background-color: white;
+    margin-right: 2px;
+    border-bottom: 1px solid #eeeeee;
+}
+.like-a img{
+    width: 4.95rem;
+    height: 4.5rem;
+}
+.like-b{
+    width:4.325rem;
+    height: 0.85rem;
+    box-sizing: border-box;
+    line-height: 17px;
+    background-color: transparent;
+    margin: 0.188rem 0.313rem;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+}
+.like-c{
+    box-sizing: border-box;
+    line-height: 0.2rem;
+    width:4.625rem;
+    height: 0.925rem;
+    color: rgb(255, 80, 0);
+    background-color: transparent;
+    margin: 0 0.063rem 0.031rem 0.25rem;
+    font-size: 16px;
+}
+/*返回顶部*/
+.return-top{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-right: 10px;
+    left: 85%;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    display: block;
+    position:fixed;
+    bottom: 70px;
+    background-color: white;
+}
+.return-top span{
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    line-height: 24px;
+    color:  #bdbdbd;
+}
+.return-top p{
+    color: #bdbdbd;
+}
+
+
+
+
+
+
+
+

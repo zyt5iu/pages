@@ -1,0 +1,92 @@
+/*------头部--------*/
+#tj{
+    background-color: transparent;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+}
+/*第一个listview*/
+#newfriends-listviewone ul li a{
+    background-color: white;
+    /*min-height: 3.0em;*/
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    /*padding: 0;*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#newfriends-listviewone ul li .touxiang{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 15px;
+}
+#newfriends-listviewone ul li h2{
+    margin-left: -20px;
+}
+#newfriends-listviewone ul li p{
+    margin-left: -20px;
+    color: #9c9a9a;
+    text-shadow: none;
+    box-shadow: none;
+}
+#newfriends-listviewone #qipao,#qipao1,#qipao2,#qiao3,#qiao4,#qiao5{
+    margin-top: 1px;
+    width: 20px;
+    border-radius:30%;
+    font-weight:100;
+    border-width:0;
+    background-color: rgb(94,203,239);
+    color: white;
+}
+#newfriends-listviewone.ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: white;
+}
+/*第二个listview*/
+#newfriends-listviewtwo ul li a{
+    background-color: white;
+    /*min-height: 3.0em;*/
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    /*padding: 0;*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#newfriends-listviewtwo ul li .touxiang{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 15px;
+}
+#newfriends-listviewtwo ul li h2{
+    margin-left: -20px;
+}
+#newfriends-listviewtwo ul li p{
+    margin-left: -20px;
+    color: #9c9a9a;
+    text-shadow: none;
+    box-shadow: none;
+}
+#newfriends-listviewtwo #qipao,#qipao1,#qipao2,#qipao3,#qipao4,#qipao5{
+    margin-top: 1px;
+    width: 20px;
+    border-radius:30%;
+    font-weight:100;
+    border-width:0;
+    background-color: rgb(94,203,239);
+    color: white;
+}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited {
+    background-color: white;
+}
+#newfriends-listviewtwo button{
+    margin-top: -10px;
+    float: right;
+    font-size: 14px;
+    width: 50px;
+    font-weight: 500;
+    padding: 4px 0 !important;
+}

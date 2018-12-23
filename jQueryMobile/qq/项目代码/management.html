@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>添加</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/management.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="more">
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="edit.html" class="ui-btn" data-role="none" data-ajax="false" id="header-back">
+            <img src="./images/more/向左箭头.png">
+            <span style="font-size: 14px">设置</span>
+        </a>
+        <h1>账号管理</h1>
+        <a href="#" data-ajax="false"  class="ui-btn ui-btn-right" id="tj">编辑</a>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 20px">
+        <div id="add-threelistview">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="#" class="frist">
+                        <img src="./images/base/QQheader.png" alt="" class="manaimg">
+                        <p style="margin-top: 10px;font-size: 15px;font-weight: 600;">留白</p>
+                        <p style="color: #aaa;">1663618914</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="./images/加.png" alt="" style="width: 30px;height: 30px;" class="manaimg">
+                        <p style="margin-top: 15px;font-size: 18px;font-weight: 500; color: #00aeef">添加或注册账号</p>
+                    </a>
+                </li>
+                <li data-role="list-divity" style="background-color: #f9f9f9"></li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <h1>关联QQ号
+                            <span style="float: right;font-size: 30px;margin-top: -10px;font-weight: 100;color:#aaa; margin-right: 5px">></span>
+                        </h1>
+                    </a>
+                </li>
+                <li data-role="list-divity" style="background-color: #f9f9f9">
+                    <p style="margin-left: -5px;color: #aaa;">关联QQ号后，即可代收该号的好友消息</p>
+                </li>
+                <li><a href="#"><h1>在线状态</h1></a></li>
+                <li><a href="#" class="ui-btn"><h1>隐身状态</h1></a></li>
+                <li data-role="list-divity" style="background-color: #f9f9f9"></li>
+                <li><a href="#" class="ui-btn"><h1>退出当前账号</h1></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

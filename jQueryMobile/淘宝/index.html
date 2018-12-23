@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width,initial-scale=1"/>
+    <title>淘宝首页</title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body onload="startTime()">
+<!--主体内容-->
+<div class="srollview">
+    <!--头部-->
+    <div class="top-fixed" id="top">
+        <header>
+            <div class="header-wrap">
+                <div id="search-placeholder">
+                    <span><i class="iconfont">&#xe583;</i>&nbsp;&nbsp;寻找宝贝店铺</span>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!--中间-->
+    <div class="scroll-wrap">
+        <!--广告-->
+        <div class="adv" id="adv">
+            <a href="#" class="adv_close" id="close"><span class="close"></span></a>
+            <a href="#" class="adv_content">
+                <i class="adv_tubiao"></i>
+                <section class="adv_app">
+                    <div class="adv_app_open">打开手机淘宝App</div>
+                    <div class="adv_app_desc">随时随地 想淘就淘</div>
+                </section>
+                <b class="adv_open">打开APP</b>
+            </a>
+        </div>
+        <!--content-->
+        <div id="content">
+            <!--轮播图-->
+            <div class="View">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/index/lun1.jpg" class="img1"></div>
+                        <div class="swiper-slide"><img src="images/index/lun2.jpg" class="img2"></div>
+                        <div class="swiper-slide"><img src="images/index/lun3.jpg" class="img3"></div>
+                        <div class="swiper-slide"><img src="images/index/lun4.jpg" class="img4"></div>
+                        <div class="swiper-slide"><img src="images/index/lun5.jpg" class="img5"></div>
+                        <div class="swiper-slide"><img src="images/index/lun6.jpg" class="img6"></div>
+                        <div class="swiper-slide"><img src="images/index/lun7.jpg" class="img7"></div>
+                        <div class="swiper-slide"><img src="images/index/lun8.jpg" class="img8"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!--10个导航-->
+            <div class="contentapp">
+                <ul>
+                    <li>
+                        <img src="images/index/tianmao.png" alt=""/>
+                        <p>天猫</p>
+                    </li>
+                    <li>
+                        <img src="images/index/jhs.png" alt=""/>
+                        <p>聚划算</p>
+                    </li>
+                    <li>
+                        <img src="images/index/tmgj.png" alt=""/>
+                        <p>天猫国际</p>
+                    </li>
+                    <li>
+                        <img src="images/index/wm.png" alt=""/>
+                        <p>外卖</p>
+                    </li>
+                    <li>
+                        <img src="images/index/tmcs.png" alt=""/>
+                        <p>天猫超市</p>
+                    </li>
+                    <li>
+                        <img src="images/index/czzx.png" alt=""/>
+                        <p>充值中心</p>
+                    </li>
+                    <li>
+                        <img src="images/index/fzlx.png" alt=""/>
+                        <p>飞猪旅行</p>
+                    </li>
+                    <li>
+                        <img src="images/index/ljb.png" alt=""/>
+                        <p>领金币</p>
+                    </li>
+                    <li>
+                        <img src="images/index/pm.png" alt=""/>
+                        <p>拍卖</p>
+                    </li>
+                    <li>
+                        <img src="images/index/fl.png" alt=""/>
+                        <p>分类</p>
+                    </li>
+                </ul>
+            </div>
+            <!--淘宝头条-->
+            <div class="headline">
+                <ul>
+                    <li>
+                        <span class="headline-logo"></span>
+                        <span class="headline-news">围观</span>
+                        <span class="headline-desc">手上有这四个特点的女生，都不怎么好看</span>
+                    </li>
+                    <li>
+                        <span class="headline-logo"></span>
+                        <span class="headline-news">运动</span>
+                        <span class="headline-desc">运动鞋别总穿耐克，这些国产鞋也很良心！</span>
+                    </li>
+                    <li>
+                        <span class="headline-logo"></span>
+                        <span class="headline-news">瘦身</span>
+                        <span class="headline-desc">据说起床早的人更瘦，真的是这样吗？</span>
+                    </li>
+                </ul>
+            </div>
+            <!--间隔-->
+            <div class="interval"></div>
+            <!--海抢购-->
+            <div class="trushbuy5">
+                <div class="trushbuy5-left">
+                    <div class="trushbuy5-left-bg"></div>
+                    <div class="trushbuy5-data">
+                        <span id="h"></span>
+                        <span class="dot">:</span>
+                        <span id="m"></span>
+                        <span class="dot">:</span>
+                        <span id="s"></span>
+                    </div>
+                </div>
+                <div class="trushbuy5-right">
+                    <div class="trushbuy5-right-up">
+                        <div class="a"></div>
+                        <div class="b"></div>
+                    </div>
+                    <div class="trushbuy5-right-down">
+                        <div class="c"></div>
+                        <div class="d"></div>
+                    </div>
+                </div>
+            </div>
+            <!--间隔-->
+            <div class="interval"></div>
+            <!--间隔图片-->
+            <div class="tbanner2"></div>
+            <!--间隔-->
+            <div class="interval"></div>
+            <!--每日好店-->
+            <div class="goodshops">
+                <div class="goodshops-title">
+                    <ul>
+                        <li class="goodshops-one"></li>
+                        <li class="goodshops-two">每日好店</li>
+                        <li class="goodshops-more">更多</li>
+                        <li class="goodshops-moreright"></li>
+                    </ul>
+                </div>
+                <div class="goodshops-content">
+                    <ul class="goodshops-content-up">
+                        <li class="up-one">
+                            <ul>
+                                <li class="up-one-frist"></li>
+                                <li class="up-one-scound">
+                                    <div class="aa"></div>
+                                    <div class="bb"></div>
+                                </li>
+                                <li class="up-one-three">今日推荐</li>
+                            </ul>
+                        </li>
+                        <li class="up-one" style="margin-left: 4.813rem">
+                            <ul>
+                                <li class="up-one-frist" id="up-one-frist2"></li>
+                                <li class="up-one-scound">
+                                    <div class="cc"></div>
+                                    <div class="dd"></div>
+                                </li>
+                                <li class="up-one-three">包包控</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!--指示器-->
+                    <div class="goodshops-content-indicator">
+                        <span style="background-size: 0.25rem 0.5rem;background-position: 0 -0.25rem;"></span>
+                        <span style="background-size: 0.25rem 0.5rem;background-position: 0 0;"></span>
+                    </div>
+                </div>
+            </div>
+            <!--猜你喜欢-->
+            <div class="likemore">
+                <div class="like">
+                    <ul>
+                        <li style="font-weight: bold;padding-top: 5px;font-size: 14px;"><img src="./images/index/like.png" alt="">猜你喜欢</li>
+                        <li style="font-size: 12px;">实时推荐最适合你的宝贝</li>
+                    </ul>
+                </div>
+                <div class="like-content">
+                    <div class="like-one">
+                        <ul>
+                            <li class="like-a"><img src="./images/index/likea.jpg" alt=""></li>
+                            <li class="like-b"><p> 为你推荐【130个】纳米海绵擦每天美人图大家都四年</p></li>
+                            <li class="like-c">￥19.9</li>
+                        </ul>
+                    </div>
+                    <div class="like-one">
+                        <ul>
+                            <li class="like-a"><a href="details.html"><img src="./images/details/one.jpg" alt=""></a></li>
+                            <li class="like-b"><p> 为你推荐【130个】纳米海绵擦每天美人图大家都四年</p></li>
+                            <li class="like-c">￥19.9</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="bottom-fixed">
+        <footer>
+            <a href="index.html"><span class="iconfont">&#xe603;</span><p>首页</p></a>
+            <a href="#"><span class="iconfont">&#xe6b0;</span><p>物流</p></a>
+            <a href="cart.html"><span class="iconfont">&#xe6a8;</span><p>购物车</p></a>
+            <a href="footprint.html"><span class="iconfont">&#xe6f3;</span><p>我的淘宝</p></a>
+            <a href="special.html"><span class="iconfont">&#xe72b;</span><p>更多</p></a>
+        </footer>
+    </div>
+</div>
+<!--返回顶部-->
+<div id="go_top" class="return-top"><span class="iconfont">&#xe604;</span><p>顶部</p></div>
+<!--轮播图js-->
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+/*从新定义头部*/
+.header-xiala{
+    background: #eee;
+    opacity: .95;
+    color: #000;
+}
+.women2-content{
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 575px;
+    background: #eee;
+    opacity: .97;
+}
+.womenn2-list{
+    padding: 0 .8133rem;
+}
+.women2-content ul {
+    padding: .3866rem 0;
+    border-bottom: 1px solid #e4e4e4;
+    overflow: hidden;
+}
+.women2-content ul li {
+    display: block;
+    list-style: none;
+    width: 25%;
+    height: .92rem;
+    line-height: .92rem;
+    float: left;
+    color: #333;
+    text-align: center;
+    font-size: .36rem;
+}

@@ -1,0 +1,68 @@
+/*下拉菜单*/
+#xl{
+    background-image: url("../images/xl/xl_bj.png");
+    width: 150px;
+    height: 245px;
+    position: absolute;
+    /*margin-left:58%;*/
+    margin-left:10px;
+    display: none;
+}
+#xl li{
+    background-color: transparent;
+    border: none;
+}
+#xl li a{
+    background-color: transparent;
+    border: none;
+    margin-left: 20px;
+    box-shadow: none;
+    text-shadow: none;
+    margin-top: 8px;
+}
+#xl .ui-btn{
+    min-height: 1em;
+    padding: 0;
+    padding-left: 40px;
+}
+
+/*主要内容*/
+#search{
+    margin: 25px;
+}
+/*消息列表*/
+#xiaoxi ul li a img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 15px;
+}
+#xiaoxi ul li a p:first-of-type{
+    font-size:18px;
+    color:black;
+}
+.ui-listview>.ui-li-has-thumb>.ui-btn, .ui-listview>.ui-li-static.ui-li-has-thumb{
+    padding-left: 6em;
+}
+#xiaoxi ul li a p{
+    font-size: 14px;
+}
+#xiaoxi #qipao,#qipao1,#qipao2{
+    margin-top: 1px;
+    border-radius:50%;
+    font-weight:100;
+    border-width:0;
+    background-color: rgba(255, 0, 0, 0.73);
+    color: white;
+}
+#xiaoxi #qipao3,#qipao4,#qipao5{
+    margin-top: 1px;
+    border-radius:50%;
+    font-weight:100;
+    border-width:0;
+    background-color: rgb(94,203,239);
+    color: white;
+}
+
+
+

@@ -1,0 +1,105 @@
+
+/*内容*/
+/*navigation导航栏*/
+#add-navigation{
+    width: 100%;
+    height: 37px;
+    background-color: white;
+    margin-top: 25px;
+    border-bottom: 1px solid #d6d6d6;
+}
+#add-navigation ul{
+    margin-left: -40px;
+}
+#add-navigation ul li{
+    margin-top: 10px;
+    list-style-type: none;
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+#add-navigation ul li a{
+    text-decoration: none;
+    color: #474747;
+    font-size: 10px;
+    font-weight: 500;
+}
+/*主内容栏*/
+/*第一个listview*/
+#add-fristlistview{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#add-fristlistview ul li a{
+    background-color: white;
+    min-height: 2.5em;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+#add-fristlistview ul li img{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top:5px;
+}
+#add-fristlistview ul li a p{
+    font-size: 10px;
+    color: #a2a2a2;
+    margin-left: 35px;
+    margin-top: 12px;
+}
+#add-fristlistview .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+     background-color: white;
+}
+/*第二个listview*/
+#add-secondlistview ul li a{
+    background-color: white;
+    min-height: 3.0em;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    /*padding: 0;*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#add-secondlistview ul li img{
+    width: 25px;
+    height: 25px;
+    margin: 15px;
+}
+#add-secondlistview ul li p{
+    margin-left: -50px;
+}
+#add-secondlistview .ui-icon-carat-r:after {
+    background-image: url('../images/dynamic/箭头.png');
+}
+/*第三个listview*/
+#add-threelistview{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#add-threelistview ul li a{
+    background-color: white;
+    min-height: 2.5em;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+#add-threelistview ul li img{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-top:5px;
+}
+#add-threelistview ul li a p{
+    font-size: 10px;
+    color: #a2a2a2;
+    margin-left: 35px;
+    margin-top: 12px;
+}
+#add-threelistview .ui-icon-carat-r:after {
+    background-image: url('../images/dynamic/箭头.png');
+}

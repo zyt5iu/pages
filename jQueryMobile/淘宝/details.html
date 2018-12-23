@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width,initial-scale=1"/>
+    <title>商品详情</title>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/details.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
+    <!--选项卡-->
+    <script type="text/javascript">
+        $(function(){
+            $("#s-header a").click(function(){
+                $(this).addClass("active").siblings().removeClass("active");
+                $("#content .mod").eq($("#s-header a").index(this)).show().siblings("#content .mod").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<!--主体内容-->
+<div class="srollview">
+    <!--头部-->
+    <header id="s-header">
+        <a href="#" class="active current">基本信息</a>
+        <a href="#">商品详情</a>
+        <a href="#">评价1804</a>
+    </header>
+    <!--内容-->
+    <div id="content">
+        <div class="mod">
+            <!--轮播图-->
+            <div class="View">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/details/one.jpg"   class="img1"></div>
+                        <div class="swiper-slide"><img src="images/details/two.jpg"   class="img2"></div>
+                        <div class="swiper-slide"><img src="images/details/three.jpg" class="img3"></div>
+                        <div class="swiper-slide"><img src="images/details/four.jpg"  class="img4"></div>
+                        <div class="swiper-slide"><img src="images/details/five.jpg"  class="img5"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!--广告-->
+            <div class="adv">
+                <img src="./images/details/adv-logo.jpg" alt="">
+            </div>
+            <!--商品信息-->
+            <div class="dese">
+                <div class="main">复古铁艺壁挂花桶咖啡奶茶店绿植墙面墙上墙壁装饰品卧室餐厅挂件</div>
+            </div>
+            <!--价格-->
+            <div class="module-price">
+                <div class="real-price">
+                    <span class="ui-label" style="margin-left: 10px">跨年狂欢价</span>
+                    <span><i class="price-symbol">¥</i><span class="price">17.5-131</span></span>
+                    <img src="./images/details/th.png">
+                </div>
+                <div class="item-price">
+                    <label style="margin-left: 10px">专柜价:</label><del>¥39.8-298</del>
+                </div>
+            </div>
+            <div class="xinxi">
+                <ul>
+                    <li style="text-align: left;margin-left: 10px;"><span>快递:0.00</span></li>
+                    <li style="text-align: center;"><span>月销售量929件</span></li>
+                    <li style="text-align: right;"><span>江苏淮安</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mod" style="display: none">
+            <ul>
+                <li><a href="#">商品详情内容</a> </li>
+            </ul>
+        </div>
+        <div class="mod" style="display: none">
+            <ul>
+                <li><a href="#">评价内容</a> </li>
+            </ul>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <a href="#" class="cell">
+            <span class="iconfont" style="color:#4A90E2;!important;">&#x345c;</span><p>客服</p>
+        </a>
+        <a href="#" class="cell"><span class="iconfont">&#xe68c;</span><p>进店</p></a>
+        <a href="#" class="cell"><span class="iconfont">&#xe6b3;</span><p>收藏</p></a>
+        <div class="trade">
+            <a href="#" class="cart" role="button">加入购物车</a>
+            <a href="#" class="buy" role="button">立即购买</a>
+        </div>
+    </div>
+    <!--购物车按钮-->
+    <div class="return-top"><a href="cart.html"><span class="iconfont" style="color:white;!important;">&#xe6a8;</span></a></div>
+</div>
+<!--轮播图js-->
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        centeredSlides: true,
+//        autoplay: {
+//            delay: 2500,
+//            disableOnInteraction: false,
+//        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

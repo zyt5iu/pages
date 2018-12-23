@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>联系人页面</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/panel.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/xl.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $("#mypanel").trigger("updatalayout")
+    </script>
+</head>
+<body>
+<div data-role="page">
+    <!--//我的面板-->
+    <div data-role="panel" id="mypanel">
+        <div id="mypanelheader">
+            <ul>
+                <li>
+                    <img src="./images/base/QQheader.png" alt="#">
+                    <font style="font-size: 30px;">留白</font>
+                </li>
+                <li><img src="./images/panel/7.jpg" alt="#"/></li>
+                <li><h5>世界亦纷扰，你在，就很好</h5></li>
+            </ul>
+        </div>
+        <div data-iconpos="left" id="panellistview" data-role="controlgroup" data-type="horizontal">
+            <ul>
+                <li><a href="#" data-role="button" data-icon="star">我的超级会员</a></li>
+                <li><a href="#" data-role="button" data-icon="shop">QQ钱包</a></li>
+                <li><a href="#" data-role="button" data-icon="gear" >个性装扮</a></li>
+                <li><a href="#" data-role="button" data-icon="video" >我的照片</a></li>
+                <li><a href="#" data-role="button" data-icon="recycle" >我的收藏</a></li>
+                <li><a href="#" data-role="button" data-icon="mail" >我的文件</a></li>
+                <li><a href="#" data-role="button" data-icon="info" >免流量特权</a></li>
+            </ul>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal" id="footer1" data-inlie="true">
+            <a href="edit.html" data-role="button" data-inline="true" data-icon="gear" data-ajax="false">设置</a>
+            <a href="#" data-role="button" data-inline="true" data-icon="gear">夜间</a>
+            <a href="#" data-role="button" data-inline="true">重庆-永川</a>
+        </div>
+    </div>
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="#mypanel" data-role="none" class="gerenxinxi"><img src="./images/base/QQheader.png" alt=""></a>
+        <h1>消息</h1>
+        <a href="add.html" data-ajax="false"  class="ui-btn ui-btn-right" id="tj">添加</a>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 20px">
+        <div id="search">
+            <input type="search" name="search" placeholder="搜索">
+        </div>
+        <!--导航-->
+        <div id="content">
+            <ul data-role="listview">
+                <li>
+                    <a href="newfriends.html" class="ui-nodisc-icon ui-alt-icon" data-ajax="false" style="box-shadow: none;">新朋友</a>
+                </li>
+            </ul>
+            <div id="scroller" >
+                <ul>
+                    <li><span style="color: rgb(94,203,239);">好友</span></li>
+                    <li><span>群</span></li>
+                    <li><span>多人聊天</span></li>
+                    <li><span>设备</span></li>
+                    <li><span>通讯录</span></li>
+                    <li><span>公众号</span></li>
+                </ul>
+            </div>
+        </div>
+        <!--联系人好友-->
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>特别关心<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">3/3</span></h4>
+            <ul data-role="listview" data-inset="false" >
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx1.jpg" class="tximg">
+                        <h2>鹿晗</h2>
+                        <p>[WiFi在线]你是春雨里洗过的太阳</p>
+                    </a>
+                </li>
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx5.jpg" class="tximg">
+                        <h2>张艺兴</h2>
+                        <p>[WiFi在线]刘海砍樵</p>
+                    </a>
+                </li>
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx6.jpg" class="tximg">
+                        <h2>吴亦凡</h2>
+                        <p>[WiFi在线]666</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>同学<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">0/1</span></h4>
+            <ul data-role="listview" data-inset="false" >
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx3.jpg" class="tximg">
+                        <h2>奥黛丽·赫本</h2>
+                        <p>[WiFi在线]阳光洒满窗台</p>
+                    </a>
+                </li>
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx4.jpg" class="tximg">
+                        <h2>嗯哼</h2>
+                        <p>[WiFi在线]your english name is aha</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>朋友<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">10/50</span></h4>
+            <ul data-role="listview" data-inset="false" >
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx6.jpg" class="tximg">
+                        <h2>江辰</h2>
+                        <p>[WiFi在线]你怎么总是忘记我很爱你</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>老师<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">5/10</span></h4>
+            <ul data-role="listview" data-inset="false" >
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx3.jpg" class="tximg">
+                        <h2>胡老师</h2>
+                        <p>[WiFi在线]上课了，同学们</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>best family<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">15/30</span></h4>
+            <ul data-role="listview" data-inset="false" >
+                <li data-role="button">
+                    <a href="#" class="ui-btn">
+                        <img src="./images/tx/tx3.jpg" class="tximg">
+                        <h2>迪丽热巴</h2>
+                        <p>[WiFi在线]呦呦切克闹</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>大学<span style="position: absolute;right: 8px;font-size: 13px;color: rgba(0, 0, 0, 0.5)">30/300</span></h4>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>my love</h4>
+        </div>
+        <div class="listone" data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d" data-inset="false">
+            <h4>我的</h4>
+        </div>
+    </div>
+    <!--//尾部-->
+    <div data-role="footer" data-fullscreen="true" data-position="fixed" id="footer2">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html"  data-ajax="false"><img src="./images/base/消息.png" alt="#"></a></li>
+                <li><a href="contact.html"  class="ui-state-disabled" data-ajax="false"><img src="./images/base/联系人.png" alt="#"></a></li>
+                <li><a href="dynamic.html"  data-ajax="false"><img src="./images/base/动态.png" alt="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

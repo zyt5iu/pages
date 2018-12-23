@@ -1,0 +1,145 @@
+/*内容导航*/
+.women-header{
+    width:10rem;
+    height: 3.1rem;
+    overflow: hidden;
+    margin-bottom: .08rem;
+    margin-top: 1.15rem;
+}
+.women-header li{
+    float: left;
+    margin-bottom: .04rem;
+    margin-right: 1px;
+}
+.women-header li>a{
+    display: block;
+    width: 2.47rem;
+    height: 1.4666rem;
+    line-height: 1.4666rem;
+    background: #fff;
+    text-align: center;
+    font-size: .37333rem;
+    color: #051b28;
+}
+/*list*/
+.women-list{
+    width: 10rem;
+    min-height: 1rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.women-one{
+    border-bottom: .5px solid #d9d9d9;
+    width: 4.96rem;
+    margin-bottom: .08rem;
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+.women-one img{
+    height: 4.96rem;
+    width: 4.96rem;
+    vertical-align: middle;
+}
+.item_point {
+    left: .19rem;
+    height: .54rem;
+    padding: 0 .22rem;
+    line-height: .54rem;
+    font-size: .32rem;
+    color: #fff;
+    background-color: #000;
+    opacity: .5;
+    border-radius: .24rem;
+    overflow: hidden;
+    position: absolute;
+    margin-top: -30px;
+}
+.item_content {
+    width: 4.48rem;
+    margin-top: .04rem;
+    padding:0.15rem  0.24rem;
+}
+.women-one h4{
+    font-size: .34666rem;
+    color: #051b28;
+    font-weight: 400;
+    width: 4.48rem;
+}
+.item_tags {
+    margin-top: -0.4rem;
+    line-height: 100%;
+}
+.item_tag_blue {
+    color: #FFF;
+    background-color: #2da4ff;
+    background-image: url("../images/women/tag.png");
+    height: .4rem;
+    display: inline-block;
+    padding: 0 .2rem 0 .16rem;
+    font-size: .252rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    overflow: hidden;
+    line-height: .425rem;
+    margin-right: -2px;
+}
+.item_tag {
+    display: inline-block;
+    padding: 0 .2rem 0 .16rem;
+    font-size: .252rem;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    overflow: hidden;
+    line-height: .425rem;
+    margin-right: -2px;
+}
+.item_price_origin {
+    font-size: .26666667rem;
+    color: #9a9a9a;
+    height: .42666667rem;
+    line-height: .42666667rem;
+}
+.item_foot {
+    width: 100%;
+    line-height: .53333333rem;
+    height: .53333333rem;
+    position: relative;
+}
+.item_price {
+    float: left;
+    display: inline-block;
+    font-size: .44rem;
+    position: relative;
+    color: #ff492d;
+    line-height: .53333333rem;
+    height: .53333333rem;
+    padding-left: .32rem;
+}
+.women-one i{
+    line-height: .48rem;
+    font-style: normal;
+    font-size: .34545rem;
+    position: absolute;
+    left: -.055rem;
+    bottom: -.00266667rem;
+}
+.women-one small{
+    font-size: .35rem;
+}
+.item_sell {
+    float: right;
+    font-size: .3rem;
+    color: #9a9a9a;
+    line-height: .66666667rem;
+    height: .53333333rem;
+}
+

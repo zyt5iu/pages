@@ -1,0 +1,40 @@
+/*------头部--------*/
+#tj{
+    background-color: transparent;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+}
+#add-threelistview{
+    margin-top:40px;
+}
+#add-threelistview ul li a{
+    background-color: white;
+    min-height: 3.0em;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+#add-threelistview ul li p{
+    margin-left: 60px;
+}
+#add-threelistview ul li .manaimg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: right;
+    margin: 10px;
+    /*margin-top: 5px;*/
+    /*margin-left: 10px;*/
+}
+#add-fristlistview .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: white;
+}
+.ui-icon-carat-r:after {
+    background-image: url('../images/勾.png');
+}
+#add-threelistview ul li h1{
+    margin: 14px 0 0 10px;
+}

@@ -1,0 +1,35 @@
+/*面板css样式*/
+/*上*/
+#mypanel{
+    background-image: url("../images/panel/4.jpg");
+}
+#mypanelheader ul li{
+    list-style-type: none;
+}
+#mypanelheader img{
+    width: 30%;
+    height: 30%;
+    border-radius:50%;
+    margin-left: -10px;
+}
+/*中*/
+#panellistview{
+    margin-top: 20px
+}
+#panellistview a{
+    background: rgba(255, 255, 255, 0.44);
+    width:185px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: -35px;
+    text-align: left;
+}
+/*下*/
+#footer1{
+     margin-top: 25px;
+     width: 260px;
+ }
+#footer1 a{
+    font-size:14.2px;
+    background: rgba(255, 255, 255,0.3);
+}

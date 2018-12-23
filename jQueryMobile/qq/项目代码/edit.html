@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设置</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/edit.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="more">
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="index.html" class="ui-btn" data-role="none" data-ajax="false" id="header-back">
+            <img src="./images/more/向左箭头.png">
+            <span style="font-size: 14px;margin-top: -10px;">返回</span>
+        </a>
+        <h1>设置</h1>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 20px">
+        <div id="add-threelistview">
+            <ul data-role="listview" data-inset="true">
+                <li>
+                    <a href="management.html" data-ajax="false" style="box-shadow: none;text-shadow: none">
+                        <span>账号管理</span>
+                        <img src="./images/base/QQheader.png" alt="">
+                    </a>
+                </li>
+                <li><a href="#"><span>手机号码</span><p style="float: right;margin-right: 30px;line-height: 3.0em">183*****46</p></a></li>
+                <li style=""><a href="#"><span>QQ达人</span></a></li>
+                <li data-role="list-divity" style="background-color: #f9f9f9"></li>
+                <li><a href="#"><span>消息通知</span></a></li>
+                <li><a href="#"><span>聊天记录</span></a></li>
+                <li><a href="#"><span>空间清理</span></a></li>
+                <li data-role="list-divity" style="background-color: #f9f9f9"></li>
+                <li><a href="#"><span>账号、设备安全</span></a></li>
+                <li><a href="#"><span>联系人、隐私</span></a></li>
+                <li><a href="#"><span>辅助功能</span></a></li>
+                <li data-role="list-divity" style="background-color: #f9f9f9"></li>
+                <li><a href="#"><span>免流量特权</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

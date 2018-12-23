@@ -1,0 +1,60 @@
+/*联系人页面样式*/
+/*------头部--------*/
+#tj{
+    background-color: transparent;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+}
+#content{
+    margin-bottom:20px;
+}
+/*搜索框*/
+#search{
+    margin: 25px;
+}
+/*导航*/
+#scroller{
+    width: 100%;
+    height: 40px;
+    margin-bottom: -15px;
+}
+#scroller ul{
+    margin-left: -40px;
+}
+#scroller li{
+    list-style-type: none;
+    float: left;
+    /*去掉阴影*/
+    /*text-shadow: none;*/
+    font-size: 15px;
+    line-height: 40px;
+}
+#scroller li span{
+    margin-right: 10px;
+}
+/*联系人*/
+.ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head+body .ui-btn.ui-btn-a:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head+body .ui-btn-a.ui-focus, html head+body .ui-body-a.ui-focus {
+    -webkit-box-shadow: 0 0 12px #fff;
+    -moz-box-shadow: 0 0 12px #fff;
+    box-shadow: 0 0 12px #fff;
+}
+.listone .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: rgba(1, 1, 1, 0.01);
+}
+.ui-icon-carat-r:after {
+    background-image: url('../images/contact/箭头.png');
+}
+.ui-icon-carat-d:after {
+    background-image: url('../images/contact/箭头向下.png');
+}
+.tximg{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px !important;
+    margin: 8px 16px;
+}
+.listone ul li p{
+    font-size: 14px;
+}

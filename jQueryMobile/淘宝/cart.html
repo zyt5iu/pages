@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,width=device-width,initial-scale=1"/>
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./js/GWC.js"></script>
+</head>
+<body>
+<div class="srollview">
+    <!--头部-->
+    <div class="header">
+        <div class="leader"><a href="index.html"><img src="./images/向左箭头.png" alt=""></a></div>
+        <div class="gwc"><span>购物车(6)</span></div>
+        <div></div>
+    </div>
+    <!--content-->
+    <div class="content">
+        <div class="content-frist" id="headgoods">
+            <div class="title-shop">
+                <div class="shop-one"> <input class="check_all check" type="checkbox"/></div>
+                <div class="shop-two"><span></span></div>
+                <div class="shop-three">
+                    <a href="">
+                        <p class="name">三只松鼠旗舰店</p>
+                        <p class="arrow"></p>
+                    </a>
+                </div>
+                <div class="shop-four">
+                    <div class="state-cont"><p>领劵</p></div>
+                    <div class="state-cont" onclick="showdiv();" id="edit"><p class="edit">编辑</p></div>
+                    <div class="state-cont" onclick="hidediv();" style="display: none" id="success"><p class="success">完成</p></div>
+                    <div class="state-cont" onclick="showdiv();" style="display: none" id="edit1"><p class="success">编辑</p></div>
+                </div>
+            </div>
+            <div class="cuodan">
+                <div class="huodong"><img src="./images/huodong.png" alt=""></div><div class="box"><span>满1件,享包邮</span></div>
+            </div>
+            <div class="group">
+                <div class="shop-info">
+                    <div class="checkbox"><input class = "check_one check" type="checkbox"/></div>
+                    <div class="shop-info-img"><a href="#"><img src="./images/gouwuche_3.png" /></a></div>
+                    <div class="shop-info-text">
+                        <ul>
+                            <li style="font-weight: 400;margin-top: 0;"><p>【三只松鼠_零食大礼包1996g】休闲零食森林礼盒9袋装 D套餐</p></li>
+                            <li style="color: #999;">其他口味</li>
+                            <li  style="color: #FF5000;">限购20件</li>
+                            <li class="shop-price">
+                                <div style="color: #FF5000; float: left">
+                                    <p style="font-size: 16px; float: left;">￥ <span class="subtotle">99.00</span> </p>
+                                    <del class="item-price">￥198.00</del>
+                                </div>
+                                <div style="float: right; margin-right: 15px;font-size: 14px;">x1</div>
+                            </li>
+                        </ul>
+                        <table id="cartTable" class="edit_table" align='center' style="border-collapse:collapse;">
+                            <tr class="count">
+                                <td><a href="#" class="reduce">-</a></td>
+                                <td><span class="count_input">1</span></td>
+                                <td><a href="#" class="add">+</a></td>
+                                <td rowspan="2" class="delete" onclick="deletediv();"><span style="color: white;!important;">删除</span></td>
+                            </tr>
+                            <tr class="desc">
+                                <td class="describe" colspan="3"><span>米白色;M</span></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-frist">
+            <div class="shop">
+                <div class="title-shop">
+                    <div class="shop-one"> <input class="check_all check" type="checkbox"/></div>                    <div class="shop-two"><span></span></div>
+                    <div class="shop-three">
+                        <a href=""><p class="name">kuose阔色旗舰店</p><p class="arrow"></p></a>
+                    </div>
+                    <div class="shop-four">
+                        <div class="state-cont"><p>领劵</p></div><div class="state-cont"><p class="edit">编辑</p></div>
+                    </div>
+                </div>
+                <div class="cuodan">
+                    <div class="huodong"><img src="./images/huodong.png" alt=""></div><div class="box"><span>满1件,享包邮</span></div>
+                </div>
+            </div>
+            <div class="group">
+                <div class="shop-info">
+                    <div class="checkbox"><input class = "check_one check" type="checkbox"/></div>                    <div class="shop-info-img"><a href="#"><img src="./images/gouwuche_1.png" /></a></div>
+                    <div class="shop-info-text">
+                        <ul>
+                            <li style="font-weight: 400;margin-top: 0;"><p>阔色2017冬装新款韩版女装chic学生休闲纽扣小心机高腰半身裙</p></li>
+                            <li style="color: #999;">黑色;L</li>
+                            <li  style="color: #FF5000;">库存紧张</li>
+                            <li class="shop-price">
+                                <div style="color: #FF5000; float: left">
+                                    <p style="font-size: 16px; float: left;">￥99.00</p>
+                                    <del class="item-price">￥198.00</del>
+                                </div>
+                                <div style="float: right; margin-right: 15px;font-size: 14px;">x1</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shop-info">
+                    <div class="checkbox"><input class = "check_one check" type="checkbox"/></div>
+                    <div class="shop-info-img"><a href="#"><img src="./images/gouwuche_2.png" /></a></div>
+                    <div class="shop-info-text">
+                        <ul>
+                            <li style="font-weight: 400;margin-top: 0;"><p>阔色2017冬装新款韩版女装chic学生休闲纽扣小心机高腰半身裙</p></li>
+                            <li style="color: #999;">黑色;L</li>
+                            <li class="shop-price">
+                                <div style="color: #FF5000; float: left">
+                                    <p style="font-size: 16px; float: left;">￥100.00</p>
+                                    <del class="item-price">￥198.00</del>
+                                </div>
+                                <div style="float: right; margin-right: 15px;font-size: 14px;">x1</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class="f-fx">
+            <div class="all-check"><input class="check_all check" type="checkbox"/></div>
+            <div class="qx">全选</div>
+            <div class="pay">
+                <span class="hj">合计：￥<small style="font-size: 14px" id="priceTotle">0.<small>00</small></small></span>
+            </div>
+            <div class="btn"><span>结算(0)</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

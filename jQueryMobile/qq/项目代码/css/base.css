@@ -1,0 +1,39 @@
+/*面板样式*/
+/*为什么不放在panel样式里------跟样式引用有关*/
+#mypanel{
+   position: fixed;
+}
+/*主页链接面板样式*/
+.gerenxinxi img{
+    width: 40px;
+    height:40px;
+    border-radius: 50%;
+}
+/*添加*/
+#xl_menu img{
+    width: 40px;
+    height:40px;
+}
+/*底部*/
+/*#footer2{*/
+    /*box-shadow: none;!important;*/
+/*}*/
+#footer2 div ul li a img{
+    height:25px;
+    width:25px;
+}
+#footer2 ul li a{
+    background: rgba(255, 255, 255,0.3);
+}
+/*添加、更多、设置、找朋友页面头部样式*/
+/*头部按钮*/
+#header-back{
+    background-color: #ebebeb;
+    border: none;
+    font-size: 17px;
+    margin-left: -15px;
+    margin-top: -5px;
+    box-shadow: none;
+}
+
+

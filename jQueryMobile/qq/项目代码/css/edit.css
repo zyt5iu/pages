@@ -1,0 +1,32 @@
+#add-threelistview{
+    margin-top:40px;
+}
+#add-threelistview ul li a{
+    background-color: white;
+    min-height: 3.0em;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+#add-threelistview ul li span{
+    font-size: 15px;
+    font-weight: 600;
+    line-height:3.0em;
+    margin-left: 8px;
+}
+#add-threelistview ul li img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 30px;
+    margin-top: 8px;
+}
+#add-fristlistview .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after, .ui-btn-icon-notext:after {
+    background-color: white;
+}
+.ui-icon-carat-r:after {
+    background-image: url('../images/dynamic/箭头.png');
+}
