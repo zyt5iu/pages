@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title></title>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" type="text/css"/>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on("pageinit","#pageone",function(){ //当进入页面二时
+            $("li:last-child").on("taphold",function(){
+                $(".popup").show();
+//                alert("长按!");
+            }).on("swipeleft",function(){
+//                alert("向左滑动!");
+                $(".assistant").parent().css({right:"248px"});
+                event.stopPropagation();
+            });
+            $(".popup>.delete,.assistant>.delete").click(function(){
+                $(this).parents("li").hide();
+            });
+        });
+    </script>
+    <style type="text/css">
+       content{
+           margin-top: 50px;
+       }
+        li{
+            position: relative;
+        }
+        .popup{
+            position: absolute;
+            margin-left: -26px;
+            left: 50%;
+            top: -30px;
+            background: #000;
+            color: #fff;
+            padding: 5px;
+            display: none;
+        }
+        .assistant{
+            position: absolute;
+            right: -248px;
+            top:0;
+            background: #ff0000;
+            color: #ffff00;
+            height: 43px;
+            line-height: 43px;
+            display: flex;
+        }
+        .assistant span{
+            padding: 0 20px;
+            color: #fff;
+        }
+        .assistant .stick{
+            background: #ccc;
+        }
+        .assistant .unreade{
+            background: #ff7f50;
+        }
+        .assistant .delete{
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <h1>头部</h1>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">第一项</a></li>
+            <li><a href="#">第一项</a></li>
+            <li><a href="#">第一项</a></li>
+            <li class="last-child">
+                <a href="#">第四项</a>
+                <div  class="assistant">
+                    <span class="stick">置顶</span>
+                    <span class="unreade">标为未读</span>
+                    <span class="delete">删除</span>
+                </div>
+                <div class="popup"><span class="stick">置顶</span><span class="delete">删除</span></div>
+            </li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>尾部</h1>
+    </div>
+</div>
+</body>
+</html>

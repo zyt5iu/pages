@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字切换</title>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        #demo{
+            width: 100px;
+            height: 40px;
+            overflow:hidden;
+        }
+        ul{
+            list-style:none;
+        }
+        /*li{*/
+            /*line-height:30px;*/
+        /*}*/
+        /*淘宝头条结束*/
+    </style>
+</head>
+<body>
+<div id="demo">
+    <ul>
+        <li>11111 </li>
+        <li>22222</li>
+        <li>3333</li>
+        <li>44444</li>
+        <li>5555</li>
+        <li>66666</li>
+    </ul>
+
+</div>
+
+<script>
+    setInterval(function(){
+        var newList=$('#demo>ul :first').clone(true);
+        $('#demo>ul').append(newList);
+        $('#demo>ul :first').remove();
+    },2000);
+</script>
+</body>
+</html>

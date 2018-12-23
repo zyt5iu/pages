@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>测试点击增加一行</title>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#addTable").click(function(){
+                var tr="<tr><td><input type=\"checkbox\" class=\"check\"/>"+
+                        "</td><td>111</td><td>222</td><td>333</td></tr>";
+                $("#table1").append(tr);
+            });
+            $("#deleteTable").click(function(){
+                $(".check").eq(-1).parent().parent().remove();
+//                $(".check").each(function(i){
+//                    if($(this).is(':checked')==true)
+//                    {
+//                        $(this).parent().parent().remove();
+//                    }
+//                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div>
+    <table id="table1">
+        <tr>
+            <td><input type="checkbox" class="check"/></td>
+            <td>1122222</td>
+            <td>112222211111</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" class="check"/></td>
+            <td>1122222</td>
+            <td>112222211111</td>
+        </tr>
+    </table>
+    <input type="button" value="增加" id="addTable"/>
+    <input type="button" value="删除" id="deleteTable"/>
+
+</div>
+</body>
+</html>

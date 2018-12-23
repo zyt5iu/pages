@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>选项卡切换</title>
+    <style type="text/css">
+        *{padding:0;margin:0;font:normal 15px "微软雅黑";color:#000;}
+        ul{list-style-type: none;padding-left: 5px;margin-bottom: -2px}
+        .tab{width:500px;margin: 10px auto}
+        a{text-decoration: none;}
+        .title li{display: inline-block;border: 1px solid #999;border-bottom: 2px solid #a00;background: #fff;text-align: center;width: 60px;height: 30px;margin: 0 1px;line-height: 30px}
+        .title .active{border-top:2px solid #a00;border-bottom: 2px solid #fff; }
+        #content{margin: 0;border: 1px solid #ccc;border-top: 2px solid #a00;width: 300px}
+        #content div{display: none;padding: 10px 0}
+        #content .mod{display: block;}
+    </style>
+    <script type="text/javascript" src="../js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".title li").click(function(){
+//            var $this=$(this);
+//            alert($this.index());
+                $(this).addClass("active").siblings().removeClass("active");
+                $("#content .mod").eq($(".title li").index(this)).show().siblings("#content .mod").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="tab">
+    <ul class="title">
+        <li class="active"><a href="#">房产</a></li>
+        <li><a href="#">家居</a></li>
+        <li><a href="#">二手房</a></li>
+    </ul>
+    <div id="content">
+        <div class="mod">
+            <ul>
+                <li><a href="#">房产内容1</a> </li>
+                <li><a href="#">房产内容2</a> </li>
+                <li><a href="#">房产内容3</a> </li>
+            </ul>
+        </div>
+        <div class="mod" style="display: none">
+            <ul>
+                <li><a href="#">家居内容1</a> </li>
+                <li><a href="#">家居内容2</a> </li>
+                <li><a href="#">家居内容3</a> </li>
+            </ul>
+        </div>
+        <div class="mod" style="display: none">
+            <ul>
+                <li><a href="#">二手房内容1</a> </li>
+                <li><a href="#">二手房内容2</a> </li>
+                <li><a href="#">二手房内容3</a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

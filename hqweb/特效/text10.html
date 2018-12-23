@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8" />
+    <title>jquery返回顶部</title>
+    <style>
+        #go_top{position:fixed; LEFT: 85%;bottom:50px;}
+    </style>
+    <script src="../js/jquery-1.6.1.min.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--$(document).ready(function() {-->
+            <!--//首先将#back-to-top隐藏-->
+            <!--$("#back-to-top").hide();-->
+            <!--//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失-->
+            <!--$(function() {-->
+                <!--$(window).scroll(function() {-->
+                    <!--if ($(window).scrollTop() > 100) {-->
+<!--//                        $("#back-to-top").fadeIn(1500);-->
+                        <!--$("#back-to-top").show();-->
+                    <!--} else {-->
+<!--//                        $("#back-to-top").fadeOut(1500);-->
+                    <!--}-->
+                <!--});-->
+                <!--//当点击跳转链接后，回到页面顶部位置-->
+                <!--$("#back-to-top").click(function() {-->
+                    <!--$('body,html').animate({-->
+                        <!--scrollTop: 0-->
+                    <!--}, 1000);-->
+                    <!--return false;-->
+                <!--});-->
+            <!--});-->
+        <!--});-->
+    <!--</script>-->
+    <script>
+        $(document).ready(function(){
+            $("#go_top").hide();
+            $(function () {
+                //检测屏幕高度
+                var height=$(window).height();
+                //scroll() 方法为滚动事件
+                $(window).scroll(function(){
+                    if ($(window).scrollTop()>height){
+                        $("#go_top").fadeIn(500);
+                    }else{
+                        $("#go_top").fadeOut(500);
+                    }
+                });
+                $("#go_top").click(function(){
+                    $('body,html').animate({scrollTop:0},100);
+                    return false;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>1<br/>
+<div id="go_top">
+    <img src="../image/xl_1.png" alt="回到顶部图片">
+</div>
+</body>
+</html>

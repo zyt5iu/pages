@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>QQ首页</title>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $("#mypanel").trigger("updatalayout")
+    </script>
+    <script>
+        window.onload=function(){
+            var w = document.documentElement.clientWidth;
+            document.getElementById('xl').style.marginLeft = (w-150) + "px";
+
+            var h = document.documentElement.clientHeight;
+            if(h > 550){
+                document.getElementById('panel_header').style.marginTop = "40%";
+                document.getElementById('qq_panel_ul').style.marginTop = "60%";
+                document.getElementById('qq_panel_setting').style.marginTop = "180%";
+                document.getElementById('qq_panel_yj').style.marginTop = "180%";
+                document.getElementById('qq_panel_tq').style.marginTop = "163%";
+            }
+            h = h-137;
+            document.getElementById('main').style.width = w + "px";
+            document.getElementById('main').style.height = h + "px";
+            w = (w-99)/2;
+            document.getElementById('search').style.marginLeft = w + "px";
+            var span_num = document.getElementsByClassName('count');
+            for(var i = 0;i < span_num.length;i++){
+                var num = parseInt(document.getElementsByClassName('count')[i].innerHTML);
+                if(num > 9){
+                    document.getElementsByClassName('count')[i].style.width = 24 + "px";
+                }
+            }
+        }
+        $(document).ready(function(){
+            $("#xl_menu").click(function(event){
+                event.stopPropagation();
+                var ss = $("#xl").css("display");
+                if(ss == "none"){
+                    $("#xl").show();
+                }
+                else{
+                    $("#xl").fadeOut(200);
+                }
+            });
+            $(document).click(function(event){
+                var _con = $('#xl');
+                if(!_con.is(event.target) && _con.has(event.target).length === 0){
+                    $('#xl').fadeOut(200);
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $("div").bind("swiperight",function(event){
+                $("#qq_panel").panel("open");
+            });
+        });
+    </script>
+    <style type="text/css">
+        /*面板css样式*/
+        #mypanel{
+            background-image: url("../image/4.jpg");
+        }
+        #mypanelheader ul li{
+            list-style-type: none;
+        }
+        #mypanelheader img{
+            width: 30%;
+            height: 30%;
+            border-radius:50%;
+            margin-left: -10px;
+        }
+        .navbarpanel{
+            position: fixed;
+            left: 2px;
+            bottom: 30px;
+            width:70%;
+        }
+        .ui-navbar li .ui-btn {
+            font-size: 14px;
+        }
+        body, input, select, textarea, button, .ui-btn{
+            line-height: 1.6;
+        }
+
+        /*主页链接面板样式*/
+        .gerenxinxi img{
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+        }
+        /*添加*/
+        #xl_menu img{
+            width: 40px;
+            height:40px;
+        }
+        /*下拉菜单*/
+        #xl{
+            background-image: url("../image/xl_bj.png");
+            width: 150px;
+            height: 245px;
+            position: absolute;
+            /*margin-left:58%;*/
+            margin-left:10px;
+            display: none;
+        }
+        #xl li{
+            background-color: transparent;
+            border: none;
+        }
+        #xl li a{
+            background-color: transparent;
+            border: none;
+            margin-left: 20px;
+            box-shadow: none;
+            text-shadow: none;
+            margin-top: 8px;
+        }
+        #xl .ui-btn{
+            min-height: 1em;
+            padding: 0;
+            padding-left: 40px;
+        }
+        /*底部*/
+        .navbar{
+            width: 100%;
+        }
+        .navbar img{
+            width: 40%;
+            height:40%;
+            margin-bottom:-10px;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page">
+    <!--//我的面板-->
+    <div data-role="panel" id="mypanel">
+        <div id="mypanelheader">
+            <ul>
+                <li>
+                    <img src="../image/QQheader.png" alt="#">
+                    <font style="font-size: 30px;">留白</font>
+                </li>
+                <li><img src="../image/7.jpg" alt="#"/></li>
+                <li><h5>世界亦纷扰，你在，就很好</h5></li>
+            </ul>
+        </div>
+        <div>
+            <ul data-role="listview">
+                <li><a href="#" class="ui-btn  ui-icon-action ui-btn-icon-left" >了解会员特权</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-shop ui-btn-icon-left" >QQ钱包</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-heart ui-btn-icon-left" >个性装扮</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-tag ui-btn-icon-left" >我的收藏</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-camera ui-btn-icon-left" >我的相册</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-mail ui-btn-icon-left" >我的文件</a></li>
+                <li><a href="#" class="ui-btn  ui-icon-calendar ui-btn-icon-left" >我的日程</a></li>
+            </ul>
+        </div>
+        <div data-role="navbar" class="navbarpanel">
+            <ul>
+                <li><a href="#">设置</a></li>
+                <li><a href="#">夜间</a></li>
+                <li><a href="#">重庆-永川</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--//头部-->
+    <div data-role="header" data-fullscreen="true" data-position="fixed">
+        <a href="#mypanel" data-role="none" class="gerenxinxi"><img src="../image/QQheader.png" alt=""></a>
+        <h1>消息</h1>
+        <!--<a href="#" data-role="none" class="gerenxinxi"><img src="../image/加号.png" alt=""></a>-->
+        <a href="#" data-role="none" data-ajax="false" id="xl_menu"><img src="../image/加号.png"></a>
+        <div id="xl">
+            <ul data-role="listview">
+                <li style="margin-top: 20px;">
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_1.png"/>
+                        <h4>创建群聊</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_2.png"/>
+                        <h4>加好友/群</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_3.png"/>
+                        <h4>扫一扫</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_4.png"/>
+                        <h4>面对面快传</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_5.png"/>
+                        <h4>付款</h4>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn">
+                        <img src="../image/xl_6.png"/>
+                        <h4>拍摄</h4>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--//内容-->
+    <div data-role="content" style="margin-top: 30px">
+        <ul data-role="listview">
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+            <li><a href="#">我是一个粉刷匠，粉刷本领强！</a></li>
+        </ul>
+    </div>
+    <!--//尾部-->
+    <div data-role="footer" data-fullscreen="true" data-position="fixed">
+        <div data-role="navbar" class="navbar">
+            <ul>
+                <li><a href="index.html"  class="ui-state-disabled" data-ajax="false"><img src="../image/消息.png" alt="#"></a></li>
+                <li><a href="contact.html"  data-ajax="false"><img src="../image/联系人.png" alt="#"></a></li>
+                <li><a href="dongtai.html"  data-ajax="false"><img src="../image/动态.png" alt="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

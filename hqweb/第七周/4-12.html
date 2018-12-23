@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2">
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <title>对话框的高级属性</title>
+    <script type="text/javascript"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>对话框的高级属性</h1>
+    </div>
+    <div data-role="content">
+        <a href="#popupCloseRight" data-rel="popup" data-role="button">右边关闭</a>
+        <a href="#popupCloseLeft" data-rel="popup" data-role="button">左边关闭</a>
+        <a href="#popupUndismissible" data-rel="popup" data-role="button">禁用关闭</a>
+        <a href="#popupCloseRight1" data-rel="popup" data-role="button">另一种右边关闭</a>
+        <a href="#popupCloseLeft1" data-rel="popup" data-role="button">另一种左边关闭</a>
+        <a href="#popupUndismissible1" data-rel="popup" data-role="button">另一种禁用关闭</a>
+        <div data-role="popup" id="popupCloseRight" class="ui-content" style="max-width: 280px">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <p>点击右侧的叉叉可以关闭对话框</p>
+        </div>
+        <div data-role="popup" id="popupCloseLeft" class="ui-content" style="max-width: 280px">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+            <p>点击左侧的叉叉可以关闭对话框</p>
+        </div>
+        <div data-role="popup" id="popupUndismissible" class="ui-content" style="max-width: 280px" data-dismissible="false">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <p>点击屏幕的空白区域不可以关闭对话框</p>
+        </div>
+        <div data-role="popup" id="popupCloseRight1" class="ui-content" style="max-width: 280px">
+            <div data-role="header" data-theme="a" class="ui-corner-top">
+                <h1>空白标题</h1>
+            </div>
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <p>点击右侧的叉叉可以关闭对话框</p>
+        </div>
+        <div data-role="popup" id="popupCloseLeft1" class="ui-content" style="max-width: 280px">
+            <div data-role="header" data-theme="a" class="ui-corner-top">
+                <h1>空白标题</h1>
+            </div>
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Close</a>
+            <p>点击左侧的叉叉可以关闭对话框</p>
+        </div>
+        <div data-role="popup" id="popupUndismissible1" class="ui-content" style="max-width: 280px" data-dismissible="false">
+            <div data-role="header" data-theme="a" class="ui-corner-top">
+                <h1>这是一个对话框的标题</h1>
+            </div>
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <p>点击屏幕的空白区域不可以关闭对话框</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

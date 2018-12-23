@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/gouwuche.css">
+    <link rel="stylesheet" href="font1/iconfont.css">
+    <script src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="js/shopping.js"></script>
+    <title>购物车</title>
+</head>
+<body>
+    <header class="header">
+        <div class="back"></div>
+        <div class="title">
+            <span>购物车</span><span><span>(</span><span>2</span><span>)</span></span>
+        </div>
+        <div></div>
+    </header>
+    <!--头部结束-->
+    <div class="shopping">
+        <div class="shop-group-item">
+            <div class="shop-name">
+                <input type="checkbox" class="check goods-check shopCheck">
+                <h4><a href="#">以诺义浩专卖店</a></h4>
+                <span class="iconfont icon-icon"></span>
+                <span class="state-cont">领券</span>
+                <a href="#"><span class="edit">编辑</span></a>
+            </div>
+            <ul>
+                <li>
+                    <div class="shop-info">
+                    <input type="checkbox" class="check goods-check goodsCheck">
+                    <div class="shop-info-img"><a href="#"><img src="image/gouwuche_1.jpg" /></a></div>
+                    <div class="shop-info-text">
+                        <h4>华硕F441 U410 A441U A400U 14寸笔记本电脑键盘保护贴膜防尘垫套</h4>
+                        <div class="shop-brief"><span>半透银</span></div>
+                        <div class="shop-price">
+                            <div class="shop-pices">￥<b class="price">9.80</b></div>
+                            <div class="shop-arithmetic">
+                                <a href="#" class="minus">-</a>
+                                <span class="num" >1</span>
+                                <a href="#" class="plus">+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </li>
+            </ul>
+            <div class="shopPrice">本店总计：￥<span class="shop-total-amount ShopTotal">0.00</span></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="f-fx">
+            <div class="all-checkbox">
+                <input type="checkbox" class="check goods-check" id="AllCheck">
+            </div>
+            <div class="qx">全选</div>
+            <div class="pay">
+                <strong class="hj">合计：￥<i class="total" id="AllTotal">0.00</i></strong>
+            </div>
+            <div class="btn">
+                <p>
+                    <span>结算</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

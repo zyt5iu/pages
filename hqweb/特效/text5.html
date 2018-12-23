@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定时间倒计时</title>
+</head>
+<body>
+<div>
+    <span id="h"></span>
+    <span class="dot">:</span>
+    <span id="m"></span>
+    <span class="dot">:</span>
+    <span id="s"></span>
+</div>
+</body>
+<script src="../js/jquery-1.11.3.js"></script>
+<script>
+    var time=1800000;
+    setInterval(function () {
+        time = time-1000;
+        var hour = parseInt(time / 1000 / 60 / 60 % 24);
+        var minute = parseInt(time / 1000 / 60 % 60);
+        var seconds = parseInt(time / 1000 % 60);
+        var h = parseInt($("#h").html());
+        var m = parseInt($("#m").html());
+        var s = parseInt($("#s").html());
+        if(h <= 10){
+            $("#h").html("0" + hour);
+        }
+        else{
+            $('#h').html(hour);
+        }
+        if(m < 10 && m > 0){
+            $("#m").html("0" + minute);
+        }
+        else{
+            $('#m').html(minute);
+        }
+        if(s <= 10 && s > 0){
+            $("#s").html("0" + seconds);
+        }
+        else{
+            $('#s').html(seconds);
+        }
+    }, 1000);
+</script>
+</html>

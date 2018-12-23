@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="`width=device-width,initial-scale=1">
+    <title>QQ登录界面</title>
+    <link rel="stylesheet" href="../../hqweb/css/jquery.mobile-1.4.5.min.css"/>
+    <script src="../../hqweb/js/jquery-1.11.3.js"></script>
+    <script src="../../hqweb/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+        function but_click(){
+            var temp1=$("#zhanghao").val();
+            if(temp1=="账号："){
+                alert("请输入QQ账号！");
+            }
+            else{
+                var zhanghao=temp1.substring(3,temp1.length);
+                var temp2=$("#mima").val();
+                if(temp2=="密码："){
+                    alert("请输入密码！");
+                }
+                else{
+                    var mima=temp2.substring(3,temp2.length);
+                    alert("提交成功"+"你的QQ账号为"+zhanghao+"你的密码为："+mima);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<!--框架-->
+<div data-role="page">
+    <div data-role="content">
+        <img src="../../hqweb/image/Q.jpg" alt="" style="width: 50%;margin-left: 25%"/>
+        <form action="#" method="post">
+            <input type="text" name="zhanghao" id="zhanghao" value="账号："/>
+            <input type="text" name="mima" id="mima" value="密码："/>
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="../../hqweb/第九周QQ/index.html" data-role="button" data-theme="f" id="login" onclick="but_click();">登录 </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" data-role="button" data-theme="e" id="forget">忘记密码</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

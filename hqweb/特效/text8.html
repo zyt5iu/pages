@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空input里面的数据</title>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script>
+    function but_click(){
+        $("#delete").click(function(){
+            $("#username").val("");
+        });
+        //当input获取焦点时，将你分配的值赋给它
+        $("#username").focus(function(){
+            if($(this).val()==""){
+                $(this).val("");
+            }
+        });
+    }
+    </script>
+</head>
+<body>
+    <input type="text" class="username" id="username" placeholder="手机号/邮箱/会员名" value="">
+    <button id="delete" onclick="but_click();">删除</button>
+
+</body>
+</html>

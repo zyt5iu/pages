@@ -1,0 +1,41 @@
+<html>
+<head>
+    <!--获取当前时间-->
+    <script type="text/javascript">
+        function startTime()
+        {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            // add a zero in front of numbers<10
+            m=checkTime(m);
+            s=checkTime(s);
+            document.getElementById('h').innerHTML=h;
+            document.getElementById('m').innerHTML=m;
+            document.getElementById('s').innerHTML=s;
+
+            t=setTimeout('startTime()',500)
+        }
+
+        function checkTime(i)
+        {
+            if (i<10)
+            {i="0" + i}
+            return i
+        }
+    </script>
+</head>
+
+<body onload="startTime()">
+
+<div>
+    <span id="h"></span>
+    <span class="dot">:</span>
+    <span id="m"></span>
+    <span class="dot">:</span>
+    <span id="s"></span>
+</div>
+
+</body>
+</html>

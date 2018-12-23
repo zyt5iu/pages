@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>分栏布局</title>
+    <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css" type="text/css"/>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $top_height=$("div[data-role-header]").height();
+            $bottom_height=$("div[data-role-footer]").height();
+            $body_height=$(window).height()-$top_height-$bottom_height;
+            $body_height=$body_height-10;
+            $body_height=$body_height+"px";
+            $("div[data-role=metro_body]").width("100%").height($body_height);
+        });
+    </script>
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        .metro_color1{background-color: #ef9c00;}
+        .metro_color2{background-color: #2ebf1b;}
+        .metro_color3{background-color: #00aeef;}
+        .metro_color4{background-color: #ed2b84;}
+        .metro_color5{background-color: blanchedalmond;}
+        .metro_color6{background-color: powderblue;}
+        .metro_rec{width: 48%;height: 30%;float: left;margin: 1%;}
+    </style>
+</head>
+<body>
+<div data-role="page" data-theme="a">
+    <div data-role="header" data-position="fixed" data-fullscreen="true">
+        <h1>头部</h1>
+    </div>
+    <div data-role="content">
+        <div data-role="metro_body">
+            <div class="metro_color1 metro_rec"></div>
+            <div class="metro_color2 metro_rec"></div>
+            <div class="metro_color3 metro_rec"></div>
+            <div class="metro_color4 metro_rec"></div>
+            <div class="metro_color5 metro_rec"></div>
+            <div class="metro_color6 metro_rec"></div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>尾部</h1>
+    </div>
+</div>
+</body>
+</html>

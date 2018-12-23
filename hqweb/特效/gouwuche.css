@@ -1,0 +1,276 @@
+html *{
+    margin:0;
+    padding:0;
+    border:0;
+    list-style:none;
+    font-style:normal;
+}
+body{
+    font-size:14px;
+    color:#333;
+    background:#f2f2f2;
+}
+a, a.link{
+    color:#666;
+    text-decoration:none;
+    font-weight:500;
+}
+a, a.link:hover{
+    color:#666;
+}
+.header{
+    width: 100%;
+    height: 3.5rem;
+    background: #fff;
+    display: flex;
+    border-bottom: 1px solid #e7e7e7;
+}
+.header div{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.back{
+    text-align: left;
+    background: url(../image/fanhui.png)1rem center no-repeat;
+    background-size: 1rem;
+}
+.title {
+    font-size: 20px;
+    display: flex;
+    text-align: left;
+}
+.shopping{
+    clear:both;
+    overflow:hidden;
+    height:auto;
+    padding-bottom: 60px;
+}
+.shop-group-item{
+    margin-bottom:5px;
+}
+.shop-group-item ul li{
+    border-bottom:1px solid #fff;
+}
+.shop-group-item ul li:last-child{
+    border-bottom:none;
+}
+
+.shop-name{
+    background:#fff;
+    height: 3rem;
+    line-height: 3rem;
+    padding:0 15px;
+    position:relative;}
+.shop-name h4{
+    float:left;
+    font-size:14px;
+    background:url(../image/gouwuche_tianmao.png) no-repeat left center;
+    background-size:20px 20px;
+    padding-left:25px;
+    margin-left: 28px;
+}
+
+.state-cont{
+    position: absolute;
+    right: 15%;
+}
+.edit{
+    position: absolute;
+    right: 1%;
+}
+
+
+.shop-info{
+    background:#f5f5f5;
+    height: 8rem;
+    padding:0 15px;
+    position:relative;}
+.shop-info .checkbox{
+    background:url(../image/yuanquan.png) no-repeat left center;
+    background-size:20px 20px;
+    position:absolute;
+    top:50%;
+    left:15px;
+    margin-top:-60px;
+    width:20px;
+    height:120px;
+}
+.shop-info .checkbox1{
+    background:url(../image/yuanquan.png) no-repeat left center;
+    background-size:20px 20px;
+    position:absolute;
+    top:50%;
+    left:15px;
+    margin-top:-60px;
+    width:20px;
+    height:120px;
+}
+.shop-info .shop-info-img{
+    position:absolute;
+    top:15px;
+    left:45px;
+    width:90px;
+    height:90px;
+}
+.shop-info .shop-info-img img{
+    width:100%;
+    height:100%;
+}
+.shop-info .shop-info-text{
+    margin-left:130px;
+    padding:15px 0;
+}
+.shop-info .shop-info-text h4{
+    font-size:14px;
+    overflow: hidden;
+    font-weight: 300;
+}
+.shop-brief{
+    height: 2rem;
+    line-height: 2rem;
+    font-size:12px;
+    color:#81838e;
+}
+.shop-brief span{
+    display:inline-block;
+    margin-right:8px;
+}
+.shop-price{
+    height:24px;
+    line-height:24px;
+    position:relative;
+}
+.shop-price .shop-pices {
+    color:#f50;
+    font-size:16px;
+}
+.shop-arithmetic{
+    position:absolute;
+    right:0;
+    top:0;
+    width:84px;
+    box-sizing:border-box;
+    height:100%;
+    border:1px solid #e0e0e0;
+}
+.shop-arithmetic a{
+    display:inline-block;
+    width:23px;
+    height:22px;
+    line-height:22px;
+    text-align:center;
+    background:#fff;
+    font-size:16px;
+}
+.shop-arithmetic .minus{
+    border-right:1px solid #e0e0e0;
+}
+.shop-arithmetic .plus{
+    border-left:1px solid #e0e0e0;
+}
+.shop-arithmetic .num{
+    width:32px;
+    text-align:center;
+    border:none;
+    display: inline-block;
+    height:100%;
+    box-sizing:border-box;
+    margin:0 -6px;
+}
+.shopPrice{
+    background:#fff;
+    height:35px;
+    line-height:35px;
+    padding:0 15px;
+    text-align:right;
+}
+.shopPrice span{
+    color:#f50;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    outline: none;
+}
+input.check {
+    background: url(../image/yuanquan.png) no-repeat center left;
+    background-size: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -18px;
+    width: 20px;
+    height: 35px;
+}
+input.check:checked {
+    background: url(../image/yuanquan_c.png) no-repeat center left;
+    background-size: 20px 20px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -18px;
+    width: 20px;
+    height: 35px;
+}
+
+
+.footer {
+    height: 3.5rem;
+    margin-top: .8rem;
+    cursor: pointer;
+}
+.footer .f-fx {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: .8rem solid transparent;
+    z-index: 2;
+    background-color: #FFF;
+    border-top: none!important;
+    width: 100%;
+    height: 3.5rem;
+    border-top: 1px solid #e7e7e7;
+    display: flex;
+}
+.footer .ft-cb {
+    width: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.footer .qx {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    padding-left: 40px;
+}
+.footer .pay {
+    flex: 1;
+    align-items: center;
+    display: flex;
+}
+.footer .pay strong {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+.total{
+    color: #f50;
+}
+.footer .btn {
+    width: 7rem;
+    color: #fff;
+    background: #f50;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: .32rem;
+}
