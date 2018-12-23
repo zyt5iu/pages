@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        main {
+            width: 1000px;
+            height: 2400px;
+            /*background: url("images/tb_bg.jpg") center top no-repeat;*/
+            background: url("img/big/bg-4.jpg") center top ;
+            margin: 0 auto;
+        }
+        div.adv {
+            position: absolute;
+            top: 90px;
+            margin-left: -138px;
+            width: 123px;
+            height: 290px;
+            background: url("images/leftAdv.jpg") center top no-repeat;
+        }
+
+        div.adv span {
+            position: absolute;
+            width: 123px;
+            line-height: 20px;
+            bottom: 0;
+            background-color: #0A246A;
+            color: white;
+            text-align: center;
+            font-size: 12px;
+            cursor: default;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="adv">
+        <span class="close">关闭</span>
+    </div>
+</main>
+<script>
+    var adv=document.querySelector('div.adv');
+    var close=document.querySelector('div.adv span');
+    var startTop=adv.offsetTop;
+    var timer = null;
+    window.onscroll= function () {
+        clearInterval(timer);
+        timer=setInterval(function () {
+            var endTop=adv.offsetTop;
+            var scrollTop=document.documentElement.scrollTop;
+            var step=(scrollTop+startTop-endTop)/10;
+            step=step>0?Math.ceil(step):Math.floor(step);
+            if(step!=0){
+                adv.style.top=endTop+step+'px';
+            }else{
+                clearInterval(timer);
+            }
+        },10)
+    };
+    close.addEventListener('click',function(){
+        adv.parentNode.removeChild(adv);
+    })
+</script>
+</body>
+</html>

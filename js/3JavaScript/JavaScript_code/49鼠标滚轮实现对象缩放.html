@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            /*background-color: #3aac56;*/
+        }
+
+        img {
+           position: absolute;
+        }
+    </style>
+</head>
+<body>
+<img id="image" src="img/scrollImg/blok-3.jpg" width="400" alt=""/>
+
+<script>
+    var oImg = document.getElementById('image');
+    var winW = document.documentElement.offsetWidth;
+    oImg.style.left = (winW-oImg.offsetWidth)/2 + "px";
+    oImg.addEventListener('mousewheel',function (e) {
+        if (e.wheelDelta>0 && oImg.width<1000){
+            oImg.style.width = oImg.offsetWidth+10+"px";
+            oImg.style.width = oImg.offsetWidth+10+"px";
+            oImg.style.left = (winW-oImg.offsetWidth)/2 + "px";
+        }else if (e.wheelDelta<0 && oImg.width>400){
+            oImg.style.width = oImg.offsetWidth-10+"px";
+            oImg.style.left = (winW-oImg.offsetWidth)/2 + "px";
+        }
+    },false)
+</script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            width: 100%;
+            background-color: #f5f5f1;
+        }
+        #nav{
+            width: 800px;
+            height: 2px;
+            position: relative;
+            background-color: #cdcdcd;
+            margin: 40px auto;
+        }
+        #nav_bar{
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            top: -6px;
+        }
+        #container{
+            width: 800px;
+            margin: auto;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        ol{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #content{
+            width: 800px;
+            position: absolute;
+        }
+        #content ol li{
+            width: 800px;
+        }
+        #content h2{
+            font-size: 65px;
+            font-weight: 500;
+            margin: 30px 0 20px 0;
+        }
+        #content em{
+            font-size: 20px;
+        }
+        #content p{
+            color: #888;
+            line-height: 30px;
+        }
+
+    </style>
+    <script>
+        window.onload= function () {
+            var oNav=document.getElementById('nav');
+            var oNav_bar=document.getElementById('nav_bar');
+            var oContent=document.getElementById('content');
+            var oContainer=document.getElementById('container');
+
+            var disX=0;
+            oNav_bar.onmousedown= function (ev) {
+                var oEvent=ev||event;
+                disX=oEvent.clientX-oNav_bar.offsetLeft;
+                document.onmousemove= function (ev) {
+                    var oEvent=ev||event;
+                    var l=oEvent.clientX-disX;
+                    if(l<0){
+                        l=0;
+                    }
+                    else if(l>oNav.offsetWidth-oNav_bar.offsetWidth){
+                        l=oNav.offsetWidth-oNav_bar.offsetWidth;
+                    }
+                    oNav_bar.style.left=l+'px';
+                    var scale=l/(oNav.offsetWidth-oNav_bar.offsetWidth);
+                    document.title=scale;
+                    oContent.style.top=-scale*(oContent.offsetHeight-oContainer.offsetHeight)+'px';
+                };
+                document.onmouseup= function () {
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+                return false;
+            };
+        }
+    </script>
+</head>
+<body>
+<div id="nav">
+    <div id="nav_bar"></div>
+</div>
+<div id="container">
+    <div id="content">
+        <ol>
+            <li class="selected" data-date="16/01/2014">
+                <h2>Horizontal Timeline</h2>
+                <em>January 16th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
+            <li data-date="28/02/2014">
+                <h2>Event title here</h2>
+                <em>February 28th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
+            <li data-date="20/04/2014">
+                <h2>Event title here</h2>
+                <em>March 20th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
+            <li data-date="20/05/2014">
+                <h2>Event title here</h2>
+                <em>May 25th, 2014</em>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+                </p>
+            </li>
+        </ol>
+    </div>
+</div>
+</body>
+</html>

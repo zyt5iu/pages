@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 500px;
+            margin: 100px auto 0;
+            border: 1px solid #0a90fb;
+            padding: 20px;
+            position: relative;
+        }
+        div.box div{
+            height: 0;
+            overflow: hidden;
+            transition: height 2s;
+        }
+        div.box div.high{
+            height: 100px;
+        }
+        div.box button{
+            position: absolute;
+            width: 80px;
+            left: 240px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>《重生》</p>
+    <p>如果有天可以让你选择，你的人生从来或继续</p>
+    <div id="toggle">
+        <p>我不知道你的答案最后是真情或假意</p>
+        <p>我希望，从南天到名利，所有你想要的 ，都别随风去</p>
+    </div>
+    <button id="btn">更多内容</button>
+</div>
+</body>
+<script>
+    var btn=document.getElementById('btn');
+    var toggle=document.getElementById('toggle');
+    btn.onclick=function(){
+        toggle.classList.toggle('high');
+        setTimeout(function(){
+            btn.innerText=(btn.innerHTML=='更多内容')?'收起':'更多内容';
+        },2000);
+    }
+</script>
+</html>

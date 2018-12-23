@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #100d21;
+        }
+
+        div.container {
+            width: 950px;
+            margin: 100px auto 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.left, div.right {
+            width: 460px;
+            height: 270px;
+            position: relative;
+        }
+
+        div.left img {
+            position: absolute;
+        }
+
+        div.left img:first-child {
+            opacity: .4;
+        }
+
+        div.left img:nth-child(2) {
+            /*(x1,x2,y1,y2)*/
+            clip: rect(0, 200px, 150px, 0);
+        }
+
+        div.ctrl {
+            position: absolute;
+            width: 200px;
+            height: 150px;
+            top: 0;
+            left: 0;
+            border: white solid 1px;
+            box-sizing: border-box;
+            cursor: move;
+        }
+
+        div.ctrl span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+        }
+
+        div.ctrl span:nth-child(1) {
+            left: -5px;
+            top: -5px;
+            cursor: nw-resize;
+        }
+
+        div.ctrl span:nth-child(2) {
+            left: calc(50% - 5px);
+            top: -5px;
+            cursor: n-resize;
+        }
+
+        div.ctrl span:nth-child(3) {
+            right: -5px;
+            top: -5px;
+            cursor: ne-resize;
+        }
+
+        div.ctrl span:nth-child(4) {
+            right: -5px;
+            top: calc(50% - 5px);
+            cursor: e-resize;
+        }
+
+        div.ctrl span:nth-child(5) {
+            right: -5px;
+            bottom: -5px;
+            cursor: se-resize;
+        }
+
+        div.ctrl span:nth-child(6) {
+            left: calc(50% - 5px);
+            bottom: -5px;
+            cursor: s-resize;
+        }
+
+        div.ctrl span:nth-child(7) {
+            left: -5px;
+            bottom: -5px;
+            cursor: sw-resize;
+        }
+
+        div.ctrl span:nth-child(8) {
+            left: -5px;
+            bottom: calc(50% - 5px);
+            cursor: e-resize;
+        }
+
+        div.right img {
+            position: absolute;
+            clip: rect(0, 200px, 150px, 0);
+        }
+    </style>
+</head>
+<body onselectstart="return false;">
+<div class="container" id="box">
+    <div class="left">
+        <img src="img/scrollImg/blok-3.jpg" alt="">
+        <img class="clip" src="img/scrollImg/blok-3.jpg" alt="">
+        <div class="ctrl">
+            <span class="leftup"></span>
+            <span class="up"></span>
+            <span class="rightup"></span>
+            <span class="right"></span>
+            <span class="rightdown"></span>
+            <span class="down"></span>
+            <span class="leftdown"></span>
+            <span class="left"></span>
+        </div>
+    </div>
+    <div class="right">
+        <img src="img/scrollImg/blok-3.jpg" alt="">
+    </div>
+</div>
+<script>
+    var oBox=document.getElementById('box');
+    var oLeft=box.querySelector('div.left');
+    var oImg2=box.querySelector('img.clip');
+    var oDiv=oLeft.querySelector('div.ctrl');
+    var aSpans=oDiv.querySelectorAll('span');
+    var oImg3=oBox.querySelector('div.right img');
+    var data={};
+    data.width=oDiv.offsetWidth;
+    data.height=oDiv.offsetHeight;
+    data.left=oDiv.offsetLeft;
+    data.top=oDiv.offsetTop;
+    data.right=data.left+data.width;
+    data.down=data.top+data.height;
+    var oLeft_top=oLeft.offsetTop;
+    var oLeft_left=oLeft.offsetLeft;
+    var oLeft_width=oLeft.offsetWidth;
+    var oLeft_height=oLeft.offsetHeight;
+    box.onmousedown=function(e){
+        var target= e.target;
+        if(target.nodeName=='DIV'){
+            data.width=oDiv.offsetWidth;
+            data.height=oDiv.offsetHeight;
+            var disX= e.pageX-oDiv.offsetLeft-oLeft_left;
+            var disY= e.pageY-oDiv.offsetTop-oLeft_top;
+            document.onmousemove=function(e){
+                data.top= e.pageY-oLeft_top-disY;
+                data.left= e.pageX-oLeft_left-disX;
+                data.left=Math.min(Math.max(data.left,0),oLeft_width-data.width);
+                data.top=Math.min(Math.max(data.top,0),oLeft_height-data.height);
+                data.right=data.left+data.width;
+                data.down=data.top+data.height;
+                clip();
+            };
+            mouseup();
+        }else if(target.nodeName=='SPAN'){
+            document.onmousemove=function(e){
+                var classN=target.className;
+                switch (classN){
+                    case 'up':
+                        up(e);
+                        break;
+                    case 'right':
+                        right(e);
+                        break;
+                    case 'down':
+                        down(e);
+                        break;
+                    case 'left':
+                        left(e);
+                        break;
+                    case 'leftup':
+                        left(e);
+                        up(e);
+                        break;
+                    case 'leftdown':
+                        left(e);
+                        down(e);
+                        break;
+                    case 'rightup':
+                        right(e);
+                        up(e);
+                        break;
+                    case 'rightdown':
+                        right(e);
+                        down(e);
+                        break;
+                }
+            };
+            mouseup();
+        }
+    };
+    function up(e){
+        data.top = Math.min(Math.max(e.pageY - oLeft_top, 0), oLeft_top);
+        oDiv.style.height= data.down-data.top+'px';
+        clip();
+    }
+    function right(e){
+        data.width= Math.min(Math.max( e.pageX-data.left-oLeft_left,0), oLeft_width-data.left);
+        oDiv.style.width= data.width+'px';
+        data.right=Math.min(Math.max(data.left+data.width, 0), oLeft_width);
+        clip();
+    }
+    function down(e){
+        data.height = Math.min(Math.max( e.pageY-data.top-oLeft_top,0), oLeft_height-data.top);
+        oDiv.style.height= data.height+'px';
+        data.down=Math.min(data.top+data.height,oLeft_height);
+        clip();
+    }
+    function left(e){
+        data.left=Math.min(Math.max(e.pageX-oLeft_left, 0), oLeft_left);
+        oDiv.style.width= data.right-data.left+'px';
+        oDiv.style.width= Math.min(data.right-data.left,oLeft_width)+'px';
+        clip();
+    }
+    function clip(){
+        oDiv.style.left=data.left+"px";
+        oDiv.style.top=data.top+"px";
+        var rect="rect("+data.top+"px, "+data.right+"px, "+data.down+"px, "+data.left+"px)";
+        oImg2.style.clip=rect;
+        oImg3.style.clip=rect;
+        oImg3.style.left=-data.left+"px";
+        oImg3.style.top=-data.top+"px";
+    }
+    function mouseup(){
+        document.onmouseup=function(){
+            this.onmousemove=null;
+            this.onmouseup=null
+        }
+    }
+</script>
+
+</body>
+</html>

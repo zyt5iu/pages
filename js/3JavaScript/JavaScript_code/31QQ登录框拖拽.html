@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #div1{
+            width: 1200px;
+            height: 600px;
+            background-color: #5a855a;
+            /*margin: auto;*/
+            position: relative;
+        }
+        #div2{
+            width: 300px;
+            height:250px;
+            /*padding: 0 20px;*/
+            text-align: center;
+            border: 1px solid #cdcdcd;
+            background-color: #7a9dca;
+            position: absolute;
+        }
+        #div2 label{
+            display: block;
+            height: 50px;
+        }
+        #div2 label input{
+            height: 25px;
+            width: 200px;
+        }
+        #div2 button{
+            width: 200px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            letter-spacing: .1em;
+            margin-top: 10px;
+        }
+        .box{
+            border:1px dashed white;
+            position:absolute;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv2=document.getElementById('div2');
+            var oDiv=document.getElementById('div1');
+
+            var disX=0;
+            var disY=0;
+
+            oDiv2.onmousedown= function (ev) {
+                var oEvent=ev||event;
+                disX=oEvent.clientX-oDiv2.offsetLeft;
+                disY=oEvent.clientY-oDiv2.offsetTop;
+
+                var oBox=document.createElement('div');
+
+                oBox.className='box';
+                oBox.style.width=oDiv2.offsetWidth-2+'px';
+                oBox.style.height=oDiv2.offsetHeight-2+'px';
+
+                oBox.style.left=oDiv2.offsetLeft+'px';
+                oBox.style.top=oDiv2.offsetTop+'px';
+
+                oDiv.appendChild(oBox);
+
+                document.onmousemove= function (ev) {
+                    var oEvent=ev||event;
+                    var l=oEvent.clientX-disX;
+                    var t=oEvent.clientY-disY;
+                    if(l<0){
+                        l=0
+                    }
+                    else if(l>oDiv.offsetWidth-oDiv2.offsetWidth){
+                        l=oDiv.offsetWidth-oDiv2.offsetWidth;
+                    }
+                    if(t<0){
+                        t=0
+                    }
+                    else if(t>oDiv.offsetHeight-oDiv2.offsetHeight){
+                        t=oDiv.offsetHeight-oDiv2.offsetHeight;
+                    }
+
+                    oBox.style.left=l+'px';
+                    oBox.style.top=t+'px';
+                };
+
+                document.onmouseup=function ()
+                {
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+
+                    oDiv2.style.left=oBox.offsetLeft+'px';
+                    oDiv2.style.top=oBox.offsetTop+'px';
+
+                    oDiv.removeChild(oBox);
+                };
+
+                return false;
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <h2>登&nbsp;录</h2>
+        <label>帐号：<input type="text"></label>
+        <label>密码：<input type="password"></label>
+        <button type="submit">立即登录</button>
+    </div>
+</div>
+</body>
+</html>

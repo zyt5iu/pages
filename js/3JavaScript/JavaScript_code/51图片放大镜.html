@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 1020px;
+            margin: 50px auto 0;
+            display: flex;
+        }
+        div.left{
+            width: 402px;
+            height: 252px;
+            border: 1px solid red;
+            position: relative;
+            margin-right: 15px;
+        }
+        div.left img{
+            width: 100%;
+            height: 100%;
+        }
+        div.left span{
+            position: absolute;
+            border: 1px solid white;
+            background-color: rgba(24, 255, 187, 0.5);
+            box-sizing: border-box;
+            width: 100px;
+            height: 62px;
+            top:0;
+            left: 0;
+            display: none;
+            cursor: default;
+        }
+        div.box div.right{
+            width: 602px;
+            height: 372px;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+        div.box div.right img{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="left">
+        <img src="img/big/bg-4.jpg" alt="">
+        <span></span>
+    </div>
+    <div class="right">
+        <img src="img/big/bg-4.jpg" alt="">
+    </div>
+    <!--比例系数实现-->
+</div>
+</body>
+<script>
+    var oBox=document.getElementById('box');
+    var oLeft=oBox.querySelector('div.left');
+    var oRight=oBox.querySelector('div.right');
+    var oBig=oBox.querySelector('div.right img');
+    var span=oBox.querySelector('span');
+    var l,t;
+    var flag=false;
+    oLeft.onmouseover= function (e) {
+        span.style.display='block';
+        oRight.style.display='block';
+        //    缩放系数
+        var scaleX=(oBig.offsetWidth-oRight.offsetWidth)/(oLeft.offsetWidth-span.offsetWidth);
+        var scaleY=(oBig.offsetHeight-oRight.offsetHeight)/(oLeft.offsetHeight-span.offsetHeight);
+        this.onmousemove= function (e) {
+            var ev=e||event;
+            //        让span跟着鼠标
+            l=Math.min(Math.max(ev.pageX-this.offsetLeft-span.offsetWidth/2,0),this.offsetWidth-span.offsetWidth);
+            t=Math.min(Math.max(ev.pageY-this.offsetTop-span.offsetHeight/2,0),this.offsetHeight-span.offsetHeight);
+            span.style.left= l+"px";
+            span.style.top= t+"px";
+            oBig.style.left=-l*scaleX+"px";
+            oBig.style.top=-t*scaleY+"px";
+        }
+    };
+    oLeft.onmouseout= function () {
+        span.style.display='none';
+        oRight.style.display='none';
+        this.onmousemove=null;
+//        还原为初态
+        oBig.style.
+                left="";
+        oBig.style.top="";
+
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        #div1{
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            margin: 40px;
+            background-color: #b2dba1;
+        }
+
+    </style>
+    <script>
+        window.onload= function () {
+            var oDiv1=document.getElementById('div1');
+            console.log('offsetLeft:'+oDiv1.offsetLeft);
+            console.log('offsetTop:'+oDiv1.offsetTop);
+            console.log('offsetWidth:'+oDiv1.offsetWidth);
+            console.log('offsetHeight:'+oDiv1.offsetHeight);
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <h3>300*300</h3>
+    <h3>padding:10px</h3>
+    <h3>margin:40px</h3>
+    <p>offsetLeft: </p>
+    <p>offsetTop:</p>
+    <p>offsetWidth:</p>
+    <p>offsetHeight:</p>
+</div>
+</body>
+</html>

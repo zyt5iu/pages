@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 800px;
+            background-color: #f5f5f5;
+            display: flex;
+            position: relative;
+            margin: 50px auto;
+        }
+        #box dl dt{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            background-color: blanchedalmond;
+            text-align: center;
+            border-bottom: 1px solid #e9e9e9;
+            cursor: pointer;
+        }
+        #box dl dd{
+            display: none;
+            text-indent: 2em;
+            line-height: 25px;
+        }
+        #box dl.active dt{
+            background-color: #fffcef;
+            border: 1px solid #e9e9e9;
+            border-bottom: none;
+        }
+        #box dl.active dd{
+            display: block;
+            position: absolute;
+            width: 768px;
+            left: 0;
+            background-color: #fffcef;
+            border: 1px solid #e9e9e9;
+            border-top: none;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <dl class="active">
+        <dt>生活</dt>
+        <dd>
+            过好当下的生活，享受人生的快乐，人生到世来一回，东奔西跑去挣钱，为什么总是心高，为什么越活越累。酸甜苦辣尝个遍，不管到那说不算。吃苦受累没人痛，没有文化就不行。翻山越岭去爬岥，干的都是体力活， c，老板立将你刷了，想要生存多挣钱，走到那里別讨贤，没有本事別强，诚实做事最理想。人生就该这样活，神仙拿你都没辙。快快乐乐度终生，没留遗憾最轻松。人活一世不轻松，累死累活争西东。不吃不喝攒钱财，闭眼以后两手空。留下金山整一座，只换儿女哭几声，活着他们不行孝，死后大办呈英雄，风风雨雨一辈子，坎坎坷坷过一生，大起大落经历过，大悲大喜感受过，就算万般的不易，也要自己去面对，千般难自己打住，万般累自己挺住。        </dd>
+    </dl>
+    <dl>
+        <dt>感悟</dt>
+        <dd>
+            感悟红尘何所愿，浅笑淡然求心安：看淡世事沧桑，内心安然无羕。过去已去，只堪回味；未来还没来，不能预知是否精彩；最好的就是把握现在，守好心，走好路，珍惜最真的情感，感受最近的幸福，享受最美的心情，无论细水长流还是波涛澎湃。人生原本无常，心安即是归处，好好的活着，别在乎太多。
+            感悟红尘何所愿，浅笑淡然求心安：看淡世事沧桑，内心安然无羕。过去已去，只堪回味；未来还没来，不能预知是否精彩；最好的就是把握现在，守好心，走好路，珍惜最真的情感，感受最近的幸福，享受最美的心情，无论细水长流还是波涛澎湃。人生原本无常，心安即是归处，好好的活着，别在乎太多。
+        </dd>
+    </dl>
+    <dl>
+        <dt>无奈相思</dt>
+        <dd>
+            无奈相思，一卷红尘，是谁的挂牵，人生的无缘，一个错过，一个生死不见，爱梦断，人回首，只是江湖冷三生，岁月无情。一杯老酒，一段人生，沧海无奈，思念自己的孤独，伤害最后的生命。一段思念，一段无缘，守望人海的冷，憔悴自己的辜负。        </dd>
+    </dl>
+    <dl>
+        <dt>我的前半生</dt>
+        <dd>
+            1、没有任何人会成为你以为的、今生今世的避风港，只有你自己，才是自己最后的庇护所。再破败再简陋，也好过寄人篱下。 <br>
+            　　
+            　　2、首先要做到可以取代任何人，然后再考虑做到任何人都不可以取代你。<br>
+            　　
+            　　3、路要自己一步步走，苦要自己一口口吃，抽筋扒皮才能脱胎换骨。<br>
+            　　
+            　　4、人与人之间，在同一时间同一件事情上，只能保留一种关系，否则就会感情用事。<br>
+            　　
+            　　5、有来有往是好事，单方面的付出叫什么，叫牺牲，一个人有多少东西可以牺牲，牺牲掉了，就完了，就没有了。<br>
+            　　
+            　　6、菩萨心肠，金刚手段，才是对待朋友和你在意的人应该有的态度。<br>
+            　　
+            　　7、最佳的报复不是仇恨，而是打心底发出的冷淡，干嘛花力气去恨一个不相干的人。<br>
+            　　
+            　　8、金钱与爱情面前卖弄自尊，是最愚蠢的事。<br>
+            　　
+            　　9、冷静，不发泄不指责，他就永远欠你的。<br>
+    </dl>
+</div>
+<script>
+    window.onload=function(){
+        new Tabs('box');
+    };
+    //     构造函数
+    function Tabs(id){
+        var oBox=document.getElementById(id);
+        this.aDl=oBox.getElementsByTagName('dl');
+        var that=this;
+        oBox.onclick= function (e) {
+            if(!that.isActive(e)){
+                that.clearActive();
+                that.addActive(e);
+            }
+        }
+    }
+    //    判断是否是当前项
+    Tabs.prototype.isActive= function (e) {
+        var e=e||event;
+        var target= e.target || e.srcElement;
+        var obj=target.parentNode;
+        if(obj.nodeName=='DL'&& obj.className =='active'){
+            return true;
+        }
+        else
+            return false;
+    };
+    //    清除active
+    Tabs.prototype.clearActive= function () {
+        for(var i=0;i< this.aDl.length;i++){
+            if( this.aDl[i].className=='active'){
+                this.aDl[i].className='';
+                break;
+            }
+        }
+    };
+    //    添加class active
+    Tabs.prototype.addActive= function (e) {
+        var e=e||event;
+        var target= e.target|| e.srcElement;
+        var obj=target.parentNode;
+        if(obj.nodeName=='DL'){
+            obj.className='active';
+        }
+    };
+
+
+
+////        事件代理
+//        var oBox=document.getElementById('box');
+//        var aDl=oBox.getElementsByTagName('dl');
+//        oBox.onclick=function(e){
+//            var e=e||event;
+//            var target= e.target|| e.srcElement;
+//            var obj=target.parentNode;
+//            if(obj.nodeName=='DL'&& obj.className!=='active'){
+//                for(var i=0;i<aDl.length;i++){
+//                    if(aDl[i].className=='active'){
+//                        aDl[i].className='';
+//                        break;
+//                    }
+//                }
+//                obj.className='active';
+//            }
+//        }
+</script>
+</body>
+</html>

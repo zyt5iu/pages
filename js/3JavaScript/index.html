@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 'microsoft yahei';
+        }
+        main{
+            height: 100%;
+            position: relative;
+        }
+        #div1 {
+            width:200px;
+            height:100%;
+            background:#cdcdcd;
+            position:absolute;
+            left:-200px;
+            z-index: 10;
+            opacity: .6;
+        }
+        #div1 ol{
+            overflow-y: auto;
+            height: 100%;
+            width: 100%;
+        }
+        li{
+            margin-left: 40px;
+        }
+        a,a:link{
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+        /*a:visited{*/
+            /*color: #999999;*/
+        /*}*/
+        #div1 span {
+            position:absolute;
+            width:20px;
+            height:70%;
+            color: white;
+            background:blue;
+            right:-20px;
+            top:15%;
+            /*opacity: .6;*/
+        }
+        main section iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            border: none;
+        }
+    </style>
+    <script>
+        window.onload=function ()
+        {
+            var oDiv=document.getElementById('div1');
+
+            oDiv.onmouseover=function ()
+            {
+                startMove(0);
+            };
+            oDiv.onmouseout=function ()
+            {
+                startMove(-200);
+            };
+        };
+
+        var timer=null;
+
+        function startMove(iTarget)
+        {
+            var oDiv=document.getElementById('div1');
+
+            clearInterval(timer);
+            timer=setInterval(function (){
+                var speed=0;
+
+                if(oDiv.offsetLeft>iTarget)
+                {
+                    speed=-10;
+                }
+                else
+                {
+                    speed=10;
+                }
+
+                if(oDiv.offsetLeft==iTarget)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    oDiv.style.left=oDiv.offsetLeft+speed+'px';
+                }
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<main>
+    <div id="div1">
+        <span>导航页面</span>
+        <!--<h3><a href="JavaScript_code/1综合幻灯片.html" target="main">首页</a></h3>-->
+        <ol>
+            <li><a href="JavaScript_code/1综合幻灯片.html" target="main">综合幻灯片</a></li>
+            <li><a href="JavaScript_code/2自定义右键菜单.html" target="main">自定义右键菜单</a></li>
+            <li><a href="JavaScript_code/3自定义导航条.html" target="main">自定义导航条</a></li>
+            <li><a href="JavaScript_code/4正则.html" target="main">正则</a></li>
+            <li><a href="JavaScript_code/5微博效果.html" target="main">微博效果</a></li>
+            <!--<li><a href="JavaScript_code/6拖拽.html" target="main">拖拽</a></li>-->
+            <li><a href="JavaScript_code/7图片轮播.html" target="main">图片轮播</a></li>
+            <li><a href="JavaScript_code/8随机选题.html" target="main">随机选题</a></li>
+            <li><a href="JavaScript_code/9鼠标带着div走.html" target="main">鼠标带着div走</a></li>
+            <li><a href="JavaScript_code/10收起展开.html" target="main">收起展开</a></li>
+            <li><a href="JavaScript_code/11时钟.html" target="main">时钟</a></li>
+            <li><a href="JavaScript_code/12前端数据编辑.html" target="main">前端数据编辑</a></li>
+            <li><a href="JavaScript_code/13商品分类导航.html" target="main">商品分类导航</a></li>
+            <li><a href="JavaScript_code/14判断两个数组是否是相似数组.html" target="main">判断两个数组是否是相似数组</a></li>
+            <li><a href="JavaScript_code/15排序.html" target="main">排序</a></li>
+            <li><a href="JavaScript_code/16链式运动.html" target="main">链式运动</a></li>
+            <li><a href="JavaScript_code/17滚动图片.html" target="main">滚动图片</a></li>
+            <li><a href="JavaScript_code/18固定边栏.html" target="main">固定边栏</a></li>
+            <li><a href="JavaScript_code/19构造函数选项卡.html" target="main">构造函数选项卡</a></li>
+            <li><a href="JavaScript_code/20多属性运动.html" target="main">多属性运动</a></li>
+            <li><a href="JavaScript_code/21多变move2.html" target="main">多变move2</a></li>
+            <li><a href="JavaScript_code/22动态搜索.html" target="main">动态搜索</a></li>
+            <li><a href="JavaScript_code/23动态加载select.html" target="main">动态加载select</a></li>
+            <li><a href="JavaScript_code/24动态级联.html" target="main">动态级联</a></li>
+            <li><a href="JavaScript_code/25动态创建数据表.html" target="main">动态创建数据表</a></li>
+            <li><a href="JavaScript_code/26顶部短时广告.html" target="main">顶部短时广告</a></li>
+            <li><a href="JavaScript_code/27淡入淡出.html" target="main">淡入淡出</a></li>
+            <!--<li><a href="JavaScript_code/28测试链接数据.html" target="main">测试链接数据</a></li>-->
+            <li><a href="JavaScript_code/29表格.html" target="main">表格</a></li>
+            <li><a href="JavaScript_code/30表单验证.html" target="main">表单验证</a></li>
+            <li><a href="JavaScript_code/31QQ登录框拖拽.html" target="main">QQ登录框拖拽</a></li>
+            <!--<li><a href="JavaScript_code/32offset.html" target="main">offset</a></li>-->
+            <li><a href="JavaScript_code/33js简易日历.html" target="main">js简易日历</a></li>
+            <li><a href="JavaScript_code/34json.html" target="main">json选项卡</a></li>
+            <li><a href="JavaScript_code/35eventcompatilble.html" target="main">eventcompatilble拖拽</a></li>
+            <li><a href="JavaScript_code/36ajax通讯录.html" target="main">ajax通讯录</a></li>
+            <li><a href="JavaScript_code/37伸缩面板.html" target="main">伸缩面板</a></li>
+            <li><a href="JavaScript_code/38滚动监控.html" target="main">滚动监控</a></li>
+            <li><a href="JavaScript_code/39翻转.html" target="main">翻转</a></li>
+            <li><a href="JavaScript_code/40翻转相册.html" target="main">翻转相册</a></li>
+            <li><a href="JavaScript_code/41倒计时.html" target="main">倒计时</a></li>
+            <li><a href="JavaScript_code/42钟表.html" target="main">钟表</a></li>
+            <li><a href="JavaScript_code/43弹性广告条.html" target="main">弹性广告条</a></li>
+            <li><a href="JavaScript_code/44浮动广告条.html" target="main">浮动广告条</a></li>
+            <li><a href="JavaScript_code/45QQ登录框完善.html" target="main">QQ登录框完善</a></li>
+            <li><a href="JavaScript_code/46动态class方法.html" target="main">动态class方法</a></li>
+            <li><a href="JavaScript_code/47文字向上滚动.html" target="main">文字向上滚动</a></li>
+            <li><a href="JavaScript_code/48文字向左滚动.html" target="main">文字向左滚动</a></li>
+            <li><a href="JavaScript_code/49鼠标滚轮实现对象缩放.html" target="main">鼠标滚轮实现对象缩放</a></li>
+            <li><a href="JavaScript_code/50文字滚动暂停.html" target="main">文字滚动暂停</a></li>
+            <li><a href="JavaScript_code/51图片放大镜.html" target="main">图片放大镜</a></li>
+            <li><a href="JavaScript_code/52裁剪clip.html" target="main">裁剪clip</a></li>
+            <li><a href="JavaScript_code/53购物车.html" target="main">购物车</a></li>
+            <li><a href="JavaScript_code/54QQ空间时光轴.html" target="main">QQ空间时光轴</a></li>
+        </ol>
+    </div>
+    <section>
+        <iframe src="JavaScript_code/1综合幻灯片.html" name="main"></iframe>
+    </section>
+</main>
+</body>
+</html>

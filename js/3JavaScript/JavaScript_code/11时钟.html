@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            background:#003;
+        }
+        ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            margin: 250px 0;
+        }
+        ul li{
+            width: 35px;
+            height: 47px;
+        }
+        .dot{
+            background: url("img/clock/sign.png") no-repeat;
+            margin: 0 5px;
+        }
+    </style>
+    <script>
+        function toDou(n){
+            if(n<10){
+                return '0'+n;
+            }
+            else{
+                return ''+n;
+            }
+        }
+        window.onload=function(){
+            var aImg=document.getElementsByTagName('img');
+            function tick(){
+                var oDate=new Date();
+                var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+                for(var i=0;i<aImg.length;i++){
+                    aImg[i].src='img/clock/'+str.charAt(i)+'.png'
+                }
+            }
+            setInterval(tick,1000);
+            tick();
+        };
+    </script>
+</head>
+<body>
+<div id="clock">
+    <ul>
+        <li><img src="img/clock/0.png" alt=""/></li>
+        <li><img src="img/clock/0.png" alt=""/></li>
+        <li class="dot"></li>
+        <li><img src="img/clock/0.png" alt=""/></li>
+        <li><img src="img/clock/0.png" alt=""/></li>
+        <li class="dot"></li>
+        <li><img src="img/clock/0.png" alt=""/></li>
+        <li><img src="img/clock/0.png" alt=""/></li>
+    </ul>
+</div>
+</body>
+</html>

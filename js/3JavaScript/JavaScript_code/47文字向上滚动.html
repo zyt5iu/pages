@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0; padding: 0}
+        div.box{
+            width: 610px;
+            height: 280px;
+            margin: 100px auto 0;
+            border: 1px solid black;
+            overflow-y: hidden;
+            padding-left: 15px; ;
+        }
+        div.box ul{
+            list-style: none;
+            line-height: 40px;
+        }
+        div.box ul a,div.box ul a:visited{
+            text-decoration: none;
+            color: #0A246A;
+        }
+        div.box ul a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <!--<li><a href="{href}">{no}.{txt}</a></li>-->
+    </ul>
+</div>
+<script>
+    var data = [];
+    data[data.length] = {href: 'http://www.baidu.com', con: '2017-2018学年第二学期第八周工作安排 2018-04-23'};
+    data[data.length] = {href: 'http://www.cqwu.edu.cn', con: ' 2017-2018学年第二学期第六周工作安排 2018-04-09'};
+    data[data.length] = {href: 'http://www.qq.com', con: '学院2017年度评优拟推荐名单公示 2018-04-08'};
+    data[data.length] = {href: 'http://www.163.com', con: '2017-2018学年第二学期第五周工作安排 2018-04-02'};
+    data[data.length] = {href: 'http://www.sina.com', con: '2017-2018学年第二学期第四周工作安排 2018-03-27'};
+    data[data.length] = {href: 'http://www.sina.com', con: '2017-2018学年第二学期第三周工作安排 2018-03-20'};
+    data[data.length] = {href: 'http://www.cqw.edu.cn', con: '关于2017年度收入12万元以上人员 自行申报个人所得税的通... 2018-03-19'};
+    data[data.length] = {href: 'http://www.google.com', con: '2017-2018学年第二学期第二周工作安排 2018-03-12'};
+
+    var box=document.querySelector('div.box');
+    var ul=document.querySelector('div.box ul');
+    var html='';
+    data.forEach(function (el, i) {
+        html+='<li><a href="'+data[i].href+'">'+(i+1)+'.'+data[i].con+'</a></li>';
+    });
+    ul.innerHTML=html;
+    var timer=null;
+    var ul1=ul.cloneNode(true);
+    box.appendChild(ul1);
+
+    function move(){
+        var top;
+        timer=setInterval(function () {
+            top=box.scrollTop;
+            if(top<ul.offsetHeight){
+                box.scrollTo(0,++top);
+            }else{
+                box.scrollTo(0,0);
+            }
+        },30)
+    }
+    move();
+    box.onmousemove= function () {
+        clearInterval(timer);
+    };
+    box.onmouseout= function () {
+        move();
+    }
+</script>
+</body>
+</html>

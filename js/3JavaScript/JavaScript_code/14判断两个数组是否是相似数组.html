@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = [19, true, "xy", undefined, "abc", 100, window,'abc'];
+        var b = ["efg", 45, false, '6', null, "89", undefined,90];
+        var flag;
+        if(a.length== b.length){
+            for(var i=0;i< a.length;i++){
+                flag=false;
+                for(var j=0;j< b.length;j++){
+                    if(typeof a[i]==typeof b[j]){
+                        b.splice(j,1);//删除J位置的1个
+                        flag=true;
+                        break;
+                    }
+                }
+                if(!flag){
+                    console.log('两数组不相似');
+                    break;
+                }
+            }
+            if(flag){
+                console.log('两数组相似');
+            }
+        }else{
+            console.log('两数组不相似');
+        }
+    </script>
+</head>
+<body>
+    <h3 style="text-align: center;margin-top: 150px">判断两数组是否是相似数组,点击检查</h3>
+</body>
+</html>

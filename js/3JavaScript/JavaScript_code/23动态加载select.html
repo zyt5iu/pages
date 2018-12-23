@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form {
+            width: 1000px;
+            margin: 50px auto 0;
+        }
+
+        label {
+            display: inline-block;
+            width: 230px;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <fieldset id="fdt">
+        <legend>请选择歌星和你喜欢的歌曲</legend>
+        <!--
+                <label>宋小宝:
+                    <select id="gx1">
+                        <option value="010">天路</option>
+                        <option value="011">苦苦追求</option>
+                        <option value="012">我的祖国</option>
+                    </select>
+                </label>
+        -->
+    </fieldset>
+</form>
+</body>
+<script src="js/eventCompatible.js"></script>
+<script>
+    var obj = {
+        周杰伦: [{id: '010', name: '七里香'}, {id: '011', name: '青花瓷'}, {id: '012', name: '天堂'}],
+        薛之谦: [{id: '001', name: '丑八怪'}, {id: '002', name: '像风一样'}, {id: '003', name: '你还要我怎样'}]
+    };
+    obj['牛奶咖啡'] = [{id: '004', name: '明天，你好'}, {id: '005', name: '从你的全世界路过'}, {id: '006', name: '偶尔还是会想起你'}];
+    obj['林俊杰'] = [{id: '007', name: '可惜没如果'}, {id: '008', name: '江南'}, {id: '009', name: '爱要怎么说出口'}];
+    var oFieldSet=document.getElementById('fdt');
+    var oLabel,oSelect,option;
+    for(var key in obj){
+        oLabel=document.createElement('label');
+        oLabel.innerText=key+":";
+        oSelect=document.createElement('select');
+        oSelect.className="star";
+        option=new Option('-请选择-','-1');
+        oSelect.appendChild(option);
+        obj[key].forEach(function (el) {
+            option=new Option(el.name,el.id);
+            oSelect.appendChild(option);
+        });
+        oLabel.appendChild(oSelect);
+        oFieldSet.appendChild(oLabel);
+    }
+    eventCompatible.agentEvent(oFieldSet,'change',['select','star'], function () {
+        var index=this.selectedIndex;
+        var oParent=this.parentNode;
+        var sName=oParent.innerText;
+        alert(sName.replace(':','')+'的歌曲编号为：'+this.value);
+    })
+</script>
+</html>

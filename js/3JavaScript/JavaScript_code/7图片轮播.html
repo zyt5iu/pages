@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+    <script src="js/move4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #div1{
+            margin: 100px auto;
+            width: 500px;
+            height: 250px;
+            background-color: lavender;
+            position: relative;
+            overflow: hidden;
+        }
+        #div1 ol{
+            list-style-type: none;
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            z-index: 20;
+            display: flex;
+        }
+        #div1 ol li{
+            padding: 5px 10px;
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+            margin: 0 10px 0 0;
+        }
+        #div1 ol li.active{
+            color: white;
+            background-color: #555555;
+            border: 1px solid #cdcdcd;
+        }
+        #div1 ul{
+            width: 500px;
+            height: 250px;
+            list-style-type: none;
+            position:absolute ;
+        }
+        #div1 ul li{
+            width: 500px;
+            height: 250px;
+        }
+        #div1 ul li img{
+            width: 100%;
+        }
+
+    </style>
+    <script>
+        window.onload= function () {
+            var oDiv1=document.getElementById('div1');
+            var aBtn=oDiv1.getElementsByTagName('ol')[0].getElementsByTagName('li');
+            var oUl=oDiv1.getElementsByTagName('ul')[0];
+            var now=0;
+            for(var i=0;i<aBtn.length;i++){
+                aBtn[i].index=i;
+                aBtn[i].onclick= function () {
+                    now=this.index;
+                    tab();
+                }
+            }
+            function tab(){
+                for(var i=0;i<aBtn.length;i++)
+                {
+                    aBtn[i].className='';
+                }
+                aBtn[now].className='active';
+                startMove(oUl,{top:-250* now});
+            }
+            function next(){
+                now++;
+                if(now==aBtn.length){
+                    now=0;
+                }
+                tab();
+            }
+            var timer=setInterval(next,2000);
+            oDiv1.onmouseover=function(){
+                clearInterval(timer);
+            };
+            oDiv1.onmouseout=function(){
+                timer=setInterval(next,2000);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <ol>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ol>
+    <ul>
+        <li><img src="img/big/sw1.jpg" alt=""/></li>
+        <li><img src="img/big/sw2.jpg" alt=""/></li>
+        <li><img src="img/big/sw3.jpg" alt=""/></li>
+        <li><img src="img/big/sw4.jpg" alt=""/></li>
+        <li><img src="img/big/md1.jpg" alt=""/></li>
+        <li><img src="img/big/md2.jpg" alt=""/></li>
+    </ul>
+</div>
+</body>
+</html>

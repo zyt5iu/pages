@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链式运动</title>
+    <script src="js/move4.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: lavenderblush;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        main>a{
+            display:block;
+            width: 50px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #005413;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-decoration: none;
+        }
+        main #nav{
+            position: absolute;
+            bottom: 0;
+            right: -100px;
+            height: 40px;
+            line-height: 40px;
+            width: 150px;
+            background-color: green;
+            color: white;
+        }
+        main #nav ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            font-size: 14px;
+        }
+        main #nav2{
+            position: absolute;
+            bottom: -340px;
+            right: 0;
+            width: 200px;
+            height:300px;
+            background-color: #e2f2e0;
+            z-index: -1;
+        }
+        main #nav2 div.header{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background-color: #cdcdcd;
+            display: flex;
+            justify-content: space-around;
+        }
+        main #nav2 div.header span{
+            cursor: pointer;
+        }
+        main #nav2 div.detail p{
+            text-indent: 2em;
+            text-align: justify;
+            line-height: 23px;
+            padding: 10px;
+        }
+        #close{
+            font-size: 18px;
+            text-decoration: none;
+            margin-left: 8px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oDiv=document.getElementById('nav');
+            var oDiv2=document.getElementById('nav2');
+            var oBtn=document.getElementById('btn_show');
+            var oClose=document.getElementById('close');
+            oBtn.onclick=function(){
+                startMove(oDiv,{right:50}, function () {
+                    startMove(oDiv2,{bottom:40})
+                })
+            };
+            oClose.onclick=function(){
+                    startMove(oDiv2,{bottom:-340},function(){
+                        startMove(oDiv,{right:-100})
+                    })
+            };
+        }
+    </script>
+</head>
+<body>
+<h3 style="text-align: center;margin-top: 200px">点击左下角导航</h3>
+    <main>
+        <div id="nav">
+            <ul>
+                <li>爱好</li>
+                <li>旅行</li>
+                <li>摄影</li>
+                <li>美术</li>
+            </ul>
+        </div>
+        <div id="nav2">
+            <div class="header">
+                <span>讨论</span>
+                <span>目录</span>
+                <span>笔记 <a href="#" id="close">X</a></span>
+            </div>
+            <div class="detail">
+                <p>
+                    如果有天
+                    可以让你选择
+                    人生重来或继续
+                    我不知道
+                    你的答案最后
+                    会是真情或假意
+                    我希望
+                    从蓝天到名利
+                    所有你想要的
+                    都别随风去
+                    告诉我吧
+                    别再沉默如谜
+                    聚散随意
+                    像红尘来去
+                    告诉你吧
+                    我也曾面临这难题
+                    而你现在看到的
+                    是谜底
+                </p>
+            </div>
+        </div>
+        <a href="#" id="btn_show">导航</a>
+    </main>
+</body>
+</html>

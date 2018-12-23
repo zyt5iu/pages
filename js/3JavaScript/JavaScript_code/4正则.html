@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    分组替换
+    var arr=[
+        "http://www.cqwu.edu.cn/img/banner1.jpg",
+        "http://www.baidu.edu.cn/img/banner2.png",
+        "http://www.360.edu.cn/img/banner3.jpg",
+        "http://www.huohu.edu.cn/img/banner4.png",
+        "http://www.chrome.edu.cn/img/banner5.jpg"
+    ];
+    var newArr=[];
+    var reg1=/http:\/\/(.+\.jpg)/;
+    arr.forEach(function (str) {
+        if(reg1.test(str)){
+            newArr.push(str.replace(reg1,'$1'));
+        }else{
+            newArr.push(str);
+        }
+    });
+    console.log(newArr);
+
+//    时间格式
+    var arr2=[
+        "2018/04/18",
+        "2018-04-25",
+        "2018520/04/181230",
+        "2018.04.02"
+    ];
+    var newArr2=[];
+    var reg2=/^(\d{4})[\.\-\/](\d{2})[\.\-\/](\d{2})/;
+    arr2.forEach(function (str2) {
+        if(reg2.test(str2)){
+            newArr2.push(str2.replace(reg2,'$2-$3-$1'));
+        }else{
+            newArr2.push(str2);
+        }
+    });
+    console.log(newArr2);
+</script>
+<h3 style="text-align: center">正则表达式的应用，点击检查</h3>
+</body>
+</html>

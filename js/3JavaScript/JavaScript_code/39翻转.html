@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.box{
+            perspective: 800px;
+            perspective-origin: 70% 50%;
+        }
+        div.box ul{
+            list-style: none;
+            width: 400px;
+            margin: 50px auto;
+            height: 400px;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        div.box li{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            border: 1px solid #cdbfe3;
+            background-color: #3277ca;
+            font-size: 300px;
+            color: white;
+            text-align: center;
+            transform-origin: bottom;
+            transition: transform .7s;
+        }
+        div.box li:not(:first-child){
+            transform: rotateX(90deg);
+        }
+        button{
+            padding: 10px 25px;
+            border: 0;
+            outline: 0;
+            background-color: green;
+            color: white;
+        }
+        button#first{
+            margin-left: 80%;
+        }
+        button#last{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <button id="first">前翻</button>
+    <button id="last">后翻</button>
+</div>
+<script>
+    var current=0;
+    var aLis=document.querySelectorAll('ul li');
+    var btnF=document.getElementById('first');
+    var btnL=document.getElementById('last');
+    btnF.onclick=function(){
+        if(current<5){
+            aLis[current].style.transform="rotateX(-90deg)";
+            aLis[current+1].style.transform="rotateX(0)";
+            current++;
+        }
+    };
+    btnL.onclick=function(){
+        if(current>0){
+            aLis[current].style.transform="rotateX(90deg)";
+            aLis[current-1].style.transform="rotateX(0)";
+            current--
+        }
+    }
+</script>
+</body>
+</html>

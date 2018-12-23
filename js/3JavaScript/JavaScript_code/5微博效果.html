@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微博效果</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @font-face {
+            font-family: "glyphicon";
+            src: url('fonts/icomoon.eot') format('eot'),
+            url('fonts/icomoon.ttf') format('ttf'),
+            url('fonts/icomoon.woff') format('woff'),
+            url('fonts/icomoon.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        main{
+            ;
+            margin: 50px auto;
+            width: 330px;
+            background-color: #F5F7FA;
+        }
+        div.header{
+            height: 45px;
+            line-height: 45px;
+            width: 100%;
+            background-color:#D2D5DA ;
+            display: flex;
+            justify-content: space-around;
+        }
+        div.header a{
+            color: #666;
+            text-decoration: none;
+        }
+        div.header a.active{
+            color: #067cff;
+        }
+        div.header a:before{
+            position: absolute;
+            font-family: glyphicon;
+            margin-left: -18px;
+            margin-top: 2px;
+        }
+        div.header a:first-child:before{
+            content: '\f0db';
+        }
+        div.header a:nth-child(2):before{
+            content: '\f00b';
+        }
+        div.header a:last-child:before{
+            content: '\f044';
+        }
+        div.message{
+            padding: 10px;
+        }
+        p{
+            padding: 5px 0 10px 0;
+            color: #999999;
+        }
+        p:after{
+            content: '\f0d7';
+            position: absolute;
+            font-family: glyphicon;
+            margin-left: 40px;
+            margin-top: 3px;
+        }
+        textarea{
+            padding: 10px;
+        }
+        button{
+            padding: 10px 25px;
+            background-color: green;
+            color: white;
+            margin-left: 200px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+        }
+        #header2{
+            position: relative;
+            font-size: 15px;
+            color: #666;
+            height: 40px;
+            display: none;
+        }
+        #header2 img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        #header2 a{
+            color: #006E31;
+            text-decoration: none;
+        }
+        #header2 time{
+            color: #999;
+            margin-left: 10px;
+        }
+        #header2 span{
+            position: absolute;
+            right: 0;
+            top: 15px;
+        }
+        ul{
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        ul li{
+            border-bottom: 1px dashed #cdcdcd;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            list-style-type: none;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        a{
+            color: #006E31;
+            text-decoration: none;
+        }
+        span{
+            margin-left: 68px;
+            font-size: 14px;
+            color: #999999;
+        }
+        section{
+            position: relative;
+            font-size: 15px;
+            color: #666;
+            height: 40px;
+        }
+        section img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        section a{
+            color: #006E31;
+            text-decoration: none;
+        }
+        section time{
+            color: #999;
+            margin-left: 10px;
+        }
+        section span{
+            position: absolute;
+            right: 0;
+            top: 15px;
+        }
+
+    </style>
+    <script src="js/move4.js"></script>
+    <script>
+        window.onload=function(){
+            var oCon=document.getElementById('content');
+            var oBtn=document.getElementById('btn');
+            var oUl=document.getElementById('ul1');
+            var oTxt=document.getElementById('txt1');
+            var oHeader=document.getElementById('header2');
+            oBtn.onclick=function ()
+            {
+                var oLi=document.createElement('li');
+
+                var oTitle=document.createElement('section');
+                oTitle.innerHTML=oHeader.innerHTML;
+
+                var oIndex=document.createElement('aside');
+                oIndex.innerHTML=oTxt.value;
+                oTitle.appendChild(oIndex);
+                oLi.appendChild(oTitle);
+
+                oTxt.value='';
+
+                if(oUl.children.length>0)
+                {
+                    oUl.insertBefore(oLi, oUl.children[0]);
+                }
+                else
+                {
+                    oUl.appendChild(oLi);
+                }
+
+                //运动
+                var iHeight=oLi.offsetHeight;
+
+                oLi.style.height='0';
+                startMove(oLi, {height: iHeight}, function (){
+                    startMove(oLi, {opacity: 100});
+                });
+
+            };
+        }
+    </script>
+</head>
+<body>
+<main>
+    <aside id="content">
+        <div class="header">
+            <a href="#" class="active">讨论</a>
+            <a href="#">目录</a>
+            <a href="#">笔记</a>
+        </div>
+        <div class="message">
+            <p>综合讨论区</p>
+            <textarea rows="4" cols="38" placeholder="欢迎分享，鼓励原创" id="txt1"></textarea>
+            <button id="btn">发起讨论</button>
+        </div>
+        <div id="header2">
+            <img src="img/tx3.jpg" alt=""/>
+            <a href="#">渡生你好</a>
+            <time>8:06</time>
+            <span>【综合讨论区】</span>
+        </div>
+
+    </aside>
+    <ul id="ul1">
+
+    </ul>
+</main>
+</body>
+</html>

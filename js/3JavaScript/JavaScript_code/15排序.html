@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: ivory;
+        margin: 150px auto;
+    }
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload= function () {
+            var OUl=document.querySelector('#ul1');
+            var OLi=OUl.querySelectorAll('li');
+            var arr=[];
+            for(var i= 0;i<OLi.length;i++){
+                arr[i]=OLi[i]
+            }
+            arr.sort(function(li1,li2){
+                return parseInt(li1.innerHTML)- parseInt(li2.innerHTML);
+            });
+            document.querySelector("button").onclick= function () {
+                for(var i=0;i<OLi.length;i++){
+                    OUl.appendChild(arr[i]);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+    <ul id="ul1">
+        <li>23</li>
+        <li>4</li>
+        <li>13</li>
+        <li>5</li>
+        <li>60</li>
+        <li>80</li>
+        <li>27</li>
+    </ul>
+    <button>点击排序</button>
+</div>
+</body>
+</html>

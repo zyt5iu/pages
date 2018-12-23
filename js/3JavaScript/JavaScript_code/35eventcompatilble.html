@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 2000px;
+        }
+        #div1{
+            width: 200px;
+            height: 250px;
+            background-color: olivedrab;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script src="js/eventCompatible.js"></script>
+<script>
+//    window.onload= function () {
+//        var oDiv1=document.getElementById('div1');
+//        var oDin1Left=oDiv1.offsetLeft;
+//        var oDin1Top=oDiv1.offsetTop;
+//        eventCompatible.addEvent(oDiv1,'mousedown', function (e) {
+//            var ev=e||event;
+////            获取鼠标按下的坐标,相对于div的坐标
+//            var disX=ev.clientX-this.offsetLeft;
+//            var disY=ev.clientY-this.offsetTop;
+//            var _this=this;
+//            var scrollLeft=getScroll().left;
+//            var scrollTop=getScroll().top;
+//
+//            eventCompatible.addEvent(document,'mousemove',move);
+//            eventCompatible.addEvent(document,'mouseup', up);
+////            eventCompatible.addEvent(document,'mouseup', function () {
+////                eventCompatible.removeEvent(document,'mousemove',move);
+////                eventCompatible.removeEvent(document,'mousemup',up);
+////            });
+//            function move(e){
+//                var ev=e||event;
+//                var oLeft=ev.pageX-disX;
+//                var oTop=ev.pageY-disY;
+////                左右上下不能出界
+////                这里有个封装的函数没写，所以有错
+//                oLeft=Math.min(Math.max(scrollLeft,oLeft),eventCompatible.getDocProp('clientWidth')-_this.offsetWidth+scrollLeft);
+//                oTop=Math.min(Math.max(scrollTop,oTop),eventCompatible.getDocProp('clientHeight')-_this.offsetHeight+scrollTop);
+//
+//                _this.style.left=oLeft+'px';
+//                _this.style.top=oTop+'px';
+//            }
+//            function up(){
+//                eventCompatible.removeEvent(document,'mousemove',move);
+//                eventCompatible.removeEvent(document,'mousemup',up);
+//            }
+//        });
+//        function getScroll(){
+////            滚动条当前位置
+//            var leftValue=eventCompatible.getDocProp('scrollLeft');
+//            var topValue=eventCompatible.getDocProp('scrollTop');
+//            return {left:leftValue,top:topValue}
+//        }
+//        eventCompatible.addEvent(window,'scroll',function (){
+//            oDiv1.style.top=oDin1Top+getScroll().top+"px";
+//            oDiv1.style.left=oDin1Left+getScroll().left+"px";
+//        })
+//    }
+    window.onload=function () {
+        var oDiv1=document.getElementById('div1');
+        var oDivLeft=oDiv1.offsetLeft;
+        var oDivTop=oDiv1.offsetTop;
+        eventCompatible.addEvent(oDiv1,'mousedown',function (ev) {
+            var e=ev||event;
+            var disX = e.pageX - this.offsetLeft;
+            var disY = e.pageY - this.offsetTop;
+            var _this = this;
+            var  scrollLeft=getScroll().left;
+            var  scrollTop=getScroll().top;
+            eventCompatible.addEvent(document, 'mousemove',move);
+            eventCompatible.addEvent(document, 'mouseup',up);
+            function move(ev) {
+                var e=ev||event;
+                var l = e.pageX - disX;
+                var t = e.pageY - disY;
+                l=Math.min(Math.max(scrollLeft,l),eventCompatible.getDocProp('clientWidth')-_this.offsetWidth+scrollLeft);
+                t=Math.min(Math.max(scrollTop,t),eventCompatible.getDocProp('clientHeight')-_this.offsetHeight+scrollTop);
+                _this.style.left = l + "px";
+                _this.style.top = t + "px";
+            }
+            function up(){
+                eventCompatible.removeEvent(document, 'mousemove',move);
+                eventCompatible.removeEvent(document, 'mouseup',up);
+            }
+        }) ;
+        function getScroll() {
+            var leftValue=document.documentElement.scrollLeft||document.body.scrollLeft;
+            var topValue=document.documentElement.scrollTop||document.body.scrollTop;
+            return {left:leftValue,top:topValue}
+        }
+        eventCompatible.addEvent(window,'scroll',function () {
+            oDiv1.style.top=oDivTop+getScroll().top+"px";
+        });
+    }
+</script>
+</body>
+</html>

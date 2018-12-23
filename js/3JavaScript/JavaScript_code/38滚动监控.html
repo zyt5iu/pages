@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #nav{
+            width: 100px;
+            position: fixed;
+            top: 100px;
+            border: 1px solid #2C9BD0;
+        }
+        #nav a{
+            text-decoration: none;
+            display: block;
+            padding: 10px 0;
+            background-color: #92F3CA;
+            text-align: center;
+            color: black;
+        }
+        #nav a.on{
+            background-color: #0CA471;
+            color: white;
+        }
+        #container{
+            width: 1000px;
+            background-color: #f5f5f1;
+            text-align: center;
+            margin: 0 auto;
+        }
+        #container div{
+            margin: 15px 0;
+        }
+        img{
+            width: 450px;
+            height: 270px;
+            margin: 5px;
+        }
+        h3{
+            color: white;
+            background-color: #0C436A;
+            padding: 10px 30px;
+            text-align: left;
+        }
+        div.two{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <a href="javascript:;" class="on">五一活动</a>
+    <a href="javascript:;">六一活动</a>
+    <a href="javascript:;">清明活动</a>
+    <a href="javascript:;">中秋活动</a>
+    <a href="#">国庆活动</a>
+</div>
+<div id="container">
+    <h2>放假活动安排</h2>
+    <div >
+        <h3>五一活动</h3>
+        <img src="img/scrollImg/blok-9.jpg">
+        <img src="img/scrollImg/blok-10.jpg">
+        <img src="img/scrollImg/blok-11.jpg">
+        <img src="img/scrollImg/blok-12.jpg">
+        <img src="img/scrollImg/blok-7.jpg">
+        <img src="img/scrollImg/blok-8.jpg">
+    </div>
+    <div class="two">
+        <h3>六一活动</h3>
+        <img src="img/scrollImg/blok-15.jpg">
+        <img src="img/scrollImg/blok-14.jpg">
+        <img src="img/scrollImg/blok-16.jpg">
+        <img src="img/scrollImg/blok-17.jpg">
+    </div>
+    <div>
+        <h3>清明活动</h3>
+        <img src="img/big/md1.jpg">
+        <img src="img/big/md2.jpg">
+        <img src="img/big/md3.jpg">
+        <img src="img/big/md4.jpg">
+    </div>
+    <div class="two">
+        <h3>中秋活动</h3>
+        <img src="img/big/sw1.jpg">
+        <img src="img/big/sw2.jpg">
+        <img src="img/big/sw3.jpg">
+        <img src="img/big/sw4.jpg">
+    </div>
+    <div>
+        <h3>国庆活动</h3>
+        <img src="img/scrollImg/blok-19.jpg">
+        <img src="img/scrollImg/blok-18.jpg">
+        <img src="img/scrollImg/blok-20.jpg">
+        <img src="img/scrollImg/blok-21.jpg">
+    </div>
+</div>
+<script>
+    var oNav=document.getElementById('nav');
+    var aA=oNav.querySelectorAll('a');
+    var oContainer=document.getElementById('container');
+    var aDiv=oContainer.querySelectorAll('div');
+    var i;
+    var timer=null;
+    function getTop(el){
+        var top=el.offsetTop;
+        while(el=el.offsetParent){
+            top+=el.offsetTop;
+        }
+        return top;
+    }
+    //    导航条固定
+    oNav.style.left=oContainer.offsetLeft+oContainer.offsetWidth+10+'px';
+    window.onresize= function () {
+        oNav.style.left=oContainer.offsetLeft+oContainer.offsetWidth+10+'px';
+    };
+    function clearClass(){
+        for(var j=0;j<aA.length;j++){
+            if(aA[j].className=='on'){
+                aA[j].className='';
+                break;
+            }
+        }
+    }
+//    滚动监控
+    window.onscroll= function () {
+        i=0;
+        while(aDiv.length>i && getTop(aDiv[i])<document.documentElement.scrollTop+window.innerHeight/2){
+            i++;
+        }
+        clearClass();
+        aA[--i].className='on';
+    };
+//    点击事件
+    [].forEach.call(aA,function (el,i) {
+        el.onclick= function () {
+            clearInterval(timer);
+            timer=setInterval(function () {
+                var scrollTop=document.documentElement.scrollTop;
+                var step=(getTop(aDiv[i])-scrollTop)/10;
+                step=step>0?Math.ceil(step):Math.floor(step);
+                if(getTop(aDiv[i])!=scrollTop){
+                    window.scrollTo(0,scrollTop+step);
+//                    if(step==-'0'){
+//                        clearInterval(timer);
+//                    }
+                }
+                else{
+                    clearInterval(timer);
+                }
+            },30);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        div {
+            width: 1000px;
+            margin: 100px auto 0;
+            border: 1px solid #3c3c3c;
+            overflow: auto;
+            display: flex;
+        }
+
+        ul {
+            line-height: 40px;
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin-right: 30px;
+        }
+
+        ul li a, ul li a:visited {
+            /*word-break: keep-all; !*保持中文不自动换行*!*/
+            white-space: nowrap;    /*强制其内容不换行,包含符号*/
+            text-decoration: none;
+            color: #0A246A;
+        }
+        ul li a:hover {
+            color: #2db3ff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>        <!--也可用ol，编号自动产生-->
+        <!--<li><a href="{href}">{no}.{txt}</a></li>-->
+    </ul>
+</div>
+<script>
+    var data = [];
+    data[data.length] = {href: 'http://www.baidu.com', con: '2017-2018学年第二学期第八周工作安排 2018-04-23'};
+    data[data.length] = {href: 'http://www.cqwu.edu.cn', con: ' 2017-2018学年第二学期第六周工作安排 2018-04-09'};
+    data[data.length] = {href: 'http://www.qq.com', con: '学院2017年度评优拟推荐名单公示 2018-04-08'};
+    data[data.length] = {href: 'http://www.163.com', con: '2017-2018学年第二学期第五周工作安排 2018-04-02'};
+    data[data.length] = {href: 'http://www.sina.com', con: '2017-2018学年第二学期第四周工作安排 2018-03-27'};
+    data[data.length] = {href: 'http://www.sina.com', con: '2017-2018学年第二学期第三周工作安排 2018-03-20'};
+    data[data.length] = {href: 'http://www.cqw.edu.cn', con: '关于2017年度收入12万元以上人员 自行申报个人所得税的通... 2018-03-19'};
+    data[data.length] = {href: 'http://www.google.com', con: '2017-2018学年第二学期第二周工作安排 2018-03-12'};
+    var html = '';
+    for (var i = 0; i < data.length; i++) {
+        html += '<li><a href="' + data[i].href + '">'+(i+1)+'.' + data[i].con + '</a></li>';
+    }
+    var box = document.querySelector('div.box');
+    var ul = box.querySelector('ul');
+    var timer = null;
+    html+=html;
+    ul.innerHTML=html;
+    //    var ul_copy = ul.cloneNode();//复制节点
+    //    ul.innerHTML = ul_copy.innerHTML = html;
+    //    box.appendChild(ul_copy);
+    function move() {
+        timer = setInterval(function () {
+            if (box.scrollLeft <= box.scrollWidth / 2) {
+                box.scrollLeft++
+            } else
+                box.scrollLeft = 0;
+        }, 15);
+    }
+    move();
+    box.addEventListener('mouseover',function(){
+        clearInterval(timer)
+    });
+    box.addEventListener('mouseout',function(){
+        move()
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #0C436A;
+        }
+        #box{
+            width: 1000px;
+            height: 350px;
+            margin: 150px auto 0;
+            perspective: 1000px;
+            perspective-origin: 70% 50%;
+        }
+        #box section{
+            position: absolute;
+            width: 500px;
+            height: 350px;
+            transform-style: preserve-3d;
+            transform-origin: right;
+            transition: transform 1.5s;
+            /*动画终态度*/
+            /*animation-fill-mode: forwards;*/
+            /*overflow: hidden;*/
+            /*转过去隐藏*/
+            /*backface-visibility: hidden;*/
+        }
+        #box section.left{
+            transform: rotateY(0deg);
+        }
+        #box section.right{
+            transform: rotateY(180deg);
+        }
+        #box div{
+            position: absolute;
+            width: inherit;
+            height: inherit;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            background-color: #00a900;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5) inset;
+            border-radius: 5px;
+        }
+        img{
+            width: 100%;
+            height: 270px;
+        }
+        #box div p{
+            line-height: 3;
+            color: white;
+        }
+        #box div.back{
+            transform: rotateY(180deg);
+            padding-left: 20px;
+            border-left: none;
+        }
+        #box div.front{
+            padding-right: 20px;
+            border-right: none;
+        }
+        #box div.front:after{
+            content: '';
+            width: 12px;
+            position: absolute;
+            height: 80%;
+            background: rgba(255,255,255,0.2);
+            right: 0;
+            top: 10%;
+            box-shadow: 0 0 5px rgba(255,255,255,0.5) inset;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <!--<section class="com left">-->
+    <!--<div class="back">-->
+    <!--<img src="img/scrollImg/blok-3.jpg" alt="">-->
+    <!--<p>国庆节</p>-->
+    <!--</div>-->
+    <!--<div class="front">-->
+    <!--<img src="img/scrollImg/blok-4.jpg" alt="">-->
+    <!--<p>国庆节</p>-->
+    <!--</div>-->
+    <!--</section>-->
+</div>
+<template>
+    <section class="com left">
+        <div class="back">
+            <img src="{path1}" alt="">
+            <p>{title1}--{page1}</p>
+        </div>
+        <div class="front">
+            <img src="{path2}" alt="">
+            <p>{title2}--{page2}</p>
+        </div>
+    </section>
+</template>
+<script src="js/eventCompatible.js"></script>
+<script>
+    arr = [];
+    arr[arr.length] = {src: "img/scrollImg/blok-3.jpg", title: "微风轻轻吹动纱裙 制作者：微微"};
+    arr[arr.length] = {src: "img/scrollImg/blok-4.jpg", title: "春游  制作者：七里香"};
+    arr[arr.length] = {src: "img/scrollImg/blok-5.jpg", title: "望眼麦浪  制作者：风眠"};
+    arr[arr.length] = {src: "img/scrollImg/blok-6.jpg", title: "细雨微风路人  制作者：angle"};
+    arr[arr.length] = {src: "img/scrollImg/blok-7.jpg", title: "你就是我的全世界  制作者：为你"};
+    arr[arr.length] = {src: "img/scrollImg/blok-8.jpg", title: "清明时节  制作者：留白"};
+    arr[arr.length] = {src: "img/scrollImg/blok-9.jpg", title: "劳动节  制作者：莉莉"};
+    arr[arr.length] = {src: "img/scrollImg/blok-10.jpg", title: "向劳动者致敬 拍摄地：花花"};
+    arr[arr.length] = {src: "img/scrollImg/blok-11.jpg", title: "五一畅游  拍摄地：嘟嘟"};
+    arr[arr.length] = {src: "img/scrollImg/blok-12.jpg", title: "向劳动者致敬  绘画者：巴巴"};
+    var str=document.querySelector('template').innerHTML;
+    var oBox=document.getElementById('box');
+    var html='';
+    var len=arr.length,zIndex=1;
+
+    for(var i=0;i<arr.length;i=i+2){
+        html+=str.replace('{path1}',arr[i].src).replace('{title1}',arr[i].title).replace('{page1}',i+1+"/"+len)
+                .replace('{path2}',arr[i+1].src).replace('{title2}',arr[i+1].title).replace('{page2}',i+2+"/"+len)
+    }
+    oBox.innerHTML=html;
+    eventCompatible.agentEvent(oBox,'click',['section','com'], function () {
+        if(this.classList.contains('left')){
+            this.className='com right';
+        }
+        else{
+            this.className='com left';
+        }
+        this.style.zIndex=zIndex++;
+    })
+</script>
+</body>
+</html>

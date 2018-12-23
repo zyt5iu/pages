@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        div.panel {
+            width: 500px;
+            margin: 50px auto 0;
+        }
+
+        .has-feedback .form-control {
+            display: inline-block;
+            padding-right: 0;
+            width: 80%;
+        }
+
+        div.require:before {
+            position: absolute;
+            content: '*';
+            color: red;
+            margin-left: -10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        请注册
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form" id="form1">
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                <div class="col-sm-9 require">
+                    <input type="text" class="form-control" id="zh1" placeholder="请输入6-10位字母数字或下划线"
+                           pattern="\w{6,10}" required><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                <div class="col-sm-9 require">
+                    <input type="password" class="form-control" id="pw1" placeholder="请输入6-8位含字母数字特殊符号"
+                           pattern="(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}" required><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="pw2">确认密码：</label>
+                <div class="col-sm-9 require">
+                    <input type="password" class="form-control" id="pw2" placeholder="请再次输入密码"
+                           pattern="(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}" required><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="email1">邮箱：</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control allow" id="email1" placeholder="请输入您的邮箱地址"><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="url1">网址：</label>
+                <div class="col-sm-9">
+                    <input type="url" class="form-control" id="url1" placeholder="请输入您的网址"><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                <label class="col-sm-3 control-label" for="age">年龄：</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="age" placeholder="请输入年龄,最大130"
+                           pattern="(1[0-2]|[1-9])?\d|130$"><span class="glyphicon"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3 checkbox">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-3 col-sm-offset-3">
+                    <button type="submit" class="btn btn-default submit">注册</button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="reset" class="btn btn-default reset">重置</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="js/eventCompatible.js"></script>
+<script>
+window.onload= function () {
+    var regData = [
+        /^\w{6,10}$/,
+        /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}$/,
+        /^(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W_])\S{6,8}$/,
+        /^\w+@\w{2,4}\.\w{2,4}(\.\w{2,4})?$/,
+        /^(http:\/\/|https:\/\/)\w+\.\w+(\.\w+)*$/,
+        /^((1[0-2]|[1-9])?\d|130)$/
+    ];
+    var oForm=document.getElementById('form1');
+    var aInput = oForm.querySelectorAll('input.form-control');
+    var aSpan=document.querySelectorAll('#form1 span');
+    var aPassword=document.querySelectorAll('input[type=password]');
+    var oSpan;
+//    eventCompatible.agentEvent(oForm,'blur',['input','form-control'], function () {
+//        oSpan = aSpan[i];
+//        oSpan.className = 'glyphicon';
+//        if(el.classList.contains('allow') && el.value.trim()=='')return;
+//        if (regData[i].test(el.value.trim())) {
+//            oSpan.classList.add('glyphicon-ok');
+//            oSpan.style.color = "green";
+//        }
+//        else {
+//            oSpan.classList.add('glyphicon-remove');
+//            oSpan.style.color = "red";
+//        }
+//
+//    });
+
+    [].forEach.call(aInput,function(el,i){
+        el.onblur = function () {
+            oSpan = aSpan[i];
+            oSpan.className = 'glyphicon';
+            if(el.classList.contains('allow') && el.value.trim()=='')return;
+            if (regData[i].test(el.value.trim())) {
+                oSpan.classList.add('glyphicon-ok');
+                oSpan.style.color = "green";
+            }
+            else {
+                oSpan.classList.add('glyphicon-remove');
+                oSpan.style.color = "red";
+            }
+        }
+    });
+//    提交
+    oForm.onsubmit= function () {
+        if(aPassword[0].value==aPassword[1].value){
+            var str='';
+            [].forEach.call(aInput, function (el) {
+                str+=el.value+"--"
+            });
+//            console.log(str);
+            alert('报名成功，请耐心等待审核哦');
+        }else{
+            alert('两次输入密码不一致！');
+        }
+        return false;
+    };
+//    重置清空
+    oForm.onreset= function () {
+        [].forEach.call(aSpan, function (el) {
+            el.className="glyphicon";
+        })
+    }
+}
+</script>
+</html>

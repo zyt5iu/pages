@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试宽高等元素同时变</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            opacity: 1;
+            border: 0 solid black;
+        }
+    </style>
+    <script src="js/move4.js"></script>
+    <script>
+        window.onload= function () {
+            var oDiv=document.getElementById('div1');
+            oDiv.onmouseover=function(){
+                startMove(oDiv,{width:330,height:500,opacity:50},function(){
+//                    this.style.border=10;
+//                    startMove(oDiv,{border:10});
+//                        alert('a');
+                });
+            };
+            oDiv.onmouseout=function(){
+                startMove(oDiv,{width:100,height:100,opacity:100},function(){
+//                    this.style.border=0;
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+
+</div>
+</body>
+</html>

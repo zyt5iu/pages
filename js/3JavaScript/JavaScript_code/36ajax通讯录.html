@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax通讯录</title>
+    <script src="js/ajax.js"></script>
+    <style>
+        button {
+           margin-left: 60%;
+            margin-top: 50px;
+            width: 80px;
+            height: 35px;
+            border: none;
+            outline: none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        table{
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+        tr{
+            height: 35px;
+        }
+        thead{
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var oBtn1=document.getElementById('btn1');
+            var oTab1=document.getElementById('tab1');
+
+            oBtn1.onclick= function () {
+                getAjaxData("post","contact.txt", function (result) {
+                    for(var i=0;i<result.length;i++){
+                        var oTr=document.createElement('tr');
+                        var id=oTab1.tBodies[0].rows.length+1;
+
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=id;
+                        oTr.appendChild(oTd);
+
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].name;
+                        oTr.appendChild(oTd);
+
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].tel;
+
+                        oTr.appendChild(oTd);
+                        var oTd=document.createElement('td');
+                        oTd.innerHTML=result[i].QQ;
+                        oTr.appendChild(oTd);
+
+                        oTab1.tBodies[0].appendChild(oTr);
+                    }
+                });
+
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn1">添加</button>
+<table id="tab1" border="1" width="600" cellspacing="0">
+    <thead>
+    <tr>
+        <td>学号</td>
+        <td>姓名</td>
+        <td>电话</td>
+        <td>QQ</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>李素凡</td>
+        <td>152152152152</td>
+        <td>15215626322</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

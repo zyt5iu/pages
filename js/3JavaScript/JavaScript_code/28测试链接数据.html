@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+<input type="button" value="提交" id="btn1">
+<ul id="ul1">
+</ul>
+<script>
+    var oBtn=document.getElementById('btn1');
+    var oUl=document.getElementById('ul1');
+
+//    function getAjaxData(method,url,func){
+//        var oAjax=new XMLHttpRequest();//创建ajax对象
+//        oAjax.open(method,url+"?t="+new Date().getTime(),true);// 打开,解决缓存
+//        oAjax.send();//发送数据
+//        oAjax.onreadystatechange= function () {//数据完成
+//            if(oAjax.readyState==4){//成功
+//                if(oAjax.status==200){
+////                    console.log(eval(oAjax.responseText));
+//                    //拿数据插入到页面(不管是json还是string)
+//                    var str=oAjax.responseText;
+//                    var result=str[0]=='['?eval(str):str;
+//                    if(func)func(result);
+//                }
+//                else{
+//                    alert("error!");
+//                }
+//            }
+//        }
+//    }
+
+
+//    oBtn.onclick= function () {
+//        getAjaxData("post","a.txt", function (result) {
+//            for(var i=0;i<result.length;i++){
+//                var oLi=document.createElement('li');
+//                oLi.innerHTML="姓名：<b>"+result[i].name+"</b> 年龄： <b>"+result[i].age+"</b>";
+//                oUl.appendChild(oLi);
+//            }
+//        },{id:1,stu:"huangqin"});
+//    }
+    oBtn.onclick= function () {
+        getAjaxData("post","a.txt?id=3&stu='huangqin'", function (result) {
+            for(var i=0;i<result.length;i++){
+                var oLi=document.createElement('li');
+                oLi.innerHTML="姓名：<b>"+result[i].name+"</b> 年龄： <b>"+result[i].age+"</b>";
+                oUl.appendChild(oLi);
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box{
+            width: 600px;
+            height: 600px;
+            margin: 50px auto 0;
+            border: 2px solid #00aa00;
+            border-radius: 50%;
+            position: relative;
+            background: url("img/clock/clock_bg.png");
+            background-size: 100% 100%;
+        }
+        div.box span{
+            position: absolute;
+            left: 292px;
+            top: 0;
+            width: 16px;
+            height: 310px;
+            transform-origin: 8px 300px;
+            background-color: red;
+        }
+        div.box span:nth-child(1){
+            height: 240px;
+            top: 70px;
+            transform-origin: 8px 230px;
+            transform: rotate(30deg);
+        }
+        div.box span:nth-child(2){
+            height: 270px;
+            top: 40px;
+            transform-origin: 8px 260px;
+            background-color: #0A246A;
+            transform: rotate(60deg);
+        }
+        div.box span:nth-child(3){
+            /*height: 290px;*/
+            /*top: 20px;*/
+            /*background: url("img/clock/clock_1.jpg");*/
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</body>
+<script>
+    var spans=document.querySelectorAll('div.box span');
+    function currentTime() {
+        var now = new Date();
+        var h = now.getHours();
+        var m = now.getMinutes();
+        var s = now.getSeconds();
+        spans[0].style.transform="rotate("+h*30+"deg)";
+        spans[1].style.transform="rotate("+m*6+"deg)";
+        spans[2].style.transform="rotate("+s*6+"deg)";
+    }
+    setInterval(currentTime, 1000);
+</script>
+</html>
