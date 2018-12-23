@@ -1,0 +1,178 @@
+body{
+    background-color: #f5f5f5;
+}
+/*导航*/
+nav a.navbar-brand img{
+    height: 50px;
+}
+nav a.navbar-brand{
+    padding: 0;
+}
+/*巨幕*/
+div.jumbotron{
+    margin-top: 50px;
+    color: white;
+    padding: 6vw 0 0 10vw;
+    background: url("../img/headline.jpg") no-repeat center center;
+    background-size: 100%;
+    height: 23vw;
+    margin-bottom: 3vw !important;
+}
+div.jumbotron h1{
+    font-size: 4vw;
+}
+div.jumbotron p{
+    font-size: 2vw;
+}
+/*媒体对象列表*/
+main h2{
+    font-weight: normal;
+    border-bottom: 1px dashed #999;
+    padding: 0 0 2vw 0;
+    color: #666;
+    margin-bottom: 2vw;
+    font-size: 3vw;
+}
+main li.media>a{
+    /*width: 30vw;*/
+}
+main li.media>a img{
+    width: 100%;
+}
+main .media-list li{
+    background-color: white;
+    border-radius: 5px;
+}
+main .media-list li .media-body{
+    padding: 20px 0 0 25px;
+}
+main .media-list li .media-body h3{
+    padding: 0 0 10px 0;
+    font-size: 2vw !important;
+}
+main .media-list li .media-body p {
+    font-size: 1vw;
+}
+main .media-list li .media-body p b{
+    display: inline-block;
+    padding: 1px 8px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 10px;
+    font-weight: normal;
+}
+/*main .media-list li .media-body .last_p{*/
+/*margin-top: 20px;*/
+/*}*/
+main .media-list li .media-body h5{
+    font-size: 2.5vw;
+    color: #f60;
+}
+main .media-list li .media-body h5 small{
+    font-size: 1vw;
+    color: #999;
+    text-decoration: line-through;
+}
+main .media-list li .media-body .btn{
+    /*width: 10vw;*/
+    border-radius: 4px;
+    background-color: #f60;
+    color: #fff;
+    font-size: 1.5vw;
+    border: none;
+}
+.panel-body {
+    padding: 10px !important;
+}
+.table{
+    margin-bottom: 0 !important;
+}
+.table a{
+    font-size: 13px;
+    color: #1b9fb0;
+}
+.table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 8px solid white;
+    background-color: #d6edf0;
+}
+.panel-body div.fig {
+    display: flex;
+}
+.panel-body div.fig img{
+    width: 100%;
+}
+.panel-body div.fig figure{
+    padding: 5px;
+}
+.panel-body div.fig figure figcaption{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+.panel div.travel a{
+    display: inline-block;
+    width: 8.5vw;
+    padding: 10px 0 10px 10px;
+    background-color: #d6edf0;
+    margin-bottom: 10px;
+    color:#1b9fb0 ;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+footer{
+    background-color: #555;
+    border-top: 1px solid #00A8FF;
+    margin-top: 30px;
+    text-align: center;
+}
+footer dt{
+    color: white;
+    font-size: 18px;
+    margin: 20px 0;
+}
+footer a{
+    display: block;
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+}
+footer a:hover{
+    color: white;
+}
+footer .down{
+    line-height: 40px;
+    font-size: 1vw;
+    background-color: black;
+    color: whitesmoke;
+}
+/*大屏*/
+@media (min-width: 991px){
+    main li.media>a {
+        width: 30vw;
+    }
+}
+/*小屏*/
+@media (min-width: 768px) and (max-width: 991px){
+    .navbar-right {
+        float: left !important;
+    }
+    main li.media>a {
+        width: 30vw;
+    }
+}
+/*超小*/
+@media (min-width: 0) and (max-width: 768px){
+    main li.media>a {
+        width: 100% !important;
+        text-align: center;
+    }
+    main li.media > .pull-left {
+         padding-right: 0 !important;
+    }
+    main .media-list li .media-body {
+        padding: 20px 0 0 10px !important;
+    }
+    main .media-list li .media-body h5 {
+        font-size: 5vw;
+    }
+}

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+//文字盒子隐藏省略
+.multi_row(@row:3) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+body{
+  background-color: #efefef;
+}
+main{
+  margin: 50px 0 50px 0;
+  aside{
+    div.panel-heading h3{
+      font-size: 20px;
+      font-weight: 700;
+      small{
+        margin-left: 15px;
+      }
+    }
+    div.panel-body{
+      padding: 0;
+      a{
+        display: block;
+        color: #555;
+        padding: 3vh 0 3vh 3.75vw;
+        font-size: 17px;
+        &:not(:last-of-type){
+          border-bottom: 1px solid #cdcdcd;
+        }
+        &.active{
+          color: blue;
+        }
+      }
+    }
+  }
+  div.new_list{
+    border: 1px solid #cdcdcd;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    div.header{
+      background: #f8f8fa;
+      h3{
+        margin: 0;
+        padding: 0 1.875vw;
+        line-height: 5.72vh;
+        font-size: 16px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eee;
+        font-weight: bold;
+        span{
+          font-size: 15px;
+          font-weight: normal;
+          color: #555;
+          a{
+            font-size: 15px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    div.detail{
+      padding: 0 3.36vw;
+      ul.media-list li.media{
+        padding: 3.41vh 0;
+        border-bottom: 1px dashed #cdcdcd;
+        &:hover{
+          cursor: pointer;
+          h4{
+            color: #206EB7;
+          }
+        }
+        &:not(:first-of-type){
+          margin: 0;
+        }
+        img{
+          width: 25%;
+          margin-right: 15px;
+        }
+        div.media-body{
+          padding: 2.04vh 0;
+          span{
+            display: inline-block;
+            width: 30vw;
+            font-size: 16px;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          time{
+              font-size: 14px;
+              color: #737373;
+            }
+          p{
+            .multi_row(2);
+            margin-top: 2vh;
+
+          }
+        }
+
+      }
+    }
+    div.foot{
+      text-align: center;
+      margin: 50px 0;
+      ul li{
+        a{
+          padding: 3px 8px;
+          border: 1px solid #cdcdcd;
+          &:hover{
+            text-decoration: none;
+            border: 1px solid #444;
+            color: #444;
+          }
+          &.active{
+            background-color: #0a74cb;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

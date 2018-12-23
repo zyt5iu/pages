@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: bisque;
+}
+div.box{
+    width: 1200px;
+    height: 160px;
+    margin: 50px auto;
+    border:1px solid #dddddd;
+    /*box-sizing: border-box;*/
+    display: flex;
+}
+div.box figure{
+    flex: 1;
+    position: relative;
+    line-height: 30px;
+    padding: 5px;
+    background-color: white;
+}
+div.box figure figcaption aside{
+    display: none;
+}
+div.box figure figcaption h3,
+div.box figure:not(:last-child):hover ~ figure:last-child h3{
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.5s;
+}
+div.box figure:hover figcaption h3,
+div.box figure:last-child h3{
+    font-weight: bold;
+    font-size: 22px;
+}
+div.box figure figcaption p{
+    font-size: 14px;
+}
+div.box figure figcaption i{
+    font-size: 12px;
+    color: red;
+}
+div.box figure:not(:last-child){
+    border-right: 1px solid #dddddd;
+}
+div.box figure:not(:last-child):hover{
+    flex: 2;
+}
+div.box figure:not(:last-child):hover~figure:last-child{
+    flex: 1;
+}
+div.box figure:not(:last-child):not(:hover):after,
+div.box figure:not(:last-child):hover ~ figure:last-child:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+}
+
+div.box figure img,
+div.box figure:not(:last-child):hover ~ figure:last-child img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    transition: all 0.5s;
+}
+div.box figure:not(:last-child):hover aside,
+div.box figure:last-child aside{
+    display: block;
+}
+div.box figure:not(:last-child):hover ~ figure:last-child aside{
+    display: none;
+}
+a{
+    color: blue;
+    text-decoration: none;
+    font-size: 18px;
+}
+div.box figure:hover img,
+div.box figure:last-child img
+{
+    width: 130px;
+}
+div.box figure:last-child{
+    flex: 2;
+}

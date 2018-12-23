@@ -1,0 +1,132 @@
+header div.img1 {
+  width: 900px;
+  margin: auto;
+}
+header nav {
+  height: 40px;
+  background-color: #1D3A64;
+}
+header nav ul {
+  width: 900px;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  color: white;
+  line-height: 40px;
+}
+header div.adv {
+  width: 100%;
+  background: url("../img/bg_1.jpeg") no-repeat;
+  background-size: 100%;
+}
+header div.adv #id_adv {
+  margin: auto;
+}
+main {
+  width: 800px;
+  margin: auto;
+}
+main section.top {
+  height: 50px;
+  background: url("../img/logo.png") no-repeat 20px center;
+  background-size: 60px 50px;
+}
+main section.top div {
+  float: right;
+}
+main section.top div p {
+  font-size: 14px;
+  padding-top: 30px;
+}
+main section.top div p span {
+  margin-right: 20px;
+}
+main section.top div p span:before {
+  content: '\f10c';
+  font-family: glyphicon;
+  position: absolute;
+  color: #0a8dff;
+  font-size: 23px;
+  margin-top: -25px;
+  margin-left: 15px;
+}
+main section.top div p span:first-of-type:after {
+  position: absolute;
+  content: '\f104';
+  font-family: glyphicon;
+  font-size: 23px;
+  margin-top: -25px;
+  margin-left: -60px;
+  color: #0a8dff;
+}
+main section.top div p span:last-of-type:after {
+  position: absolute;
+  content: '\f105';
+  font-family: glyphicon;
+  font-size: 23px;
+  margin-top: -25px;
+  margin-left: -5px;
+  color: #0a8dff;
+}
+main div.down {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+main div.down div.left {
+  width: 30%;
+  border: 1px solid #cdcdcd;
+  float: left;
+  margin-bottom: 20px;
+}
+main div.down div.left img {
+  width: 100%;
+  height: 70%;
+}
+main div.down div.left div.header {
+  padding: 15px 0;
+}
+main div.down div.left div.header span {
+  border-bottom: 2px solid #222;
+}
+main div.down div.left div.detail {
+  padding-bottom: 10px;
+}
+main div.down div.left div.detail time {
+  display: inline-block;
+  background-color: #666;
+  color: white;
+  margin-bottom: 5px;
+}
+main div.down div.left div.detail h5 {
+  color: black;
+}
+main div.down div.left div.detail p {
+  text-align: justify;
+  margin-top: 5px;
+}
+main div.down div.left:not(:last-of-type) {
+  margin-right: 4%;
+}
+footer {
+  clear: both;
+  height: 110px;
+  background-color: #343434;
+  color: white;
+}
+footer div.foot {
+  width: 800px;
+  margin: auto;
+}
+footer div.foot div.left {
+  float: left;
+}
+footer div.foot div.right {
+  float: right;
+  margin-top: 20px;
+}

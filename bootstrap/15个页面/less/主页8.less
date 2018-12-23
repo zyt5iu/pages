@@ -1,0 +1,219 @@
+div.container{
+  width: 70%;
+  margin: auto;
+  header{
+    div.adv{
+      background: linear-gradient(top,#EFEFEF,white);
+      display: flex;
+      justify-content: space-between;
+      section{
+        p{
+          margin: 15px 10px 0 0 ;
+          color: #777777;
+        }
+      }
+    }
+    nav{
+      clear: both;
+      height: 40px;
+      float: left;
+      background: #0F89C8;
+      a{
+        padding: 0 20px;
+        color: white;
+        display: inline-block;
+        margin-top: 10px;
+        &:not(:last-of-type){
+          border-right: 1px solid white;
+        }
+      }
+    }
+  }
+  main{
+    clear: both;
+    display: flex;
+    padding-top: 15px;
+    div.header{
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #cdcdcd;
+      background: #C5E8FC;
+      span{
+        margin-left: 15px;
+        color: #296393;
+        font-weight: bold;
+        &:before{
+          content: '\f152';
+          font-family: glyphicon;
+          margin-right: 10px;
+        }
+      }
+      a{
+        float: right;
+        margin-right: 10px;
+        font-size: 13px;
+      }
+    }
+    div.header1{
+      height: 30px;
+      border-bottom: 5px solid #E9DEA0;
+      background: linear-gradient(top,white,#D3DAD2);
+      span{
+        display:inline-block ;
+        padding: 5px 15px;
+        border-radius: 5px 5px 0 0;
+        background-color: #66BCED;
+        color: white;
+      }
+      a{
+        float: right;
+        margin-right: 10px;
+      }
+    }
+    div.left{
+      flex: 3;
+      margin-right: 15px;
+      div.one{
+        border: 1px solid #cdcdcd;
+        margin-bottom: 10px;
+        div.detail{
+          padding: 10px;
+          ul li{
+            border-bottom: 1px dashed #cdcdcd;
+            padding: 3px;
+            &:before{
+              content: '\f0a4';
+              font-family: glyphicon;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    div.right{
+      flex: 7;
+      div.up{
+        display: flex;
+        aside.two{
+          flex: 6;
+          margin-right: 15px;
+          div.img2{
+            border: 1px solid #cdcdcd;
+          }
+          div.aa{
+            margin: 15px 0;
+            border: 1px solid #cdcdcd;
+            border-radius: 10px 0 0 0 ;
+            div.detail{
+              padding: 10px;
+              img{
+                float: left;
+                width: 30%;
+                height: 30%;
+              }
+              p{
+                text-align: justify;
+                text-indent: 2em;
+              }
+              a{
+                color: #0099ff;
+              }
+            }
+          }
+          div.bb{
+            border: 1px solid #cdcdcd;
+            border-radius: 10px 0 0 0;
+            div.detail{
+              padding: 10px;
+              ul li{
+                padding: 7px;
+                border-bottom: 1px dashed #cdcdcd;
+                time{
+                  float: right;
+                }
+                a{
+                  font-size: 13px;
+                }
+                &:before{
+                  content: '\f0a4';
+                  font-family: glyphicon;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+        aside.three{
+          flex: 4;
+          div.login{
+            border: 1px solid #cdcdcd;
+            height: 140px;
+            background-color: #F2F2F2;
+            text-align: center;
+            h3{
+              color: #C5AD55;
+            }
+            p{
+              margin-top: 14px;
+            }
+            button{
+              padding: 0 8px;
+              margin: 0 10px;
+            }
+
+          }
+          div.img4{
+            text-align: center;
+            img{
+              margin-top: 20px;
+            }
+          }
+          div.cc{
+            border: 1px solid #cdcdcd;
+            margin-top: 20px;
+            div.detail{
+              padding: 10px;
+              figure{
+                height: 80px;
+                border-bottom: 1px dashed #cdcdcd;
+                img{
+                  width: 30%;
+                  float: left;
+                  margin-right: 10px;
+                }
+                figcaption{
+                  padding-top: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      div.down{
+        div.dd{
+          margin-top: 15px;
+          border: 1px solid #cdcdcd;
+          div.detail{
+            padding: 15px 10px 15px 10px;
+            img{
+              width: 32.5%;
+            }
+            p{
+              display: flex;
+              justify-content: space-around;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer{
+    height: 60px;
+    border-top: 2px solid #CAD7DF;
+    text-align: center;
+    background: #FBFBFB;
+    p{
+      margin-top: 15px;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+.public_head {
+  height: 25px;
+  border-bottom: 1px solid #CDCDCD;
+}
+div.container {
+  width: 1000px;
+  margin: auto;
+}
+div.container a:hover {
+  color: red;
+}
+div.container header div.top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 25px;
+  line-height: 25px;
+  background-color: #F1EEE9;
+  border-radius: 5px 5px 0 0;
+  padding: 0 15px 0 5px;
+  font-size: 14px;
+}
+div.container header div.top a {
+  color: black;
+}
+div.container header img {
+  width: 100%;
+  height: 250px;
+}
+div.container header nav {
+  height: 20px;
+  background-color: #30577e;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+div.container header nav ul {
+  width: 70%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  float: left;
+}
+div.container header nav ul li {
+  border-right: 1px solid #777 ;
+  padding-right: 20px;
+}
+div.container header nav ul a {
+  color: white;
+}
+div.container header nav ul li.active a {
+  color: blue;
+  background-color: white;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+div.container header nav time {
+  color: white;
+  font-size: 14px;
+  margin-left: 50px;
+}
+div.container main div.up {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: #333;
+}
+div.container main div.up div.one {
+  padding: 5px;
+  width: 28%;
+  background-color: #788CB1;
+  border-radius: 5px;
+}
+div.container main div.up div.one div.header {
+  height: 25px;
+}
+div.container main div.up div.one div.header h3 {
+  display: inline-block;
+  font-size: 16px;
+  color: #0A246A;
+  margin-left: 20px;
+}
+div.container main div.up div.one div.header button {
+  float: right;
+  margin-right: 10px;
+}
+div.container main div.up div.one p {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: white;
+  text-indent: 2em;
+  text-align: justify;
+  line-height: 20px;
+}
+div.container main div.up div.two {
+  width: 28%;
+  margin: 0 1%;
+  background: url("../img/zy1img1.png") no-repeat;
+  background-size: 100%;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+}
+div.container main div.up div.three {
+  width: 40%;
+  border: 1px solid #CDCDCD;
+}
+div.container main div.up div.three div.header {
+  height: 25px;
+  border-bottom: 1px solid #CDCDCD;
+  line-height: 25px;
+}
+div.container main div.up div.three div.header p {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0 5px;
+  background-color: #B4B7C6;
+  border-radius: 5px;
+  color: white;
+}
+div.container main div.up div.three div.header span {
+  float: right;
+  margin-right: 10px;
+  color: #0A246A;
+}
+div.container main div.up div.three ul {
+  padding: 5px 0 5px 20px;
+}
+div.container main div.up div.three ul li {
+  height: 21px;
+}
+div.container main div.up div.three ul li time {
+  float: right;
+  margin-right: 15px;
+}
+div.container main div.mid {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  color: #333;
+}
+div.container main div.mid div.four {
+  width: 28%;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px 0 0 0;
+}
+div.container main div.mid div.four div.header {
+  height: 25px;
+  border-bottom: 1px solid #CDCDCD;
+  border-radius: 5px 0 0 0;
+  background: -webkit-linear-gradient(top, #ffffff, #e9f4fa);
+  background: linear-gradient(top, #ffffff, #e9f4fa);
+}
+div.container main div.mid div.four div.header p {
+  border-radius: 5px 0 0 0;
+  display: inline-block;
+  padding: 3px 15px;
+  background-color: #788CB1;
+  color: white;
+}
+div.container main div.mid div.four ul li {
+  padding: 3px 10px;
+  border-bottom: 1px dashed #CDCDCD;
+}
+div.container main div.mid div.five {
+  width: 23%;
+  margin-left: 10px;
+  border: 1px solid #CDCDCD;
+  font-size: 13px;
+}
+div.container main div.mid div.five div.header {
+  height: 25px;
+  border-bottom: 1px solid #CDCDCD;
+  border-bottom: 2px solid #0a74cb;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(top, #ffffff, #ecf7f1);
+  background: linear-gradient(top, #ffffff, #ecf7f1);
+  color: #11579D;
+}
+div.container main div.mid div.five div.header span:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: green;
+  margin: 0 10px;
+}
+div.container main div.mid div.five ul li {
+  padding: 5px 0 5px 5px;
+}
+div.container main div.down {
+  height: 30px;
+  margin-top: 20px;
+  border-bottom: 1px solid #4fb6fc;
+  border-top: 1px solid #4fb6fc;
+}
+div.container main div.down h3 {
+  display: inline-block;
+  color: #4266fc ;
+  padding: 0 10px;
+}
+div.container main div.down span {
+  font-size: 14px;
+  color: #333;
+}
+div.container footer {
+  height: 100px;
+  background: -webkit-linear-gradient(top, #ffffff, #0a74cb);
+  background: linear-gradient(top, #ffffff, #0a74cb);
+  text-align: center;
+  color: #333333;
+}
+div.container footer p:first-of-type {
+  padding: 35px 0 15px 0;
+}

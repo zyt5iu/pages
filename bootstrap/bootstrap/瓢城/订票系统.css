@@ -1,0 +1,101 @@
+/*导航*/
+nav a.navbar-brand img{
+    height: 50px;
+}
+nav a.navbar-brand{
+    padding: 0;
+}
+/*巨幕*/
+div.jumbotron{
+    margin-top: 50px;
+    background: url("../img/headline.jpg")no-repeat center center;
+    background-size: 100% auto;
+    height: 23vw;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 7vw;
+}
+div.jumbotron h1{
+    font-size: 4vw;
+}
+div.jumbotron p{
+    font-size: 2vw;
+}
+/*主体内容*/
+main .active{
+    padding: 0 3px;
+    background-color: #4eaa5f;
+    border-radius: 3px;
+    color: white;
+}
+main div.jingdian,main div.hot_sale{
+    padding-right:11px;
+}
+main div.jingdian a{
+    display: inline-block;
+    width: calc(33.3% - 4px);
+    line-height: 30px;
+    text-align: center;
+    background-color: #dddddd;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    text-decoration: none;
+}
+main div.jingdian a:hover{
+    background-color: green;
+    color: white;
+}
+main div.hot_sale a,main div.boby_box a{
+    display: inline-block;
+    width: calc(50% - 4px);
+    text-align: center;
+    margin-bottom: 10px;
+}
+main div.boby_box a{
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 3px;
+}
+main div.boby_box a span{
+    margin-right: 5px;
+}
+/*脚注*/
+footer{
+    background-color: #555;
+    border-top: 1px solid #00A8FF;
+    margin-top: 30px;
+    text-align: center;
+}
+footer dt{
+    color: white;
+    font-size: 18px;
+    margin: 20px 0;
+}
+footer a{
+    display: block;
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+}
+footer a:hover{
+    color: white;
+}
+footer .down{
+    line-height: 40px;
+    font-size: 1vw;
+    background-color: black;
+    color: whitesmoke;
+}
+/*小屏*/
+@media (min-width: 768px) and (max-width: 991px){
+    .navbar-right {
+        float: left !important;
+    }
+}
+
+
+
+
+
+
+

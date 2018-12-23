@@ -1,0 +1,127 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "glyphicon";
+  src: url('../fonts/icomoon.eot') format('eot'),
+  url('../fonts/icomoon.ttf') format('ttf'),
+  url('../fonts/icomoon.woff') format('woff'),
+  url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+header{
+  background-color: #1D7AD9;
+  height: 85px;
+  div{
+    width: 365px;
+    height: 85px;
+    background: url("../img/logo1.png") no-repeat left center;
+    margin: 0 auto;
+    padding-left: 135px;
+    color: white;
+    font-size: 23px;
+    line-height: 85px;
+  }
+}
+div.main1{
+  div.login{
+    width: 415px;
+    border: 1px solid #cdcdcd;
+    margin: 10px auto;
+    padding: 40px 0 10px 85px;
+    p{
+      font-size: 14px;
+      color: #999999;
+      &:last-of-type{
+        margin-top: 10px;
+        font-family: glyphicon;
+        letter-spacing: .2em;
+      }
+    }
+    &>input{
+      width: 305px;
+      height: 30px;
+      margin-bottom: 20px;
+    }
+    .one{
+      margin: 10px 0 20px 0;
+      color: #333333;
+      span{
+        margin-right: 10px;
+      }
+    }
+    input[type="button"]{
+      height: 35px;
+      font-size: 17px;
+      letter-spacing: .5em;
+      font-weight: 500;
+      color: #606060;
+    }
+    button{
+      position: absolute;
+      padding: 10px 30px;
+      background-color: #7CBE56;
+      border: none;
+      color: white;
+      z-index: 2;
+      margin-left: 250px;
+      margin-top: 10px;
+    }
+  }
+}
+div.main2{
+  margin-top: 80px;
+  div.register{
+    width: 530px;
+    text-align: center;
+    margin:15px auto;
+    padding: 70px 0 0 105px;
+    border: 1px solid #CDCDCD;
+    dl{
+      width: 440px;
+      margin-bottom:20px;
+      color: #999999;
+      input{
+        height: 35px;
+        width: 270px;
+        outline: none;
+      }
+      dt{
+        float: left;
+        text-align: end;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        >span{
+          &:before{
+            content: "*";
+            position: absolute;
+            color: red;
+            margin-left: -15px;
+            margin-top: 3px;
+          }
+
+        }
+      }
+    }
+    &>p{
+      padding: 30px 0;
+      font-size: 13px;
+      span{
+        color: #0a74cb;
+      }
+    }
+    button{
+      padding: 8px 110px;
+      font-size: 18px;
+      letter-spacing: 0.4em;
+      border: none;
+      color: white;
+      margin-bottom: 35px;
+      background-color: #7CBE56;
+    }
+  }
+}

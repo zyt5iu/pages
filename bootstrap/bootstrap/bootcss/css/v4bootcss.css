@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "glyphicon";
+  src: url("../../fonts/icomoon.eot");
+  src: url("../../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../../fonts/icomoon.woff") format("woff"), url("../../fonts/icomoon.ttf") format("truetype"), url("../../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.navbar-inverse {
+  min-height: 4rem;
+  background-color: #563d7c;
+  padding-right: 15px;
+}
+.navbar-inverse div.navbar-header .navbar-brand {
+  padding: 5px 10px;
+}
+.navbar-inverse div.navbar-header a {
+  font-size: 22px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  margin: 10px 20px;
+}
+.navbar-inverse div.index a {
+  color: #cbbde2;
+  font-size: 16px;
+}
+.navbar-inverse div.index ul.header_rig a {
+  font-family: glyphicon;
+}
+.navbar-inverse div.index ul.header_rig li.dropdown ul.dropdown-menu a {
+  color: black;
+}
+.navbar-inverse div.index ul.header_rig > li:last-of-type a {
+  border: 1px solid #ffe484;
+  border-radius: 5px;
+  color: #ffe484;
+  margin: 5px 20px 0 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar-inverse div.index ul.header_rig > li:last-of-type a:hover {
+  background-color: #ffe484;
+  color: black;
+}
+main {
+  margin: 110px 0 0 0;
+}
+main div.one img {
+  width: 100%;
+}
+main div.one h1 {
+  color: #7952b3;
+  font-size: 64px;
+}
+main div.one p {
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: justify;
+  line-height: 30px;
+}
+main div.one a {
+  width: 48%;
+  padding: 15px 8px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+}
+main div.one a:first-of-type {
+  color: #7952b3;
+  border-color: #7952b3;
+}
+main div.one a:first-of-type:hover {
+  background-color: #7952b3 ;
+  color: white;
+}
+main div.one a:last-of-type {
+  color: #777;
+  border-color: #777;
+}
+main div.one a:last-of-type:hover {
+  background-color: #777;
+  color: white;
+}
+main div.one span {
+  display: block;
+  margin: 15px 0 0 0;
+  color: #6c757d;
+}
+main div.two {
+  box-sizing: border-box;
+  margin-top: 45px;
+  background-color: #f8f9fa;
+}
+main div.two div {
+  height: 620px;
+  border: 1px solid white;
+  padding: 60px;
+}
+main div.two div span {
+  font-family: glyphicon;
+  display: block;
+  font-size: 40px;
+  color: #007bff;
+}
+main div.two div h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+main div.two div h3 {
+  margin-top: 20px;
+}
+main div.two div p {
+  font-size: 16px;
+  line-height: 25px;
+}
+main div.two div code {
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+}
+main div.two div img {
+  width: 100%;
+  margin: 15px 0;
+}
+main div.two div > a {
+  background-color: white;
+  color: #007bff;
+  border-color: #007bff ;
+  margin-top: 30px;
+}
+footer {
+  background-color: #f8f9fa;
+  height: 172px;
+  padding: 40px 0  60px 60px;
+}
+footer div.header a {
+  display: inline-block;
+  font-weight: 500;
+  color: #495057;
+  margin: 20px 10px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  div.navbar-header {
+    padding-left: 40%;
+  }
+  .nav > li {
+    display: inline-block !important;
+    float: left !important;
+  }
+  .navbar-inverse .navbar-collapse {
+    border: none;
+    text-align: center;
+  }
+  .navbar-nav {
+    padding-left: 20%;
+  }
+  main div.one {
+    text-align: center;
+  }
+  main div.one img {
+    width: 40%;
+  }
+}

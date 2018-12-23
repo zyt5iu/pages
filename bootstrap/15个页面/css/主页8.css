@@ -1,0 +1,243 @@
+div.container {
+  width: 70%;
+  margin: auto;
+}
+div.container header div.adv {
+  background: -webkit-linear-gradient(top, #efefef, #ffffff);
+  background: linear-gradient(top, #efefef, #ffffff);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+div.container header div.adv section p {
+  margin: 15px 10px 0 0 ;
+  color: #777777;
+}
+div.container header nav {
+  clear: both;
+  height: 40px;
+  float: left;
+  background: #0F89C8;
+}
+div.container header nav a {
+  padding: 0 20px;
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+}
+div.container header nav a:not(:last-of-type) {
+  border-right: 1px solid white;
+}
+div.container main {
+  clear: both;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 15px;
+}
+div.container main div.header {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #cdcdcd;
+  background: #C5E8FC;
+}
+div.container main div.header span {
+  margin-left: 15px;
+  color: #296393;
+  font-weight: bold;
+}
+div.container main div.header span:before {
+  content: '\f152';
+  font-family: glyphicon;
+  margin-right: 10px;
+}
+div.container main div.header a {
+  float: right;
+  margin-right: 10px;
+  font-size: 13px;
+}
+div.container main div.header1 {
+  height: 30px;
+  border-bottom: 5px solid #E9DEA0;
+  background: -webkit-linear-gradient(top, #ffffff, #d3dad2);
+  background: linear-gradient(top, #ffffff, #d3dad2);
+}
+div.container main div.header1 span {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px 5px 0 0;
+  background-color: #66BCED;
+  color: white;
+}
+div.container main div.header1 a {
+  float: right;
+  margin-right: 10px;
+}
+div.container main div.left {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  margin-right: 15px;
+}
+div.container main div.left div.one {
+  border: 1px solid #cdcdcd;
+  margin-bottom: 10px;
+}
+div.container main div.left div.one div.detail {
+  padding: 10px;
+}
+div.container main div.left div.one div.detail ul li {
+  border-bottom: 1px dashed #cdcdcd;
+  padding: 3px;
+}
+div.container main div.left div.one div.detail ul li:before {
+  content: '\f0a4';
+  font-family: glyphicon;
+  margin-right: 5px;
+}
+div.container main div.right {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+div.container main div.right div.up {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.container main div.right div.up aside.two {
+  -webkit-box-flex: 6;
+  -webkit-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  margin-right: 15px;
+}
+div.container main div.right div.up aside.two div.img2 {
+  border: 1px solid #cdcdcd;
+}
+div.container main div.right div.up aside.two div.aa {
+  margin: 15px 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px 0 0 0 ;
+}
+div.container main div.right div.up aside.two div.aa div.detail {
+  padding: 10px;
+}
+div.container main div.right div.up aside.two div.aa div.detail img {
+  float: left;
+  width: 30%;
+  height: 30%;
+}
+div.container main div.right div.up aside.two div.aa div.detail p {
+  text-align: justify;
+  text-indent: 2em;
+}
+div.container main div.right div.up aside.two div.aa div.detail a {
+  color: #0099ff;
+}
+div.container main div.right div.up aside.two div.bb {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px 0 0 0;
+}
+div.container main div.right div.up aside.two div.bb div.detail {
+  padding: 10px;
+}
+div.container main div.right div.up aside.two div.bb div.detail ul li {
+  padding: 7px;
+  border-bottom: 1px dashed #cdcdcd;
+}
+div.container main div.right div.up aside.two div.bb div.detail ul li time {
+  float: right;
+}
+div.container main div.right div.up aside.two div.bb div.detail ul li a {
+  font-size: 13px;
+}
+div.container main div.right div.up aside.two div.bb div.detail ul li:before {
+  content: '\f0a4';
+  font-family: glyphicon;
+  margin-right: 5px;
+}
+div.container main div.right div.up aside.three {
+  -webkit-box-flex: 4;
+  -webkit-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+div.container main div.right div.up aside.three div.login {
+  border: 1px solid #cdcdcd;
+  height: 140px;
+  background-color: #F2F2F2;
+  text-align: center;
+}
+div.container main div.right div.up aside.three div.login h3 {
+  color: #C5AD55;
+}
+div.container main div.right div.up aside.three div.login p {
+  margin-top: 14px;
+}
+div.container main div.right div.up aside.three div.login button {
+  padding: 0 8px;
+  margin: 0 10px;
+}
+div.container main div.right div.up aside.three div.img4 {
+  text-align: center;
+}
+div.container main div.right div.up aside.three div.img4 img {
+  margin-top: 20px;
+}
+div.container main div.right div.up aside.three div.cc {
+  border: 1px solid #cdcdcd;
+  margin-top: 20px;
+}
+div.container main div.right div.up aside.three div.cc div.detail {
+  padding: 10px;
+}
+div.container main div.right div.up aside.three div.cc div.detail figure {
+  height: 80px;
+  border-bottom: 1px dashed #cdcdcd;
+}
+div.container main div.right div.up aside.three div.cc div.detail figure img {
+  width: 30%;
+  float: left;
+  margin-right: 10px;
+}
+div.container main div.right div.up aside.three div.cc div.detail figure figcaption {
+  padding-top: 10px;
+}
+div.container main div.right div.down div.dd {
+  margin-top: 15px;
+  border: 1px solid #cdcdcd;
+}
+div.container main div.right div.down div.dd div.detail {
+  padding: 15px 10px 15px 10px;
+}
+div.container main div.right div.down div.dd div.detail img {
+  width: 32.5%;
+}
+div.container main div.right div.down div.dd div.detail p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+div.container footer {
+  height: 60px;
+  border-top: 2px solid #CAD7DF;
+  text-align: center;
+  background: #FBFBFB;
+}
+div.container footer p {
+  margin-top: 15px;
+}

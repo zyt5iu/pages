@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画导航</title>
+    <style>
+        body{
+            background: bisque;
+        }
+        nav{
+            margin-top: 200px;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            perspective: 300px;
+        }
+        a,a:visited{
+            text-decoration: none;
+            color: black;
+            /*右下，模糊程度6，颜色*/
+            text-shadow: 2px 2px 6px rgba(0,0,0,.5);
+            position: relative;
+            transition: all 1s;
+        }
+        a:hover{
+            color: red;
+        }
+        nav a:not(:last-child){
+            margin-right: 50px;
+        }
+        nav a span{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url("../img/logo.png") no-repeat;
+            top: -80px;
+            left: calc(50% - 40px);
+            opacity: 0;
+            transition: all 1s;
+        }
+        /*图片动画*/
+        nav a:nth-child(1) span{
+            /*3d表示3个轴都转*/
+            transform: translateY(10px) rotate3d(1,1,1,45deg);
+            transform-origin: center bottom;
+        }
+        nav a:nth-child(2) span {
+            transform: translate3d(0, 20px, 0);
+        }
+        nav a:nth-child(3) span {
+            transform: translate3d(0, 10px, 0) rotate3d(0, 1, 0, 90deg);
+            transform-origin: center bottom;
+        }
+        nav a:nth-child(4) span {
+            transform: translate3d(0, -20px, 0);
+        }
+        nav a:nth-child(5) span {
+            /*2倍*/
+            transform: scale3d(2, 2, 1);
+        }
+        nav a:hover span{
+            opacity: 1;
+            /*指向他的时候归位*/
+            transform: translate3d(0,0,0) rotate3d(1,1,1,0deg) scale3d(1, 1, 1);
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="#">Home
+        <span></span>
+    </a>
+    <a href="#">About me
+        <span></span>
+    </a>
+    <a href="#">Photography
+        <span></span>
+    </a>
+    <a href="#">Work
+        <span></span>
+    </a>
+    <a href="#">Contact
+        <span></span>
+    </a>
+</nav>
+</body>
+</html>

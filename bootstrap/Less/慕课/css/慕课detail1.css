@@ -1,0 +1,40 @@
+@charset "UTF-8";
+main h4 {
+  font-size: 16px !important;
+}
+main section {
+  padding-bottom: 15px;
+}
+main section h4 {
+  text-align: center;
+}
+main section article {
+  padding: 0 20px;
+  text-align: center;
+}
+main section article p {
+  text-align: justify;
+  text-indent: 2em;
+  font-size: 14px;
+  color: #999999;
+  line-height: 25px;
+}
+main section article h3 {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #0A246A;
+}
+main section article aside {
+  border: none;
+  margin: 20px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #cacaca;
+  color: #a7a7a7;
+  font-size: 14px;
+}
+main section article h5 {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #0A246A;
+  font-size: 15px;
+}

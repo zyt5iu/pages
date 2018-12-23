@@ -1,0 +1,607 @@
+@charset "UTF-8";
+body {
+  background-color: #F0F0F0;
+}
+main {
+  width: 1000px;
+  margin: 15px auto 40px;
+}
+main .current a {
+  font-size: 14px;
+  color: #575757;
+}
+main .current a:first-child {
+  font-weight: bold;
+}
+main .current a:hover {
+  color: #0a74cb;
+  text-decoration: underline;
+}
+main .up {
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  margin-top: 15px;
+}
+main .up aside {
+  width: 310px;
+  border-right: 1px solid #cdcdcd;
+}
+main .up aside dl dt {
+  display: none;
+  width: 310px;
+  text-align: center;
+  margin-top: 15px;
+}
+main .up aside dl .test {
+  display: block;
+}
+main .up aside dl dd {
+  width: 55px;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+  border: 1px solid #cdcdcd;
+  border-right: 1px solid transparent;
+  margin: 20px 0;
+}
+main .up aside dl dd:hover {
+  border: 1px solid #317EE7;
+}
+main .up aside dl:last-child dd {
+  border-right: 1px solid #cdcdcd ;
+}
+main .up aside dl:last-child dd:hover {
+  border-right: 1px solid #317EE7 ;
+}
+main .up section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 0 0 30px;
+}
+main .up section h4 {
+  color: #333333;
+}
+main .up section p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+main .up section p span {
+  margin-left: 20px;
+}
+main .up section p:first-of-type span {
+  color: #D70000;
+  font-size: 20px;
+}
+main .up section p:first-of-type span:before {
+  content: '￥';
+  font-size: 10px;
+}
+main .up section p:nth-of-type(2) span {
+  background: url("../img/icon_bg.jpg") no-repeat;
+  padding-left: 60px;
+  font-size: 13px;
+  color: #666;
+}
+main .up section p:last-of-type {
+  color: #999999;
+  margin-bottom: 15px;
+}
+main .up section form {
+  background-color: #F2F2F2;
+  padding: 20px 0 20px 15px;
+  margin: 15px 0 0 -15px;
+  line-height: 40px;
+  font-size: 14px;
+}
+main .up section form label {
+  display: block;
+  color: #666;
+}
+main .up section form label a {
+  display: inline-block;
+  width: 70px;
+  color: #666;
+}
+main .up section form label select,
+main .up section form label button,
+main .up section form label span {
+  height: 30px;
+  outline: none;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+main .up section form label button {
+  padding: 0 15px;
+}
+main .up section form label:nth-of-type(3) a {
+  float: left;
+}
+main .up section form label:nth-of-type(3) .btn {
+  margin-left: 75px;
+}
+main .up section form label:last-child {
+  margin-top: 15px;
+}
+main .up section form label:last-child span:nth-of-type(1) {
+  padding: 8px 5px;
+  background-color: #F6F6F6;
+}
+main .up section form label:last-child span:nth-of-type(2) {
+  padding: 8px 20px;
+  margin-left: -5px;
+  box-shadow: 0 0 10px #ddd inset;
+}
+main .up section form label:last-child span:nth-of-type(3) {
+  padding: 8px 3px;
+  background-color: #F6F6F6;
+  margin-left: -5px;
+  margin-right: 5px;
+}
+main .up section form label:last-child b {
+  color: #FC7700;
+}
+main .up section div.add {
+  display: inline-block;
+  width: 282px ;
+  height: 91px;
+  text-align: center;
+  line-height: 91px;
+}
+main .up section div.add span {
+  width: 185px;
+  height: 50px;
+  display: inline-block;
+  background-color: #F68500;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+main .up section div.add span:before {
+  content: '\f07a';
+  font-family: glyphicon;
+  margin-right: 15px;
+}
+main .up section div.add:last-of-type {
+  margin-left: -4px;
+  border-left: 1px solid #cdcdcd;
+}
+main .down {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .down aside {
+  width: 190px;
+  margin-right: 25px;
+}
+main .down aside div.first {
+  border: 1px solid #ccc;
+}
+main .down aside div.first header {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 15px;
+  border-top: 2px solid #1D86CF;
+}
+main .down aside div.first figure {
+  padding: 0 15px 0 22px;
+  height: 206px;
+  background-color: white;
+}
+main .down aside div.first figure .img {
+  width: 153px;
+  height: 150px;
+  line-height: 150px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .down aside div.first figure figcaption {
+  font-size: 12px;
+}
+main .down aside div.first figure figcaption p {
+  color: #999999;
+}
+main .down aside div.first figure figcaption span {
+  color: red;
+}
+main .down aside div.first figure:last-child {
+  padding-bottom: 22px;
+}
+main .down aside div.second {
+  margin-top: 10px;
+}
+main .down aside div.second header {
+  border-top: none;
+}
+main .down section {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+main .down section div.three {
+  display: table;
+  clear: both;
+}
+main .down section div.three ol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 20px 200px;
+}
+main .down section div.three ol li:not(:last-child) {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  color: black;
+  font-size: 13px;
+}
+main .down section div.three ol li:not(:last-child):hover {
+  color: black;
+  background-color: #E9E9E9;
+  cursor: pointer;
+}
+main .down section div.three ol li:nth-child(13) {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  margin-left: 10px;
+}
+main .down section div.three ol input {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+}
+main .down section div.three ol button {
+  width: 40px;
+  height: 25px;
+  margin-left: 5px;
+}
+main .down section div.three ol .active {
+  color: red !important;
+  background-color: #E9E9E9;
+}
+main .down section div.one {
+  width: 784px;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+}
+main .down section div.one header {
+  height: 40px;
+  border-bottom: 1px solid #ccc;
+  background-color: #F2F2F2;
+}
+main .down section div.one header button {
+  text-align: center;
+  width: 391px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #999999;
+}
+main .down section div.one header button:first-child:before {
+  content: '\f1ea';
+  font-family: glyphicon;
+  margin-right: 10px;
+}
+main .down section div.one header button:last-child {
+  margin-left: -2.8px;
+}
+main .down section div.one header button:last-child:before {
+  content: '\f27b';
+  font-family: glyphicon;
+  margin-right: 10px;
+}
+main .down section div.one header button.active {
+  background-color: #0479CA;
+  color: white;
+}
+main .down section div.one div#cpJS div.img3 {
+  width: 100%;
+  padding: 30px 70px 30px 140px;
+}
+main .down section div.one div#cpJS div.content {
+  padding: 20px;
+}
+main .down section div.one div#cpJS div.content div.header {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 2px solid #D7D7D7;
+}
+main .down section div.one div#cpJS div.content div.header span:first-child {
+  font-size: 16px;
+  color: #2457A6;
+  padding: 0 5px 5px 5px;
+  border-bottom: 2px solid #2457A6;
+}
+main .down section div.one div#cpJS div.content div.header span:last-child {
+  font-size: 13px;
+  color: #777;
+  margin-left: 10px;
+}
+main .down section div.one div#cpJS div.content p {
+  margin-top: 20px;
+  color: #666666;
+  font-size: 15px;
+}
+main .down section div.one div#cpJS div.img5 {
+  text-align: center;
+  padding: 20px 0;
+}
+main .down section div.one div#spPJ {
+  display: none;
+}
+main .down section div.one div#spPJ h5 {
+  padding: 10px;
+  color: #666;
+}
+main .down section div.one div#spPJ div.score {
+  width: 560px;
+  height: 62px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+main .down section div.one div#spPJ div.score > span {
+  display: block;
+  color: #999999;
+}
+main .down section div.one div#spPJ div.score > span b {
+  font-size: 60px;
+  color: #FF8F00;
+  font-weight: normal;
+}
+main .down section div.one div#spPJ div.score .strip {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
+}
+main .down section div.one div#spPJ div.score .strip p {
+  color: #666;
+  font-size: 12px;
+  position: relative;
+}
+main .down section div.one div#spPJ div.score .strip p:first-child {
+  width: 450px;
+  height: 18px;
+  background-color: #BDBDBD;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin: 20px 0 10px 0;
+}
+main .down section div.one div#spPJ div.score .strip p:first-child:before {
+  content: '4.7';
+  position: absolute;
+  right: 10px;
+  top: -25px;
+  background-color: #7F7F7F;
+  color: white;
+  font-size: 12px;
+  padding: 0 5px;
+}
+main .down section div.one div#spPJ div.score .strip p:first-child:after {
+  content: '';
+  position: absolute;
+  right: 18px;
+  top: -9px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #7F7F7F;
+}
+main .down section div.one div#spPJ nav {
+  clear: both;
+  margin-top: 60px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #F2F2F2;
+  font-size: 13px;
+}
+main .down section div.one div#spPJ nav a {
+  padding: 10px 10px 8px 10px;
+  font-size: 13px;
+  margin: 0 10px 0 15px;
+  color: black;
+}
+main .down section div.one div#spPJ nav a:first-of-type {
+  color: #317EE7;
+  border-bottom: 2px solid #317EE7;
+}
+main .down section div.one div#spPJ nav span:first-of-type {
+  margin-left: 170px;
+}
+main .down section div.one div#spPJ nav span {
+  border: 1px solid #CDCDCD;
+  border-bottom: none;
+  margin-right: -5px;
+  padding: 0 5px;
+}
+main .down section div.one div#spPJ nav span:after {
+  content: '\f0d7';
+  font-family: glyphicon;
+  margin: 5px;
+}
+main .down section div.one div#spPJ div.tab ul li {
+  padding: 0 20px;
+  height: 120px;
+  clear: both;
+}
+main .down section div.one div#spPJ div.tab ul li div.img2 {
+  float: left;
+  width: 65px;
+  height: 100px;
+  padding: 20px;
+  margin-right: 50px;
+}
+main .down section div.one div#spPJ div.tab ul li div.img2 p {
+  color: #838395;
+  font-size: 13px;
+  text-align: center;
+}
+main .down section div.one div#spPJ div.tab ul li > p:first-of-type {
+  display: inline-block;
+  margin: 20px 0;
+  width: 580px;
+  font-weight: bold;
+}
+main .down section div.one div#spPJ div.tab ul li > p:first-of-type i {
+  font-family: glyphicon;
+  font-style: normal;
+  color: #F6A135;
+  letter-spacing: 0.2em;
+}
+main .down section div.one div#spPJ div.tab ul li > p:first-of-type time {
+  float: right;
+  font-weight: normal;
+  color: #ABABAB;
+  font-size: 12px;
+}
+main .down section div.one div#spPJ div.tab ul li > p:last-of-type {
+  margin-bottom: 15px;
+  color: #777777;
+}
+main .down section div.one div#spPJ div.tab ul li a {
+  color: #085C9B;
+}
+main .down section div.two {
+  width: 784px;
+  background-color: white;
+  margin-top: 20px;
+}
+main .down section div.two header {
+  height: 35px;
+  line-height: 40px;
+  color: #076EBB;
+}
+main .down section div.two header span:first-child {
+  padding: 10px 20px 5px 20px;
+  border: 1px solid #0688BA;
+  border-bottom: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+main .down section div.two header span:last-child {
+  display: inline-block;
+  margin-left: -5px;
+  width: 639px;
+  height: 35px;
+  border-bottom: 1px solid #0688BA;
+  font-size: 13px;
+  text-align: right;
+}
+main .down section div.two > p {
+  margin: 20px;
+  height: 40px;
+  padding: 10px;
+  background-color: #F3F3F3;
+  font-size: 13px;
+  line-height: 20px;
+  color: #777777;
+}
+main .down section div.two ul li {
+  padding: 0 20px;
+  height: 126px;
+  margin-bottom: 35px;
+  color: #ABABAB;
+}
+main .down section div.two ul li div.img2 {
+  float: left;
+  width: 55px;
+  height: 80px;
+  line-height: 20px;
+  padding: 20px;
+  margin-right: 15px;
+  text-align: center;
+}
+main .down section div.two ul li div.img2 p {
+  color: #838395;
+  font-size: 13px;
+}
+main .down section div.two ul li > p:first-of-type {
+  display: inline-block;
+  margin: 20px 0;
+  width: 610px;
+  font-weight: bold;
+  color: black;
+}
+main .down section div.two ul li > p:first-of-type time {
+  float: right;
+  font-weight: normal;
+  font-size: 12px;
+  color: #ABABAB;
+}
+main .down section div.two ul li > p:last-of-type {
+  margin-top: 5px;
+  width: 575px;
+  margin-left: 107px;
+  padding: 20px 30px;
+  background-color: #F1F1F1;
+  position: relative;
+  color: black;
+}
+main .down section div.two ul li > p:last-of-type span {
+  color: #ABABAB;
+}
+main .down section div.two ul li > p:last-of-type:after {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-bottom-color: #F1F1F1;
+}
+main .down section div.two div.three {
+  margin-left: 200px;
+}

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+.position {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header section.cart {
+  background-color: #1d7ad9;
+  height: 85px;
+}
+header section.cart > div {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 85px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: url("../img/logo1.png") no-repeat left center;
+  padding-left: 550px;
+}
+header section.cart > div div.line {
+  width: 335px;
+  height: 3px;
+  background-color: #FFF003;
+  margin-top: 30px;
+  font-size: 13px;
+}
+header section.cart > div div.line span {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 50px;
+  position: relative;
+  top: -6px;
+  color: #1D7AD9;
+}
+header section.cart > div div.line span:not(:last-of-type) {
+  margin-right: 137px;
+  background-color: #FFF003;
+}
+header section.cart > div div.line span:last-of-type {
+  background-color: #8DBDEB;
+}
+header section.cart > div div.line p a:nth-of-type(1) {
+  color: #FFF003;
+  margin-left: -20px;
+  margin-right: 80px;
+}
+header section.cart > div div.line p a:nth-of-type(2) {
+  color: #FFF003;
+}
+header section.cart > div div.line p a:nth-of-type(3) {
+  position: absolute;
+  margin-left: 80px;
+  color: white;
+}
+main {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+main form.form1 {
+  border: 1px solid #cdcdcd;
+  margin-bottom: 30px;
+}
+main form.form1 header {
+  padding-left: 10px;
+  background-color: #F4F4F4;
+  line-height: 35px;
+}
+main form.form1 header a {
+  float: right;
+  font-size: 13px;
+  color: #3377FF;
+  margin-right: 35px;
+  cursor: pointer;
+}
+main form.form1 section {
+  padding: 25px 0 0 50px;
+}
+main form.form1 section dl {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+main form.form1 section dl:before {
+  content: "*";
+  position: absolute;
+  color: red;
+  margin-left: -15px;
+  margin-top: 3px;
+}
+main form.form1 section dl select,
+main form.form1 section dl input {
+  height: 25px;
+}
+main form.form1 section dl dt {
+  float: left;
+  display: block;
+  text-align: justify;
+  width: 80px;
+  height: 30px;
+}
+main form.form1 section dl dt > span {
+  display: inline-block;
+  padding-left: 100%;
+}
+main form.form1 section dl .phone {
+  width: 90px;
+}
+main form.form1 section button {
+  padding: 8px 20px;
+  background-color: #3F8CF6;
+  border: none;
+  color: white;
+  margin: 15px 0;
+}
+main form.form1 section > input {
+  color: #666666;
+  padding: 3px 20px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+main form.form1 section > input:first-of-type {
+  background-color: #3F8CF6;
+  color: white;
+  box-shadow: none;
+}
+main form.form1 ul {
+  padding: 10px 0 0 30px;
+}
+main form.form1 ul li {
+  height: 45px;
+  color: #444444;
+}
+main form.form1 ul li input {
+  margin-right: 5px;
+}
+main form.form1 ul li span {
+  margin-left: 20px;
+}
+main form.form1 ul li:first-child span:before {
+  content: '\f1d7';
+  font-family: glyphicon;
+  color: green;
+  padding: 5px;
+  font-size: 23px;
+}
+main form.form1 p {
+  padding: 10px 0 0 30px;
+  font-size: 15px;
+  color: #777;
+}
+main form.form1 p input {
+  margin-right: 5px;
+}
+main form.form1 table {
+  width: 100%;
+  color: #777;
+  font-size: 15px;
+  border-bottom: 1px solid #cdcdcd;
+}
+main form.form1 table tr:first-child {
+  height: 35px;
+}
+main form.form1 table tr:first-child td {
+  border-bottom: 1px solid #cdcdcd;
+}
+main form.form1 table tr td {
+  clear: both;
+}
+main form.form1 table tr td:not(:first-of-type) {
+  text-align: center;
+}
+main form.form1 table tr td figure div {
+  float: left;
+  padding: 5px 30px 5px 50px;
+}
+main form.form1 table tr td figure figcaption p:last-of-type {
+  margin-top: 20px;
+  font-size: 14px;
+  color: black;
+}
+main form.form1 div.not {
+  font-size: 14px;
+}
+main form.form1 div.not > a {
+  color: #3377FF ;
+  display: inline-block;
+  padding: 15px 0 20px 30px;
+}
+main form.form1 div.not > p {
+  color: red;
+}
+main form.form1 div.not > p:before {
+  content: '\f06a';
+  font-family: glyphicon;
+  color: #E79202;
+  margin-right: 10px;
+}
+main form.form1 div.not figure {
+  padding: 20px 0 40px  30px;
+}
+main form.form1 div.not figure p {
+  line-height: 13px;
+}
+main form.form1 div.not figure p span {
+  color: #D70000;
+  font-weight: bold;
+}
+main form.form1 div.play {
+  width: 190px;
+  height: 100px;
+  margin-left: 750px;
+  margin-bottom: 20px;
+}
+main form.form1 div.play span {
+  color: #EF0000;
+  font-size: 25px;
+  font-weight: bold;
+}
+main form.form1 div.play button {
+  padding: 10px 50px;
+  background-color: #E50007;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 30px;
+  margin-top: 10px;
+}

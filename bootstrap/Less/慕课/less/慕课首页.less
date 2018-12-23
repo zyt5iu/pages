@@ -1,0 +1,139 @@
+@charset "UTF-8";
+//公共部分
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: "glyphicon";
+  src: url('../fonts/icomoon.eot') format('eot'),
+  url('../fonts/icomoon.ttf') format('ttf'),
+  url('../fonts/icomoon.woff') format('woff'),
+  url('../fonts/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+//字体图标设置
+.data-icon(@l:-35px,@fs:20px){
+  position: absolute;
+  content: attr(data-icon);
+  font-family: glyphicon;
+  color: #999;
+  margin-left: @l;
+  font-size: @fs;
+  margin-top: -1px;
+}
+.position{
+  width: 1000px;
+  margin: auto;
+}
+.red_icon{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-bottom-color: red;
+  transform: rotate(-45deg);
+  margin-left: -5px;
+  margin-top: 5px;
+}
+ul li{
+  list-style: none;
+  font-size: 13px;
+}
+//主体内容
+main{
+  //height: 800px;
+  a,a:visited{
+    color: black;
+    text-decoration: none;
+  }
+  a:hover{
+    color: darkred;
+    text-decoration: underline;
+  }
+  .position;
+  div.up {
+    display: flex;
+    .left {
+      flex: 3;
+    }
+    .mid {
+      flex: 3;
+    }
+    .right {
+      flex: 1;
+    }
+    margin-top: 10px;
+    section{
+      background: white;
+      border: 1px solid #E8E8E8;
+      header{
+        display: flex;
+        justify-content: space-between;
+        line-height: 40px;
+        padding: 0 20px 0 15px;
+        border-bottom: 1px solid #E8E8E8;
+        font-size: 14px;
+        h3{
+          font-weight: normal;
+        }
+        a{
+          color: #999999;
+          &:after{
+            .data-icon(0,20px);
+          }
+        }
+      }
+      figure{
+        display: flex;
+        padding: 5px;
+        figcaption{
+          font-size: 12px;
+          line-height: 20px;
+          margin-left: 5px;
+          h4 a{
+            color: #d80000;
+          }
+        }
+      }
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+    }
+    .left ul li{
+      margin: 5px;
+      line-height: 24px;
+      border-bottom: 1px dashed #ccc;
+      display: flex;
+      justify-content: space-between;
+      &:before{
+        .red_icon;
+      }
+      &:last-child{
+        border: none;
+      }
+    }
+    .mid{
+      figcaption{
+        p{
+          text-indent: 2em;
+        }
+      }
+      ul{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 25px;
+        li a{
+          color: red;
+        }
+      }
+    }
+    .right video{
+      width: 100%;
+    }
+  }
+}
+
+

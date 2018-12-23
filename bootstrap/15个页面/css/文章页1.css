@@ -1,0 +1,193 @@
+@charset "UTF-8";
+div.container {
+  width: 70%;
+  margin: auto;
+}
+div.container header div.adv {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+div.container header nav {
+  height: 40px;
+  line-height: 40px;
+  background: -webkit-linear-gradient(top, #0454c7, #0c61d6);
+  background: linear-gradient(top, #0454c7, #0c61d6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+div.container header nav a {
+  color: white;
+}
+div.container header nav a:hover {
+  color: red;
+}
+div.container header div.header {
+  padding: 20px 10px;
+  background: #eeeeee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.container header div.header dl {
+  padding: 0 10px;
+}
+div.container header div.header dl dt {
+  float: left;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 25px;
+}
+div.container header div.header dl dt span:before {
+  content: '\f099';
+  font-family: glyphicon;
+  position: absolute;
+  font-size: 30px;
+  margin-top: -35px;
+  margin-left: 5px;
+  color: #6B91C2;
+}
+div.container header div.header dl dd {
+  overflow: hidden;
+}
+div.container header div.header dl dd a {
+  color: #666666;
+  font-size: 14px;
+}
+div.container main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+div.container main div.header {
+  height: 35px;
+  line-height: 35px;
+  background-color: #FAFBFF;
+  border-bottom: 1px solid #cdcdcd;
+  font-weight: bold;
+  font-size: 14px;
+}
+div.container main section {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+  margin-right: 15px;
+}
+div.container main section div.one {
+  border: 1px solid #cdcdcd;
+}
+div.container main section div.one div.detail {
+  padding: 10px;
+}
+div.container main section div.one div.detail div.header1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+div.container main section div.one div.detail div.header1 h2 {
+  color: #FF8538;
+  font-weight: 500;
+  margin: 30px 0;
+}
+div.container main section div.one div.detail div.header1 time {
+  margin-left: 30px;
+}
+div.container main section div.one div.detail div.font p {
+  text-indent: 2em;
+  margin-top: 15px;
+}
+div.container main section div.one div.detail div.font p:nth-of-type(2) {
+  font-weight: bold;
+  margin-left: 80%;
+  padding-top: 15px;
+  font-size: 13px;
+}
+div.container main section div.one div.detail div.font ul {
+  list-style-type: disc;
+  margin: 25px;
+}
+div.container main section div.two {
+  border: 1px solid #cdcdcd;
+  margin-top: 15px;
+}
+div.container main section div.two div.detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  text-align: center;
+}
+div.container main section div.two div.detail figure {
+  margin-right: 5px;
+}
+div.container main section div.three {
+  margin-top: 15px;
+  border: 1px solid #cdcdcd;
+}
+div.container main section div.three span {
+  padding: 20px;
+}
+div.container main aside {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+div.container main aside div.four {
+  border: 1px solid #cdcdcd;
+}
+div.container main aside div.four div.detail {
+  padding: 10px;
+}
+div.container main aside div.four div.detail ul li {
+  padding: 3px 0;
+}
+div.container main aside div.four div.detail ul li:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: #0050a2;
+  margin-right: 5px;
+}
+div.container main aside div.four div.detail ul li time {
+  float: right;
+}
+div.container main aside div.five {
+  border: 1px solid #cdcdcd;
+  margin-top: 15px;
+}
+div.container main aside div.five div.detail {
+  padding: 10px;
+}
+div.container main aside div.five div.detail img {
+  width: 49%;
+}
+div.container main aside div.five div.detail ul li {
+  padding: 3px 0;
+}
+div.container main aside div.five div.detail ul li:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: #0050a2;
+  margin-right: 5px;
+}
+div.container footer {
+  height: 60px;
+  margin-top: 20px;
+  border-top: 3px solid #6E97E6;
+  line-height: 30px;
+  text-align: center;
+}

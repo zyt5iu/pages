@@ -1,0 +1,190 @@
+body {
+  background-color: #B4E2F9;
+}
+div.container {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 10px #555;
+}
+div.container header div.initial {
+  height: 70px;
+  line-height: 70px;
+  text-align: right;
+  background: url("../img/zy5img1.png") no-repeat left center;
+  background-color: #F6F9FF;
+}
+div.container header nav {
+  height: 40px;
+  background: -webkit-linear-gradient(top, #158cb7, #186c9b);
+  background: linear-gradient(top, #158cb7, #186c9b);
+}
+div.container header nav dl:not(:first-of-type) dt a {
+  border-left: 1px solid white;
+}
+div.container header nav dl dt {
+  float: left;
+  width: 85px;
+  height: 20px;
+  padding: 10px 0;
+  text-align: center;
+}
+div.container header nav dl dt a,
+div.container header nav dl dt a:visited {
+  color: white;
+  padding: 0 10px;
+  display: inline-block;
+}
+div.container header nav dl dt a:hover {
+  color: red;
+}
+div.container header nav dl dd {
+  display: none;
+}
+div.container header nav dl:hover > dd {
+  display: block;
+  position: absolute;
+  margin-top: 40px;
+  width: 70%;
+  background-color: #cdcdcd;
+  text-align: center;
+}
+div.container header div.img1 img {
+  width: 100%;
+}
+div.container main div.header {
+  width: 100px;
+  background: -webkit-linear-gradient(top, #e4ecf7, #f5f5f5);
+  background: linear-gradient(top, #e4ecf7, #f5f5f5);
+  border: 1px solid #cdcdcd;
+  border-bottom: none;
+  margin: 5px  0 0 5px;
+  border-radius: 4px 4px 0 0;
+}
+div.container main div.up {
+  margin: 15px 0;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.container main div.up aside.left {
+  width: 25%;
+  border: 1px solid #cdcdcd;
+  background-color: #F1F5F6;
+}
+div.container main div.up aside.left div.img2 {
+  margin-bottom: 20px;
+  width: 100%;
+}
+div.container main div.up aside.left div.img2 img {
+  width: 100%;
+}
+div.container main div.up aside.left div.detail {
+  margin: 5px;
+  border: 1px solid #cdcdcd;
+  background: -webkit-linear-gradient(top, #bce0fa, #ffffff);
+  background: linear-gradient(top, #bce0fa, #ffffff);
+}
+div.container main div.up aside.left div.detail ul {
+  padding: 5px;
+}
+div.container main div.up aside.left div.detail ul li {
+  border-bottom: 1px dashed #aaa;
+  padding: 5px 0 5px 15px;
+}
+div.container main div.up section.mid {
+  width: 48%;
+  margin: 0 1%;
+}
+div.container main div.up section.mid div.one {
+  font-size: 14px;
+  border: 1px solid #cdcdcd;
+}
+div.container main div.up section.mid div.one:first-of-type {
+  margin-bottom: 25px;
+}
+div.container main div.up section.mid div.one p {
+  padding: 10px 5px 10px 5px;
+  text-indent: 2em;
+}
+div.container main div.up section.mid div.one a {
+  color: red;
+}
+div.container main div.up section.mid div.one ul {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+div.container main div.up section.mid div.one ul time {
+  float: right;
+}
+div.container main div.up section.mid div.one ul li {
+  padding: 1px 0;
+}
+div.container main div.up section.mid div.one button {
+  background-color: #CE3B05;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin: 0 0 10px 350px;
+  color: white;
+}
+div.container main div.up aside.right {
+  width: 25%;
+}
+div.container main div.up aside.right div.aa {
+  border: 1px solid #cdcdcd;
+  background-color: #EAF4F6;
+}
+div.container main div.up aside.right div.aa div.img3 {
+  width: 100%;
+  padding: 5px;
+}
+div.container main div.up aside.right div.aa div.img3 img {
+  width: 96%;
+}
+div.container main div.up aside.right div.img4 {
+  margin: 30px 0 10px 0;
+  text-align: center;
+}
+div.container main div.up aside.right div.bb {
+  border: 1px solid #cdcdcd;
+  background-color: #EAF4F6;
+}
+div.container main div.up aside.right div.bb div.detail {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+div.container main div.up aside.right div.bb div.detail ul {
+  list-style-type: disc;
+  margin-left: 30px;
+}
+div.container main div.down {
+  margin: 10px;
+}
+div.container main div.down div.detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #B4D2EA;
+}
+div.container main div.down div.detail img {
+  width: 31%;
+  height: 31%;
+  margin: 10px;
+  border: 1px solid #cdcdcd;
+}
+div.container footer {
+  text-align: center;
+  height: 80px;
+  background: -webkit-linear-gradient(top, #daf0fd, #f5f5f5);
+  background: linear-gradient(top, #daf0fd, #f5f5f5);
+  border-top: 1px solid #618EB8;
+  font-size: 14px;
+}
+div.container footer p {
+  padding-top: 20px;
+}

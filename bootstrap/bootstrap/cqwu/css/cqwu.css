@@ -1,0 +1,129 @@
+@charset "UTF-8";
+main {
+  margin-top: 15px;
+}
+main div.header {
+  height: 40px;
+  border-bottom: 2px solid #969696;
+}
+main div.header span {
+  display: inline-block;
+  padding: 8px 15px 8px 15px;
+  border-bottom: 2px solid #002F94;
+  font-size: 20px;
+  font-weight: bold;
+}
+main div.header span small {
+  color: #002F94;
+  font-size: 17px;
+  font-weight: bold;
+}
+main div.header a {
+  float: right;
+  font-size: 15px;
+  display: inline-block;
+  padding: 8px 0 8px 0;
+  color: #7F667F;
+}
+main div.news div.detail {
+  margin: 30px 0 0 0;
+}
+main div.news div.detail div.panel {
+  border: none;
+  color: white;
+}
+main div.news div.detail div.panel div.panel-heading {
+  background-color: #d54248;
+  height: 60px;
+  color: white;
+}
+main div.news div.detail div.panel div.panel-body {
+  padding: 0;
+  background-color: #5d718e;
+}
+main div.news div.detail div.panel div.panel-body img {
+  width: 100%;
+}
+main div.news div.detail div.panel div.panel-body p {
+  padding: 15px 15px 0 15px;
+  text-indent: 2em;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+main div.news div.detail div.panel div.panel-body a {
+  margin-left: 70%;
+  color: white;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+main div.news div.detail div.panel:hover div.panel-heading {
+  background-color: #5d718e;
+}
+main div.news div.detail div.panel:hover div.panel-body {
+  background-color: #d54248;
+}
+main div.notice_academic div.detail a {
+  display: block;
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px solid #b5b5b5;
+}
+main div.notice_academic div.detail a div.one {
+  color: white;
+  background-color: #5a6989;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0;
+}
+main div.notice_academic div.detail a div.one b {
+  font-size: 30px;
+}
+main div.notice_academic div.detail a div.two h4 {
+  color: #737373;
+  font-weight: 600;
+  font-size: 16px;
+}
+main div.notice_academic div.detail a div.two p {
+  color: #858687;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+main div.notice_academic div.detail a:hover div.one {
+  background-color: #213A69;
+}
+main div.notice_academic div.detail a:hover div.two h4 {
+  color: #213A69;
+}
+main div.notice_academic div.second div.detail a {
+  border-bottom: 1px dashed #b5b5b5 !important;
+}
+main div.TOPICS div.detail {
+  padding: 15px;
+}
+main div.TOPICS div.detail a {
+  color: #666666;
+  display: inline-block;
+}
+main div.TOPICS div.detail a figure {
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+}
+main div.TOPICS div.detail a figure img {
+  width: 100%;
+  margin: 2px 0 5px 0;
+}
+main div.TOPICS div.detail a figure figcaption {
+  padding: 5px 0 5px 5px;
+}
+main div.TOPICS div.detail a:hover {
+  background-color: #5D718E ;
+  color: white;
+  text-decoration: none;
+}

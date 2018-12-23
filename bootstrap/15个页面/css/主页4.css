@@ -1,0 +1,356 @@
+header section {
+  width: 800px;
+  margin: auto;
+}
+header section img {
+  width: 100%;
+}
+header a,
+header a:visited {
+  color: white;
+}
+header div.initial {
+  color: white;
+  height: 30px ;
+  background: url("../img/zy4initial.png");
+}
+header div.initial > section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 13px;
+  line-height: 22px;
+}
+header div.img1 {
+  background: url("../img/zy4img_2.png");
+}
+header nav {
+  background: -webkit-linear-gradient(top, #a29ea3, #292929, #000000);
+  background: linear-gradient(top, #a29ea3, #292929, #000000);
+  height: 30px;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  line-height: 30px;
+  font-size: 14px;
+}
+main {
+  width: 800px;
+  margin: 15px auto 15px auto;
+  font-size: 14px;
+}
+main div.up {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+}
+main div.up div.left {
+  width: 600px;
+  margin-right: 10px;
+  color: #333333;
+}
+main div.up div.left div.one {
+  width: 230px;
+  height: 200px;
+  border: 1px solid #cdcdcd;
+  float: left;
+  margin-right: 10px;
+  background-color: #F9F9F9;
+}
+main div.up div.left div.one div.header {
+  background: url("../img/zy4img1.png") no-repeat left center;
+  height: 30px;
+}
+main div.up div.left div.one div.adv {
+  text-align: center;
+  padding: 10px 0 8px 0;
+}
+main div.up div.left div.one div.detail {
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main div.up div.left div.one div.detail span:first-of-type:before {
+  content: '\f0d9';
+  font-family: glyphicon;
+  margin: 0 5px 0 5px;
+}
+main div.up div.left div.one div.detail span:last-of-type:after {
+  content: '\f0da';
+  font-family: glyphicon;
+  margin: 0 5px 0 5px;
+}
+main div.up div.left div.two {
+  width: 340px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #cdcdcd;
+  padding-left: 10px;
+  background-color: #F9F9F9;
+}
+main div.up div.left div.two div.header {
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main div.up div.left div.two div.header span {
+  border-bottom: 2px solid #B43234;
+}
+main div.up div.left div.two div.header a {
+  margin-right: 10px;
+}
+main div.up div.left div.two div.detail {
+  height: 70px;
+}
+main div.up div.left div.two div.detail h3 {
+  font-size: 13px;
+  color: #1677BB;
+  margin: 8px 0 5px 0;
+}
+main div.up div.left div.two div.detail figure {
+  font-size: 10px;
+}
+main div.up div.left div.two div.detail figure img {
+  float: left;
+  margin-right: 5px;
+}
+main div.up div.left div.three {
+  width: 593px;
+  margin-top: 10px;
+  border: 1px solid #CDCDCD;
+  background-color: #F9F9F9;
+}
+main div.up div.left div.three div.header {
+  background: url("../img/zy4img5.png") no-repeat left center;
+  height: 30px;
+}
+main div.up div.left div.three dl {
+  padding: 0 5px;
+  margin: 0 10px;
+  height: 55px;
+  border-bottom: 1px dashed #CCCCCC;
+}
+main div.up div.left div.three dl:nth-of-type(4),
+main div.up div.left div.three dl:nth-of-type(5) {
+  border-bottom: none;
+}
+main div.up div.left div.three dl:nth-of-type(3) dd {
+  line-height: 45px;
+}
+main div.up div.left div.three dl dt {
+  float: left;
+  width: 130px;
+  padding-top: 15px ;
+}
+main div.up div.left div.three dl dt a {
+  font-size: 13px;
+  display: inline-block;
+  width: 90px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #CF3E43;
+  text-align: center;
+}
+main div.up div.left div.three dl dd {
+  overflow: hidden;
+  font-size: 12px;
+  padding-top: 5px;
+  line-height: 25px;
+}
+main div.up div.left div.three dl dd a {
+  margin-right: 10px;
+}
+main div.up div.right {
+  width: 190px;
+}
+main div.up div.right div.four {
+  border: 1px solid #cdcdcd;
+  background-color: #F9F9F9;
+}
+main div.up div.right div.four div.detail {
+  text-align: center;
+}
+main div.up div.right div.four div.detail img {
+  margin: 5px 0;
+}
+main div.up div.right div.five {
+  margin-top: 10px;
+  border: 1px solid #cdcdcd;
+  background-color: #F9F9F9;
+}
+main div.up div.right div.five div.header {
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px;
+}
+main div.up div.right div.five div.header span {
+  border-bottom: 2px solid #A20300;
+}
+main div.up div.right div.five div.header a {
+  font-size: 12px;
+}
+main div.up div.right div.five div.detail {
+  padding: 5px 5px 5px 10px;
+}
+main div.up div.right div.five div.detail ul li {
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #cdcdcd;
+}
+main div.up div.right div.five div.detail ul li:after {
+  content: '\f103';
+  font-family: glyphicon;
+  float: right;
+  color: #B40400;
+  font-weight: bold;
+}
+main div.down {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+main div.down div.header {
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5px;
+}
+main div.down div.header span {
+  border-bottom: 2px solid #A20300;
+}
+main div.down div.header a {
+  font-size: 12px;
+}
+main div.down div.six {
+  width: 25%;
+  border: 1px solid #cdcdcd;
+  background-color: #f9f9f9;
+}
+main div.down div.six div.detail {
+  padding: 5px;
+}
+main div.down div.six div.detail ul li {
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px dashed #cdcdcd;
+}
+main div.down div.six div.detail ul li:after {
+  content: '\f101 更多';
+  font-family: glyphicon;
+  float: right;
+  color: #B40400;
+  font-weight: bold;
+}
+main div.down div.seven {
+  width: 46%;
+  border: 1px solid #cdcdcd;
+  margin: 0 2%;
+  background-color: #f9f9f9;
+}
+main div.down div.seven div.detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 5px;
+}
+main div.down div.seven div.detail h5 {
+  color: #FBA550 ;
+  border-bottom: 1px dashed #cdcdcd;
+  padding: 5px 0;
+  margin-bottom: 5px;
+}
+main div.down div.seven div.detail div.aa {
+  width: 48%;
+}
+main div.down div.seven div.detail div.bb {
+  margin-left: 20px;
+}
+main div.down div.seven div.detail img {
+  margin-left: 15px;
+}
+main div.down div.seven div.detail p {
+  text-align: center;
+}
+main div.down div.seven div.detail p:after {
+  content: '\f105';
+  font-family: glyphicon;
+  color: #AC0404;
+  margin-left: 25px;
+}
+main div.down div.seven div.detail p:before {
+  content: '\f104';
+  font-family: glyphicon;
+  color: #AC0404;
+  margin-right: 25px;
+}
+main div.down div.eight {
+  width: 25%;
+  border: 1px solid #cdcdcd;
+  background-color: #f9f9f9;
+}
+main div.down div.eight div.detail figure {
+  height: 70px;
+  padding-top: 10px;
+}
+main div.down div.eight div.detail figure img {
+  float: left;
+  padding: 20px 10px;
+}
+main div.down div.eight div.detail figure figcaption {
+  font-size: 13px;
+  color: #888;
+}
+footer {
+  text-align: center;
+  height: 80px;
+  background-color: #7B7575;
+  color: white;
+  font-size: 14px;
+}
+footer p {
+  padding-top: 20px;
+}

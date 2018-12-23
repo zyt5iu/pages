@@ -1,0 +1,78 @@
+@charset "UTF-8";
+//主要内容
+main{
+  div.header{
+    padding: 40px;
+    h1{
+      font-size: 42px;
+    }
+    p{
+      padding: 5px 0;
+    }
+  }
+  div.detail{
+    figure{
+      padding: 5px;
+      margin-bottom: 30px;
+      border: 1px solid #cdcdcd;
+      img{
+        width: 100%;
+      }
+      figcaption{
+        padding: 10px;
+        height: 200px;
+        overflow-y:hidden ;
+        a{
+          display: inline-block;
+          padding: 15px 0;
+          //margin: 15px 0;
+        }
+
+      }
+    }
+
+  }
+}
+footer{
+  border-top: 1px solid #cdcdcd;
+  margin-top: 40px;
+}
+//返回顶部
+small.bootcss_top{
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #929292;
+  text-align: center;
+  a{
+    font-size: 25px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+  }
+  &:hover{
+    background-color: #4c4c4c;
+  }
+}
+@media (min-width:768px) and (max-width: 991px){
+  div.jumbotron{
+    h1{
+      font-size: 90px;
+    }
+    h2{
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width:767px) {
+  div.jumbotron{
+    h1{
+      font-size: 60px;
+    }
+    h2{
+      font-size: 18px;
+    }
+  }
+}

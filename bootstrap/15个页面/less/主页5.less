@@ -1,0 +1,189 @@
+body{
+  background-color: #B4E2F9;
+}
+div.container{
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 10px #555;
+  header{
+    div.initial{
+      height: 70px;
+      line-height: 70px;
+      text-align: right;
+      background: url("../img/zy5img1.png") no-repeat left center;
+      background-color: #F6F9FF;
+    }
+    nav{
+      height: 40px;
+      background: linear-gradient(top,#158CB7,#186C9B);
+      dl{
+        &:not(:first-of-type) dt a{
+          border-left: 1px solid white;
+        }
+        dt{
+          float: left;
+          width: 85px;
+          height: 20px;
+          padding: 10px 0;
+          text-align: center;
+          a,a:visited{
+            color: white;
+            padding: 0 10px;
+            display: inline-block;
+          }
+          a:hover{
+            color: red;
+          }
+        }
+        dd{
+          display: none;
+        }
+        &:hover>dd{
+          display: block;
+          position: absolute;
+          margin-top: 40px;
+          width: 70%;
+          background-color: #cdcdcd;
+          text-align: center;
+        }
+      }
+    }
+    div.img1 img{
+      width: 100%;
+    }
+  }
+  main{
+    div.header{
+      width: 100px;
+      background: linear-gradient(top,#E4ECF7,whitesmoke);
+      border: 1px solid #cdcdcd;
+      border-bottom: none;
+      margin: 5px  0 0 5px;
+      border-radius: 4px 4px 0 0;
+    }
+    div.up{
+      margin: 15px 0;
+      box-sizing: border-box;
+      display: flex;
+      aside.left{
+        width: 25%;
+        border: 1px solid #cdcdcd;
+        background-color: #F1F5F6;
+        div.img2{
+          margin-bottom: 20px;
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+        div.detail{
+          margin: 5px;
+          border: 1px solid #cdcdcd;
+          background: linear-gradient(top,#BCE0FA,white);
+          ul{
+            padding: 5px;
+            li{
+              border-bottom: 1px dashed #aaa;
+              padding: 5px 0 5px 15px;
+            }
+          }
+        }
+      }
+      section.mid{
+        width: 48%;
+        margin: 0 1%;
+        div.one{
+          font-size: 14px;
+          border: 1px solid #cdcdcd;
+          &:first-of-type{
+            margin-bottom: 25px;
+          }
+          p{
+            padding: 10px 5px 10px 5px;
+            text-indent: 2em;
+          }
+          a{
+            color: red;
+          }
+          ul{
+            list-style-type: disc;
+            margin-left: 25px;
+            time{
+              float: right;
+            }
+            li{
+              padding: 1px 0;
+            }
+          }
+          button{
+            background-color: #CE3B05;
+            border: none;
+            border-radius: 5px;
+            padding: 3px 5px;
+            margin: 0 0 10px 350px;
+            color: white;
+          }
+        }
+      }
+      aside.right{
+        width: 25%;
+        div.aa{
+          border: 1px solid #cdcdcd;
+          background-color: #EAF4F6;
+          div.img3{
+            width: 100%;
+            padding: 5px;
+            img{
+              width: 96%;
+            }
+          }
+        }
+        div.img4{
+          margin: 30px 0 10px 0;
+          text-align: center;
+        }
+        div.bb{
+          border: 1px solid #cdcdcd;
+          background-color: #EAF4F6;
+          div.detail{
+            margin: 10px;
+            border-radius: 5px;
+            background-color: white;
+            ul{
+              list-style-type: disc;
+              margin-left: 30px;
+              li{
+                //padding: 5px 0;
+              }
+            }
+
+          }
+        }
+      }
+    }
+    div.down{
+      margin: 10px;
+      div.detail{
+        display: flex;
+        border: 1px solid #B4D2EA;
+        img{
+          width: 31%;
+          height: 31%;
+          margin: 10px;
+          border:1px solid #cdcdcd;
+        }
+      }
+    }
+  }
+  footer{
+    text-align: center;
+    height: 80px;
+    background: linear-gradient(top,#DAF0FD,whitesmoke);
+    border-top: 1px solid #618EB8;
+    font-size: 14px;
+    p{
+      padding-top: 20px;
+    }
+  }
+}

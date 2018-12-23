@@ -1,0 +1,129 @@
+@charset "UTF-8";
+//文字盒子隐藏省略
+.multi_row(@row:3) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+div.initial{
+  nav.navbar{
+    min-height: 40px;
+    background-color: #012269;
+  }
+  nav form.navbar-form{
+    margin: 3px 0;
+  }
+  .navbar-nav>li>a{
+    padding: 10px;
+  }
+  nav.navbar ul.ul_one{
+    margin-right: 15%;
+  }
+  nav input.form-control{
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    height: 20px;
+    margin-top: 7px;
+    border-radius: 15px;
+    background-color: #8091B4;
+    color: white;
+  }
+  nav span.glyphicon-search{
+    color: #b7c9dd;
+    top: 7px;
+    left:8px;
+  }
+  nav ul li a{
+    color: #C7CAD6 !important;
+  }
+}
+header{
+  margin-top: 40px;
+  background: url("../images/top_bg.jpg") no-repeat right top;
+  div.up{
+    padding: 10px 0 10px 10px;
+    background: url("../images/top_icon.png") no-repeat right bottom;
+  }
+  div.down{
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    div.container{
+      //display: flex;
+      dl{
+        margin: 0;
+        &:hover{
+          cursor: pointer;
+          dt{
+            background-color: #4197D0;
+          }
+          dd{
+            z-index: 10;
+            display: block;
+            position: absolute;
+            background: rgba(232, 232, 232, 0.8);
+            left: 0;
+            right: 0;
+            top:41px;
+            text-align: center;
+            a{
+              color: #333333;
+              font-size: 17px;
+              display: inline-block;
+              padding: 10px 15px;
+              &:hover{
+                color: #0a8dff;
+                text-decoration: none;
+
+              }
+            }
+          }
+        }
+        dt{
+          padding: 10px 20px;
+          color: white;
+          font-size: 15px;
+          float: left;
+        }
+        dd{
+          display: none;
+        }
+      }
+    }
+  }
+}
+footer{
+  margin-top: 30px;
+  background: url("../images/footer_bg.jpg") no-repeat center center;
+  div.up{
+    padding: 40px 110px 20px 110px;
+    color: white;
+    a{
+      color: white;
+    }
+    div.col-sm-4:not(:first-of-type){
+      h4{
+        border-bottom: 1px solid white;
+        span{
+          display: inline-block;
+          border-bottom: 1px solid white;
+        }
+      }
+      a{
+        display: block;
+        &:hover{
+          color: red;
+        }
+      }
+    }
+  }
+  div.down{
+    color: #6d7180;
+    padding: 10px;
+    line-height: 20px;
+    font-size: 13px;
+    background-color: #041438;
+  }
+}

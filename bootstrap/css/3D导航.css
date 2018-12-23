@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    margin-top: 100px;
+    color: whitesmoke;
+}
+nav dl{
+    padding: 10px 20px;
+    position: relative;
+    /*哪个盒子要变换就加给谁*/
+    /*perspective: 900px; !* 透视深度*!*/
+    /*perspective-origin: -100% -50%; !* 指定用户从哪个方向看过来的 *!*/
+}
+nav dl dt{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /*要旋转的面的父盒子*/
+    transform-style: preserve-3d; /* 子元素以3D效果呈现 */
+    /*让整体先往后移25（整体高度为50.6），为了防止近大远小*/
+    transform: translateZ(-25px);
+    transition: transform 0.5s;
+}
+nav dl dt span{
+    position: absolute;
+    padding: 10px 20px;
+    /*暂时加，也许没有用*/
+    top:0;
+    left: 0;
+}
+nav dl dt span.front{
+    transform: translateZ(25px);
+    background-color: #487cff;
+}
+nav dl dt span.bottom{
+    transform: rotateX(-90deg) translateZ(25px);
+    background-color: #ffcfab;
+}
+nav dl dt:hover{
+    transform: translateZ(-25px) rotateX(90deg);
+    cursor: pointer;
+}
+nav>dl>dd{
+    position: absolute;
+    left: 0;
+    top:50px;
+    display: none;
+    white-space: nowrap;
+}
+nav>dl:hover dd{
+    display: block;
+}
+nav>dl{
+    margin-right: 1px;
+    /*margin-left: 1px;*/
+}
+nav>dl>dd>dl{
+    margin-top: 1px;
+}

@@ -1,0 +1,280 @@
+@charset "UTF-8";
+.one_detail {
+  width: 81px;
+  text-align: right;
+  margin-right: 42px;
+}
+main {
+  width: 1000px;
+  margin: 15px auto 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #cdcdcd;
+}
+main aside {
+  width: 185px;
+  height: 827px;
+  border: 1px solid #cdcdcd;
+  background-color: #f3f3f3;
+  margin-right: 20px;
+}
+main aside header {
+  padding: 10px 0;
+  border-bottom: 1px solid #cdcdcd;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+main aside dl {
+  border-bottom: 1px solid #cdcdcd;
+  line-height: 23px;
+  font-size: 12px;
+  padding: 10px 0 10px 20px;
+}
+main aside dl dt {
+  font-weight: bold;
+}
+main aside dl a,
+main aside dl a:visited {
+  display: block;
+  color: #575757;
+  margin-left: 15px;
+}
+main aside dl a:hover,
+main aside dl a:visited:hover {
+  text-decoration: underline;
+  color: #0a74cb;
+}
+main aside ul li {
+  height: 70px;
+  padding-top: 10px;
+  background-color: white;
+}
+main aside ul li div.img2 {
+  width: 80px;
+  height: 70px;
+  float: left;
+  text-align: center;
+}
+main aside ul li a,
+main aside ul li a:visited {
+  color: #888;
+  font-size: 13px;
+}
+main aside ul li p {
+  color: #777;
+}
+main section.right {
+  width: 795px;
+  font-size: 13px;
+}
+main section.right div.one {
+  border-bottom: 1px solid #cdcdcd;
+}
+main section.right div.one a,
+main section.right div.one a:visited {
+  color: #1D7AD9;
+}
+main section.right div.one a:hover {
+  color: red;
+}
+main section.right div.one header {
+  height: 41px;
+  line-height: 41px;
+  border-bottom: 1px solid #cdcdcd;
+}
+main section.right div.one header span {
+  display: inline-block;
+  width: 81px;
+  text-align: right;
+  margin-right: 42px;
+  color: #999999;
+}
+main section.right div.one header a {
+  margin-right: 110px;
+}
+main section.right div.one dl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  position: relative;
+}
+main section.right div.one dl:not(:last-child) {
+  border-bottom: 1px dashed #dddddd;
+}
+main section.right div.one dl:not(:last-child) dd:last-child {
+  right: 0;
+  position: absolute;
+}
+main section.right div.one dl dt {
+  width: 81px;
+  text-align: right;
+  margin-right: 42px;
+  color: #999 !important;
+}
+main section.right div.one dl .bx {
+  width: 60px;
+}
+main section.right div.one dl .bx a {
+  background-color: #1D7AD9;
+  padding: 3px;
+  color: white !important;
+}
+main section.right div.one dl dd:last-child {
+  margin-right: 30px !important;
+}
+main section.right div.one dl dd:last-child a {
+  color: #333;
+}
+main section.right div.one dl dd:last-child a:after {
+  content: '\f107';
+  font-family: glyphicon;
+  margin-left: 3px;
+}
+main section.right div.one dl:last-child dd select {
+  padding: 0 10px;
+  height: 28px;
+  margin-right: 10px;
+}
+main section.right div.one .first dd:not( :nth-of-type(1)):not( :nth-of-type(5)) {
+  width: 130px;
+}
+main section.right div.one .first dd:not( :nth-of-type(1)):not( :nth-of-type(5)) a {
+  display: block;
+  margin-bottom: 5px;
+}
+main section.right div.one .second dd:not( :nth-of-type(1)) {
+  margin-right: 22px ;
+}
+main section.right div.two {
+  margin-top: 15px;
+}
+main section.right div.two ul {
+  height: 33px;
+  background-color: #F5F5F5;
+  border: 1px solid #cdcdcd;
+  line-height: 33px;
+  padding: 0 10px;
+}
+main section.right div.two ul li {
+  float: left;
+}
+main section.right div.two ul li select {
+  padding: 0 8px;
+  height: 25px;
+  margin-left: 5px;
+}
+main section.right div.two ul li:last-child {
+  float: right;
+  margin-right: 70px;
+}
+main section.right div.two ul li span {
+  margin-left: 10px;
+  color: #999999;
+}
+main section.right div.two ul li span i {
+  font-style: normal;
+  color: red;
+}
+main section.right div.two figure {
+  width: 198px;
+  padding: 33px;
+  float: left;
+}
+main section.right div.two figure .img {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main section.right div.two figure .img.renQi:after {
+  content: '\f0a3';
+  font-family: glyphicon;
+  font-size: 60px;
+  color: #FF7100;
+  position: absolute;
+  margin-top: 0;
+}
+main section.right div.two figure .img.renQi:before {
+  position: absolute;
+  margin-top: 21px;
+  margin-left: 112px;
+  content: '人气';
+  z-index: 10;
+  color: white;
+}
+main section.right div.two figure .img.hot:before {
+  content: '特价';
+}
+main section.right div.two figure figcaption span {
+  display: inline-block;
+  margin: 10px 0;
+  color: red;
+}
+main section.right div.two figure figcaption span i {
+  margin-left: 10px;
+  color: #0a74cb;
+  font-style: normal;
+}
+main section.right div.two figure figcaption a {
+  width: 90px;
+  display: block;
+  color: #0a74cb;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #C3D5E7;
+}
+main section.right div.two figure figcaption a:before {
+  content: '\f07a';
+  font-family: glyphicon;
+  margin-right: 5px;
+}
+main section.right div.three {
+  display: table;
+  clear: both;
+}
+main section.right div.three ol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 20px 33px;
+}
+main section.right div.three ol li:not( :nth-child(13)) {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  color: black;
+  font-size: 13px;
+}
+main section.right div.three ol li:not( :nth-child(13)):hover {
+  color: white;
+  background-color: #0a74cb;
+  cursor: pointer;
+}
+main section.right div.three ol li:nth-child(13) {
+  height: 30px;
+  line-height: 30px;
+  font-size: 13px;
+  margin-left: 10px;
+}
+main section.right div.three ol input {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+}
+main section.right div.three ol button {
+  width: 40px;
+  height: 25px;
+  margin-left: 5px;
+}
+main section.right div.three ol .active {
+  color: white;
+  background-color: #0a74cb;
+}

@@ -1,0 +1,113 @@
+@charset "UTF-8";
+div.initial nav.navbar {
+  min-height: 40px;
+  background-color: #012269;
+}
+div.initial nav form.navbar-form {
+  margin: 3px 0;
+}
+div.initial .navbar-nav > li > a {
+  padding: 10px;
+}
+div.initial nav.navbar ul.ul_one {
+  margin-right: 15%;
+}
+div.initial nav input.form-control {
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  height: 20px;
+  margin-top: 7px;
+  border-radius: 15px;
+  background-color: #8091B4;
+  color: white;
+}
+div.initial nav span.glyphicon-search {
+  color: #b7c9dd;
+  top: 7px;
+  left: 8px;
+}
+div.initial nav ul li a {
+  color: #C7CAD6 !important;
+}
+header {
+  margin-top: 40px;
+  background: url("../images/top_bg.jpg") no-repeat right top;
+}
+header div.up {
+  padding: 10px 0 10px 10px;
+  background: url("../images/top_icon.png") no-repeat right bottom;
+}
+header div.down {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+header div.down div.container dl {
+  margin: 0;
+}
+header div.down div.container dl:hover {
+  cursor: pointer;
+}
+header div.down div.container dl:hover dt {
+  background-color: #4197D0;
+}
+header div.down div.container dl:hover dd {
+  z-index: 10;
+  display: block;
+  position: absolute;
+  background: rgba(232, 232, 232, 0.8);
+  left: 0;
+  right: 0;
+  top: 41px;
+  text-align: center;
+}
+header div.down div.container dl:hover dd a {
+  color: #333333;
+  font-size: 17px;
+  display: inline-block;
+  padding: 10px 15px;
+}
+header div.down div.container dl:hover dd a:hover {
+  color: #0a8dff;
+  text-decoration: none;
+}
+header div.down div.container dl dt {
+  padding: 10px 20px;
+  color: white;
+  font-size: 15px;
+  float: left;
+}
+header div.down div.container dl dd {
+  display: none;
+}
+footer {
+  margin-top: 30px;
+  background: url("../images/footer_bg.jpg") no-repeat center center;
+}
+footer div.up {
+  padding: 40px 110px 20px 110px;
+  color: white;
+}
+footer div.up a {
+  color: white;
+}
+footer div.up div.col-sm-4:not(:first-of-type) h4 {
+  border-bottom: 1px solid white;
+}
+footer div.up div.col-sm-4:not(:first-of-type) h4 span {
+  display: inline-block;
+  border-bottom: 1px solid white;
+}
+footer div.up div.col-sm-4:not(:first-of-type) a {
+  display: block;
+}
+footer div.up div.col-sm-4:not(:first-of-type) a:hover {
+  color: red;
+}
+footer div.down {
+  color: #6d7180;
+  padding: 10px;
+  line-height: 20px;
+  font-size: 13px;
+  background-color: #041438;
+}

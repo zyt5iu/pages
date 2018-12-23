@@ -1,0 +1,186 @@
+@charset "UTF-8";
+div.container {
+  width: 70%;
+  margin: auto;
+}
+div.container header div.initial {
+  height: 25px;
+  line-height: 25px;
+  text-align: right;
+}
+div.container header div.adv {
+  height: 300px;
+}
+div.container header div.adv img {
+  width: 100%;
+  height: 100%;
+}
+div.container header nav {
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  background: -webkit-linear-gradient(top, #d70000, #9d0708);
+  background: linear-gradient(top, #d70000, #9d0708);
+}
+div.container header nav a {
+  color: white;
+  display: inline-block;
+  padding: 10px 21.9px;
+}
+div.container header nav a:not(:last-of-type) {
+  border-right: 1px solid  #740202;
+}
+div.container header nav a:not(:first-of-type) {
+  border-left: 1px solid #ED0101;
+}
+div.container main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+div.container main aside {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 10px;
+  margin-right: 20px;
+}
+div.container main aside div.header {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  color: white;
+  font-size: 17px;
+  background-color: #C30302;
+}
+div.container main aside div.header span:before {
+  content: '\f01b';
+  font-family: glyphicon;
+  margin-right: 15px;
+  font-size: 18px;
+}
+div.container main aside div.one {
+  border: 3px solid #EEEEEE;
+  background-color: #FFF5F6;
+  padding-bottom: 15px;
+}
+div.container main aside div.one p {
+  padding: 15px 0 0 15px;
+}
+div.container main aside div.one p:before {
+  content: '\f138';
+  font-family: glyphicon;
+  margin-right: 15px;
+  color: #FF650D;
+}
+div.container main aside div.two {
+  margin-top: 15px;
+  border: 3px solid #EEEEEE;
+  background-color: #FFF5F6;
+}
+div.container main aside div.two h3 {
+  color: #888888;
+  font-size: 15px;
+  padding-left: 20px;
+}
+div.container main aside div.two p {
+  text-align: center;
+  padding: 5px 0;
+}
+div.container main aside div.two p:first-of-type {
+  color: red;
+  font-size: 18px;
+}
+div.container main aside div.two p a {
+  display: inline-block;
+  padding: 3px 3px;
+  border: 1px solid #AFC6E7;
+  background: -webkit-linear-gradient(top, #eef4fc, #d5e3f8);
+  background: linear-gradient(top, #eef4fc, #d5e3f8);
+  color: #1A649D;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+div.container main aside div.two p a:before {
+  content: '\f1d6';
+  font-family: glyphicon;
+  color: #1A649D;
+  margin-right: 5px;
+}
+div.container main aside div.two p span {
+  display: inline-block;
+  padding: 3px 3px;
+  border: 1px solid #B4E7AF;
+  color: #3A9D1A;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(top, #f0fcee, #d8f8d5);
+  background: linear-gradient(top, #f0fcee, #d8f8d5);
+}
+div.container main aside div.two p span:before {
+  content: '\f007';
+  font-family: glyphicon;
+  color: #3A9D1A;
+  margin-right: 5px;
+}
+div.container main section {
+  -webkit-box-flex: 7;
+  -webkit-flex: 7;
+      -ms-flex: 7;
+          flex: 7;
+}
+div.container main section div.header1 {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #cdcdcd;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #555;
+  background-color: #F6F6F6;
+  margin-bottom: 2px;
+  padding: 0 15px;
+}
+div.container main section div.detail {
+  border: 4px solid #EFEFEF;
+  background-color: white;
+}
+div.container main section div.detail ul {
+  border: 1px solid #cdcdcd;
+  padding: 10px;
+}
+div.container main section div.detail ul li:not(:last-of-type) {
+  padding: 10px 5px 10px 15px;
+  border-bottom: 1px dashed #cdcdcd;
+}
+div.container main section div.detail ul li:not(:last-of-type) time {
+  float: right;
+}
+div.container main section div.detail ul li:last-of-type {
+  margin-top: 20px;
+  color: #666666;
+  padding-left: 30px;
+}
+div.container footer p {
+  text-align: center;
+  font-size: 15px;
+}
+div.container footer p:first-of-type {
+  height: 30px;
+  line-height: 30px;
+  background-color: #AF0102 ;
+  color: white;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,301 @@
+.div_one {
+  border: 1px solid #cdcdcd;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+.div_one div.detail {
+  padding: 15px;
+}
+.div_one div.detail ul li {
+  padding: 1px 0;
+}
+.div_one div.detail ul li:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: #0099ff;
+  margin-right: 10px;
+}
+.div_one div.detail ul li:hover {
+  color: #0099ff;
+}
+.div_one div.detail ul li:hover a {
+  color: #0099ff;
+}
+.div_two {
+  border: 1px solid #cdcdcd;
+  margin: 0 15px;
+}
+.div_two div.detail {
+  padding: 10px;
+}
+.div_two div.detail ul li {
+  padding: 1px 0;
+}
+.div_two div.detail ul li:hover {
+  color: #0099ff;
+}
+.div_two div.detail ul li:hover a {
+  color: #0099ff;
+}
+.div_two div.detail time {
+  float: right;
+  margin-right: 15px;
+}
+header section {
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header div.initial {
+  background: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
+  background: linear-gradient(top, #ffffff, #f1f1f1);
+  border-bottom: 1px solid #cdcdcd;
+  height: 20px;
+  font-size: 13px;
+  line-height: 20px;
+}
+header div.adv {
+  height: 80px;
+  background: -webkit-linear-gradient(top, #eeeeee, #ffffff);
+  background: linear-gradient(top, #eeeeee, #ffffff);
+}
+header div.adv section {
+  height: 80px;
+}
+header div.adv section div.detail input {
+  width: 240px;
+  height: 25px;
+  margin-top: 25px;
+}
+header div.adv section div.detail a {
+  display: inline-block;
+  padding: 3px 5px;
+  background: -webkit-linear-gradient(top, #1a86d1, #8cd2f6);
+  background: linear-gradient(top, #1a86d1, #8cd2f6);
+  position: absolute;
+  margin-left: -70px;
+  border-radius: 5px;
+  color: white;
+  font-family: glyphicon;
+  font-size: 13px;
+  margin-top: 28px;
+  letter-spacing: .5em;
+  cursor: pointer;
+}
+header nav {
+  height: 40px;
+  background: #0C86C7;
+}
+header nav section a {
+  display: inline-block;
+  padding: 9px 15px;
+  color: white;
+  cursor: pointer;
+}
+header nav section a:not(:last-of-type):after {
+  content: '';
+  width: 1px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  margin-left: 15px;
+}
+header nav section a:hover {
+  background-color: #0C436A;
+}
+main {
+  width: 70%;
+  margin: auto;
+}
+main div.header {
+  height: 40px;
+  line-height: 40px;
+  background-color: #1395E0;
+  color: white;
+  padding: 0 10px 0 20px;
+}
+main div.header a {
+  float: right;
+  color: white;
+}
+main div.header1 {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 0 0 10px;
+  border-bottom: 2px solid #94C1E0;
+  background: -webkit-linear-gradient(top, #f1f1f1, #ffffff);
+  background: linear-gradient(top, #f1f1f1, #ffffff);
+}
+main div.adv1 {
+  height: 300px;
+}
+main div.adv1 img {
+  width: 100%;
+  height: 100%;
+}
+main div.guangGao {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+}
+main div.guangGao span {
+  color: #8DBDE3;
+}
+main div.up {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+}
+main div.up div.one {
+  border: 1px solid #cdcdcd;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+main div.up div.one div.detail {
+  padding: 15px;
+}
+main div.up div.one div.detail ul li {
+  padding: 1px 0;
+}
+main div.up div.one div.detail ul li:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: #0099ff;
+  margin-right: 10px;
+}
+main div.up div.one div.detail ul li:hover {
+  color: #0099ff;
+}
+main div.up div.one div.detail ul li:hover a {
+  color: #0099ff;
+}
+main div.up div.two {
+  -webkit-box-flex: 4;
+  -webkit-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  border: 1px solid #cdcdcd;
+  margin: 0 15px;
+}
+main div.up div.two div.detail {
+  padding: 10px;
+}
+main div.up div.two div.detail ul li {
+  padding: 1px 0;
+}
+main div.up div.two div.detail ul li:hover {
+  color: #0099ff;
+}
+main div.up div.two div.detail ul li:hover a {
+  color: #0099ff;
+}
+main div.up div.two div.detail time {
+  float: right;
+  margin-right: 15px;
+}
+main div.mid img {
+  width: 100%;
+}
+main div.down {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+main div.down div.three {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 20px;
+  border: 1px solid #cdcdcd;
+}
+main div.down div.three img {
+  margin: 15px 0;
+}
+main div.down div.two {
+  -webkit-box-flex: 5;
+  -webkit-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  border: 1px solid #cdcdcd;
+  margin: 0 15px;
+}
+main div.down div.two div.detail {
+  padding: 10px;
+}
+main div.down div.two div.detail ul li {
+  padding: 1px 0;
+}
+main div.down div.two div.detail ul li:hover {
+  color: #0099ff;
+}
+main div.down div.two div.detail ul li:hover a {
+  color: #0099ff;
+}
+main div.down div.two div.detail time {
+  float: right;
+  margin-right: 15px;
+}
+main div.down div.one {
+  border: 1px solid #cdcdcd;
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+main div.down div.one div.detail {
+  padding: 15px;
+}
+main div.down div.one div.detail ul li {
+  padding: 1px 0;
+}
+main div.down div.one div.detail ul li:before {
+  content: '\f0da';
+  font-family: glyphicon;
+  color: #0099ff;
+  margin-right: 10px;
+}
+main div.down div.one div.detail ul li:hover {
+  color: #0099ff;
+}
+main div.down div.one div.detail ul li:hover a {
+  color: #0099ff;
+}
+main div.foot {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #cdcdcd;
+  margin-top: 10px;
+}
+main div.foot span {
+  color: #FAC8AF;
+}
+main div.foot span a {
+  margin: 0 15px;
+}
+footer {
+  text-align: center;
+  color: white;
+  height: 80px;
+  margin-top: 10px;
+  padding-top: 25px;
+  background: -webkit-linear-gradient(top, #00538f, #016bb5);
+  background: linear-gradient(top, #00538f, #016bb5);
+}
+footer p {
+  margin-top: 10px;
+}

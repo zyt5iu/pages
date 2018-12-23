@@ -1,0 +1,65 @@
+@charset "UTF-8";
+main div.header {
+  padding: 40px;
+}
+main div.header h1 {
+  font-size: 42px;
+}
+main div.header p {
+  padding: 5px 0;
+}
+main div.detail figure {
+  padding: 5px;
+  margin-bottom: 30px;
+  border: 1px solid #cdcdcd;
+}
+main div.detail figure img {
+  width: 100%;
+}
+main div.detail figure figcaption {
+  padding: 10px;
+  height: 200px;
+  overflow-y: hidden ;
+}
+main div.detail figure figcaption a {
+  display: inline-block;
+  padding: 15px 0;
+}
+footer {
+  border-top: 1px solid #cdcdcd;
+  margin-top: 40px;
+}
+small.bootcss_top {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: #929292;
+  text-align: center;
+}
+small.bootcss_top a {
+  font-size: 25px;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+}
+small.bootcss_top:hover {
+  background-color: #4c4c4c;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  div.jumbotron h1 {
+    font-size: 90px;
+  }
+  div.jumbotron h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  div.jumbotron h1 {
+    font-size: 60px;
+  }
+  div.jumbotron h2 {
+    font-size: 18px;
+  }
+}
