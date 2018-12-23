@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        div.show {
+            width: 600px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_1.jpg">
+    <img src="images/star_2.jpg">
+    <img src="images/star_3.jpg">
+    <img src="images/star_4.jpg">
+    <img src="images/star_3.jpg">
+    <img src="images/star_4.jpg">
+</div>
+<div class="show">
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    $('div.box').on('mouseenter', 'img', function () {
+        var $this = $(this);
+        var src = $this.attr('src').replace('images/star_3.jpg', 'images/star_1.jpg')
+                .replace('images/star_4.jpg', 'images/star_2.jpg');
+        $this.attr('src', src);
+        $this.prevAll().each(function () {
+            var $this = $(this);
+            src = $this.attr('src').replace('images/star_3.jpg', 'images/star_1.jpg')
+                    .replace('images/star_4.jpg', 'images/star_2.jpg');
+            $this.attr('src', src);
+        });
+        $this.nextAll().each(function () {
+            var $this = $(this);
+            src = $this.attr('src').replace('images/star_1.jpg', 'images/star_3.jpg')
+                    .replace('images/star_2.jpg', 'images/star_4.jpg');
+            $this.attr('src', src);
+        });
+
+    }).on('click','img',function () {
+        $('div.show').text(($(this).index() + 1) / 2)
+    })
+</script>
+</body>
+</html>

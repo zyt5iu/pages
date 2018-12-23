@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 900px;
+            height: 100px;
+            background-color: #0CA471;
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0 0 50px;
+            padding: 15px;
+        }
+        div img{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="imgBox">
+    <img src="img/scrollImg/blok-3.jpg" alt="">
+    <img src="img/scrollImg/blok-4.jpg" alt="">
+    <img src="img/scrollImg/blok-5.jpg" alt="">
+    <img src="img/scrollImg/blok-6.jpg" alt="">
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $("#imgBox").on('mouseenter','img', function (e) {
+        var  $this=$(this);
+        var src=$this.attr('src');
+        var $bigImg=$('<img src="'+src+'" alt="">');
+        $bigImg.css({
+            position:'absolute',
+            top: e.pageY,
+            left: e.pageX
+        });
+        $bigImg.appendTo('body');
+        $this.mousemove(function (e) {
+            $bigImg.css({
+                top: e.pageY+15,
+                left: e.pageX+15
+            });
+        }).mouseleave(function () {
+            $bigImg.remove();
+            $this.off();//清空所有事件
+        })
+    })
+</script>
+</body>
+</html>

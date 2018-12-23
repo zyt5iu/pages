@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #a6e3ee;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0 0 0 ;
+        }
+
+        div table {
+            width: 60%;
+            border: 1px solid #005aa7;
+            background-color: #fff;
+            /*border-collapse: collapse;       *//*设置相邻边线为合并,默认是分离*/
+            cursor: progress;
+            border-radius: 5px;
+
+        }
+
+        table tr:first-child {
+            border-radius: 5px;
+        }
+
+        table caption {
+            font-size: 25px;
+            font-family: "微软雅黑";
+            font-weight: 500;
+            letter-spacing: .3em;
+            margin-bottom: 15px;
+        }
+
+        table thead tr th {
+            background-color: #21d8ff;
+            padding: 6px 0;
+            font-size: 20px;
+        }
+
+        thead tr th:first-child {
+            border-radius: 5px 0 0;
+        }
+
+        thead tr th:last-child {
+            border-radius: 0 5px 0 0;
+        }
+
+        tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 5px;
+        }
+
+        tbody tr:last-child td:last-child {
+            border-radius: 0 0 5px 0;
+        }
+
+        table tbody {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        tbody tr.parent {
+            background-color: #93aaff;
+            color: white;
+        }
+
+        tbody tr td {
+            padding: 6px;
+        }
+
+        tr.odd {
+            background-color: aliceblue;
+        }
+
+        tr.even {
+            background-color: #dee;
+        }
+
+        tr.selected {
+            background-image: -webkit-linear-gradient(top, #76dbff, white);
+            font-weight: 300;
+        }
+
+        tr.selected td {
+            border-radius: 0 0 10px 10px;
+        }
+
+        tr.fontColor {
+            color: #ff0000;
+        }
+
+        tr.parent td {
+            font-family: "微软雅黑";
+            font-weight: 300;
+            font-size: 17px;
+            position: relative;
+        }
+
+        tr.parent td span:first-child {
+            position: absolute;
+            right: 20%;
+            top: 12px;
+            border: 7px solid transparent;
+            border-top-color: #ff0000;
+            display: none;
+        }
+
+        tr.parent td span:last-child {
+            position: absolute;
+            right: 20%;
+            bottom: 12px;
+            border: 7px solid transparent;
+            border-bottom-color: #fc0;
+        }
+
+        table hr {
+            width: 50%;
+        }
+
+        table label {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        label input {
+            font-size: 20px;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <label>筛查(输入表中任意数据信息可查员工情况）：
+        <input id="filterName" type="text">
+    </label>
+    <hr>
+    <table>
+        <caption>职工基本信息表</caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>暂住地</th>
+            <th>所属组</th>
+            <th>选择</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="parent" id="row_01">
+            <td colspan="5">前台设计组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="child_row_01">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_01">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_01">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_01">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="parent" id="row_02">
+            <td colspan="5">后台开发组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="child_row_02">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_02">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_02">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_02">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_02">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="parent" id="row_03">
+            <td colspan="5">全栈开发组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="child_row_03">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_03">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_03">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="child_row_03">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="js/jquery-3.3.1.min.js" ></script>
+<script>
+    $('tbody tr:not(.parent):even').addClass('even');
+    $('tbody tr:not(.parent):odd').addClass('odd');
+    $('tbody').on('click', 'tr,input', function (e) {//事件代理可以代理多个元素
+        var $this = $(this);
+        if ($this.hasClass('parent')) {
+            var id = $this.attr('id');
+            $('.child_' + id).toggle();//显示或者隐藏
+            $this.find('span').toggle();//切换颜色
+        } else if ($this[0].nodeName == 'INPUT') {
+            e.stopPropagation();//停止冒泡
+            $this.closest('tr').toggleClass('fontColor');
+        } else {
+            $this.toggleClass('fontColor');
+            var input = $this.find('input')[0];
+            input.checked = !input.checked;
+        }
+    });
+    $('#filterName').keypress(function(){//敲回车键才触发 keyup是放开就会触发
+        var val=this.value.trim();
+        $('tbody tr:not(.parent)').hide().filter(':contains('+val+')').show();
+    })
+</script>
+</body>
+</html>

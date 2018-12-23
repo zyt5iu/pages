@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        div.box {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto 0;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        div.box ul {
+            position: absolute;
+            left: -600px;
+            list-style: none;
+            display: flex;
+        }
+
+        div.box ul li {
+            width: 600px;
+            height: 400px;
+        }
+        /*div.box ul li*/
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        div.box div.dir {
+            position: absolute;
+            height: 50px;
+            left: 15px;
+            width: 570px;
+            top: calc(50% - 25px);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.box div.dir span {
+            width: 80px;
+            height: inherit;
+            background-color: #eee;
+            color: #333;
+            font-size: 40px;
+            line-height: 50px;
+            text-align: center;
+            opacity: .2;
+            cursor: default;
+        }
+
+        div.box div.dir span:hover {
+            opacity: .7;
+        }
+
+        div.box div.ctrl {
+            position: absolute;
+            left: calc(50% - 50px);
+            bottom: 30px;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div.box div.ctrl span {
+            width: 5px;
+            height: 5px;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+
+        div.box div.ctrl span.on {
+            background-color: #ff947a;
+        }
+
+    </style>
+</head>
+<body onselectstart="return false;">
+<div class="box">
+    <ul>
+        <!--<li><a href="#"><img src="images/1.jpg" alt=""></a></li>-->
+    </ul>
+    <div class="dir">
+        <span class="dirleft">&lt;&lt;</span>
+        <span class="dirright">&gt;&gt;</span>
+    </div>
+    <div class="ctrl">
+    </div>
+</div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    data = [];
+    data[data.length] = 'img/scrollImg/blok-3.jpg';
+    data[data.length] = 'img/scrollImg/blok-4.jpg';
+    data[data.length] = 'img/scrollImg/blok-5.jpg';
+    data[data.length] = 'img/scrollImg/blok-6.jpg';
+    data[data.length] = 'img/scrollImg/blok-7.jpg';
+    var $ul = $('div.box ul');
+    var $ctrl = $('div.ctrl');
+    $.each(data, function (index) {
+        $ul.append($('<li><a href="#"><img src="' + this + '"></a></li>'));
+        if (index == 0) {
+            $ctrl.append("<span class='on'></span>")
+        } else
+            $ctrl.append("<span></span>");
+    });
+    $ul.append($('<li><a href="#"><img src="' + data[0] + '"></a></li>'));
+    $ul.prepend($('<li><a href="#"><img src="' + data[data.length - 1] + '"></a></li>'));
+    var index = 0;
+    var len = data.length;
+    var liW = $('ul li:eq(0)').outerWidth();
+    var timer = null;
+    var $spans = $('div.ctrl span');
+    function move($el, offset) {
+        var num=-offset/liW;
+        $el.animate({left: "+=" + offset}, 500, function () {
+            if(index==0 && num<0){
+                $(this).css('left', -len * liW);
+                index = len - 1
+            }else if(index==len-1 && num>0){
+                $(this).css('left', -liW);
+                index = 0
+            }else {
+                index+=num;
+            }
+            highLight(index);
+            $(this).stop(true)
+        })
+    }
+    $('span.dirleft').click(function () {
+        move($ul, liW);
+    });
+    var $right = $('span.dirright');
+    $right.click(function () {
+        move($ul, -liW);
+    });
+    function play() {
+        timer = setInterval(function () {
+            $right.click()
+        }, 1000)
+    }
+    $('div.box').hover(function () {
+        clearInterval(timer);
+    },function () {
+        play()
+    }).mouseleave();
+    function highLight(no) {
+        $spans.eq(no).addClass('on').siblings().removeClass('on');
+    }
+    $ctrl.on('click', 'span', function () {
+        var i = $(this).index();
+        if(index!=i){
+            move($ul, (index - i) * liW)
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .tab{
+            width: 300px;
+            height: 250px;
+            margin: 50px auto;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .hd{
+            display: flex;
+            justify-content: space-between;
+            background-color: navajowhite;
+        }
+        .hd span{
+            display: block;
+            width: 98px;
+            line-height: 40px;
+            background-color: #0A246A;
+            text-align: center;
+            color: white;
+            margin: 0;
+            cursor: pointer;
+        }
+        .hd span.cur{
+            background-color: white;
+            color: black;
+        }
+        .bd div{
+            display: none;
+            float: left;
+        }
+        .bd div.cur{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="hd">
+        <span class="first cur">散文</span>
+        <span>诗歌</span>
+        <span>杂文</span>
+    </div>
+    <div class="bd">
+        <div class="cur">
+           <p>
+               锦绣河山，江涛滚滚，鸿越鹰翔。看画桥飞渡，霞楼耸秀；绮船穿越，云舞盛阳。
+
+               翠柏青松，习风飒爽，猎猎旌旗万里扬。慎思量，任凭栏诗酒，漫道沧桑。
+
+               前贤夙志皇皇，后承继，共图国富强。笑河虾挥剪，海鳅跳浪；窥仓地鼠，吠日天狼。
+
+               可晓天高，可知地厚，龙跃苍穹一扫光。轩辕慰，致大同世界，从此安康。
+           </p>
+        </div>
+        <div>
+            <p>
+                《春天乐趣大》
+
+                ——赠季小珩同学
+
+                诗/林泽祥
+
+                季节变化春最美，
+
+                小孩花丛玩不累。
+
+                珩玉土中扒出来，( 文章阅读网：www.sanwen.net )
+
+                乐作石子砸鸟飞！
+
+                注:藏头诗，“季小珩乐”！
+            </p>
+        </div>
+        <div>
+            <p>
+
+                我告诉她，我很好，笑嘻嘻的哪有什么事，此时的我内心是痛苦，消极而悲观的，而她帮不了我，倾诉只能徒增她的情绪，感情这件事别人无法调和，只能自己与过去和解。
+
+                而我与 “向日葵花“”这不期而遇的温暖，让我对生活生生有着不息的希望。而我想人生大底就是如此吧，或许没有非要分的手，却也没有非要在一起的人~            </p>
+        </div>
+    </div>
+</div>
+<div class="tab">
+    <div class="hd">
+        <span class="first cur">新闻</span>
+        <span>体育</span>
+        <span>赛事</span>
+    </div>
+    <div class="bd">
+        <div class="cur">
+            <ul>
+                <li><a href="#">对讲机I一i</a></li>
+                <li><a href="#">对讲机I一i</a></li>
+                <li><a href="#">对讲机I一i</a></li>
+                <li><a href="#">对讲机I一i</a></li>
+                <li><a href="#">对讲机I一i</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">体育体育</a></li>
+                <li><a href="#">体育体育</a></li>
+                <li><a href="#">体育体育</a></li>
+                <li><a href="#">体育体育</a></li>
+                <li><a href="#">体育体育</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">赛事赛事</a></li>
+                <li><a href="#">赛事赛事</a></li>
+                <li><a href="#">赛事赛事</a></li>
+                <li><a href="#">赛事赛事</a></li>
+                <li><a href="#">赛事赛事</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+    $(".tab .hd span").mouseenter(function () {
+        $(this).addClass("cur").siblings().removeClass("cur")
+                .parent(".hd").siblings(".bd").children("div").eq($(this).index()).addClass("cur")
+                .siblings().removeClass("cur");
+    });
+</script>
+</body>
+</html>

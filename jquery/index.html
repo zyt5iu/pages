@@ -1,0 +1,146 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+            font: 15px/2 'microsoft yahei';
+        }
+        main{
+            height: 100%;
+            position: relative;
+        }
+        #div1 {
+            width:200px;
+            height:100%;
+            background:#cdcdcd;
+            position:absolute;
+            left:-200px;
+            z-index: 10;
+            opacity: .6;
+        }
+        #div1 ol{
+            overflow-y: auto;
+            height: 100%;
+            width: 100%;
+        }
+        li{
+            margin-left: 40px;
+        }
+        a,a:link{
+            color: #000000;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+        /*a:visited{*/
+        /*color: #999999;*/
+        /*}*/
+        #div1 span {
+            position:absolute;
+            width:20px;
+            height:70%;
+            color: white;
+            background:blue;
+            right:-20px;
+            top:15%;
+            /*opacity: .6;*/
+        }
+        main section iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            border: none;
+        }
+    </style>
+    <script>
+        window.onload=function ()
+        {
+            var oDiv=document.getElementById('div1');
+
+            oDiv.onmouseover=function ()
+            {
+                startMove(0);
+            };
+            oDiv.onmouseout=function ()
+            {
+                startMove(-200);
+            };
+        };
+
+        var timer=null;
+
+        function startMove(iTarget)
+        {
+            var oDiv=document.getElementById('div1');
+
+            clearInterval(timer);
+            timer=setInterval(function (){
+                var speed=0;
+
+                if(oDiv.offsetLeft>iTarget)
+                {
+                    speed=-10;
+                }
+                else
+                {
+                    speed=10;
+                }
+
+                if(oDiv.offsetLeft==iTarget)
+                {
+                    clearInterval(timer);
+                }
+                else
+                {
+                    oDiv.style.left=oDiv.offsetLeft+speed+'px';
+                }
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<main>
+    <div id="div1">
+        <span>导航页面</span>
+        <!--<h3><a href="jQuery_code/1商品分类导航.html" target="main">首页</a></h3>-->
+        <ol>
+            <li><a href="jQuery_code/1商品分类导航.html" target="main">商品分类导航</a></li>
+            <li><a href="jQuery_code/2指向大图显示.html" target="main">指向大图显示</a></li>
+            <li><a href="jQuery_code/3旋转式抽奖原理.html" target="main">旋转式抽奖原理</a></li>
+            <li><a href="jQuery_code/4文字横向滚动.html" target="main">文字横向滚动</a></li>
+            <li><a href="jQuery_code/5顶部短时广告.html" target="main">顶部短时广告</a></li>
+            <li><a href="jQuery_code/6表格应用.html" target="main">表格应用</a></li>
+            <li><a href="jQuery_code/7表格数据编辑.html" target="main">表格数据编辑</a></li>
+            <li><a href="jQuery_code/8轮播图片.html" target="main">轮播图片</a></li>
+            <li><a href="jQuery_code/9定位侧边导航.html" target="main">定位侧边导航</a></li>
+            <li><a href="jQuery_code/10QQ空间时光轴.html" target="main">QQ空间时光轴</a></li>
+            <li><a href="jQuery_code/11侧边二级导航.html" target="main">侧边二级导航</a></li>
+            <li><a href="jQuery_code/12动态星星.html" target="main">动态星星</a></li>
+            <li><a href="jQuery_code/13瀑布流相册.html" target="main">瀑布流相册</a></li>
+            <li><a href="jQuery_code/14轮播图.html" target="main">轮播图</a></li>
+            <li><a href="jQuery_code/15购物车编辑.html" target="main">购物车编辑</a></li>
+            <li><a href="jQuery_code/图片切换.html" target="main">图片切换</a></li>
+            <li><a href="jQuery_code/选项卡.html" target="main">选项卡</a></li>
+<li><a href="jQuery_code/表格的格列变色.html" target="main">表格列变色</a></li>
+
+
+        </ol>
+    </div>
+    <section>
+        <iframe src="jQuery_code/1商品分类导航.html" name="main"></iframe>
+    </section>
+</main>
+</body>
+</html>

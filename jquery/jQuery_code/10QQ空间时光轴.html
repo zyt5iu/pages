@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body {
+            background: url("img/big/bg.jpg") center top no-repeat fixed;
+            background-size: 100% 100%;
+        }
+        nav {
+            height: 40px;
+            line-height: 40px;
+            width: 100%;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        nav ul{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li{
+            list-style-type: none;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        div.container {
+            padding-top: 40px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+        div.container div.adv {
+            height: 260px;
+            background-color: rgba(255, 255, 255, .3);
+        }
+        div.container div.main {
+            padding: 30px 0 50px 10px;
+        }
+        div.container div.left {
+            position: absolute;
+            border-right: 2px solid #fff;
+            padding: 10px 10px 10px 0;
+            color: #fff;
+            line-height: 25px;
+            text-align: right;
+            top: 350px;
+        }
+        div.container div.left dl dd {
+            display: none;
+            margin: 5px 0;
+        }
+        div.container div.left dl dt {
+            cursor: pointer;
+        }
+        div.container div.left dl.on dt {
+            color: #de5823;
+        }
+        div.container div.left dl.on dt:after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 25px;
+            margin-left: 10px;
+            background-color: #de5823;
+        }
+        div.container div.left dl.on dd {
+            display: block;
+            cursor: pointer;
+        }
+        div.container div.left dl.on dd.on {
+            color: #de5823;
+        }
+        div.container div.left dl.on dd.on:after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 25px;
+            margin-left: 10px;
+            background-color: #de5823;
+        }
+        div.container div.right {
+            margin-left: 80px;
+            padding-left: 35px;
+        }
+        div.container div.right {
+            border-left: 2px solid green;
+        }
+        div.container div.right article {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px;
+        }
+        div.container div.right article img {
+            width: 100%;
+        }
+        div.container div.right article:before {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: -76px;
+            margin-top: 40px;
+            background-color: #4c8905;
+        }
+        div.container div.right article p.date:before {
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            transform: rotate(45deg);
+            margin-left: -30px;
+            margin-top: 30px;
+            background-color: white;
+        }
+        div.container div.right dl dt {
+            position: absolute;
+            margin-left: -35px;
+            margin-top: 20px;
+            color: #fff;
+        }
+        div.container div.right dl dd:before {
+            position: absolute;
+            content: attr(data-month);
+            margin-left: -25px;
+            margin-top: 85px;
+            color: #fff;
+        }
+        div.container div.right dl dd article p.date {
+            color: #b2b2b2;
+            font-size: 35px;
+            line-height: 50px;
+            font-weight: 600;
+        }
+        div.container div.right dl dd article p.date span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            background-color: #acdeff;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 25px;
+            padding: 5px;
+            margin: 0 15px 0 20px;
+            line-height: 25px;
+        }
+        div.container div.right dl dd article p.intro {
+            line-height: 25px;
+            text-indent: 2em;
+            text-align: justify;
+            color: #666;
+            margin: 10px;
+        }
+        div.container p.like_m a, div.container p.like_m a:visited {
+            display: inline-block;
+            color: #999;
+            margin: 15px 40px;
+            text-decoration: none;
+        }
+        div.container p.like_m a:first-child:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url("images/icon1.png");
+            margin-left: -30px;
+        }
+        div.container p.like_m a:last-child:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url("images/icon2.jpg");
+            margin-left: -30px;
+        }
+        div.container p.verylike {
+            margin-left: 30px;
+            color: #c3c3c3;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul class="list-inline container">
+        <li><a href="http://www.cqwu.net" target="view_window">学校主页</a></li>
+        <li><a href="javascript:;">首页</a></li>
+        <li><a href="社团概况.html">社团概况</a></li>
+        <li><a href="活动中心.html">活动中心</a></li>
+        <li class="down"><a href="走进社团.html" >走进社团</a></li>
+        <li><a href="论坛.html">论坛</a></li>
+        <li><a href="报名通道.html">报名通道</a></li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="adv"></div>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</div>
+<template>
+    <article>
+        <p class="date"><span>{nli}</span>{date}</p>
+        <p class="intro">{intro}</p>
+        {img}
+        <p class="like_m">
+            <a href="#">({like})</a>
+            <a href="#">({comment})</a>
+        </p>
+        <p class="verylike">{veryLike}</p>
+    </article>
+</template>
+</body>
+<script src="js/data.js"></script>
+<script src="js/GetLunarDay.js"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<script>
+    //    对data排序？
+    data.sort(function (a, b) {
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
+    });
+    //动态生成要求的数据结构，对象，数组
+    var json = {};
+    $.each(data, function (i) {
+        var date = new Date(this.date);
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        if (!json[year]) {
+            json[year] = {}
+        }
+        if (!json[year][month]) {
+            json[year][month] = []
+        }
+        this.nli = GetLunarDateString(date);
+        this.veryLike = this.like > 10000 ? this.like / 10000 : this.like;
+        json[year][month].push(this);
+    });
+    //    将data数据放在HTML中
+    var $left = $('div.main div.left');
+    var $right = $('div.main div.right');
+    var tempHtml = $('template').html();
+    $.each(json, function (year) {
+        var $dlL = $('<dl class="year"></dl>');
+        var $dlR = $('<dl class="year"></dl>');
+        $.each(this, function (month) {
+            $dlL.prepend('<dd class="month">' + month + '</dd>');
+            var $dd = $('<dd class="month" data-month="' + month + '月"></dd>');
+            var html = '';
+            $(this).each(function (i) {
+                var nli = this.nli[0] + "<br>&nbsp;&nbsp;&nbsp;" + this.nli[1];
+                var arr={nli:nli,date:this.date,intro:this.intro,img:this.media,like:this.like,comment:this.comment,veryLike:this.veryLike};
+                var reg;
+                html=tempHtml;
+                for (var key in arr){
+                    reg=new RegExp("{"+key+"}");
+                    html=html.replace(reg,arr[key])
+                }
+                /*
+                 html = tempHtml.replace('{nli}', nli).replace('{date}', this.date)
+                 .replace('{intro}', this.intro).replace('{img}', this.media)
+                 .replace('{like}', this.like).replace('{comment}', this.comment)
+                 .replace('{veryLike}', this.veryLike);
+                 */
+                $dd.append(html);
+            });
+            $dlR.prepend($dd);
+        });
+        $dlR.prepend('<dt>' + year + '</dt>');
+        $dlL.prepend('<dt>' + year + '</dt>');
+        $left.prepend($dlL);
+        $right.prepend($dlR);
+    });
+//    $left.children().eq(0).addClass('on').children().eq(1).addClass('on');//一开始就展开
+//    点击左边的年月，跳转
+    $left.on('click', 'dt,dd', function () {//点击右边的年月
+        var $dl = $(this).parent();
+        var index = $dl.index();//拿到年份的下标
+        var index_m = $(this).index();//拿到dd的下标
+        var top=$right.children().eq(index).children().eq(index_m).offset().top;
+        $('html,body').animate({scrollTop: top - 60}, 1000);
+    });
+    function clearOn() {
+        $left.children().each(function () {
+            if ($(this).hasClass('on')) {
+                $(this).removeClass('on').children().removeClass('on');
+                return false;
+            }
+        })
+    }
+//    滚动条事件，展开年月，并且对应滑动
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop > $left.position().top - 70) {
+            $left.css({position: 'fixed', top: '70px'})
+        } else
+            $left.css({position: 'absolute', top: '350px'});
+        var i = 0;
+        var $dls = $right.children();//多个dl
+        while (i < $dls.length && scrollTop > $dls.eq(i).offset().top - 350) {
+            i++;
+        }
+        clearOn();
+        i = i > 0 ? i - 1 : 0;
+        var $dlL = $left.children().eq(i);
+        $dlL.addClass('on');
+        var $dds = $dls.eq(i).children('dd');
+        i = 0;
+        while (i < $dds.length && scrollTop > $dds.eq(i).offset().top - 350) {
+            i++;
+        }
+        i = i > 0 ? i - 1 : 0;
+        $dlL.children('dd').eq(i).addClass('on');
+    })
+</script>
+</html>

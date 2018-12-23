@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table,tr,td{
+            /*width: 300px;*/
+            /*height: 400px;*/
+            border: 1px solid #444;
+            border-collapse: collapse;
+        }
+        td{
+            width: 80px;
+            height: 40px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 10px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<!--<p>活动一</p>
+<p>活动一</p>
+<p>活动一</p>
+<p>活动一</p>
+<p class="par">活动一</p>
+<div id="box">哈哈</div>
+<div>
+    <ul>
+        <li><p>我是内部文字</p></li>
+    </ul>
+</div>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<div class="font"></div>-->
+<script type="text/javascript">
+    var box=document.getElementById('box');
+/*
+    // 1、jquery介绍
+
+    //        脚本里面可以用JavaScript原生代码；也可以用jQuery代码
+    //        但是各自只能用自己的（jQuery对象后面只能调用jQuery对象的方法）
+    //        有没有一种方法能够让jQuery对象转换为js对象（面试特爱问）
+    //        jQuery对象——》js对象   直接加[]就行  console.log($("p")[0].innerHTML);
+    //        js对象--》jQuery对象 直接给js 对象加$()   $(box).css("color","red");
+
+    //2、jquery选择器
+
+    //    $("div ul li p").css("color","red");
+    //    $("p").css("width",200);
+    //    $("p.par").css("font-size","20px");
+    //    $("p:first").css("background-color","blue");//选择第一个元素
+    //    $("p:last").css("background-color","blue");//选择第一个元素
+    //    $("p:lt(3)").css("background-color","blue");//序号小于3的
+    //    $("p:gt(3)").css("background-color","blue");//序号大于于3的
+    //    $("p:eq(3)").css("background-color","blue");//序号等于于3的
+    //    $("p:even").css("background-color","blue");//序号是偶数的
+    //    $("p:odd").css("background-color","blue");//序号是奇数的
+    //    $("p").eq(3).css("background-color","blue");//用方法得到序号等于3的，可以改。
+    //    $("tr:even").css("background-color","blue");//序号是偶数的
+    //    $("tr:odd").css("background-color","green");//序号是奇数的
+    //    $("p:contains(云)").css("color","red");根据内容找
+    //    console.log($("tr").length);
+    //    console.log($("tr").size());
+    //    $("div input").val();获取表单元素input的值
+    //    $("p").data('bbb');//取<p data-bbb="重庆文理"></p>的值“重庆文理‘
+    //    $("p").data('bbb','软件工程');//取<p data-bbb="重庆文理"></p>的值设置为“软件工程”
+
+
+    // 3、显示和隐藏
+    //    show();show(1000);
+    //    hide();hide(1000);
+    //    toggle();可以显示可以隐藏
+
+    //    slideDown();//向下展开，会立即将元素的高度变为0，都可以加时间，可以等同于显示
+    //    slideUp();//向上合起
+    //    slideToggle();//都可以
+
+    //    mouseenter()鼠标进入，mouseleave()鼠标离开
+
+    //4、淡入淡出
+    //    fadeIn()淡入
+    //    fadeOut()淡出
+    //    fadeToggle()切换淡入淡出
+    //    fadeTo(1000,0.5);时间，透明度到多少
+
+    // 5、css()能够设置多个属性
+    //    $("p").css({
+    //        "width":200,
+    //        "height":40,
+    //        "background-color":"blue"
+    //    });
+
+    //6、html()
+    //    $("div.font").html("内部文字")//设置内部文字
+    //    $("div.font").html("<ul><li>插入标签文字</li></ul>")//设置标签内部文字
+    //    console.log($("div.font").html());//读取内部文字
+
+    // 7、addclass()和removeclass()增加类和删除类
+    //    $("div.font").addClass("one");
+    //    $("div.font").removeClass("one");
+
+    // 8、attr直接改变属性
+    //    $("div.font").attr("","");
+
+    // 9、节点操作
+    //    1、我 this
+    //    $(this)   $(window)   $(document)  不加双引号
+    //    2、父亲（方法）parent();
+    //    $("p").click(function () {
+    //        $(this).parent().animate({"left":1000},500);
+    //    });
+    //    3、儿子 children() 亲儿子
+    //    $("div").click(function () {
+    //        $(this).children().css("background-color","blue");
+    //    });
+    //    $("div").click(function () {
+    //        $(this).children("h3").css("background-color","blue");//他孩子里面的h3改样式，也可以是class
+    //        $(this).children(".font").css("background-color","blue");//他孩子里面的class
+    //    });
+    //    4、兄弟 sibling()，亲兄弟，里面也可以加参数
+    //    $("div").click(function () {
+    //        $(this).sibling().css("background-color","blue");
+    //        $(this).sibling(".font").css("background-color","blue");
+    //    });
+    //    5、连写,当前到了哪个节点就从哪个节点出发
+    //    $("div").click(function () {
+    //        $(this).css("background-color","blue").sibling(".font").css("background-color","red")
+    //    .parent().animate({"left":1000},500).sibling(".font").css("background-color","blue");
+    //    });
+
+    //不常用节点：
+    //    parents();//祖先
+    //    next();//下一个兄弟
+    //    nextAll();//后面所有的兄弟
+    //    prev();//前一个兄弟
+    //    prevAll();//前面所有的亲兄弟
+    //    find();//所有的后代
+
+    //10、序号问题
+    //    1、eq() 只能选一个 ，表示大排队的序号而不是亲兄弟的序号
+    //    2、index() 排名第几，无视亲兄弟类型，只要是同一个父节点。位置（相当于i）
+    //    总结：eq()是队列的排名，index()是亲兄弟的排名
+
+    //11、对应
+    //    1、点击box1中的p--想让box2中的p 变颜色(她的兄弟变蓝--到谁就是谁)
+    //    $(".box1 p").click(function () {
+    //        $(".box2 p").eq($(this).index()).css("background-color","red").sibling().css("background-color","blue");
+    //    });
+    //    2、选项卡  单独html举例
+
+    //    3、each() 遍历每一个元素，遍历到元素要做的事情 想让每一个div的第一个儿子背景色变红 格列变色单独html举例
+    //    $("div").each(function (i) {//each()中的匿名函数可以传一个参数i，
+    //        $(this).children().eq(0).css("background-color","red");
+    //    });
+
+    //12、动画animate() 异步语句
+    //    1、动画的概述  animate() 括号里面第一个参数是一个json表示终点，第二个元素表示的是时间毫秒。  animate()是基于终点的动画。不同于js的简单动画（是基于步长的），至于 animate()的每一步走多远是jQuery的事
+    //    $("p").animate({"left":1000},2000);//p标签的left从初始值运动到1000px 在2毫秒时间内
+    //    2、不能参与animate()的属性：background-color；background-position；css的新属性（除了（border-radius））
+    //    3、同一元素执行顺序：按顺序执行  同步
+    //    $("div").animate({"left":800},1000);先
+    //    $("div").animate({"top":300},1000);后
+    ////    于上面两不等价
+    //    $("div").animate({
+    //        "left":800,
+    //        "top":300
+    //    },1000);
+    //    4、不同元素的animate() 同时执行 异步
+    //    5、css变化是瞬间完成的，所以css变化在animate前执行
+    //    $("div").animate({"left":800},1000).css("background-color","red");//先变红再移动
+
+    //13、 回调函数：所有的异步语句都会有回调概念，异步语句完成后执行回调函数
+    //    $("div").animate({"left":800},1000, function () {
+    //        $("this").css("background-color","red")
+    //    });//先移动再变红
+
+    //14、delay();延迟,只能用于动画前面
+
+    //15、stop(是否清空动画队列,是否立即完成当前动画);true/false
+    //    stop(); //等价于stop(false,false).表示立即执行下一动画,立即停止当前动画
+    //    stop(true);//等价于stop(true,false)表示清空动画队列,立即停止当前动画√
+    //    stop(true,true);//表示清空动画队列,立即停止并完成当前动画
+    //    stop(false,true);//立即执行下一动画，立即停止并完成当前动画
+    //    防止动画积累：元素身上可能有不同的动画--"防流氓"
+
+    //16、is()。表示元素是否具有某种状态，返回的值是true/false
+    //    $().is(":animated");  //表示元素是否在运动
+    //    $().is(":visible")  //表示元素是否可见
+    //    $().is(".current")  //表示元素是否具有该类名
+*/
+
+//    17、追加元素
+    $("div").append("<p>追加的内容</p>");//内容作为孩子，在后面
+    $("div").prepend("<p>追加的内容</p>");//内容作为孩子，在前面
+    $("<p>追加的内容new</p>").appendTo("div");
+    $("<p>追加的内容new</p>").prependTo("div");
+    $("div").after("<p>追加的内容</p>");//内容作为兄弟，在后面
+    $("div").before("<p>追加的内容</p>");//内容作为兄弟，在前面
+
+//    18、删除，清空元素
+    $("div").empty();//清空所以孩子
+    $("div").remove();//删除div
+    $("div").detach();//删临时除div,数据被保存
+    $("p").unwrap();//包裹删除该元素的父元素但是保留自己及兄弟
+    $("p").wrapAll('<div></div>');//包裹增加该元素的父元素
+    $("p").wrapInner('<div></div>');//包裹增加该元素孩子加一个父元素
+
+//    19、拷贝，克隆clone()
+    var $div2=$("div").clone();
+    $('body').append($div2);
+
+//    20、遍历
+    $("div").find('li');//在div内部找li
+    $("li").closest('div');//找邻近的div
+
+//    21、事件
+    $("ul").hover(function () {
+        alert('鼠标进入');
+    }, function () {
+        alert('鼠标离开');
+    });
+
+//    selected();
+
+//    22、位置
+    $('div').position().top;//div相对于定位的top
+    $('div').height();//div的高
+
+
+
+
+
+</script>
+</body>
+</html>

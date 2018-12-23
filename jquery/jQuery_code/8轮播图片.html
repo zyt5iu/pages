@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.box {
+            width: 459px;
+            height: 330px;
+            margin: 50px auto 0;
+            border: 1px solid cornflowerblue;
+            position: relative;
+            background: url("img/scrollImg/blok-10.jpg");
+        }
+
+        div.box img {
+            position: absolute;
+            display: none;
+        }
+
+        div.box nav {
+            margin-top: 270px;
+            height: 60px;
+            display: flex;
+            padding: 5px 0;
+            box-sizing: border-box;
+            background-color: #587ab3;
+            color: white;
+        }
+
+        div.box nav span {
+            flex: 1;
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+            cursor: default;
+        }
+
+        div.box nav span.on {
+            background-color: white;
+            color: red;
+        }
+
+        div.box nav span.on em {
+            font-style: normal;
+        }
+
+        div.box nav span em {
+            display: block;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <a href="#">
+        <img src="img/scrollImg/blok-3.jpg" alt="暖暖微风">
+        <img src="img/scrollImg/blok-4.jpg" alt="春游">
+        <img src="img/scrollImg/blok-5.jpg" alt="秋天的麦浪">
+        <img src="img/scrollImg/blok-6.jpg" alt="细雨润无声">
+        <img src="img/scrollImg/blok-8.jpg" alt="清明和煦">
+    </a>
+    <nav>
+        <span data-href="http://www.cqwu.edu.cn"><em>暖暖微风</em><em>全场119元起</em></span>
+        <span data-href="http://www.163.com"><em>春游</em><em>全场357元起</em></span>
+        <span data-href="http://www.qq.com"><em>秋天的麦浪</em><em>全场99元起</em></span>
+        <span data-href="http://www.baidu.com"><em>细雨润无声</em><em>全场3.1折起</em></span>
+        <span data-href="http://www.cctv.com"><em>清明和煦</em><em>全场4.1折起</em></span>
+    </nav>
+</div>
+</body>
+<script src="js/jquery-2.1.3.js"></script>
+<script>
+    var $imgs = $('.box img');
+    var $spans=$('.box span');
+    var timer=null;
+    var i=0;
+    function move(){
+        timer=setInterval(function () {
+            inmove(true);
+        },2000);
+    }
+    function inmove(flag){
+        $imgs.stop(true,true).hide().eq(i).show(500, function () {
+            $spans.removeClass('on').eq(i).addClass('on');
+            var href=$spans.eq(i).attr('data-href');
+            $(this).parent().attr('href',href);
+            if(flag){
+                if(i<$imgs.length-1){
+                    i++;
+                }
+                else {
+                    i=0;
+                }
+            }
+        });
+    }
+    $('.box').hover(function () {
+        clearInterval(timer);
+    }, function () {
+        move();
+    }).mouseleave();
+    $('nav').on('mouseenter','span', function () {
+        clearInterval(timer);
+        i=$(this).index();
+        inmove(false);
+    })
+</script>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        div {
+            width: 1000px;
+            margin: 100px auto 0;
+            border: 1px solid #3c3c3c;
+            overflow: hidden;
+            display: flex;
+        }
+
+        ul {
+            line-height: 40px;
+            list-style: none;
+            display: flex;
+        }
+
+        ul li {
+            margin-right: 30px;
+        }
+
+        ul li a, ul li a:visited {
+            /*word-break: keep-all; !*保持中文不自动换行*!*/
+            white-space: nowrap;    /*强制其内容不换行,包含符号*/
+            text-decoration: none;
+            color: #0A246A;
+        }
+        ul li a:hover {
+            color: #2db3ff;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li><a href="http://www.baidu.com">1. 2017-2018学年第二学期第八周工作安排 2018-04-23</a></li>
+        <li><a href="http://www.cqwu.edu.cn">2.  2017-2018学年第二学期第六周工作安排 2018-04-09</a></li>
+        <li><a href="http://www.qq.com">3. 学院2017年度评优拟推荐名单公示 2018-04-08</a></li>
+        <li><a href="http://www.163.com">4. 2017-2018学年第二学期第五周工作安排 2018-04-02</a></li>
+        <li><a href="http://www.sina.com">5. 2017-2018学年第二学期第四周工作安排 2018-03-27</a></li>
+        <li><a href="http://www.sina.com">6. 2017-2018学年第二学期第三周工作安排 2018-03-20</a></li>
+        <li><a href="http://www.cqw.edu.cn">7. 关于2017年度收入12万元以上人员 自行申报个人所得税的通...2018-03-19</a></li>
+        <li><a href="http://www.google.com">8. 2017-2018学年第二学期第二周工作安排 2018-03-12</a></li>
+    </ul>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    var $box=$('#box');
+    var $ul=$('div#box ul').clone();
+    $ul.appendTo('div#box');
+    var ulW=$ul.outerWidth();
+    var i=0;
+    var timer=null;
+    function move(){
+        timer=setInterval(function () {
+            if(i>=ulW){
+                i=0;
+            }
+            $('#box').scrollLeft(i++);
+        },10)
+    }
+
+/*
+    function move(){//第二种方法，但是这个布局是div外面还有个盒子，为了做绝对定位
+        var left;
+        timer=setInterval(function () {
+           left=$box.position().left;
+            if(left<-ulW){
+                $box.css({left:0});
+            }
+            $box.css({left:"-=1"});
+        },10);
+    }
+*/
+
+    $box.hover(function () {
+        clearInterval(timer);
+    }, function () {
+        move();
+    }).mouseleave();
+</script>
+</body>
+</html>

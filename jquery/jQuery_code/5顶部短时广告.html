@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        main figure {
+            position: relative;
+            display: none;
+        }
+
+        main span {
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: url("img/icon.jpg") no-repeat -399px -19px;
+        }
+
+        main span:hover {
+            background: url("img/icon.jpg") no-repeat -371px -19px;
+        }
+
+        main div {
+            height: 0;
+        }
+
+        /*显示隐藏视频部分CSS样式*/
+        aside {
+            position: fixed;
+            height: 200px;
+            width: 282px;
+            right: -250px;
+            bottom: 0;
+        }
+
+        aside span {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 32px;
+            height: 32px;
+            margin-top: -16px;
+            background: url("icon/login.png") no-repeat;
+            cursor: pointer;
+        }
+
+        aside span.out {
+            background: url("icon/logout.png") no-repeat;
+        }
+
+        aside img {
+            position: absolute;
+            top: 0;
+            left: 32px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <figure>
+        <img src="img/big/sw1_1.jpg" >
+        <span></span>
+    </figure>
+    <div>
+        <img src="img/big/md1_1.jpg" alt="" style="height: 488px; ">
+    </div>
+    <section>
+        <img src="img/big/cqwu.jpg" alt="">
+    </section>
+</main>
+<aside>
+    <span></span>
+    <img src="img/scrollImg/blok-3.jpg" alt="">
+</aside>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    $('main div').animate({height:'373'},2000).delay(1000).animate({height:'150'},1000,function(){
+        $(this).prev().show().end().remove();//end表示回退一步就又变成了div，prev是往前走
+    });
+    $('main figure span').click(function(){
+        $(this).parent().remove();
+    });
+    $('aside span').click(function(){
+        var $this=$(this);
+        $this.toggleClass('out');
+        if($this.hasClass('out')){
+            $this.parent().animate({right:0},500)
+        }else {
+            $this.parent().animate({right:'-250'},500)
+        }
+    });
+</script>
+</body>
+</html>

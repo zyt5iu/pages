@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            /*margin: 50px 700px 0;*/
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #2a859c;
+            width: 400px;
+            margin: auto;
+        }
+
+        form > * {
+            width: 250px;
+            margin-top: 20px;
+        }
+
+        form > input, form > a {
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post">
+    <label>用户名：
+        <input id="uname" maxlength="50">
+    </label>
+    <label>密&nbsp;码：
+        <input type="password" id="password">
+    </label>
+    <label>
+        <input type="checkbox" id="rmbUser">记住用户名
+    </label>
+    <a href="#">忘记密码?</a>
+    <button>登录</button>
+</form>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+    $(function(){
+        if($.cookie("c_name")){
+            $('#rmbUser')[0].checked=true;
+            $('#uname').val($.cookie('uname'));
+            $('#password').val($.cookie('pwd'))
+        }
+        $('form').submit(function(e){
+            e.preventDefault();//阻止默认行为
+            saveInfo();
+        });
+        function saveInfo(){
+            if($('#rmbUser')[0].checked){
+                var uname=$('#uname').val();
+                var pwd=$('#password').val();
+                $.cookie('c_name','true',{expires:7});//过期时间7天
+                $.cookie('uname',uname,{expires:7});
+                $.cookie('pwd',pwd,{expires:7})
+            }else {
+                $.cookie('c_name','false',{expires:-1});
+                $.cookie('uname','',{expires:-1});
+                $.cookie('pwd','',{expires:-1})
+            }
+        }
+    })
+</script>
+</body>
+</html>
