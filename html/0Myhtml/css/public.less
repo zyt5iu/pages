@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  color: #222222;
+}
+a:hover{
+  color: #0ac70a;
+  text-decoration: none;
+}
+ul li{
+  list-style-type: none;
+}
+//导航
+header{
+  //最开始的导航
+  div.initial{
+    line-height: 25px;
+    padding-left: 70%;
+    background-color: #212121;
+    span{
+      color: #ccc;
+      margin-left: 15px;
+    }
+  }
+  nav{
+    clear: both;
+    font-size: 17px;
+    img{
+      height: 40px;
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+      li{
+        a{
+          padding: 10px !important;
+        }
+        form{
+          margin: 3px 0 0 0!important;
+        }
+      }
+    }
+  }
+  .navbar-nav {
+    float: none;
+  }
+  .navbar {
+     margin-bottom: 0!important;
+  }
+  //首页导航active的设置
+  .navbar-default .navbar-nav>.active>a{
+    background: none!important;
+    color: #0ac70a;
+  }
+  //首页a标签划过样式
+  .navbar-default .navbar-nav>li>a:hover{
+    color: #0ac70a!important;
+  }
+  //首页a标签下拉菜单划过样式
+  .dropdown-menu>li>a:hover{
+    color: #0ac70a;
+    text-decoration: none;
+    background: none!important;
+  }
+  //下拉菜单按钮样式
+  .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background: none!important;
+    color: #0ac70a;
+  }
+}
+//主要内容
+div.main{
+  padding: 0 100px;
+  margin: 30px 0 50px 0;
+}
+//脚注
+footer{
+  border-top: solid 1px #eee;
+  background: #f8f8f8;
+  padding: 20px 0 10px 0;
+  div.footer_txt{
+    display: flex;
+    justify-content: space-around;
+    dl:not(:last-child){
+      text-align: center;
+    }
+    dl{
+      dd{
+        margin-top: 5px;
+        a{
+          color: #888;
+        }
+      }
+    }
+
+    img{
+      width: 200px;
+      height: auto;
+    }
+  }
+  div.footer_note span{
+    margin-left: 40px;
+  }
+}
+//返回顶部
+small.bootcss_top{
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #58c4a0;
+  text-align: center;
+  a{
+    font-size: 25px;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+  }
+  &:hover{
+    background-color: #4cae4c;
+  }
+}

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>院子-首页</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--导航-->
+<header>
+    <div class="initial navbar-static-top container-fluid">
+        <span>客服热线：010-15894652</span>
+        <span>服务时间（9:00-18:00）</span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav" style="padding: 10px">
+                    <li><a href="#" style="padding: 0 10px 0 0!important;"><img src="img/logo.PNG"></a></li>
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="homestay.html">民宿长短租</a></li>
+                    <li><a href="land.html">土地租凭</a></li>
+                    <li><a href="land_manage.html">土地托管</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">资讯百科 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">政策解读</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">土地资讯</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">服务中心</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入关键词">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                    </li>
+                    <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="#register" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="login" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请登录</h4>
+                </div>
+                <form id="form_login" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="zh" id="zh1">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pw1"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                            <div class="col-sm-4 require">
+                                <input type="text"  class="form-control" name="yzm" id="yzm" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <span id="yzm1" ></span>
+                                <a href="" id="change_yzm">换一张</a>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label id="info" class="col-sm-4 control-label pull-left"></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请注册</h4>
+                </div>
+                <form id="form_reg" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input class="form-control" name="zh" id="zh" required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="username">用户名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="name" id="username"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd2">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pwd2">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd3">确认密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="repwd" id="pwd3">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="nc" id="nc">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="address">通讯地址：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="address" id="address">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel">电话号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="tel" id="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">注册</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<!--轮播图-->
+<div id="slidershow" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#slidershow" data-slide-to="0" class="active"></li>
+        <li data-target="#slidershow" data-slide-to="1"></li>
+        <li data-target="#slidershow" data-slide-to="2"></li>
+        <li data-target="#slidershow" data-slide-to="3"></li>
+        <li data-target="#slidershow" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="img/slideshow1.png" alt="First slide">
+            <div class="carousel-caption"></div>
+        </div>
+        <div class="item">
+            <img src="img/slideshow2.jpg" alt="Second slide">
+            <div class="carousel-caption">
+                <h1>冷天不冻下力汉，黄土不亏勤劳人</h1>
+                <h4>老板，你来租，我帮你种，收获专属于你的农产品</h4>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/slideshow3.jpg" alt="Third slide">
+            <div class="carousel-caption">
+                <h1>一方水土养一方人一方水土养一方人</h1>
+                <h4>您的农产品需要这笔资金成长</h4>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/slideshow4.png" alt="Third slide">
+            <div class="carousel-caption">
+                <h1>一方水土养一方人一方水土养一方人</h1>
+                <h4>您的农产品需要这笔资金成长</h4>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/slideshow5.png" alt="Four slide">
+            <div class="carousel-caption">
+                <h1>一方水土养一方人一方水土养一方人</h1>
+                <h4>您的农产品需要这笔资金成长</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wrap">
+    <ul>
+        <li><i class="one">&#xf118;</i><span>土地托管</span></li>
+        <li><i class="two">&#xf291;</i><span>订单采购</span></li>
+        <li><i class="three">&#xf0f8;</i><span>服务商合作</span></li>
+        <li><i class="four">&#xf19c;</i><span>政府合作</span></li>
+        <li><i class="five">&#xf0c1;</i><span>小站加盟</span></li>
+    </ul>
+</div>
+<!--主要内容-->
+<div class="main">
+    <!--搜索-->
+    <div class="container">
+        <form action="#" id="search">
+            <ul>
+                <li>
+                    <input type="text" autocomplete="off"  name="query" placeholder="目的地，城市，地址" value="">
+                    <a href="##" class="btn btn-success">搜索</a>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!--引言-->
+    <div class="introduction">
+        <p>
+            想想世界这么大一片天地，有属于你自己的一片土地，种你想吃的蔬菜水果，享受生活，体验生活。
+            闲时田间劳作，犹如桃花源记里“土地平旷，屋舍俨然，有良田美池桑竹之属。阡陌交通，鸡犬相闻。
+            其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。”
+            忙时，农民伯伯帮你滋养你的农作物长大。
+            休息，体验民间习俗，见你这辈子都没见过的东西。
+        </p>
+    </div>
+    <!--热门活动-->
+    <div class="hot_activity">
+        <div id="hot_homestay">
+            <h2>玩转民宿<small class="pull-right"><a href="homestay.html">更多&gt;&gt;</a></small></h2>
+            <div class="row text-center">
+                <div class="col-xs-3">
+                    <a href="##">
+                        <img src="img/hot_homestay1.jpg" alt=""/>
+                        <div class="info-box" style=" background: #f66;">
+                            <h4>轰趴聚会</h4>
+                            <p>私密空间 亲朋好友尽兴玩</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="##">
+                        <img src="img/hot_homestay2.jpg" alt=""/>
+                        <div class="info-box" style=" background: #ffb000;">
+                            <h4>轰趴聚会</h4>
+                            <p>私密空间 亲朋好友尽兴玩</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="##">
+                        <img src="img/hot_homestay3.jpg" alt=""/>
+                        <div class="info-box" style=" background: #36c48f;">
+                            <h4>轰趴聚会</h4>
+                            <p>私密空间 亲朋好友尽兴玩</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="##">
+                        <img src="img/hot_homestay4.jpg" alt=""/>
+                        <div class="info-box" style=" background: #404a54;">
+                            <h4>轰趴聚会</h4>
+                            <p>私密空间 亲朋好友尽兴玩</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="hot_land">
+            <h2>热门土地<small class="pull-right"><a href="land.html">更多&gt;&gt;</a></small></h2>
+            <div class="row">
+                <div class="col-xs-4">
+                    <a href="#">
+                        <div class="bgcover">
+                            <div >四川筠连榨菜基地</div>
+                        </div>
+                        <img src="img/hot-land1.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="##">
+                        <div class="bgcover">
+                            <div >贵州毕节辣椒基地</div>
+                        </div>
+                        <img src="img/hot-land2.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="##">
+                        <div class="bgcover">
+                            <div >湖北孝感水稻基地</div>
+                        </div>
+                        <img src="img/hot-land3.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="##"></a>
+                    <div class="bgcover">
+                        <div >湖北荆州水稻基地</div>
+                    </div>
+                    <img src="img/hot-land4.jpg">
+                </div>
+                <div class="col-xs-4">
+                    <a href="##">
+                        <div class="bgcover">
+                            <div >安徽宿州小麦基地</div>
+                        </div>
+                        <img src="img/hot-land5.jpg">
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="##">
+                        <div class="bgcover">
+                            <div >安徽蚌埠小麦基地</div>
+                        </div>
+                        <img src="img/hot-land6.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--认证发布方式-->
+    <div class="identify">
+        <h2>让分享和信赖悄然发生</h2>
+        <div class="identify_body">
+            <div><a href="#">双方身份验证</a></div>
+            <div><a href="#">安全线上交易</a></div>
+            <div><a href="#">我有民宿土地</a></div>
+            <div><a href="#">客服服务热线</a></div>
+        </div>
+    </div>
+    <!--资讯、百科部分-->
+    <div class="news">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="news_header">
+                    <h2>资讯<small>/ INFORMATION</small></h2>
+                    <a href="##" class="pull-right">更多 &gt;</a>
+                </div>
+                <div class="news_body">
+                    <figure>
+                        <img src="img/news1.jpg" alt="">
+                        <figcaption>
+                            <h4>院子网给你不一样的生活，一样的享受</h4>
+                            <p>
+                                中以农业产业基金合伙人表示：“土地是农业的第一生产要素，是农业现代化、规模化产业升级的必要条件。「聚土网」自成立以来，坚持以农村土地为切入，整合上下游资源，做一站式的农业产业链服务平台，对土地在农业产业化过程中的运作方式非常熟悉，在农业领域有其独特的优势。作为一家国资背景的产业基金，我们投资「聚土网」，一是对以土地为入口的农业领域的看好，二是「聚土网」经过最近两年的发展，商业模式落地性强，业务规模快速扩大。同时我们相信在乡村振兴的政策背景下，农业领域的发展前景将迎来一个新的时代。”
+                            </p>
+                            <a href="##" target="_blank">查看详情&nbsp;&gt;</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="news_down">
+                    <ul>
+                        <li><a href="##">加大科技投入， 促进蔬菜产业发展 <time class="pull-right">2018-7-19</time></a></li>
+                        <li><a href="##">云南普洱市：1000亩甜竹示范基地建成，助推农村经济发展 <time class="pull-right">2018-7-19</time></a></li>
+                        <li><a href="##">天山南北，规模化特色种植业迅猛发展<time class="pull-right">2018-7-19</time></a></li>
+                        <li><a href="##">2018年共享农庄的申报流程及创建模式，你都了解吗？ <time class="pull-right">2018-7-19</time></a></li>
+                        <li><a href="##">农村光伏发电国家有补贴吗？2018年农村光伏发电补贴标准及方式 <time class="pull-right">2018-7-19</time></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="news_header">
+                    <h2>百科<small> / ENCYCLOPEDIA</small></h2>
+                    <a href="##" class="pull-right">更多 &gt;</a>
+                </div>
+                <div class="news_body2">
+                    <figure>
+                        <img src="img/news2.jpg" alt="">
+                        <figcaption>
+                            <h4><a href="##">丢两头，种中间，玉米棒子没空尖。</a></h4>
+                            <p>
+                                <a href="##">
+                                    玉米是一年生雌雄同株异花授粉植物， 植株高大， 茎强壮， 是重要的粮食作物和饲料作物， 也是全世界总产量最高的农作物， 其种植面积和总产量仅次于水稻和小麦。玉米一直都被誉为长寿食品， 含有丰富的蛋 白质、 脂肪、 维生素、 微量元素、 纤维素等， 具有开发高营养、 高生物学功能食品的巨大潜力。但由于其遗传性较为复杂， 变异种类丰富， 在常规的育种过程中存在着周期过长、 变异系数过大、 影响子代生长发育的缺点， 而现代生物育种技术不但克服了上述缺点和不足， 同时也提高了育种速度和质量
+                                </a>
+                            </p>
+                            <a href="##" target="_blank">查看详情&nbsp;&gt;</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/news3.jpg" alt="">
+                        <figcaption>
+                            <h4><a href="##">麦要浇芽，菜要浇花</a></h4>
+                            <p>
+                                <a href="##">
+                                    栽培技术编辑
+                                    确定小麦播种期应考虑许多因素。首先是温度，播期早晚是能否培育冬前壮苗的关键。播种过早，苗期温度太高，麦苗易徒长，冬前群体过大，土壤养分早期消耗过度，易形成先旺后弱的“老弱苗”，春性较强的品种还易遭冻害；播种过晚，冬前生长积温不够，苗龄太小，分布不足，根系不
+                                    麦子
+                                    麦子
+                                    发达，抗逆性差而成为晚弱苗。冬前壮苗的要求，半冬性品种冬前主茎叶龄以5—7片，单株4—8个以上分蘖，蘖根比为1:1—2为宜，根据温度与麦苗生长关系的研究，形成壮苗的适宜播种日期为日平均气温在15—18℃之间，冬前0℃以上积温500—600℃。其次是品种类型。在同一类型区内，冬性品种抗冻性好，冬前主茎叶可达8片，偏春性品种抗冻能力差，主茎叶不超过6片，播期按此要求适当提前或延后。第三，要考虑地力条件及栽培管理技术，高肥水地可延长3—5天，低肥水地宜提前3—5天，同样条件管理水平差的宜早几天，管理精细的宜晚几天。独秆麦、地膜麦可推迟10天以上。第四，不同地形、地貌及土质的适宜播期也不同。山丘地，阴坡宜先种，向阳地温度高宜后种，平原薄地、盐碱涝洼地宜适当早种。
+                                </a>
+                            </p>
+                            <a href="##" target="_blank">查看详情&nbsp;&gt;</a>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/news4.jpg" alt="">
+                        <figcaption>
+                            <h4><a href="##">征用土地注意事项</a></h4>
+
+                            <p>
+                                <a href="##">
+                                    征用土地就是国家为了公共利益的需要，依法将集体所有的土地转变为国有土地的强制手段。征用土地具有的特征
+                                </a>
+                            </p>
+                            <a href="##" target="_blank">查看详情&nbsp;&gt;</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--脚注-->
+<footer>
+    <div class="footer_txt">
+        <dl >
+            <dt>特色功能</dt>
+            <dd><a href="##" >发布土地</a></dd>
+            <dd><a href="##" >我要找地</a></dd>
+            <dd><a href="##" >土地评估</a></dd>
+            <dd><a href="##" >申请合作</a></dd>
+            <dd><a href="##" >土地贷款</a></dd>
+            <dd><a href="##" >农业保险</a></dd>
+            <dd><a href="##" >成为农业服务商</a></dd>
+        </dl>
+        <dl >
+            <dt>院子学院</dt>
+            <dd><a href="##" >政策法规</a></dd>
+            <dd><a href="##" >土地问答</a></dd>
+            <dd><a href="##" >土地合同</a></dd>
+            <dd><a href="##" >土地工具</a></dd>
+        </dl>
+        <dl >
+            <dt>资讯中心</dt>
+            <dd><a href="##" >土地快讯</a></dd>
+            <dd><a href="##" >农业快讯</a></dd>
+            <dd><a href="##" >流转资讯</a></dd>
+            <dd><a href="##" >农业项目</a></dd>
+            <dd><a href="##" >聚焦三农</a></dd>
+            <dd><a href="##" >土流快讯</a></dd>
+            <dd><a href="##" >资讯标签</a></dd>
+        </dl>
+        <dl >
+            <dt>帮助中心</dt>
+            <dd><a href="##" >网站公告</a></dd>
+            <dd><a href="##" >我要找地</a></dd>
+            <dd><a href="##" >我要卖地</a></dd>
+            <dd><a href="##" >网站注册登录</a></dd>
+            <dd><a href="##" >成为流转中心</a></dd>
+            <dd><a href="##" >社群导航</a></dd>
+        </dl>
+        <dl >
+            <dt>关于院子网</dt>
+            <dd><a href="##" >公司介绍</a></dd>
+            <dd><a href="##" >媒体报道</a></dd>
+            <dd><a href="##" >加入我们</a></dd>
+            <dd><a href="##" >广告服务</a></dd>
+            <dd><a href="##" >联系我们</a></dd>
+        </dl>
+        <dl>
+            <dt>关注我们</dt>
+            <dd><img src="img/weibo.png" alt=""/></dd>
+        </dl>
+        <dl >
+            <dt>联系我们</dt>
+            <dd><p>市场合作：0731-83298637</p> </dd>
+            <dd><p>商务合作：400-6666-737</p> </dd>
+            <dd><p>企业邮箱：service@1663618914.com</p> </dd>
+        </dl>
+    </div>
+    <div class="footer_note text-center">
+        <span>©2018版权所有 院子网</span>
+        <span><a href="http://www.miibeian.gov.cn/"  rel="nofollow">渝ICP备582852825号-2</a></span>
+        <span>增值电信业务经营许可证:湘B2-201558254006</span>
+        <span><a href="##"><img src="img/beian.png">渝公网安备 201558254006</a></span>
+    </div>
+</footer>
+<!--侧边-->
+<small class="bootcss_top"><a href="#" class="glyphicon glyphicon-chevron-up"></a></small>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $("#slidershow").carousel({
+            interval:3000
+        });
+    })
+</script>
+</body>
+</html>

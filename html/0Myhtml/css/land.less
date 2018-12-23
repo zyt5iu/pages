@@ -1,0 +1,210 @@
+//ÎÄ×ÖºÐ×ÓÒþ²ØÊ¡ÂÔ
+.multi_row(@row:3) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+body{
+  background-color: #f5f5f5;
+}
+div.main {
+  &>ul{
+    background-color: white;
+    margin-bottom: 35px;
+    a{
+      font-size: 20px;
+      font-weight: lighter;
+      &:hover{
+        background-color: white!important;
+      }
+    }
+    li.active,li:hover{
+      border-bottom: 2px #14A35B solid;
+      a{
+        color:  #14A35B;
+        font-weight: bold;
+      }
+      a:after{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border: 5px solid transparent;
+        border-top-color: #14A35B;
+        top: 50px;
+        left: 49%;
+      }
+
+    }
+  }
+  div.menu{
+    width: 100%;
+    padding: 30px 30px 10px 30px;
+    background-color: white;
+    dl{
+      dt{
+        float: left;
+        width: 90px;
+        color: #999;
+        font-weight: normal;
+        padding: 3px 5px;
+      }
+      dd {
+        overflow: auto;
+        padding: 3px 0;
+        strong{
+          color: #14A35B;
+        }
+        a{
+          padding: 3px 5px;
+        }
+        p.level{
+          display: block;
+          width: 100%;
+          padding: 15px;
+          border: 1px #e9e9e9 dashed;
+          line-height: 25px;
+          margin-top: 5px;
+        }
+        span{
+          color: darkorange;
+        }
+      }
+    }
+  }
+  div.list_land{
+    margin-top: 40px;
+    .media>.pull-left {
+      margin-right: 5px;
+    }
+    ul.media-list{
+      li.media{
+        height: 210px;
+        background-color: white;
+        &:hover{
+          border: 2px #14A35B solid;
+          box-sizing: border-box;
+        }
+        img{
+          width: 290px;
+          height: 210px;
+        }
+        div.media-body{
+          padding: 0 20px;
+          position: relative;
+          h3{
+            padding-right:80px;
+            .multi_row(1);
+            small{
+              margin-left: 15px;
+            }
+          }
+          small.tag{
+            position:absolute;
+            right: 20px;
+            top:20px;
+            display: block;
+            background-color: #14A35B;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          div.tag_detail{
+            display: none;
+            color: white;
+            background-color: #14A35B;
+            height: 500px;
+            position: absolute;
+          }
+          p{
+            clear: both;
+            color: #999;
+          }
+          p.num{
+            position: absolute;
+            right: 23px;
+            top: 90px;
+            span{
+              font-size: 28px;
+              color: #14A35B;
+            }
+          }
+          p.aside_land_detail{
+            .multi_row(3);
+          }
+        }
+      }
+    }
+    div.paging{
+      display: flex;
+      justify-content: center;
+      ul{
+        margin-bottom: 0!important;
+        li a{
+          margin: 0 5px;
+        }
+        li.active a{
+          background-color: #4cae4c;
+          color: white;
+          outline: none;
+          border: 1px #4cae4c solid;
+        }
+        li a:hover{
+          background-color: #4cae4c;
+          color: white;
+          border: 1px #4cae4c solid;
+        }
+      }
+    }
+
+    div.aside_land{
+      background-color: white;
+      padding: 5px 25px 10px 25px;
+      width: 100%;
+      ul li{
+        img{
+          float: left;
+          width: 20%;
+          margin-right: 20px;
+        }
+        &:not(:last-child){
+          border-bottom: 1px #cccccc dashed;
+        }
+        figcaption{
+          h3{
+            color: #ffa037;
+            small{
+              color: #222222;
+            }
+          }
+
+          color: #999;
+        }
+      }
+    }
+    div.hot_homestay_land{
+      background-color: white;
+      padding: 5px 25px 10px 25px;
+      margin-top: 20px;
+      h3{
+        border-left: 4px #14A35B solid;
+        padding: 0 0 0 20px;
+        margin-bottom: 20px;
+      }
+      ul li{
+        &:not(:last-child) {
+          border-bottom: 1px #cccccc dashed;
+        }
+        img{
+          width: 40%;
+          float: left;
+          margin-right: 20px;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类导航</title>
+    <style type="text/css">
+        /*全局样式*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        dt{
+            font-size: 18px;
+        }
+        /*a样式*/
+        a,a:visited{
+            text-decoration: none;
+            color: black;
+        }
+        /*导航开始*/
+        nav{
+            width: 250px;
+            margin: 80px 0 0 80px;
+            background-color: #d3fdff;
+            position: relative;
+        }
+        /*导航标题*/
+        nav h3{
+            background-color: #0a74cb;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 23px;
+        }
+        nav>dl{
+            padding: 8px 0 8px 10px;
+            border: 1px solid #0a90fb;
+            border-top: none;
+        }
+        nav>dl>dt{
+            position: relative;
+            cursor: pointer;
+            height: 50px;
+            line-height: 50px;
+        }
+        nav>dl>dt:after{
+            position: absolute;
+            content: '';
+            right: 10px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../images/right.png");
+            background-size: 16px 16px;
+            margin-top: 15px;
+        }
+        nav>dl:hover{
+            background: white;
+            padding: 8px 0 8px 10px;
+        }
+        nav>dl:hover>dt:after{
+            background: white;
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 65px;
+            top: -23px;
+            left: 225px;
+            z-index: 5;
+        }
+        nav>dl:hover>dd{
+            display: block;
+            margin-left: -1px;
+        }
+        /*二级内容*/
+        nav>dl>dd{
+            display: none;
+            position: absolute;
+            left: 250px;
+            top: 40px;
+            width: 800px;
+            height: 500px;
+            border: 1px solid #0a90fb;
+            padding: 15px;
+        }
+        /*三级内容*/
+        .left{
+            float: left;
+            width: 500px;
+        }
+        .right{
+            float: right;
+            width: 300px;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .left>dl{
+            width: 400px;
+            margin-top: 20px;
+        }
+        .left>dl:not(:last-child){
+            border-bottom: 1px dashed #dddddd;
+        }
+        .left>dl>dt{
+            float: left;
+            width: 80px;
+        }
+        .left>dl>dd{
+            overflow: auto;
+            word-spacing: 10px;
+            padding-left: 10px;
+
+        }
+        .left>dl>dd a{
+            display: inline-block;
+            padding: 0 5px 10px 0 ;
+        }
+        .right>dl>dd{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <h3>全部商品分类</h3>
+    <dl>
+        <dt><a href="#">电子商品</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+                    <dt class="left-dt"><a href="#">电器</a></dt>
+                    <dd>
+                        <a href="#">告白气球</a>
+                        <a href="#">系统分析师</a>
+                        <a href="#">系统规划与管理师</a>
+                        <a href="#"> 软件设计师</a>
+                        <a href="#">程序员</a>
+                        <a href="#">网络管理员</a>
+                        <a href="#">信息处理技术员</a>
+                    </dd>
+                </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">儿童用品</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+            <a href="#">信息系统监理师</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">信息处理d技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">书籍资料</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+            </div>
+            <div class="right">
+                <img src="../images/one.jpg" alt=""><br/>
+                <dl>
+                    <dt>而看是谜底</dt>
+                    <dd><a href="#">我不知道你的答案</a></dd>
+                    <dd><a href="#">最后到底是真情或假意</a></dd>
+                    <dd><a href="#">如果有天</a></dd>
+                </dl>
+                <img src="../images/three.jpg" alt="">
+            </div>
+        </dd>
+    </dl>
+    <dl>
+        <dt><a href="#">流行音乐</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+        <dt class="left-dt"><a href="#">周杰伦</a></dt>
+        <dd>
+            <a href="#">告白气球</a>
+            <a href="#">系统分析师</a>
+            <a href="#">七里香</a>
+            <a href="#"> 青花瓷</a>
+            <a href="#">程序员</a>
+            <a href="#">稻香</a>
+            <a href="#">晴天</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">歌单</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 算什么</a>
+            <a href="#">网络工程师</a>
+            <a href="#">简单爱</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">安静</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">鹿晗</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">彩虹</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+    </div>
+    <div class="right">
+        <img src="../images/js2.jpg" alt=""><br/>
+        <dl>
+            <dt>而看是谜底</dt>
+            <dd><a href="#">我不知道你的答案</a></dd>
+            <dd><a href="#">最后到底是真情或假意</a></dd>
+            <dd><a href="#">如果有天</a></dd>
+        </dl>
+        <img src="../images/js1.jpg" alt="">
+    </div>
+    </dd>
+    </dl>
+    <dl>
+        <dt><a href="#">等你下课</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+        <dt class="left-dt"><a href="#">十一月小狼</a></dt>
+        <dd>
+            <a href="#">告白气球</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">程序员</a>
+            <a href="#">网络管理员</a>
+            <a href="#">信息处理技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">八度空间</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+            <a href="#">信息系统监理师</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">信息处理d技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">我很忙</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+    </div>
+    <div class="right">
+        <img src="../images/blok-4.jpg" alt=""><br/>
+        <dl>
+            <dt>而看是谜底</dt>
+            <dd><a href="#">我不知道你的答案</a></dd>
+            <dd><a href="#">最后到底是真情或假意</a></dd>
+            <dd><a href="#">如果有天</a></dd>
+        </dl>
+        <img src="../images/blok-3.jpg" alt="">
+    </div>
+    </dd>
+    </dl>
+    <dl>
+        <dt><a href="#">苦熬时代</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+        <dt class="left-dt"><a href="#">寻找周杰伦</a></dt>
+        <dd>
+            <a href="#">告白气球</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">程序员</a>
+            <a href="#">网络管理员</a>
+            <a href="#">信息处理技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">黄金加</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+            <a href="#">信息系统监理师</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">信息处理d技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">大灌篮</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+    </div>
+    <div class="right">
+        <img src="../images/blok-1.jpg" alt=""><br/>
+        <dl>
+            <dt>而看是谜底</dt>
+            <dd><a href="#">我不知道你的答案</a></dd>
+            <dd><a href="#">最后到底是真情或假意</a></dd>
+            <dd><a href="#">如果有天</a></dd>
+        </dl>
+        <img src="../images/blok-2.jpg" alt="">
+    </div>
+    </dd>
+    </dl>
+    <dl>
+        <dt><a href="#">微笑好吗</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+        <dt class="left-dt"><a href="#">剩下的盛夏</a></dt>
+        <dd>
+            <a href="#">告白气球</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">程序员</a>
+            <a href="#">网络管理员</a>
+            <a href="#">信息处理技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">命中注定</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+            <a href="#">信息系统监理师</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">信息处理d技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">谁是白菜</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+    </div>
+    <div class="right">
+        <img src="../images/blok-3.jpg" alt=""><br/>
+        <dl>
+            <dt>而看是谜底</dt>
+            <dd><a href="#">我不知道你的答案</a></dd>
+            <dd><a href="#">最后到底是真情或假意</a></dd>
+            <dd><a href="#">如果有天</a></dd>
+        </dl>
+        <img src="../images/blok-4.jpg" alt="">
+    </div>
+    </dd>
+    </dl>
+    <dl>
+        <dt><a href="#">流浪车票</a></dt>
+        <dd class="right-both">
+            <div class="left">
+                <dl class="left-dl">
+        <dt class="left-dt"><a href="#">我的爱人</a></dt>
+        <dd>
+            <a href="#">告白气球</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">程序员</a>
+            <a href="#">网络管理员</a>
+            <a href="#">信息处理技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">幸福结局</a></dt>
+        <dd>
+            <a href="#">重生</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+            <a href="#">信息系统监理师</a>
+            <a href="#">系统集项成目管理工程师</a>
+            <a href="#">信息处理d技术员</a>
+        </dd>
+    </dl>
+    <dl class="left-dl">
+        <dt class="left-dt"><a href="#">骑士精神</a></dt>
+        <dd>
+            <a href="#">栀子花开 </a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统分析师</a>
+            <a href="#">系统规划与管理师</a>
+            <a href="#"> 软件设计师</a>
+            <a href="#">网络工程师</a>
+        </dd>
+    </dl>
+    </div>
+    <div class="right">
+        <img src="../images/blok-5.jpg" alt=""><br/>
+        <dl>
+            <dt>而看是谜底</dt>
+            <dd><a href="#">我不知道你的答案</a></dd>
+            <dd><a href="#">最后到底是真情或假意</a></dd>
+            <dd><a href="#">如果有天</a></dd>
+        </dl>
+        <img src="../images/blok-6.jpg" alt="">
+    </div>
+    </dd>
+    </dl>
+</nav>
+</body>
+</html>

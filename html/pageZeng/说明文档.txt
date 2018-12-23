@@ -1,0 +1,18 @@
+字体：
+
+Lato-Black  ——导航字体 3.87px  16px
+Lato-Bold
+Lato-Light 
+Lato-Medium ——your logo 10.62px  44px
+Lato-Regular
+Raleway-Black
+Raleway-Regular
+
+分辨率  72  .ai里面的大小 
+分辨率 300  导出为png的格式
+Ctrl alt i  在PS中打开 可以调屏幕分辨率
+分辨率 72  宽度：315.719 
+分辨率 300 宽度  1316
+4.166666
+
+ctrl +alt +shift+s 保存切片为web格式

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body data-target="#myScoroll" data-spy="scroll">
+<!--导航-->
+<header>
+    <div class="initial navbar-static-top container-fluid">
+        <span>客服热线：010-15894652</span>
+        <span>服务时间（9:00-18:00）</span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav" style="padding: 10px">
+                    <li><a href="#" style="padding: 0 10px 0 0!important;"><img src="img/logo.PNG"></a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="homestay.html">民宿长短租</a></li>
+                    <li><a href="land.html">土地租凭</a></li>
+                    <li><a href="land_manage.html">土地托管</a></li>
+                    <li  class="active"><a href="about.html">关于我们</a></li>
+                    <li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入关键词">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                    </li>
+                    <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="#register" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="login" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请登录</h4>
+                </div>
+                <form id="form_login" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="zh" id="zh1">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pw1"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                            <div class="col-sm-4 require">
+                                <input type="text"  class="form-control" name="yzm" id="yzm" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <span id="yzm1" ></span>
+                                <a href="" id="change_yzm">换一张</a>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label id="info" class="col-sm-4 control-label pull-left"></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请注册</h4>
+                </div>
+                <form id="form_reg" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input class="form-control" name="zh" id="zh" required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="username">用户名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="name" id="username"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd2">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pwd2">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd3">确认密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="repwd" id="pwd3">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="nc" id="nc">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="address">通讯地址：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="address" id="address">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel">电话号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="tel" id="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">注册</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="jumbotron">
+    <div class="container">
+        <h2>有院子的地方就有家</h2>
+        <p>给心一个放松的地方，给自己留另一方天地</p>
+    </div>
+</div>
+<div class="main">
+    <div class="row">
+        <div class="col-md-2" id="myScoroll">
+            <ul class="nav nav-pills nav-stacked my_nav" data-spy="affix" data-offset-top="1">
+                <li class="active"><a href="#one">院子简介</a></li>
+                <li><a href="#two">免费声明</a></li>
+                <li><a href="#three">联系我们</a></li>
+                <li><a href="#four">我有建议</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10" >
+            <div class="one">
+                <div class="flag1"><img src="img/one.gif" alt=""><h3 id="one">院子简介</h3></div>
+                <p> 院子网故事   作者：木子草</p>
+                <p>
+                    王尔德说，我不想谋生，我想生活。
+                    八月长安说，最快乐的生活，是别人的生活。
+                    韩寒说，我所理解的生活，就是和我喜欢的一切在一起。
+                </p>
+                <p>
+                    可究竟什么是生活？什么样的生活又是我们都在苦苦追寻的？ 每个人都有各自不同的定义，
+                    但我知道， 你一定有自己向往的样子， 这世界，也总有人正过着你想要的生活。
+                </p>
+                <p>
+                    每天囿于城市的钢筋水泥中， 我想要逃离喧嚣， 找一个安静的地方， 安一个舒适的家。
+                    那里一定要有植物的绿色； 有花开的芬芳， 有可以安放疲倦的角落。
+                    当蔷薇爬满篱架， 听清风在耳边细语， 看冬树在春天抽芽， 花前月下。
+                    花静静绽放她的姿态， 时光悄悄挪移她的步伐， 日子也开始不再那么地匆忙。
+                    门前屋后， 洒下种子，看它慢慢长成门的形状。
+                    只待来年花开， 架起一树的浪漫， 唤醒每一天的活力和希望。
+                    清晨出门， 傍晚归家， 打开门， 就能嗅一院子的花香。
+                    穿过这片缤纷斑斓， 再走到最靠近生活的地方， 心情都会变得不再一样。
+                    因为， 无论花开还是花落， 都有各自幸福美好的模样。
+                    花开时有惊艳， 落花时有烂漫， 无需感慨，我们只需在时光的间隙里， 学会和生活好好相处， 学会和固执的自己握手言和。
+                </p>
+                <p>
+                    春夏秋冬， 四季成画。 春天有繁花似锦， 夏天有雨后清新， 秋天有树叶泛黄， 冬天有春夏秋的记忆可以收藏。
+                    一天很短， 一辈子也不长， 时间应该浪费在美好的事情上。
+                    不谈喜悲， 只闻花香就好。 一定要有元气满满的早晨。 呼吸第一口新鲜的空气， 再做一份简单的早餐， 就着花香吃下。
+                    一定要有惬意悠闲的午后。 发发呆， 花树下躺躺， 在另一个世界里待一会， 就能忘记了很多的烦恼。 一定要有安然入睡的夜晚。 梳理好一天的思绪， 伴着花香睡下，
+                    梦里，是不是都能笑出来？ 我们都渴望把日子过成诗， 简单精致，优雅从容； 奈何多数人把它过成了自己的歌，
+                    时而不靠谱，时而不着调。 幸好， 我们都还在向着自己的方向， 不是轻易妥协，而是步履不停。
+                </p>
+                <p>
+                    十几岁的时候，我们都渴望张扬， 二十岁的时候，我们仍在恣意疯狂， 只有越长大，越明白：
+                    即使生活有一千个理由让你哭， 你也要， 找到一个理由让自己笑。
+                    不要纠结于过去， 也不要过分忧虑于未来， 最重要的永远是当下。
+                    最怕等到人生垂暮， 才想起俯拾朝花。 拥挤纷扰的世界， 只愿把握好当下， 只愿寻得一个心安处，
+                    只愿每天抬头看见花开， 低头有向往的生活…… 走过这条花路， 愿你想要的一切， 早日都拥有……
+                </p>
+            </div>
+            <div class="two">
+                <div class="flag1"><img src="img/two.gif" alt=""><h3 id="two">免费声明</h3></div>
+                <p>
+                    中国法律规定的免责条件主要有：<br>
+                    1.不可抗力：《合同法》第117条规定，因不可抗力不能履行合同的，根据不可抗力的影响，部分或者全部免除责任，但法律另有规定的除外。当事人延迟履行后发生不可抗力的，不能免除责任。本法所称不可抗力，是指不能预见、不能避免并不能克服的客观情况。 <br>
+                    2.货物本身的自然性质、货物的合理损耗：《合同法》第311条规定：承运人对运输过程中货物的毁损、灭失承担损害赔偿责任，但承运人证明货物的毁损、灭失是因不可抗力、货物本身的自然性质或者合理损耗以及托运人、收货人的过错造成的，不承担损害赔偿责任。<br>
+                    3.债权人的过错：《合同法》第311条规定、第370条规定：寄存人交付的保管物有瑕疵或者按照保管物的性质需要采取特殊保管措施的，寄存人应当将有关情况告知保管人。寄存人未告知，致使保管物受损失的，保管人不承担损害赔偿责任；保管人因此受损失的，除保管人知道或者应当知道并且未采取补救措施的以外，寄存人应当承担损害赔偿责任。<br>
+                </p>
+                <p>
+                    1.免责条款的概念：免责条款，就是当事人以协议排除或限制其未来责任的合同条款。其一，免责条款是合同的组成部分，是一种合同条款；其二，免责条款的提出必须是明示的，不允许以默示方式作出，也不允许法官推定免责条款的存在。<br>
+                    2.免责条款的有效与无效<br>
+                    （1）基于现行法的规定确定免责条款的有效或者无效。免责条款以意思表示为要素，以排除或限制当事人的未来责任为目的，因而属于一种民事行为，应受《合同法》第52条、第53条、第54条、第47条、第48条、第51条和第40条的规定调整 。<br>
+                    （2）基于风险分配理论确定免责条款的有效或者无效<br>
+                    （3）根据过错程度确定免责条款的有效或者无效，《合同法》第40条、第53条。<br>
+                    （4）根据违约的轻重确定免责条款的有效或者无效 ，我国没有采用。<br>
+                </p>
+            </div>
+            <div class="three">
+                <div class="flag1"><img src="img/three.gif" alt=""><h3 id="three">联系我们</h3></div>
+                <p>院子网有限公司</p>
+                <p>客服热线：15201520000</p>
+                <p>联系电话：2596384741</p>
+                <p>问题咨询：yuanzi@qq.com</p>
+                <p>业务合作：yuanzi@yuanzi.xin</p>
+                <p>渠道媒介：yuanziappweb</p>
+                <p>招　　聘：院子</p>
+            </div>
+            <div class="four">
+                <div class="flag1"><img src="img/four.gif" alt=""><h3 id="four">我有建议</h3></div>
+                <p>感谢您帮助我们改进产品及服务，您可以通过以下方式提出您宝贵的建议：</p>
+                <p>① 联系之前为您服务的客服人员</p>
+                <p>② 拨打聚土网服务专线：259638474</p>
+                <p>③ 发送邮件到聚土网邮箱：yuanzi@yuanzi.xin</p>
+                <p>④ 点击网站 “在线客服” 留言</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--脚注-->
+<footer>
+    <div class="footer_note text-center">
+        <span>©2018版权所有 院子网</span>
+        <span><a href="http://www.miibeian.gov.cn/"  rel="nofollow">渝ICP备582852825号-2</a></span>
+        <span>增值电信业务经营许可证:湘B2-201558254006</span>
+        <span><a href="##"><img src="img/beian.png">渝公网安备 201558254006</a></span>
+    </div>
+</footer>
+<!--侧边-->
+<small class="bootcss_top"><a href="#" class="glyphicon glyphicon-chevron-up"></a></small>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

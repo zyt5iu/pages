@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>院子-土地托管</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/land_manage.css">
+    <script src="js/move.js"></script>
+    <script>
+        // 获取元素
+        function getClass(oParent,class_name){
+            var childes=oParent.getElementsByTagName('*');
+            var aEls=[];
+            for(var i=0;i<childes.length;i++){
+                if(childes[i].className==class_name){
+                    aEls.push(childes[i]);
+                }
+            }
+            return aEls;
+        }
+        window.onload=function(){
+            var oDiv=document.getElementById('box');
+
+            var oFig=oDiv.getElementsByTagName('figure')[0];
+            var oImgs=oFig.getElementsByTagName('img');
+// 向前，向后按钮
+            var oPrev=getClass(oDiv, 'prev')[0];
+            var oNext=getClass(oDiv, 'next')[0];
+//遮罩
+            var oMarkLeft=getClass(oDiv, 'markLeft')[0];
+            var oMarkRight=getClass(oDiv, 'markRight')[0];
+//小图
+            var oUl=oDiv.getElementsByTagName('ul')[0];
+            var oLi=oUl.getElementsByTagName('li');
+
+            var nowzIndex=1;
+            var now=0;
+// 按钮显示与隐藏
+            oPrev.onmouseover=oMarkLeft.onmouseover=function(){
+                startMove(oPrev,'opacity',100)
+            };
+            oPrev.onmouseout=oMarkLeft.onmouseout=function(){
+                startMove(oPrev,'opacity',0)
+            };
+            oNext.onmouseover=oMarkRight.onmouseover=function(){
+                startMove(oNext,'opacity',100)
+            };
+            oNext.onmouseout=oMarkRight.onmouseout=function(){
+                startMove(oNext,'opacity',0)
+            };
+//小图的高亮,大小图切换
+            for(var i=0;i<oLi.length;i++){
+                oLi[i].index=i;
+                oLi[i].onmouseover=function(){
+                    //指向当前图片不动
+                    if(now==this.index){
+                        return;
+                    }
+                    now=this.index;
+                    toggle();
+                }
+            }
+            function toggle(){
+                //小图的高亮
+                for(var j=0;j<oLi.length;j++){
+                    startMove(oLi[j],'opacity',50);
+                }
+                startMove(oLi[now],'opacity',100);
+                // 下滑出现
+                oImgs[now].style.cssText="z-index:"+(++nowzIndex)+";height:0";
+                startMove(oImgs[now],'height',340);
+            }
+            oPrev.onclick=function(){
+                now--;
+                if(now==-1)now=oLi.length-1;
+                toggle();
+                if(now==0){
+                    startMove(oUl,'left',0);
+                }
+                else if(now==oLi.length-1){
+                    startMove(oUl,'left',-(now-2)*oLi[0].offsetWidth);
+                }
+                else{
+                    startMove(oUl,'left',-(now-1)*oLi[0].offsetWidth);
+                }
+            };
+            oNext.onclick=function(){
+                now++;
+                if(now==oLi.length)now=0;
+                toggle();
+                if(now==0){
+                    startMove(oUl,'left',0);
+                }
+                else if(now==oLi.length-1){
+                    startMove(oUl,'left',-(now-2)*oLi[0].offsetWidth);
+                }
+                else{
+                    startMove(oUl,'left',-(now-1)*oLi[0].offsetWidth);
+                }
+            };
+//            自动切换
+            var timer=setInterval(oNext.onclick,2000);
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+            };
+            oDiv.onmouseout=function(){
+                timer=setInterval(oNext.onclick,2000);
+            }
+        }
+    </script>
+</head>
+<body>
+<!--导航-->
+<header>
+    <div class="initial navbar-static-top container-fluid">
+        <span>客服热线：010-15894652</span>
+        <span>服务时间（9:00-18:00）</span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav" style="padding: 10px">
+                    <li><a href="#" style="padding: 0 10px 0 0!important;"><img src="img/logo.PNG"></a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="homestay.html">民宿长短租</a></li>
+                    <li><a href="land.html">土地租凭</a></li>
+                    <li class="active"><a href="land_manage.html">土地托管</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入关键词">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                    </li>
+                    <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="#register" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="login" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请登录</h4>
+                </div>
+                <form id="form_login" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="zh" id="zh1">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pw1"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                            <div class="col-sm-4 require">
+                                <input type="text"  class="form-control" name="yzm" id="yzm" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <span id="yzm1" ></span>
+                                <a href="" id="change_yzm">换一张</a>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label id="info" class="col-sm-4 control-label pull-left"></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请注册</h4>
+                </div>
+                <form id="form_reg" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input class="form-control" name="zh" id="zh" required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="username">用户名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="name" id="username"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd2">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pwd2">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd3">确认密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="repwd" id="pwd3">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="nc" id="nc">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="address">通讯地址：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="address" id="address">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel">电话号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="tel" id="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">注册</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="one row">
+        <div class="col-md-9 left">
+            <h2>托管体系</h2>
+            <ul class="media-list">
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-rounded" src="img/land_manage1.jpg" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">个性化的托管方案</h3>
+                        <p class="last_p ">
+                            针对不同对象、不同区域，匹配不同的托管方案。
+                            更加放心，更加舒心，农田有农民看管，您也可以时常去田间耕种，收割。
+                            如果您有农田需要托管，也可以找我们托管哦
+                        </p>
+                        <div class="flag">
+                            <b>农场</b>
+                            <b>合作社</b>
+                            <b>村委</b>
+                            <b>地方政府</b>
+                        </div>
+                        <a href="##" class="a_btn1">我有土地要托管</a>
+                        <a href="##" class="a_btn2">我有订单要委托</a>
+                    </div>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-rounded" src="img/land_manage2.jpg" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">丰富的土地整合经验</h3>
+                        <p class="last_p ">
+                            从碎片到连片，从分散到整合，到托管，统一规划，统一管理，经验丰富
+                            从碎片到连片，从分散到整合，到托管，统一规划，统一管理，经验丰富
+                        </p>
+                        <div class="flag">
+                            <b>农产品加工</b>
+                            <b>资源整合</b>
+                            <b>精准落户</b>
+                            <b>大收益</b>
+                        </div>
+                        <a href="##" class="a_btn1">我有土地要托管</a>
+                        <a href="##" class="a_btn2">我有订单要委托</a>
+                    </div>
+                </li>
+                <li class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-rounded" src="img/land_manage4.jpg" alt="...">
+                    </a>
+                    <div class="media-body">
+                        <h3 class="media-heading">完整的供应链整合实力</h3>
+                        <p class="last_p ">
+                            打通上下游对托管成员耕种收、过程管理、交割、物流，保证交易的完整性
+                            打通上下游对托管成员耕种收、过程管理、交割、物流，保证交易的完整性
+                        </p>
+                        <div class="flag">
+                            <b>技术</b>
+                            <b>风险控制</b>
+                            <b>大型订单合作</b>
+                        </div>
+                        <a href="##" class="a_btn1">我有土地要托管</a>
+                        <a href="##" class="a_btn2">我有订单要委托</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-3 hidden-sm hidden-xs right">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">热门种植</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td><a href="#">白菜</a></td>
+                            <td><a href="#">空心菜</a></td>
+                            <td><a href="#">生菜</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">菠菜</a></td>
+                            <td><a href="#">油麦菜</a></td>
+                            <td><a href="#">芹菜</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">西红柿</a></td>
+                            <td><a href="#">土豆</a></td>
+                            <td><a href="#">红薯</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">花生</a></td>
+                            <td><a href="#">花生油</a></td>
+                            <td><a href="#">菜油</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">鸡鸭鱼猪</a></td>
+                            <td><a href="#">新甘蜜宝</a></td>
+                            <td><a href="#">野生板栗</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">水产</a></td>
+                            <td><a href="#">巨峰葡萄</a></td>
+                            <td><a href="#">草莓</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="panel panel-primary" >
+                <div class="panel-heading" >
+                    <h3 class="panel-title">民宿土地百宝箱</h3>
+                </div>
+                <div class="panel-body travel">
+                    <a href="#">土地性质</a>
+                    <a href="#">远离城市</a>
+                    <a href="#">到达路线</a>
+                    <a href="#">地铁线路查询</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="six">
+
+    </div>
+</div>
+<!--脚注-->
+<footer>
+    <div class="footer_note text-center">
+        <span>©2018版权所有 院子网</span>
+        <span><a href="http://www.miibeian.gov.cn/"  rel="nofollow">渝ICP备582852825号-2</a></span>
+        <span>增值电信业务经营许可证:湘B2-201558254006</span>
+        <span><a href="##"><img src="img/beian.png">渝公网安备 201558254006</a></span>
+    </div>
+</footer>
+<!--侧边-->
+<small class="bootcss_top"><a href="#" class="glyphicon glyphicon-chevron-up"></a></small>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div.container{
+            width: 450px;
+            height: 300px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        div.container .left{
+            position: absolute;
+            content: '';
+            width: 30%;
+            left: 0;
+            top:0;
+            bottom: 0;
+        }
+        .left:hover{
+            background: rgba(200,200,200,0.5);
+            cursor: url("../cur/NEZUMI-悲踢.cur"),auto;
+        }
+        div.container .right{
+            position: absolute;
+            content: '';
+            width: 30%;
+            right: 0;
+            top:0;
+            bottom: 0;
+        }
+        .right:hover{
+            background: rgba(200,200,200,0.5);
+            cursor: url("../cur/NEZUMI-悲踢.cur"),auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <span class="left"></span>
+    <img src="../images/three.jpg" alt="">
+    <span class="right"></span>
+</div>
+</body>
+</html>

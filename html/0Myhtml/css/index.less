@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "glyphicon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/icomoon.woff") format("woff"),
+  url("../fonts/icomoon.ttf") format("truetype"),
+  url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+//文字盒子隐藏省略
+.multi_row(@row:3) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @row;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+//字体图标设置
+.data-icon(@l:-35px,@fs:30px){
+  position: absolute;
+  font-family: glyphicon;
+  color: #999;
+  margin-left: @l;
+  font-size: @fs;
+}
+//轮播图
+//轮播图按钮
+.carousel-indicators li {
+  width: 50px!important;
+  height: 7px!important;
+  border-radius: 5px!important;
+  background-color: white;
+  opacity:0.4;
+}
+.carousel-indicators .active {
+  width: 50px!important;
+  height: 7px!important;
+  opacity:1;
+}
+.carousel-indicators {
+  left: 70% !important;
+}
+//轮播图上面的小图标
+div.wrap{
+  position: relative;
+  margin-left: 30%;
+  margin-top: -120px;
+  z-index: 10;
+  ul li{
+    width: 150px;
+    height:45px;
+    line-height: 45px;
+    float: left;
+    list-style-type: none;
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0 17px;
+    border-radius: 36px;
+    margin-left: 16px;
+    cursor: pointer;
+    &:hover{
+      background-color: white;
+    }
+    i{
+      margin-right: 10px;
+      font-family: glyphicon;
+      font-style: normal;
+      font-size: 20px;
+      font-weight: lighter;
+    }
+    .one{
+      color: #088206;
+    }
+    .two{
+      color: #19b3fb;
+    }
+    .three{
+      color: #a687fe;
+    }
+    .four{
+      color: #fe89af;
+    }
+    .five {
+      color: #f8e617;
+    }
+    span{
+      font-size: 16px;
+      color: #222;
+    }
+  }
+}
+//标题位置
+.carousel-caption {
+  right: 5%!important;
+  left: 40% !important;
+  padding-bottom: 100px!important;
+}
+//主要内容
+div.main{
+  margin-top: 150px;
+  //搜索
+  #search{
+    box-shadow: 0 5px 30px rgba(156,160,171,0.25);
+    ul {
+      li {
+        list-style-type: none;
+        input{
+          width: 100%;
+          height: 65px;
+          padding: 0  100px 0 50px;
+          outline: none;
+        }
+        &:before{
+          content: '\f002';
+          .data-icon(10px,28px);
+          margin-top: 8px;
+        }
+        a{
+          position: absolute;
+          margin-left: 75%;
+          margin-top: -55px;
+          width: 65px;
+          height: 45px;
+          line-height: 32px;
+          font-size: 18px;
+          outline: none;
+        }
+      }
+    }
+  }
+  //引言
+  div.introduction{
+    margin: 60px 0;
+    p{
+      text-indent: 2em;
+      font-size: 17px;
+      line-height: 35px;
+    }
+  }
+  //热门活动
+  div.hot_activity{
+      //热门民宿
+      .info-box {
+        position: absolute;
+        padding: 15px 20px;
+        bottom: 0;
+        width: 280px;
+        height: 90px;
+        color: #fff;
+      }
+      //热门土地
+      div#hot_land{
+        margin: 40px 0;
+        div.col-xs-4{
+          margin-bottom: 10px;
+          img{
+            width: 100%;
+          }
+          div.bgcover{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            color: #fff;
+            padding-top: 110px;
+            text-align: center;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  //认证方式
+  div.identify{
+    margin: 50px 0;
+    h2{
+      margin-bottom: 50px;
+    }
+    div.identify_body{
+      display: flex;
+      justify-content: space-around;
+      div{
+        width: 250px;
+        height: 180px;
+        background-color: #1aae32;
+        line-height: 180px;
+        text-align: center;
+        a{
+          font-size: 22px;
+          color: white;
+        }
+        &:hover{
+          //background-color: #abde10;
+          background-color: #5e91c2;
+          box-shadow: #222 0 0 10px;
+        }
+      }
+    }
+  }
+  //资讯、百科部分
+  div.news{
+    div.news_header{
+      h2{
+        display: inline-block!important;
+      }
+      a{
+        font-size: 18px;
+        margin-top: 25px;
+        color: black;
+      }
+    }
+    div.news_body{
+      margin: 30px 0;
+      img{
+        float: left;
+        width: 45%;
+        margin-right: 30px;
+      }
+      figcaption{
+        padding: 15px 0 0 0;
+        h4{
+          .multi_row(1);
+        }
+        p{
+          .multi_row(4);
+          margin-top: 15px;
+          text-align:justify;
+          text-justify:inter-ideograph;
+        }
+        a{
+          color: #4cae4c;
+        }
+      }
+    }
+    div.news_down{
+      clear: both;
+      ul{
+        li{
+          line-height: 30px;
+          font-size: 16px;
+          font-weight: lighter;
+        }
+      }
+    }
+    div.news_body2{
+      figure{
+        padding-top: 15px;
+        img{
+          float: left;
+          width: 30%;
+          margin: 0 25px 0 0;
+        }
+        figcaption{
+          h4{
+            .multi_row(1);
+          }
+          p{
+            .multi_row(2);
+            margin-top: 15px;
+            text-align:justify;
+            text-justify:inter-ideograph;
+          }
+        }
+      }
+    }
+  }
+}

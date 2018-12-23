@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style type="text/css">
+        /*下拉菜单*/
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        nav{
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            display: flex;
+            justify-content: center;
+            background: dodgerblue;
+        }
+        nav dl a:link,a:visited{
+            color: white;
+            text-decoration: none;
+        }
+        dt{
+            width: 200px;
+            text-align: center;
+            background: dodgerblue;
+        }
+        dd{
+            display: none;
+        }
+        nav dl:hover dd{
+            display: block;
+            width: 200px;
+            background: #a1c5ff;
+            border-bottom: 1px solid white;
+            text-align: center;
+        }
+
+        /*中英文导航切换*/
+        ul li a:link ,a:visited{
+            text-decoration: none;
+            color: black;
+            display: block;
+            width:200px;
+            background: blanchedalmond;
+            border: 1px solid white;
+        }
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            background: blanchedalmond;
+            border-bottom: 1px solid beige;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin-top: 300px;
+        }
+        label{
+            display: block;
+            width: 200px;
+        }
+        span{
+            display: none;
+            width:200px;
+            background: deepskyblue;
+        }
+        a:hover label{
+            display: none;
+        }
+        a:hover span{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <dl>
+            <dt><a href="#">首页</a></dt>
+        </dl>
+        <dl>
+            <dt><a href="#">院系设置</a></dt>
+            <dd><a href="#">文化与传媒学院</a></dd>
+            <dd><a href="#">软件工程学院</a></dd>
+            <dd><a href="#">材料与化工学院</a></dd>
+            <dd><a href="#">材料与化工学院</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">人才培养</a></dt>
+            <dd><a href="#">本科生培养</a></dd>
+            <dd><a href="#">研究生培养</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">校园文化</a></dt>
+            <dd><a href="#">教工之家</a></dd>
+            <dd><a href="#">学生社团</a></dd>
+            <dd><a href="#">品牌文化</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">信息公开</a></dt>
+            <dd><a href="#">指针与指南</a></dd>
+            <dd><a href="#">年度报告</a></dd>
+            <dd><a href="#">实施办法</a></dd>
+        </dl>
+    </nav>
+    <div>
+        <ul>
+            <li><a href="#"><label>首页</label> <span>HOME</span></a></li>
+            <li><a href="#"><label>课程大厅</label><span>Course</span></a></li>
+            <li><a href="#"><label>留言区</label><span>Message</span></a></li>
+            <li><a href="#"><label>学习中心</label><span>Learing</span></a></li>
+            <li><a href="#"><label>讨论中心</label><span>Discussion</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>

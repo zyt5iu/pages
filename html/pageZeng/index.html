@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <title>demo</title>
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="stylesheet" href="static/media.css">
+    <script type="text/javascript">
+        window.onload=function(){
+            let oDiv1=document.getElementById('slide');
+            let oUl=oDiv1.getElementsByTagName('ul')[0];
+            let aLi=oUl.getElementsByTagName('li');
+            let aControlL=document.getElementById('pre_left');
+            let aControlR=document.getElementById('next_right');
+            let speed=-2;
+
+            oUl.innerHTML+=oUl.innerHTML;
+            oUl.style.width=aLi[0].offsetWidth*aLi.length+'px';
+            function move(){
+                if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                    oUl.style.left='0';
+                }
+                if(oUl.offsetLeft>0){
+                    oUl.style.left=-oUl.offsetWidth/2+'px';
+                }
+                oUl.style.left=oUl.offsetLeft+speed+'px';
+            }
+            let timer=setInterval(move,30);
+            oUl.onmouseover=function(){
+                clearInterval(timer);
+            };
+            oUl.onmouseout=function() {
+                timer = setInterval(move, 30);
+            };
+            aControlL.onclick=function ()
+            {
+                speed=-2;
+            };
+            aControlR.onclick=function ()
+            {
+                speed=2;
+            };
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <a href="##">Your</a>
+            <a href="##" class="logo_txt">LOGO</a>
+        </div>
+        <nav>
+            <a href="##" class="active">HOME</a>
+            <a href="##">PAGES</a>
+            <a href="##">FEATURE</a>
+            <a href="##">BLOG</a>
+            <a href="##">CONTACT</a>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <img src="static/img/banner.png" alt="">
+            <div class="banner_text">
+                <div>
+                    <p>HERE YOU CAN TYPE</p>
+                    <p><b>YOUR COMPANY </b></p>
+                    <p><b>SLOGAN</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="slogan">
+            <div>
+                <h1>Create Your Own Genuine Web Masterpiece</h1>
+                <p>Lorem lpsum is simply dummy text of the printing and typesetting industy</p>
+            </div>
+        </div>
+        <div class="list_menu">
+            <div class="row">
+                <div class="col-4">
+                    <img src="static/img/ideas.png" alt="ideas">
+                    <h2>Ideas</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <img src="static/img/search.png" alt="ideas">
+                    <h2>Make research</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="col-4">
+                    <img src="static/img/work.png" alt="ideas">
+                    <h2>Do the work</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="slideshow public">
+            <div class="content">
+                <h1>Some of Our Work</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="swipe" id="slide">
+                    <div class="pre_left" id="pre_left"><img src="static/img/left.png" alt=""></div>
+                    <div class="swipeImg slideshow_swipeImg">
+                        <ul>
+                            <li><img src="static/img/slideshow1.jpg" alt="slideshow1.jpg"></li>
+                            <li><img src="static/img/slideshow2.jpg" alt="slideshow1.jpg"></li>
+                            <li><img src="static/img/slideshow3.jpg" alt="slideshow1.jpg"></li>
+                            <li><img src="static/img/slideshow4.jpg" alt="slideshow1.jpg"></li>
+                        </ul>
+                    </div>
+                    <div class="next_right" id="next_right"><img src="static/img/right.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="story public">
+            <div class="content">
+                <h1>Our Last Story</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="divide">
+                    <div class="flag1">
+                        <span>&lt;</span>
+                        <span>&gt;</span>
+                    </div>
+                    <div class="flag2"></div>
+                </div>
+                <div class="swipe">
+                    <div class="swipeImg story_swipeImg">
+                        <ul>
+                            <li><img src="static/img/slideshow1.jpg" alt="slideshow1.jpg"></li>
+                            <li><img src="static/img/slideshow2.jpg" alt="slideshow1.jpg"></li>
+                            <li><img src="static/img/slideshow3.jpg" alt="slideshow1.jpg"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="triangle"></div>
+            <div class="pro_wape" id="pro_wape">
+                <div class="progress_list">
+                    <div class="circle">
+                        <div class="pos_left">
+                            <div class="c_left"></div>
+                        </div>
+                        <div class="pos_right">
+                            <div class="c_right"></div>
+                        </div>
+                        <div class="middle">
+                            <div>
+                                <span id="number1">72</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle_name">InDesign</div>
+                </div>
+                <div class="progress_list">
+                    <div class="circle">
+                        <div class="pos_left">
+                            <div class="c_left"></div>
+                        </div>
+                        <div class="pos_right">
+                            <div class="c_right"></div>
+                        </div>
+                        <div class="middle">
+                            <div>
+                                <span>40</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle_name">After Effect</div>
+                </div>
+                <div class="progress_list">
+                    <div class="circle">
+                        <div class="pos_left">
+                            <div class="c_left"></div>
+                        </div>
+                        <div class="pos_right">
+                            <div class="c_right"></div>
+                        </div>
+                        <div class="middle">
+                            <div>
+                                <span>90</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle_name">Illustrator</div>
+                </div>
+                <div class="progress_list">
+                    <div class="circle">
+                        <div class="pos_left">
+                            <div class="c_left"></div>
+                        </div>
+                        <div class="pos_right">
+                            <div class="c_right"></div>
+                        </div>
+                        <div class="middle">
+                            <div>
+                                <span>62</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle_name">Photoshop</div>
+                </div>
+                <div class="progress_list">
+                    <div class="circle">
+                        <div class="pos_left">
+                            <div class="c_left"></div>
+                        </div>
+                        <div class="pos_right">
+                            <div class="c_right"></div>
+                        </div>
+                        <div class="middle">
+                            <div>
+                                <span>54</span>%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="circle_name">Premiere</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col-4">
+                <h2>ABOUT US</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+                </p>
+            </div>
+            <div class="col-4 links" >
+                <h2>QUICK LINKS</h2>
+                <p>ALERTS AND STUFFS</p>
+                <p>CUSTOM SHORTCODES</p>
+                <p>PRICING PLANS</p>
+                <p>TOGGLE ELEMENTS</p>
+                <p>TYPOGRAPHY</p>
+            </div>
+            <div class="col-4">
+                <h2>GET IN TOUCH</h2>
+                <figure>
+                    <img src="static/img/home.png" alt="">
+                    <figcaption>
+                        <p>66 South Street,  </p>
+                        <p>Window 6 Wonderland, </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="static/img/tel.png" alt="">
+                    <figcaption>
+                        <p>+440 875369208 - Office  </p>
+                        <p>+440 353363114 - Fax</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="static/img/email.png" alt="">
+                    <figcaption>
+                        <p>freepik@sitename.com</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </footer>
+    <script src="static/jquery.js"></script>
+    <script src="static/index.js"></script>
+</div>
+</body>
+</html>

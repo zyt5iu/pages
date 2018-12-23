@@ -1,0 +1,23 @@
+main {
+  margin-top: 60px;
+}
+main div.panel div.main-ul {
+  padding: 0 50px;
+}
+main div.panel div.main-ul li {
+  line-height: 50px;
+  border-bottom: 1px dashed #cdcdcd;
+}
+main div.panel div.main-ul li a,
+main div.panel div.main-ul li a:visited {
+  color: black;
+}
+main div.panel div.main-ul li a:hover {
+  color: blue;
+}
+main div.panel div.main-ul li a {
+  display: block;
+}
+main div.panel div.main-ul li time {
+  float: right;
+}

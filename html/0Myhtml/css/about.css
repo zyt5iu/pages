@@ -1,0 +1,49 @@
+body {
+  background-color: #f5f5f5 !important;
+}
+/*��Ļ*/
+div.jumbotron {
+  color: white;
+  padding: 6vw 0 0 10vw;
+  background: url("../img/about.jpg") no-repeat center center;
+  background-size: 100%;
+  height: 23vw;
+}
+div.main div.flag1 {
+  margin-bottom: 15px;
+}
+div.main div.flag1 img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+div.main div.flag1 h3 {
+  display: inline-block;
+  padding: 0 0  0 10px;
+}
+div.main div.one,
+div.main div.two,
+div.main div.three,
+div.main div.four {
+  background-color: white;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+}
+div.main div.one p,
+div.main div.two p,
+div.main div.three p,
+div.main div.four p {
+  text-indent: 2em;
+}
+div.main ul.my_nav {
+  top: 50px;
+}
+div.main ul.my_nav li {
+  width: 150px;
+  background-color: white;
+  line-height: 30px;
+  text-align: center;
+}
+div.main ul.my_nav li.active a {
+  background-color: #14A35B;
+}

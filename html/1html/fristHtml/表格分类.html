@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格分类</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #a6e3ee;
+        }
+        div.container{
+            width: 50%;
+            margin: 50px auto;
+        }
+        label{
+            position: relative;
+            display: block;
+            font-size: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #9A9A9A;
+            margin-bottom: 30px;
+        }
+        /*凹陷效果*/
+        label:after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 1px;
+            left: 0;
+            top: 36px;
+            background-color: white;
+        }
+        label input{
+            height: 20px;
+            width: 40%;
+        }
+        table{
+            width: 100%;
+            border: 1px solid #63a2cb;
+            border-radius: 5px;
+            background-color: white;
+            line-height: 40px;
+            text-align: center;
+        }
+        table caption{
+            font: 26px/3 'microsoft yahei';
+            letter-spacing: 15px;
+        }
+        table th{
+            background-color: #21d8ff;
+        }
+        table th:first-child{
+            border-radius: 5px 0 0 0;
+        }
+        table th:last-child{
+            border-radius: 0 5px 0 0;
+        }
+        table tr.parent{
+            background-color: #93aaff;
+            color: white;
+        }
+        table tr.parent span{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        table tr.parent span:first-child{
+            border-top-color: #FFCC00;
+            display: none;
+        }
+        table tr.parent span:last-child{
+            border-bottom-color: #FFCC00;
+            margin-top: 7px;
+        }
+        tbody tr:not(.parent):nth-child(2n){
+            background-color: #e3ffff;
+        }
+        tbody tr:last-child td:first-child{
+            border-radius: 0 0 0 5px;
+        }
+        tbody tr:last-child td:last-child{
+            border-radius: 0 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <label>筛查(输入表中任意数据信息可查员工情况）：
+        <input>
+    </label>
+    <table>
+        <caption>职工基本信息表</caption>
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>暂住地</th>
+            <th>所属组</th>
+            <th>选择</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="group1" class="parent">
+            <td colspan="5">前台设计组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="group1_child">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox" checked></td>
+        </tr>
+        <tr class="group1_child">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox" ></td>
+        </tr>
+        <tr class="group1_child">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox" ></td>
+        </tr>
+        <tr class="group1_child">
+            <td>黄琴</td>
+            <td>女</td>
+            <td>重庆开州</td>
+            <td>前台设计</td>
+            <td><input type="checkbox" ></td>
+        </tr>
+        <tr class="parent" id="group2">
+            <td colspan="5">后台开发组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="group2_child">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group2_child">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group2_child">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group2_child">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group2_child">
+            <td>周瑞</td>
+            <td>男</td>
+            <td>重庆开州</td>
+            <td>后台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="parent" id="group3">
+            <td colspan="5">前台开发组(点击可展开或收起)<span></span><span></span></td>
+        </tr>
+        <tr class="group3_child">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group3_child">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group3_child">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr class="group3_child">
+            <td>凯哥</td>
+            <td>男</td>
+            <td>重庆合川</td>
+            <td>前台开发组</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

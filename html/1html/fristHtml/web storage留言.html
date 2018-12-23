@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单的web存储留言板sessiontorage</title>
+    <style type="text/css">
+        textarea{
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+    <script type="text/javascript">
+        function addInfo(){
+            var info=window.document.getElementById("t1");
+            var LStorage=window.localStorage;//获取localstorage对象
+            //判断对象中是否有myborad键
+            if(LStorage.myBorad){
+                var date=new Date();
+                //获取原先建所对应的值再加上文本框中所输入的留言信息
+                LStorage.myBorad +=t1.value+"\n发表时间"+date.toLocaleString()+"\n";
+            }
+            else{
+                var date=new Date();
+                LStorage.myBorad=t1.value+"\n发表时间"+date.toLocaleString()+"\n";
+            }
+            upInfo();
+        }
+        //取出键所对应的值显示在多行文本框中
+        function upInfo(){
+            var LStorage=window.localStorage;//获取localstorage对象
+            var show=window.document.getElementById("show");
+            if(window.localStorage.myBorad){
+                show.value=window.localStorage.getItem("myBorad");
+            }else{
+                show.value="还没有留言!"
+            }
+        }
+        //清除留言信息
+        function cleanInfo(){
+            window.localStorage.removeItem("myBorad");
+            upInfo();
+        }
+    </script>
+</head>
+<body>
+    <h2>简单的web存储留言板</h2>
+    <textarea id="t1"></textarea><br/>
+    <input type="button" class="button" onclick="addInfo()" value="留言"/>
+    <input type="button" class="button" onclick="cleanInfo()" value="清除留言"/><br/>
+    <hr/>
+    <textarea id="show" readonly></textarea>
+</body>
+</html>

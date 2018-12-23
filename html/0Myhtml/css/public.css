@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #222222;
+}
+a:hover {
+  color: #0ac70a;
+  text-decoration: none;
+}
+ul li {
+  list-style-type: none;
+}
+header div.initial {
+  line-height: 25px;
+  padding-left: 70%;
+  background-color: #212121;
+}
+header div.initial span {
+  color: #ccc;
+  margin-left: 15px;
+}
+header nav {
+  clear: both;
+  font-size: 17px;
+}
+header nav img {
+  height: 40px;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+header nav ul li a {
+  padding: 10px !important;
+}
+header nav ul li form {
+  margin: 3px 0 0 0!important;
+}
+header .navbar-nav {
+  float: none;
+}
+header .navbar {
+  margin-bottom: 0!important;
+}
+header .navbar-default .navbar-nav > .active > a {
+  background: none!important;
+  color: #0ac70a;
+}
+header .navbar-default .navbar-nav > li > a:hover {
+  color: #0ac70a!important;
+}
+header .dropdown-menu > li > a:hover {
+  color: #0ac70a;
+  text-decoration: none;
+  background: none!important;
+}
+header .navbar-default .navbar-nav > .open > a,
+header .navbar-default .navbar-nav > .open > a:hover,
+header .navbar-default .navbar-nav > .open > a:focus {
+  background: none!important;
+  color: #0ac70a;
+}
+div.main {
+  padding: 0 100px;
+  margin: 30px 0 50px 0;
+}
+footer {
+  border-top: solid 1px #eee;
+  background: #f8f8f8;
+  padding: 20px 0 10px 0;
+}
+footer div.footer_txt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+footer div.footer_txt dl:not(:last-child) {
+  text-align: center;
+}
+footer div.footer_txt dl dd {
+  margin-top: 5px;
+}
+footer div.footer_txt dl dd a {
+  color: #888;
+}
+footer div.footer_txt img {
+  width: 200px;
+  height: auto;
+}
+footer div.footer_note span {
+  margin-left: 40px;
+}
+small.bootcss_top {
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #58c4a0;
+  text-align: center;
+}
+small.bootcss_top a {
+  font-size: 25px;
+  line-height: 50px;
+  text-decoration: none;
+  color: white;
+}
+small.bootcss_top:hover {
+  background-color: #4cae4c;
+}

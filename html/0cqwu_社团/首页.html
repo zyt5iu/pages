@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <title>学生社团联合会</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/首页2.css">
+    <script src="js/main_move.js"></script>
+    <script src="js/move.js"></script>
+    <script src="js/move2.js"></script>
+</head>
+<body>
+<!--导航-->
+<header>
+    <div class="initial">
+        <div class="container">
+            <a href="#">English</a>
+            <a href="#" data-toggle="modal" data-target="#myModal">登录</a>
+        </div>
+    </div>
+    <!--登录弹框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">请登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" id="from1">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-2 control-label" for="exampleInputEmail1">学号：</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入学号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="exampleInputPassword1">密码：</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-3 col-sm-offset-2 checkbox">
+                                <label><input type="checkbox"> 记住密码</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary"><a href="首页.html" style="color: white">登录</a></button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="logo">
+            <div class="logo1">
+                <img src="img/logo2.png" alt="">
+                <img src="img/logo3.png" alt="">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="请输入关键词">
+                <i>&#xf002;</i>
+                <span>搜索</span>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul class="list-inline container">
+            <li><a href="http://www.cqwu.net" target="view_window">学校主页</a></li>
+            <li><a href="javascript:;">首页</a></li>
+            <li><a href="社团概况.html">社团概况</a></li>
+            <li><a href="活动中心2.html">活动中心</a></li>
+            <li class="down">
+                <a href="走进社团.html" >走进社团</a>
+                <div class="down_menu">
+                    <a href="走进社团.html">社团风采</a>
+                    <a href="走进社团.html">社团明星</a>
+                    <a href="走进社团.html">社团招新</a>
+                </div>
+            </li>
+            <li><a href="论坛.html">论坛</a></li>
+            <li><a href="报名通道.html">报名通道</a></li>
+        </ul>
+    </nav>
+</header>
+<!--轮播图-->
+<div id="sliderbox">
+    <figure>
+        <img src="img/big/banner1.jpg" alt="" style="z-index: 1">
+        <img src="img/big/banner2.jpg" alt="">
+        <img src="img/big/banner3.jpg" alt="">
+    </figure>
+    <span class="prev">&lt;</span>
+    <span class="next">&gt;</span>
+    <a href="javascript:;" class="markLeft"></a>
+    <a href="javascript:;" class="markRight"></a>
+    <ul>
+        <li><img src="img/big/banner1.jpg" alt=""></li>
+        <li><img src="img/big/banner2.jpg" alt=""></li>
+        <li><img src="img/big/banner3.jpg" alt=""></li>
+    </ul>
+</div>
+<!--主要内容-->
+<main>
+    <!--最新活动-->
+    <div class="up container">
+        <div class="header1">
+            <span>最新活动</span>
+            <a href="活动中心2.html">更多&gt;&gt;</a>
+        </div>
+        <div class="detail row">
+            <div class=" col-md-4">
+                <figure>
+                    <a href="活动中心1.html"><img src="img/newactivity1.png" alt=""></a>
+                    <figcaption>
+                        <h3>第四届网页设计大赛</h3>
+                        <time>
+                            报名时间：2018年3月16日至24日 <br>
+                        </time>
+                        <section>
+                            <p>
+                                活动简介：
+                                为了活跃校园网络文化，点缀校园缤纷色彩，为了给大家提供一个艺术想象空间、情操陶冶园地和学习互助场所，为了使同学们认识互联网在学习、工作和交流中的重要作用，提高学生审美能力以及对平面设计作品视觉传达的认识，激发学生创新和设计的潜能，发觉优秀网页设计人才，提高同学们的网页制作水平，使学生学习和实际工作联系起来，拟办本校第四届网页设计大赛。
+                            </p>
+                        </section>
+                        <a href="报名通道.html" class="btn btn-primary">点击报名 &gt;&gt;</a>
+                        <a href="活动中心1.html" class="btn btn-info">了解详情 &gt;&gt;</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class=" col-md-4">
+                <figure>
+                    <a href="活动中心1.html"><img src="img/newactivity3.png" alt=""></a>
+                    <figcaption>
+                        <h3>电脑俱乐部</h3>
+                        <time>
+                            报名时间：2018年5月16日至24日 <br>
+                        </time>
+                        <section>
+                            <p>
+                                活动简介：
+                                瞧一瞧，看一看，电脑俱乐部要招新啦！学弟学妹们，电脑俱乐部人才齐全，活动多，让你学到更多电脑知识，对于大学计算机二级有很大的帮助。 各类人才，奇葩，逗比陪你走过新一学年，有欢笑，有泪水，学知识，长技能的同时，锻炼你的交际能力（PS：学长很帅很强大，学姐可爱亲切哦听到这里你还不动心吗？在开学之后欢迎你们的到来。快来哦，等着你们。                           </p>
+                        </section>
+                        <a href="报名通道.html" class="btn btn-primary">点击报名 &gt;&gt;</a>
+                        <a href="活动中心1.html" class="btn btn-info">了解详情 &gt;&gt;</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class=" col-md-4">
+                <figure>
+                    <a href="活动中心1.html"><img src="img/football.jpg" alt=""></a>
+                    <figcaption>
+                        <h3>足球协会</h3>
+                        <time>
+                            报名时间：2018年4月16日至24日 <br>
+                        </time>
+                        <section>
+                            <p>
+                                活动简介：
+                                重庆文理学院足球协会承办的“2015年重庆文理学院劲松杯足球赛”在该院开赛，来自全院15个学院19支足球队伍将参加为期25天的比赛。                           </p>
+                        </section>
+                        <a href="报名通道.html" class="btn btn-primary">点击报名 &gt;&gt;</a>
+                        <a href="活动中心1.html" class="btn btn-info">了解详情 &gt;&gt;</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    <!--中间过度图片-->
+    <div class="mid">
+        <img src="img/bg_2.png" alt="">
+    </div>
+    <!--资讯栏-->
+    <div class="down ">
+        <div class="container">
+            <div class="header2" >
+                <h3>资讯栏</h3>
+            </div>
+            <div id="box">
+                <div id="nav1">
+                    <div id="nav_bar1"></div>
+                </div>
+            </div>
+            <div id="container1">
+                <div id="content1">
+                    <ol>
+                        <li class="selected" data-date="16/01/2014">
+                            <h3>体育专递|赚足眼球！文理世界杯激情上演！</h3>
+                            <em>2018-4-19 体育专递</em>
+                            <p>
+                                四月的正午骄阳似火，
+                                文理的足球热闹非凡。
+
+                                众所周知2018世界杯在六月份就要打响，但是属于我们的世界杯将在文理提前上演。
+                            </p>
+                        </li>
+                        <li data-date="28/02/2014">
+                            <h3>
+                                八强诞生!“篮球旋风”掀翻文理，你的学院需要你!</h3>
+                            <em>2018-04-15 体育专递</em>
+                            <p>
+                                自4月11号校篮球赛开战以来，各学院篮球队使尽浑身解数，为自己的学院争取荣光。经过了五轮激烈的厮杀之后，有一些学院遗憾无缘八强，也有一些学院表现突出，以披荆斩棘之势闯入八强。相信没有入围的会有更好的下一次，已入围的会有更棒的下一场！
+                            </p>
+                        </li>
+                        <li data-date="20/04/2014">
+                            <h3>
+                                这是一篇有香味的星湖推文</h3>
+                            <em>2018-04-09 星湖写作社</em>
+                            <p>
+
+                                在樱花盛开，百鸟争鸣的季节里，我们重庆文理学院星湖校区可是迎来了一大波游客，这是谁的功劳呢，
+                                当然是我们卫星湖锦绣如画风景啦！
+                            </p>
+                        </li>
+                        <li data-date="20/05/2014">
+                            <h3>厉害了，我的老师：热烈庆祝我校李洪雷博士在《Nature》上发表重要研究成果！</h3>
+                            <em>
+                                2018-3-19</em>
+                            <p>
+
+                                我校特色植物研究院李洪雷博士为该文的共同第一作者，重庆文理学院为共同第一作者单位，实现了我校在《Nature》上发表高水平论文的零突破，也是《Nature》首次发表我国系统发育生态学领域的学术论文，在国内外系统进化研究方面具有重要意义
+                            </p>
+                        </li>
+                        <li data-date="20/05/2014">
+                            <h3>
+                                厉害了，我的学校：我校申报的“微纳米光电材料与器件国际科技合作基地”正式获批为2017年度国家级国际科技合作基地</h3>
+                            <em>
+
+                                2018-03-20</em>
+                            <p>
+
+                                此次的“微纳米光电材料与器件国际科技合作基地”由我校校长许洪斌担任负责人。这一基地联合俄罗斯托木斯克理工大学、美国加州大学、新西兰奥克兰大学、澳大利亚皇家墨尔本理工大学等国际知名科研机构，依托新材料技术研究院，围绕柔性光电材料与器件、无机光功能材料与器件、微纳米敏感材料与传感器、微纳米材料成型技术等关键技术领域，展开了富有成效的国际交流与合作。
+                            </p>
+                        </li>
+                        <li data-date="20/05/2014">
+                            <h3>[斯蒂芬·威廉·霍金]他本属于星辰大海，只是回归宇宙了</h3>
+                            <em>2018-3-16</em>
+                            <p>推送者：大学生文学协会</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--脚注-->
+<footer>
+    <!--链接-->
+    <div class="one ">
+        <div class="container">
+            <h3><span>友情链接</span></h3>
+            <div class="first">
+                <a href="#">校内链接</a>
+                <a href="#">合作伙伴</a>
+            </div>
+            <div class="second">
+                <a href="#">重庆文理学院学生会</a>
+                <a href="#">重庆文理学院学生会</a>
+                <a href="#">重庆文理学院学生会</a>
+            </div>
+        </div>
+    </div>
+    <!--尾部-->
+    <div class="two ">
+        <div class="container">
+            <figure>
+                <img src="img/footerlogo.png" alt="">
+                <figcaption>
+                    <p>投稿邮箱：123456789@qq.com</p>
+                    <p>意见邮箱：123456789@qq.com</p>
+                    <p>办公地址：重庆文理学院红河A区现代技术中心(软件开发室)</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

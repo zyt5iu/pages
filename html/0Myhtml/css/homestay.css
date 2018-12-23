@@ -1,0 +1,79 @@
+body {
+  background-color: #fbfcfa;
+}
+div.main div.homestay_search .form-group {
+  margin-right: 20px;
+}
+div.main div.homestay_search div.row div {
+  padding: 0!important;
+}
+div.main div.homestay_search div.row label {
+  padding: 5px 0 0 10px!important;
+}
+div.main div.homestay_search button {
+  background-color: #4cae4c;
+  color: white;
+  outline: none;
+  border: none;
+  width: 120px;
+  height: 34px;
+}
+div.main div.up {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+div.main div.up img {
+  position: absolute;
+}
+div.main div.up img:hover {
+  -webkit-transform: scale(1.05, 1.05);
+      -ms-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
+}
+div.main div.down {
+  background-color: white;
+  border: 1px #cccccc solid;
+  padding: 8px 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+div.main div.down a span {
+  width: 70%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+div.main div.down a time {
+  position: absolute;
+  margin: -17px 0 0 63%;
+}
+div.main div.paging {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.main div.paging ul {
+  margin-bottom: 0!important;
+}
+div.main div.paging ul li a {
+  margin: 0 5px;
+}
+div.main div.paging ul li.active a {
+  background-color: #4cae4c;
+  color: white;
+  outline: none;
+  border: 1px #4cae4c solid;
+}
+div.main div.paging ul li a:hover {
+  background-color: #4cae4c;
+  color: white;
+  border: 1px #4cae4c solid;
+}

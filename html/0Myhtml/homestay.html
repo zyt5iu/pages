@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>院子-长短租</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/homestay.css">
+</head>
+<body>
+<!--导航-->
+<header>
+    <div class="initial navbar-static-top container-fluid">
+        <span>客服热线：010-15894652</span>
+        <span>服务时间（9:00-18:00）</span>
+    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container-fluid">
+            <div>
+                <ul class="nav navbar-nav" style="padding: 10px">
+                    <li><a href="#" style="padding: 0 10px 0 0!important;"><img src="img/logo.PNG"></a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li  class="active"><a href="#">民宿长短租</a></li>
+                    <li><a href="land.html">土地租凭</a></li>
+                    <li><a href="land_manage.html">土地托管</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入关键词">
+                            </div>
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </form>
+                    </li>
+                    <li><a href="#login" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+                    <li><a href="#register" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="login" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请登录</h4>
+                </div>
+                <form id="form_login" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh1">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="zh" id="zh1">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pw1">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pw1"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                            <div class="col-sm-4 require">
+                                <input type="text"  class="form-control" name="yzm" id="yzm" required>
+                            </div>
+                            <div class="col-sm-5">
+                                <span id="yzm1" ></span>
+                                <a href="" id="change_yzm">换一张</a>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label id="info" class="col-sm-4 control-label pull-left"></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">登录</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="register" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">请注册</h4>
+                </div>
+                <form id="form_reg" class="form-horizontal">
+                    <div class="modal-body">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="zh">帐号：</label>
+                            <div class="col-sm-9 require">
+                                <input class="form-control" name="zh" id="zh" required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="username">用户名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="name" id="username"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd2">密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="pwd" id="pwd2">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="pwd3">确认密码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="password" class="form-control" name="repwd" id="pwd3">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="nc" id="nc">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="address">通讯地址：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="address" id="address">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel">电话号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" name="tel" id="tel">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">注册</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="homestay_search">
+        <form role="form" id="search_form">
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-4 control-label">城市：</label>
+                        <div class="col-sm-8">
+                            <select class="form-control" id="name">
+                                <option>三亚</option>
+                                <option>成都</option>
+                                <option>北京</option>
+                                <option>上海</option>
+                                <option>广州</option>
+                                <option>重庆</option>
+                                <option>丽江</option>
+                                <option>厦门</option>
+                                <option>深圳</option>
+                                <option>青岛</option>
+                                <option>武汉</option>
+                                <option>大理</option>
+                                <option>长沙</option>
+                                <option>苏州</option>
+                                <option>西安</option>
+                                <option>海口</option>
+                                <option>杭州</option>
+                                <option>秦皇岛</option>
+                                <option>北海</option>
+                                <option>舟山</option>
+                                <option>韶关</option>
+                                <option>贵阳</option>
+                                <option>惠州</option>
+                                <option>威海</option>
+                                <option>昆明</option>
+                                <option>桂林</option>
+                                <option>珠海</option>
+                                <option>开封</option>
+                                <option>嘉兴</option>
+                                <option>大连</option>
+                                <option>洛阳</option>
+                                <option>乌镇</option>
+                                <option>清远</option>
+                                <option>天津</option>
+                                <option>济南</option>
+                                <option>张家界</option>
+                                <option>西双版纳</option>
+                                <option>郑州</option>
+                                <option>南京</option>
+                                <option>哈尔滨</option>
+                                <option>福州</option>
+                                <option>武夷山</option>
+                                <option>万宁</option>
+                                <option>烟台</option>
+                                <option>南通</option>
+                                <option>武夷山</option>
+                                <option>湖州</option>
+                                <option>沈阳</option>
+                                <option>常州</option>
+                                <option>宁波</option>
+                                <option>江门</option>
+                                <option>琼海</option>
+                                <option>南昌</option>
+                                <option>晋中</option>
+                                <option>连云港</option>
+                                <option>千岛湖</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="time1" class="col-sm-4 control-label">开始日期：</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="time1" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="time2" class="col-sm-4 control-label">结束日期：</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="time2" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="house" class="col-sm-3 control-label">户型：</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="house">
+                                <option>全部</option>
+                                <option>一居</option>
+                                <option>二居</option>
+                                <option>三居</option>
+                                <option>四居</option>
+                                <option>四居以上</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <div class="col-sm-offset-2">
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row ">
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay12.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay1.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay10.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay3.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay4.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay7.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay6.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay5.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay4.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay3.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay2.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+        <div class="col-xs-3 col-lg-3">
+            <div class="up scale"><a href="#"><img src="img/hot_homestay1.jpg" alt=""></a></div>
+            <div class="down"><a href="##"><span>重庆避暑民宿/特价进行中 快来抢购抢购就是新专辑</span><time >2018-7-21</time></a></div>
+        </div>
+    </div>
+    <div class="paging">
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+<!--脚注-->
+<footer>
+    <div class="footer_note text-center">
+        <span>©2018版权所有 院子网</span>
+        <span><a href="http://www.miibeian.gov.cn/"  rel="nofollow">渝ICP备582852825号-2</a></span>
+        <span>增值电信业务经营许可证:湘B2-201558254006</span>
+        <span><a href="##"><img src="img/beian.png">渝公网安备 201558254006</a></span>
+    </div>
+</footer>
+<!--侧边-->
+<small class="bootcss_top"><a href="#" class="glyphicon glyphicon-chevron-up"></a></small>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

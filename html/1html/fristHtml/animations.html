@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animations动画</title>
+    <link rel="stylesheet" href="../css/tans-anima.css"/>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".btn-paused").click(function(){
+                $("#js-wrap").addClass("paused");
+            });
+            $("a").on("click",function(e){
+                $("#js-wrap").removeClass("paused");
+                $("#js-wrap").attr("class","wrap "+$(e.target).attr("class").split("-")[1]);
+            })
+        })
+    </script>
+</head>
+<body>
+<!--animations示例-->
+<div class="animations">
+    <h3>animation动画</h3>
+    <div class="container"><div class="wrap" id="js-wrap"></div></div>
+    <a href="#" class="run-xfast">最快</a>
+    <a href="#" class="run-fast">快</a>
+    <a href="#" class="run-normal">正常</a>
+    <a href="#" class="run-slow">慢</a>
+    <button class="btn-paused">暂停</button>
+</div>
+</body>
+</html>

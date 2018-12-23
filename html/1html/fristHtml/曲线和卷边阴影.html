@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>曲线和卷边阴影</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .effect{
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            background: white;
+            /*外阴影+内阴影*/
+            box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 60px rgba(0,0,0,.05) inset;
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            line-height: 300px;
+        }
+        .effect:before,.effect:after{
+            position: absolute;
+            content: '';
+            width: 80%;
+            height: 150px;
+            background: darkolivegreen;
+            left: 10%;
+            bottom: 0;
+            border-radius: 80px/30px;
+            z-index: -1;
+            /*四周阴影，扩散30px 模糊程度0.5*/
+            box-shadow:0 0 30px  rgba(0,0,0,0.5) ;
+        }
+        div.photo{
+            width: 450px;
+            height: 300px;
+            margin: auto;
+            box-shadow: 0 0 3px rgba(0,0,0,.5);
+            position: relative;
+        }
+        div.photo:before,.photo:after{
+            content: '';
+            width: 93%;
+            height: 232px;
+            position: absolute;
+            left: 3.5%;
+            z-index: -10;
+        }
+        div.photo:before{
+            top: 35px;
+            background: burlywood;
+            transform: skewX(-15deg) rotate(-10deg);
+            box-shadow:0 0 25px  rgba(0,0,0,0.8) ;
+        }
+        div.photo:after{
+            top: 35px;
+            background: cadetblue;
+            transform: skewX(15deg) rotate(10deg);
+            box-shadow:0 5px 30px  rgba(0,0,0,1) ;
+        }
+
+    </style>
+</head>
+<body>
+<div class="effect">
+    <h1>曲线阴影</h1>
+</div>
+<div class="photo">
+    <img src="../images/three.jpg" alt="风景图片">
+</div>
+</body>
+</html>

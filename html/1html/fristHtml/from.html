@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" charset="UTF-8">
+    <meta name="author" content="huangqin"/>
+    <meta name="Description" content="huangqin"/>
+    <meta name="website" content="http://www.baidu.com/"/>
+    <meta name="keywords" content="huangqin"/>
+    <title>form表单的作业</title>
+    <style>
+        /*链接颜色*/
+        a:link{
+            color:#FF0000;
+        }
+        /*访问过后的链接*/
+        a:visited {
+            color:grey;
+            text-decoration:none;
+        }
+        /*鼠标悬浮在链接上*/
+        a:hover {
+            color:green;
+            text-decoration:none;
+        }
+        /*点击时的颜色*/
+        a:active {
+            color:blue;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="http://www.cqwu.net/" name="loginform">
+        单行文本框：<input type="text" name="username" id="username" maxlength="10"/><br/>
+        密码框：<input type="password" name="password" id="password" size="6"/><br/>
+        隐藏框：<input type="hidden" name="hidden" id="hidden"/><br/>
+        单选框：<input type="radio" name="sex" value="1" id="male" checked/>男
+                <input type="radio" name="sex" value="2" id="female"/>女<br/>
+        复选框：<input type="checkbox" name="hobby" value="3" id="book"/>看书
+                <input type="checkbox" name="hobby" value="4" id="bookss"/>听歌
+                <input type="checkbox" name="hobby" value="5" id="books"/>旅行<br/>
+        图像域：<input type="image" name="img" src="logo.jpg" /><br/>
+        文件上传域：<input type="file" name="file" id="file"/><br/>
+        提交按钮：<input type="submit" name="submit" id="submit" value="提交"/><br/>
+        重置按钮：<input type="reset" name="reset" id="reset" value="重置"/><br/>
+        普通按钮：<input type="button" name="button" id="button" value="普通按钮"/><br/>
+        button按钮：<button type="submit">提交</button><br/>
+        button按钮：<button type="reset">重置</button><br/>
+        button按钮：<button>普通</button><br/>
+        label关联标签：<label>请输入文本：<input type="text" name="text" maxlength="16"/></label><br/>
+        列表框：
+        <select name="hobbby" id="hobby" size="3">
+            <option value="旅行">旅行</option>
+            <option value="看电影">看电影</option>
+            <option value="摄影">摄影</option>
+            <option value="摄影">摄影</option>
+        </select>
+        选项组列表框：
+        <select name="hobbby2" id="hobby2">
+            <optgroup label="最喜欢">
+                <option value="旅行">旅行</option>
+                <option value="看电影">看电影</option>
+                <option value="摄影">摄影</option>
+                <option value="摄影">摄影</option>
+            </optgroup>
+            <optgroup label="一般喜欢">
+                <option value="旅行">旅行</option>
+                <option value="看电影">看电影</option>
+                <option value="摄影">摄影</option>
+                <option value="摄影">摄影</option>
+            </optgroup>
+        </select><br/>
+        a标签伪状态：
+        <a href="#">asedfdgfgfgvbvbv</a>
+        <div><a href="#">今天是个好日子，心想的事儿都能成！</a></div>
+        <div><a href="#">今天是个好日子，心想的事儿都能成！</a></div>
+    </form>
+</body>
+</html>

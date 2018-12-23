@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报名通道</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/报名通道.css">
+</head>
+<body data-target="#nav_box" data-spy="scolls">
+<!--导航-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="首页.html">
+                    <img src="img/logo2.png" alt="" class="img3">
+                    <img src="img/logo4.png" alt="" class="img4">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav  navbar-left">
+                    <li><a href="首页.html" >首页</a></li>
+                    <li><a href="社团概况.html">社团概括</a></li>
+                    <li><a href="活动中心2.html">活动中心</a></li>
+                    <li class="dropdown ">
+                        <a href="走进社团.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">走进社团 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li ><a href="走进社团.html">社团风采</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="走进社团.html">社团明星</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="走进社团.html">社团招新</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="论坛.html">论坛 <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#">报名通道</a></li>
+                </ul>
+                <form class="navbar-form navbar-right hidden-sm">
+                    <div class="form-group">
+                        <input type="text" class="firstInput" placeholder="请输入关键字">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--巨幕-->
+<div class="jumbotron"></div>
+<!--主要内容-->
+<main class="container">
+    <h3>报名通道</h3>
+    <hr>
+    <ul class="nav nav-pills" role="tablist">
+        <li class="active"><a href="#bulletin1" role="tab" data-toggle="pill">社团招新报名</a></li>
+        <li><a href="#rule1" role="tab" data-toggle="pill">社团活动报名</a></li>
+    </ul>
+    <!-- 选项卡面板 -->
+    <div id="myTabContent1" class="tab-content mycontent1">
+        <div class="tab-pane fade in active" id="bulletin1">
+            <div class="row apply">
+                <div class="col-md-5">
+                    <img src="img/zhaoxin.jpg" alt="" >
+                </div>
+                <div class="col-md-7" >
+                    <form class="form form-horizontal" role="form" id="form" method="post">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="name1">姓名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" id="name1" placeholder="请输入姓名"
+                                       pattern="([\u4e00-\u9fa5]){2,7}" required><span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label  class="col-sm-3 control-label">性别：</label>
+                            <div class="col-sm-9 ">
+                                <label class="radio-inline" ><input type="radio" name="Radios" checked>男</label>
+                                <label class="radio-inline" ><input type="radio" name="Radios">女</label>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="QQ1">QQ号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入QQ账号" id="QQ1"
+                                       pattern="\d{5,12}"><span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="email11">邮箱：</label>
+                            <div class="col-sm-9 ">
+                                <input type="email" class="form-control" id="email11" placeholder="请输入您的邮箱地址"><span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel1">手机号码：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  placeholder="请输入手机号码" id="tel1" pattern="\d{11}">
+                                <span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label">学院：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入学院">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label">专业：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入专业">
+                            </div>
+                        </div>
+                        <div class="form-group down has-feedback">
+                            <label class="col-sm-3 control-label">社团名称：</label>
+                            <div class="col-sm-9 require">
+                                <select name="union"  class="form-control">
+                                    <optgroup label="学术科技类">
+                                        <option value="大学生心理成长协会">大学生心理成长协会</option>
+                                        <option value="秘书协会">秘书协会</option>
+                                        <option value="会计协会">会计协会</option>
+                                        <option value="蓝鲨金融协会">蓝鲨金融协会</option>
+                                        <option value="智能机械协会">智能机械协会</option>
+                                        <option value="志远电子兴趣社">志远电子兴趣社</option>
+                                        <option value="物理协会">物理协会</option>
+                                        <option value="电脑俱乐部">电脑俱乐部</option>
+                                        <option value="物流实践协会">物流实践协会</option>
+                                        <option value="善治学会">善治学会</option>
+                                        <option value="知行学会">知行学会</option>
+                                    </optgroup>
+                                    <optgroup label="社会实践类">
+                                        <option value="旅行">旅行</option>
+                                        <option value="看电影">看电影</option>
+                                        <option value="摄影">摄影</option>
+                                        <option value="摄影">摄影</option>
+                                    </optgroup>
+                                    <optgroup label="文学类">
+                                        <option value="旅行">旅行</option>
+                                        <option value="看电影">看电影</option>
+                                        <option value="摄影">摄影</option>
+                                        <option value="摄影">摄影</option>
+                                    </optgroup>
+                                    <optgroup label="艺体类">
+                                        <option value="旅行">旅行</option>
+                                        <option value="看电影">看电影</option>
+                                        <option value="摄影">摄影</option>
+                                        <option value="摄影">摄影</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-5">
+                                <button type="submit" class="btn btn-primary">报名</button>
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="reset" class="btn btn-info reset">重置</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="rule1">
+            <div class="row apply">
+                <div class="col-md-5">
+                    <img src="img/zhaoxin.jpg" alt="" >
+                </div>
+                <div class="col-md-7">
+                    <form class="form form-horizontal" role="form" id="form1">
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="name">姓名：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control" id="name" placeholder="请输入姓名"
+                                       pattern="\w{1,4}" required><span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label  class="col-sm-3 control-label">性别：</label>
+                            <div class="col-sm-9 ">
+                                <label class="radio-inline" ><input type="radio" name="Radios" checked>男</label>
+                                <label class="radio-inline" ><input type="radio" name="Radios">女</label>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="QQ">QQ号码：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入QQ账号" id="QQ"
+                                       pattern="\d{5,12}"><span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="email1">邮箱：</label>
+                            <div class="col-sm-9 ">
+                                <input type="email" class="form-control" id="email1" placeholder="请输入您的邮箱地址"><span class="glyphicon"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label" for="tel">手机号码：</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control"  placeholder="请输入手机号码" id="tel" pattern="\d{11}">
+                                <span class="glyphicon"></span>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label">学院：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入学院">
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label">专业：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入专业">
+                            </div>
+                        </div>
+                        <div class="form-group down has-feedback">
+                            <label class="col-sm-3 control-label">社团名称：</label>
+                            <div class="col-sm-9 require">
+                                <select name="union"  class="form-control">
+                                    <optgroup label="学术科技类">
+                                        <option value="大学生心理成长协会">大学生心理成长协会</option>
+                                        <option value="秘书协会">秘书协会</option>
+                                        <option value="会计协会">会计协会</option>
+                                        <option value="蓝鲨金融协会">蓝鲨金融协会</option>
+                                        <option value="智能机械协会">智能机械协会</option>
+                                        <option value="志远电子兴趣社">志远电子兴趣社</option>
+                                        <option value="物理协会">物理协会</option>
+                                        <option value="电脑俱乐部">电脑俱乐部</option>
+                                        <option value="物流实践协会">物流实践协会</option>
+                                        <option value="善治学会">善治学会</option>
+                                        <option value="知行学会">知行学会</option>
+                                    </optgroup>
+                                    <optgroup label="社会实践类">
+                                        <option value="台球协会">台球协会</option>
+                                        <option value="心绿环保协会">心绿环保协会</option>
+                                        <option value="自立协会">自立协会</option>
+                                        <option value="青年志愿者协会">青年志愿者协会</option>
+                                    </optgroup>
+                                    <optgroup label="文学类">
+                                        <option value="渝西青年社">渝西青年社</option>
+                                        <option value="大学生文化协会">大学生文化协会</option>
+                                        <option value="星湖写作社">星湖写作社</option>
+                                        <option value="《清风》杂志社">《清风》杂志社</option>
+                                    </optgroup>
+                                    <optgroup label="艺体类">
+                                        <option value="博乐社">疾骑自行车社</option>
+                                        <option value="V-power街舞社">V-power街舞社</option>
+                                        <option value="大学生跑步协会">大学生跑步协会</option>
+                                        <option value="球迷俱乐部">球迷俱乐部</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group has-feedback">
+                            <label class="col-sm-3 control-label">活动名称：</label>
+                            <div class="col-sm-9 require">
+                                <input type="text" class="form-control"  placeholder="请输入活动名称">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="col-sm-offset-2 col-sm-5">
+                                <button type="submit" class="btn btn-primary submit">报名</button>
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="reset" class="btn btn-info reset">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--脚注-->
+<footer class=" hidden-xs ">
+    <div class="container">
+        <div class="pull-left">
+            <ul class="list-inline text-center">
+                <li>投稿邮箱：123456789@qq.com</li>
+                <li>意见邮箱：123456789@qq.com</li>
+                <li>办公地址：重庆文理学院红河A区现代技术中心(软件开发室)</li>
+            </ul>
+            <p>Copyright @ 2018 sunny.com All Rights Reserved | 京ICP 13046642号-2</p>
+        </div>
+        <div class="pull-right">
+            <a href="#">&#xf1d7;</a>
+            <a href="#">&#xf18a;</a>
+            <a href="#">&#xf1d6;</a>
+        </div>
+    </div>
+</footer>
+<script>
+    window.onload=function(){
+        var regData = [
+            /^([\u4e00-\u9fa5]){2,7}$/,
+            /^\d{5,12}$/,
+            /^\w+@\w{2,4}\.\w{2,4}(\.\w{2,4})?$/,
+            /^\d{11}$/
+        ];
+        var oForm=document.querySelectorAll('form.form');
+        var aInput = document.querySelectorAll('input.form-control');
+        var aSpan=document.querySelectorAll('form.form span');
+        var oSubmit=document.querySelectorAll('button.submit');
+        var oSpan;
+        [].forEach.call(aInput,function(el,i){
+            el.onblur = function () {
+                oSpan = aSpan[i];
+                oSpan.className = 'glyphicon';
+                if (regData[i].test(el.value.trim())) {
+                    oSpan.classList.add('glyphicon-ok');
+                    oSpan.style.color = "green";
+                }
+                else {
+                    oSpan.classList.add('glyphicon-remove');
+                    oSpan.style.color = "red";
+                }
+            }
+        });
+        //    重置清空
+        oForm.onreset= function () {
+            [].forEach.call(aSpan, function (el) {
+                el.className="glyphicon";
+            });
+        }
+    }
+</script>
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h2{
+            background: cadetblue;
+            color: white;
+            margin: 0;
+            padding: 5px;
+        }
+        .menu{
+            width: 200px;
+            margin: 80px auto 0;
+            border: 1px solid cornflowerblue;
+        }
+        dl{
+            padding: 5px 0 5px 0;
+        }
+        dl:hover dd{
+            display: block;
+            margin-left: 25px;
+            font-size: 14px;
+            line-height: 23px;
+        }
+        dt,dd{
+            margin-left: 10px;
+            cursor: default;
+        }
+        dd{
+            display: none;
+        }
+        dl:not(:last-child){
+            border-bottom: 1px dashed burlywood;
+        }
+        div.menu dt{
+            position: relative;
+        }
+        div.menu dt:after{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-top-color: darkgray;
+            right: 10px;
+        }
+        .menu dl:hover dd:before{
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            border: 4px solid transparent;
+            border-left-color: blue;
+            margin-top: 8px;
+        }
+        dd a{
+            margin-left: 10px;
+            text-decoration: none;
+            color: #333333;
+        }
+        dd a:hover{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>商品信息分类</h2>
+       <div class="content">
+           <dl>
+               <dt>日用百货</dt>
+               <dd><a href="#">这是二级名称</a></dd>
+               <dd><a href="#">去百度看看</a></dd>
+               <dd><a href="#">去天猫看看</a></dd>
+           </dl>
+           <dl>
+               <dt>家用电器</dt>
+               <dd><a href="#">这是二级名称</a></dd>
+               <dd><a href="#">去百度看看</a></dd>
+               <dd><a href="#">去天猫看看</a></dd>
+           </dl>
+           <dl>
+               <dt>化工材料</dt>
+               <dd><a href="#">这是二级名称</a></dd>
+               <dd><a href="#">去百度看看</a></dd>
+               <dd><a href="#">去天猫看看</a></dd>
+           </dl>
+           <dl>
+               <dt>家具家私</dt>
+               <dd><a href="#">这是二级名称</a></dd>
+               <dd><a href="#">去百度看看</a></dd>
+               <dd><a href="#">去天猫看看</a></dd>
+           </dl>
+       </div>
+    </div>
+</body>
+</html>

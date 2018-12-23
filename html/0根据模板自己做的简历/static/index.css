@@ -1,0 +1,243 @@
+﻿/*全局样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #ff4b13;
+    text-decoration: none;
+}
+/*侧边栏*/
+.aside{
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #4b4b4b;
+    overflow: hidden;
+    overflow-y: auto;
+}
+div.head{
+    width: 160px;
+    height: 160px;
+    background-color: white;
+    border-radius: 100%;
+    border: 5px white solid;
+    margin: 2em auto;
+    transition: transform 1s;
+}
+div.head img{
+    width: 160px;
+    height: 160px;
+}
+div.head:hover{
+    transform: rotate(1turn);
+}
+nav.menu{
+    display: flex;
+    flex-direction: column;
+}
+nav.menu a{
+    color: white;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    transition: background .3s,box-shadow .3s;
+}
+nav.menu a:hover{
+    background-color: #333;
+}
+
+/*右边全局样式*/
+main.content{
+    margin-left: 250px;
+}
+section{
+    padding: 5em 0;
+    clear: both;
+}
+div.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+div.title{
+    margin-bottom: 1.5em;
+}
+div.title i{
+    margin-right: .5em;
+}
+p{
+    line-height: 1.8em;
+    margin-bottom: 1em;
+}
+/*个人资料*/
+#info{
+    background: url("img/bg-1.png") fixed;
+}
+#info div.detail,#story div.detail{
+    display: flex;
+    flex-direction: row;
+}
+#info div.detail div{
+    width: 30%;
+}
+/*技能*/
+#skills{
+    background-color: #f8bd24;
+}
+#skills div.detail{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skills div.skill_item{
+    width: 25%;
+    height: 160px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.skill_item div.list{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    border-radius: 100%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.skill_item img{
+    width: 55px;
+    height: 55px;
+    margin:0 auto;
+    transition: transform 0.4s;
+}
+.skill_item img:hover{
+   transform: rotate(1turn);
+}
+.skill_item h3{
+    margin: 5px 0;
+}
+
+/*个人作品*/
+#works{
+    background: url("img/bg-2.png") fixed;
+}
+#works div.detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#works div.works-item{
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#works div.works-item img{
+    transition: transform 0.3s;
+    width: 100%;
+}
+#works div.works-item img:hover{
+    transform: scale(1.05,1.05);
+    cursor: pointer;
+
+
+}
+#works img.smallShow{
+    display: none;
+}
+/*个人经历*/
+#story{
+    background: url("img/bg-3.png") fixed;
+}
+#story div.one{
+    width: 60%;
+}
+#story div.two{
+    width: 30%;
+}
+#story div.two img{
+    width: 100%;
+}
+.timeline{
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1.5em;
+    border-left: 2px grey solid;
+}
+.timeline li{
+    line-height: 1.5em;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.timeline li:hover:before{
+    transform: scale(1.2, 1.2);
+}
+.timeline li:before{
+    content: "";
+    left: -2.3em;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    position: absolute;
+    background: #f8bd24;
+    border-radius: 100%;
+    transition: transform .3s;
+}
+
+/* - 图片放大 */
+img[bk-image=active]{
+    cursor: pointer;
+}
+
+.bk-image{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 66;
+    position: fixed;
+    user-select: none;
+}
+
+.bk-image:before{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    position: absolute;
+    animation: fade-in .5s both;
+    -webkit-animation: fade-in .5s both;
+    background: rgba(0, 0, 0, .5);
+}
+
+.bk-image img{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    cursor: zoom-out;
+    position: absolute;
+    animation: fade-small-large .3s both;
+    -webkit-animation: fade-small-large .3s both;
+}
+
+.bk-image.remove:before{
+    animation: fade-off .3s both;
+    -webkit-animation: fade-off .3s both;
+}
+
+.bk-image.remove img{
+    animation: fade-large-small .3s both;
+    -webkit-animation: fade-large-small .3s both;
+}
+
+.bk-image img[src$=".jpg"]{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}

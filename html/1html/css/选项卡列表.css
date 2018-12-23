@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*横向选项卡导航*/
+.nav1{
+    position: relative;
+    width: 600px;
+    margin: 80px auto 0;
+    display: flex;
+}
+.nav1 dl{
+    flex: 1;
+}
+.nav1 dt{
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+.nav1 dl:not(:last-child):hover,.nav1 dl:last-child{
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.nav1 dl:not(:last-child):hover:after,.nav1 dl:last-child:after{
+    content: '';
+    width: calc(100% / 4 - 1px);
+    height: 3px;
+    margin-top: -2px;
+    background: white;
+    z-index: 20;
+    position: absolute;
+}
+.nav1 dl:not(:last-child):hover{
+    z-index: 30;
+}
+.nav1 dl:not(:last-child):hover ~dl:last-child{
+    border: none;
+}
+.nav1 dd{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    border: 1px solid #ddd;
+    height: 300px;
+    padding: 15px;
+    background: white;
+}
+dd a:link,dd a:visited{
+    color: #999;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 15px;
+}
+/*纵向选项卡导航*/
+.nav2{
+    position: relative;
+    width: 600px;
+    height: 320px;
+    margin: 400px auto 0;
+}
+.nav2 dl{
+    width: 150px;
+}
+.nav2 dl dt{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.nav2 dl:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+.nav2 dl:not(:last-child):hover,.nav2 dl:last-child{
+    border:1px solid #ddd ;
+    border-right: none;
+}
+.nav2 dl:not(:last-child):hover~dl:last-child{
+    border: none;
+    border-right: 1px solid #dddddd;
+}
+.nav2 dl:not(:last-child):hover dd{
+    z-index: 20;
+}
+.nav2 dl dd{
+    position: absolute;
+    width: 450px;
+    top: 0;
+    right: -1px;
+    bottom: 0;
+    border: 1px solid #ddd;
+    border-left: none;
+    padding: 15px;
+    background: white;
+    box-sizing: border-box;
+}
+

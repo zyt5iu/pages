@@ -1,0 +1,84 @@
+/*全局样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: url("../images/bg-1.jpg") rgba(255,255,255,0.1);
+    background-size: cover;
+    /*opacity:0.5;*/
+}
+header{
+    width: 100%;
+    height: 50px;
+}
+.navbar ul{
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    background: #ffeccc;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul li a{
+    color: black;
+}
+main{
+    width: 100%;
+    height: 800px;
+}
+.content{
+    width: 60%;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.header img{
+    width:100%;
+    height: 400px;
+}
+aside{
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+section{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+.left,.right{
+    padding: 10px;
+}
+.left img{
+    width: 80%;
+    height: 80%;
+    margin: 5px 20px;
+}
+h3{
+    margin-bottom: 10px;
+}
+.up img{
+    margin-top: 20px;
+}
+.down{
+    margin-top: 50px;
+}
+footer{
+    clear: both;
+    width: 60%;
+    height: 40px;
+    margin: 0 auto;
+    background: bisque;
+    text-align: center;
+}

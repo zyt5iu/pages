@@ -1,0 +1,67 @@
+/*媒体文件样式*/
+@media screen and (max-width: 500px){
+    html[resize] body{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1930px){
+    html[resize] body{
+        font-size: 18px;
+    }
+}
+@media screen{
+    div.wrap{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/*手机屏的时候*/
+@media screen and (max-width: 900px) {
+    .aside {
+        width: inherit;
+        position: relative;
+    }
+    .aside .menu{
+        background: #f8bd24;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .aside .menu a:hover{
+        background: none;
+        box-shadow: 0 -3px 0 #fff inset;
+    }
+    main.content{
+        margin-left: 0;
+    }
+    main section{
+        padding: 3em 0;
+    }
+    #info div.detail,#story div.detail{
+        display: flex;
+        flex-direction: column;
+    }
+    #info div.detail div{
+        width:100%;
+    }
+    #skills div.skill_item{
+        width: 100%;
+        margin-bottom: 0!important;
+        margin-right: 15px;
+    }
+    #skills div.detail{
+        overflow: auto;
+        flex-wrap: nowrap;
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #works img.smallShow{
+        display: inline-block;
+    }
+    #works a.bigShow{
+        display: none;
+    }
+    #story div.one,#story div.two{
+        width: 100%;
+    }
+}

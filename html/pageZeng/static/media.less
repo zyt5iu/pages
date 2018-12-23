@@ -1,0 +1,22 @@
+@media (min-width: 768px)  and (max-width: 1300px){
+  .sizeW(@wid){
+    width: calc(150 / 72 * @wid);
+  }
+  .sizeH(@hei){
+    height: calc(150 / 72 * @hei);
+  }
+  .sizeLinHei(@lin_Hei){
+    line-height: calc(150 / 72 * @lin_Hei);
+  }
+}
+@media screen  and (max-width: 768px){
+  .sizeW(@wid){
+    width: calc(72 / 72 * @wid);
+  }
+  .sizeH(@hei){
+    height: calc(72 / 72 * @hei);
+  }
+  .sizeLinHei(@lin_Hei){
+    line-height: calc(72 / 72 * @lin_Hei);
+  }
+}

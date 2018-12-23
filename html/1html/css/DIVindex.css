@@ -1,0 +1,212 @@
+/*ȫ����ʽ*/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+#container{
+    width: 900px;
+    margin: 0 auto;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*导航*/
+#banner{
+    width: 900px;
+    height: 250px;
+    background:url("../images/logo.jpg");
+    background-size: cover;
+}
+#globllink ul li{
+    float: left;
+}
+#globllink ul li a{
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: url("../images/bg1.png");
+}
+#globllink a:link,#globllink a:visited{
+    color: black;
+}
+#globllink a:hover,#globllink a:active{
+    color: beige;
+    background: url("../images/bg2.png");
+}
+/*中间内容*/
+.content{
+    width: 900px;
+    height: 695px;
+    background-color: cornflowerblue;
+    clear: both;
+}
+/*中间内容左边部分*/
+#left{
+    margin: 5px;
+    width: 250px;
+    padding: 3px;
+    background-color: white;
+    float: left;
+}
+#left .weather h3{
+    text-align: center;
+}
+.weather{
+    width: 240px;
+    height: 160px;
+    background: cornflowerblue;
+    padding: 5px;
+    margin:  0 auto;
+}
+.weather-bg{
+    height: 40px;
+    line-height: 40px;
+    background: url("../images/weather1.png") no-repeat;
+    margin-left: 20px;
+    color: white;
+}
+.one{
+    float: left;
+}
+.two{
+    float: right;
+}
+.one li{
+    background: url("../images/flower.png") no-repeat;
+    background-size: 25px 25px;
+}
+.one a{
+    margin-left: 25px;
+}
+.con a:link,.con a:visited{
+    color: white;
+}
+.con a:hover,.con a:active{
+    color: burlywood;
+}
+/*今日推荐*/
+.speacil{
+    width: 250px;
+    background: cornflowerblue;
+}
+.jinri{
+    width: 250px;
+    height: 30px;
+    background: lightskyblue;
+    background-image: url("../images/flower.png");
+    background-repeat: no-repeat;
+}
+.jinri h3{
+    margin-left: 35px;
+    line-height: 30px;
+}
+.speacil ul{
+    margin-top: 10px;
+}
+.speacil ul li{
+    text-align: center;
+}
+.speacil ul li img{
+    width: 220px;
+    height: 125px;
+    border: 1px solid white;
+}
+.speacil a:link,.speacil a:visited{
+    color: white;
+    font-size: 15px;
+}
+.speacil a:hover,.speacil a:active{
+    color: burlywood;
+    font-size: 15px;
+}
+/*中间内容*/
+#middle{
+    width: 355px;
+    background: white;
+    padding: 5px;
+    float: left;
+    margin-top: 5px;
+}
+#middle .img2 img{
+    width: 355px;
+    height: 245px;
+}
+.frist{
+    width: 355px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 30px;
+    color: cornflowerblue;
+    font-style: oblique;
+}
+.img3 ul li{
+    float: left;
+    margin-left: 2px;
+}
+.img3 img{
+    width: 85px;
+    height: 120px;
+}
+.luxian{
+    clear: both;
+}
+.lead li{
+    background: url("../images/flower.png") no-repeat;
+    height: 32px;
+}
+.lead li a{
+    height: 35px;
+    line-height: 35px;
+    margin-left: 30px;
+}
+.lead li a:link,.lead li a:visited{
+    color: black;
+}
+.lead li a:hover,.lead li a:active{
+    color: burlywood;
+}
+/*右边*/
+#right{
+    margin-top: 5px;
+    width: 250px;
+    /*height: 600px;*/
+    float: left;
+    border: 3px solid white;
+    margin-left: 4px;
+}
+.eat ul{
+    padding: 10px;
+}
+.eat ul li{
+    background: url("../images/flower.png") no-repeat;
+    background-size: 25px 25px;
+    border-bottom: 1px dashed white;
+    height: 28px;
+}
+.eat ul li a{
+    margin-left: 28px;
+    font-size: 15px;
+}
+.eat ul li a:link,.eat ul li a:visited{
+    color: white;
+}
+.eat ul li a:hover,.eat ul li a:active{
+    color: burlywood;
+}
+.hotiel{
+    margin-top: 20px;
+}
+#footer{
+    clear: both;
+    width: 900px;
+    height: 30px;
+    background:cornflowerblue ;
+    text-align: center;
+    color: white;
+}

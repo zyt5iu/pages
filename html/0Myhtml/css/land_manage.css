@@ -1,0 +1,104 @@
+body {
+  background-color: #f5f5f5;
+}
+div.main div.one div.left h2 {
+  border-left: 4px #14A35B solid;
+  padding-left: 20px;
+  color: #666;
+  margin-bottom: 2vw;
+}
+div.main div.one div.left ul li {
+  background-color: white;
+  border-radius: 5px;
+  height: 250px;
+  overflow: hidden;
+  padding-right: 20px;
+}
+div.main div.one div.left ul li a {
+  width: 50%;
+}
+div.main div.one div.left ul li a img {
+  width: 100%;
+}
+div.main div.one div.left ul li div.media-body {
+  padding: 20px 0 0 25px;
+}
+div.main div.one div.left ul li div.media-body h3 {
+  padding: 0 0 10px 0;
+}
+div.main div.one div.left ul li div.media-body p {
+  line-height: 25px;
+}
+div.main div.one div.left ul li div.media-body div.flag {
+  margin: 20px 0 10px 0;
+}
+div.main div.one div.left ul li div.media-body div.flag b {
+  padding: 5px 10px;
+  border: #14A35B 1px solid;
+  border-radius: 5px;
+}
+div.main div.one div.left ul li div.media-body .a_btn1,
+div.main div.one div.left ul li div.media-body .a_btn2 {
+  color: white;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+}
+div.main div.one div.left ul li div.media-body .a_btn1 {
+  background-color: #14A35B;
+}
+div.main div.one div.left ul li div.media-body .a_btn1:hover {
+  background-color: #129151;
+  color: #f4f4f4;
+}
+div.main div.one div.left ul li div.media-body .a_btn2 {
+  background-color: #58c4a0;
+}
+div.main div.one div.left ul li div.media-body .a_btn2:hover {
+  background-color: #4aa687;
+  color: #f4f4f4;
+}
+div.main div.one div.right .panel-body {
+  padding: 10px !important;
+}
+div.main div.one div.right .table {
+  margin-bottom: 0 !important;
+}
+div.main div.one div.right .table a {
+  font-size: 13px;
+  color: #1b9fb0;
+}
+div.main div.one div.right .table-bordered > thead > tr > td,
+div.main div.one div.right .table-bordered > tbody > tr > td,
+div.main div.one div.right .table-bordered > tfoot > tr > td {
+  border: 8px solid white;
+  background-color: #d6edf0;
+}
+div.main div.one div.right .panel-body div.fig {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.main div.one div.right .panel-body div.fig img {
+  width: 100%;
+}
+div.main div.one div.right .panel-body div.fig figure {
+  padding: 5px;
+}
+div.main div.one div.right .panel-body div.fig figure figcaption {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+div.main div.one div.right .panel div.travel a {
+  display: inline-block;
+  width: 8.5vw;
+  padding: 10px 0 10px 10px;
+  background-color: #d6edf0;
+  margin-bottom: 10px;
+  color: #1b9fb0 ;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
